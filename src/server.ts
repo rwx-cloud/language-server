@@ -1250,12 +1250,18 @@ connection.onDefinition(async (params: TextDocumentPositionParams): Promise<Loca
   return [locationLink];
 });
 
-// Hover provider
+// Hover provider - only handle specific RWX features, let YAML extension handle schema
 connection.onHover(async (params: TextDocumentPositionParams): Promise<Hover | null> => {
   const document = documents.get(params.textDocument.uri);
   if (!document || !isRwxRunFile(document)) {
     return null;
   }
+
+  // ONLY handle our specific hover cases:
+  // 1. YAML aliases (*alias-name)
+  // 2. Package hovers (call: package version)
+  // 3. Parameter hovers in 'with' blocks
+  // Let the YAML extension handle all other field hovers
 
   // Check if we're hovering over a YAML alias
   const aliasInfo = getYamlAliasAtPosition(document, params.position);
@@ -1353,16 +1359,18 @@ connection.onHover(async (params: TextDocumentPositionParams): Promise<Hover | n
   }
 
   // Check if we're hovering over a parameter name in a with block
-  const paramMatch = currentLine.match(/^\s*([a-zA-Z0-9_-]+):/);
-  if (paramMatch) {
-    const paramName = paramMatch[1];
+  // Only handle this if we're actually in a 'with' context
+  if (isInWithContext(document, params.position)) {
+    const paramMatch = currentLine.match(/^\s*([a-zA-Z0-9_-]+):/);
+    if (paramMatch) {
+      const paramName = paramMatch[1];
 
-    try {
-      // Find the associated call package
-      const packageInfo = findCallPackageForWithBlock(document, params.position.line);
-      if (!packageInfo) {
-        return null;
-      }
+      try {
+        // Find the associated call package
+        const packageInfo = findCallPackageForWithBlock(document, params.position.line);
+        if (!packageInfo) {
+          return null;
+        }
 
       // Fetch detailed package information to get parameter details
       const packageDetails = await fetchPackageDetails(packageInfo.packageName, packageInfo.version);
@@ -1395,12 +1403,14 @@ connection.onHover(async (params: TextDocumentPositionParams): Promise<Hover | n
       return {
         contents: hoverContent,
       };
-    } catch (error) {
-      connection.console.error(`Error getting parameter hover info: ${error instanceof Error ? error.message : String(error)}`);
-      return null;
+      } catch (error) {
+        connection.console.error(`Error getting parameter hover info: ${error instanceof Error ? error.message : String(error)}`);
+        return null;
+      }
     }
   }
 
+  // Return null for all other cases - let YAML extension handle schema-based hovers
   return null;
 });
 
