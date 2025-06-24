@@ -32,10 +32,11 @@ tasks:
       - package.json
       - package-lock.json
 
-  - key: build
+  - key: compile
     use: npm-install
-    run: npm run build
+    run: npm run compile
     filter:
+      - node_modules
       - src
       - support
       - package*.json
