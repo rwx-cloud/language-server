@@ -61,6 +61,8 @@ interface RWXPackageDetails {
   parameters: RWXPackageParameter[];
 }
 
+const USER_AGENT = 'rwx-language-server/1';
+
 // Package cache - cache for 1 hour
 const packageCache: { data: RWXPackagesResponse | null; timestamp: number } = {
   data: null,
@@ -85,7 +87,7 @@ async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
     const response = await fetch('https://cloud.rwx.com/mint/api/leaves/documented', {
       headers: {
         Accept: 'application/json,*/*',
-        'User-Agent': 'rwx-docs-leaves-index/1',
+        'User-Agent': USER_AGENT,
       },
     });
 
@@ -123,7 +125,7 @@ async function fetchPackageDetails(packageName: string, version: string): Promis
     const response = await fetch(url, {
       headers: {
         Accept: 'application/json,*/*',
-        'User-Agent': 'rwx-docs-leaves-index/1',
+        'User-Agent': USER_AGENT,
       },
     });
 
@@ -871,10 +873,10 @@ connection.onCompletion(async (textDocumentPosition: TextDocumentPositionParams)
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
   if (item.data === 1) {
     item.detail = 'Task definition';
-    item.documentation = 'Define tasks for your Mint workflow';
+    item.documentation = 'Define tasks for your RWX workflow';
   } else if (item.data === 2) {
     item.detail = 'Trigger definition';
-    item.documentation = 'Define triggers for your Mint workflow';
+    item.documentation = 'Define triggers for your RWX workflow';
   }
   return item;
 });
@@ -1544,7 +1546,7 @@ connection.onRequest('rwx/dumpDebugData', async (params: { uri: string }) => {
     }
 
     if (!isRwxRunFile(document)) {
-      return { error: 'Not a Mint workflow file' };
+      return { error: 'Not an RWX workflow file' };
     }
 
     const text = document.getText();
