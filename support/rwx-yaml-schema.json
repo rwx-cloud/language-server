@@ -10,7 +10,11 @@
       "minItems": 1,
       "description": "An array of task definitions that form the core execution units of your workflow. Each task represents a discrete unit of work that executes in an isolated containerized environment. Tasks can execute shell commands, call reusable packages, or embed other run definitions. Tasks support sophisticated dependency management through 'use' (inherits outputs and filesystem) and 'after' (ordering only), enabling complex workflows with parallel execution, content-based caching, and flexible artifact management.",
       "items": {
-        "oneOf": [{ "$ref": "#/$defs/CommandTask" }, { "$ref": "#/$defs/PackageTask" }, { "$ref": "#/$defs/EmbeddedRunTask" }]
+        "oneOf": [
+          { "$ref": "#/$defs/CommandTask" },
+          { "$ref": "#/$defs/PackageTask" },
+          { "$ref": "#/$defs/EmbeddedRunTask" }
+        ]
       }
     },
     "on": {
@@ -36,7 +40,11 @@
 
   "$defs": {
     "PrimitiveValue": {
-      "oneOf": [{ "type": "string" }, { "type": "number" }, { "type": "boolean" }],
+      "oneOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "boolean" }
+      ],
       "description": "A primitive value that can be a string, number, or boolean. All values are cast to strings by the RWX system."
     },
     "CommandTask": {
@@ -49,7 +57,10 @@
           "description": "A unique identifier for the task used for dependencies, artifact references, and display purposes. Must start with a letter, number, or underscore, followed by any combination of letters, numbers, underscores, hyphens, or dots. Keys serve as display names in the UI and logs and must be unique within the run definition. Common patterns include kebab-case (build-frontend), underscore_case (set_env_one), and descriptive names (deploy-production)."
         },
         "run": {
-          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }],
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ],
           "description": "The shell command(s) to execute in the task container. Can be a single command string, a multi-line string using YAML's pipe (|) operator, or an array of command strings executed sequentially. Commands run in a bash shell with full access to environment variables, pipes, and redirects. Supports template expressions like ${{ init.parameter }} for dynamic command generation. Multi-line strings preserve formatting and are ideal for complex scripts."
         },
         "use": {
@@ -69,7 +80,11 @@
           "description": "Specifies compute resource requirements for the task execution agent. Default allocation is 2 CPUs, 8GB memory, and 50GB disk. Can specify memory (with units like 'gb'), CPU count, disk space (in 50GB increments), and special features like static IPs or tmpfs. Choose agent specifications based on task requirements - use larger agents for compilation or data processing, smaller agents for simple operations. Different tasks can use different agent specifications for cost optimization."
         },
         "docker": {
-          "oneOf": [{ "type": "boolean" }, { "type": "string", "enum": ["preserve-data"] }, { "type": "string" }],
+          "oneOf": [
+            { "type": "boolean" },
+            { "type": "string", "enum": ["preserve-data"] },
+            { "type": "string" }
+          ],
           "description": "Docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is essential for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing."
         },
         "parallel": {
@@ -93,7 +108,11 @@
           "description": "Reference to a named tool cache for incremental caching. The tool cache preserves the filesystem contents from previous executions of this task, enabling incremental updates when the task has a cache miss. Particularly effective for dependency installation tasks like npm install, bundle install, or yarn install. Tool cache names should be unique within the vault and descriptive of their purpose. The global tool-cache vault configuration must be set for task-level tool caches to function."
         },
         "filter": {
-          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }, { "$ref": "#/$defs/InputFilesystemFilter" }],
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } },
+            { "$ref": "#/$defs/InputFilesystemFilter" }
+          ],
           "description": "Specify which files from the workspace should be present for the task execution. Filters use glob patterns and improve cache hit rates by ensuring tasks only depend on relevant files. Only affects the workspace directory (/var/mint-workspace), not system files. Supports patterns: '*' (match within segment), '**' (match across segments), '{}' (comma-delimited options), '!' (negate/exclude)."
         },
         "background-processes": {
@@ -104,6 +123,11 @@
         "outputs": {
           "$ref": "#/$defs/OutputConfiguration",
           "description": "Configure different types of task outputs including file artifacts, test result parsing, output values for other tasks, and problem detection from logs or files. Artifacts are preserved as downloadable files, test results integrate with UI display, output values enable task communication via $MINT_VALUES directory, and problems support built-in matchers (eslint, rubocop, etc.) or custom formats."
+        },
+        "timeout": {
+          "type": "string",
+          "minimum": 1,
+          "description": "Maximum execution time for the task (default: 10 minutes), with a unit like 'm' or 'h' on the end (e.g. `timeout: 30m`). If the task runs longer than this timeout, it will be terminated with a SIGKILL signal (or SIGTERM if terminate-grace-period-seconds is set). The timeout applies to the entire task execution, including any background processes and their ready checks. Helps prevent runaway tasks from consuming resources indefinitely."
         },
         "timeout-minutes": {
           "type": "integer",
@@ -196,7 +220,10 @@
           "description": "Initialization parameters to pass to the embedded run definition. These parameters are available as template variables in the embedded run using the 'init' namespace (e.g., ${{ init.environment }}). Allows customizing the behavior of reusable run definitions based on the calling context, enabling parameterized workflows that can adapt to different environments, configurations, or input data."
         },
         "target": {
-          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }],
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ],
           "description": "Specific tasks within the embedded run to execute. If not specified, all tasks in the embedded run will be executed according to their dependencies. Allows selective execution of portions of larger run definitions, enabling modular workflow composition. Can be a single task key or an array of task keys. Dependencies of targeted tasks are automatically included."
         },
         "after": { "$ref": "#/$defs/After" },
@@ -212,12 +239,18 @@
     },
 
     "Dependencies": {
-      "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }],
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ],
       "description": "Task keys that must complete successfully before this task can start. Can be a single task key string or an array of task keys. Dependencies ensure proper execution order and that required outputs, artifacts, or side effects are available."
     },
 
     "After": {
-      "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }],
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ],
       "description": "Task keys that must complete (successfully or not) before this task starts. Unlike dependencies, 'after' constraints don't require success."
     },
 
@@ -416,7 +449,10 @@
               "type": "object",
               "properties": {
                 "run": {
-                  "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }],
+                  "oneOf": [
+                    { "type": "string" },
+                    { "type": "array", "items": { "type": "string" } }
+                  ],
                   "description": "Command or commands to run to check if the background process is ready. Should be lightweight and idempotent. Use service-specific tools when possible (e.g., pg_isready for PostgreSQL, redis-cli ping for Redis)."
                 },
                 "timeout-seconds": {
@@ -432,7 +468,10 @@
           "description": "Configuration for checking when the background process is ready to receive requests. Can be a simple command string, array of commands, or detailed object with timeout configuration. Ready checks run repeatedly until they succeed or timeout. Use service-specific ready check commands when possible rather than generic port checks."
         },
         "after": {
-          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }],
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ],
           "description": "Other background processes that must be ready before starting this process. Can be a single process key or an array of process keys. Creates startup sequencing to handle service dependencies (e.g., database before web server)."
         },
         "terminate-grace-period-seconds": {
@@ -516,7 +555,12 @@
                   },
                   "format": {
                     "type": "string",
-                    "enum": ["auto", "problem-json", "github-annotation-json", "github-annotations-action-json"],
+                    "enum": [
+                      "auto",
+                      "problem-json",
+                      "github-annotation-json",
+                      "github-annotations-action-json"
+                    ],
                     "description": "Format of the problem file"
                   }
                 },
@@ -731,10 +775,16 @@
       "description": "GitLab event triggers for automated run execution. Supports push events (branch updates), tag-push events (tag creation), and merge-request events (MR lifecycle). Each trigger provides GitLab-specific event context and supports conditional execution, initialization parameters, target tasks, and custom run titles.",
       "properties": {
         "push": {
-          "oneOf": [{ "$ref": "#/$defs/BaseTrigger" }, { "type": "array", "items": { "$ref": "#/$defs/BaseTrigger" } }]
+          "oneOf": [
+            { "$ref": "#/$defs/BaseTrigger" },
+            { "type": "array", "items": { "$ref": "#/$defs/BaseTrigger" } }
+          ]
         },
         "tag-push": {
-          "oneOf": [{ "$ref": "#/$defs/BaseTrigger" }, { "type": "array", "items": { "$ref": "#/$defs/BaseTrigger" } }]
+          "oneOf": [
+            { "$ref": "#/$defs/BaseTrigger" },
+            { "type": "array", "items": { "$ref": "#/$defs/BaseTrigger" } }
+          ]
         },
         "merge-request": {
           "oneOf": [
@@ -883,7 +933,10 @@
     },
 
     "TargetTasks": {
-      "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }],
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ],
       "description": "Specific tasks to execute when triggered"
     },
 

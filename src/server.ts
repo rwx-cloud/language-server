@@ -413,7 +413,7 @@ function extractTaskKeys(result: any): string[] {
 
   return result.partialRunDefinition.tasks
     .map((task: any) => task.key)
-    .filter((key: string) => key && typeof key === "string");
+    .filter((key: string) => key && typeof key === "string" && key !== "#fake");
 }
 
 // Helper function to find task definition location in document
@@ -813,7 +813,7 @@ async function checkPackageVersions(
             end: Position.create(callLine.line, callLine.versionEnd),
           },
           message: `Package version ${callLine.version} is outdated. The newest version is ${latestPackage.version}.`,
-          source: "mint",
+          source: "rwx",
           code: "outdated-version",
           data: {
             packageName: callLine.packageName,
@@ -867,24 +867,62 @@ function isInUseContext(
     return true;
   }
 
-  // Additional check: if the line contains "use: [" but cursor is after comma or space
+  // Define pattern for use: [ detection
   const useArrayPattern = /use:\s*\[/;
+
+  // Additional check: if the line contains "use: [" but cursor is after comma or space
   if (
     currentLine.includes("use:") &&
-    currentLine.includes("[") &&
-    !currentLine.includes("]")
+    currentLine.includes("[")
   ) {
     // Check if we're positioned after the opening bracket
     const useArrayMatch = currentLine.match(useArrayPattern);
     if (useArrayMatch) {
       const arrayStartPos = useArrayMatch.index! + useArrayMatch[0].length;
       if (position.character >= arrayStartPos) {
+        // We're positioned after the opening bracket
         return true;
       }
     }
   }
 
-  return false;
+  // Check for multi-line array context
+  // Look backward from current line to find "use: [" without a closing "]"
+  let arrayStartLine = -1;
+  let arrayDepth = 0;
+  
+  for (let i = currentLineIndex; i >= 0; i--) {
+    const line = lines[i];
+    if (!line) continue;
+    
+    // Count brackets on this line
+    const openBrackets = (line.match(/\[/g) || []).length;
+    const closeBrackets = (line.match(/\]/g) || []).length;
+    
+    if (i === currentLineIndex) {
+      // For current line, only count brackets before cursor
+      const beforeCursorLine = line.substring(0, position.character);
+      const openBracketsBefore = (beforeCursorLine.match(/\[/g) || []).length;
+      const closeBracketsBefore = (beforeCursorLine.match(/\]/g) || []).length;
+      arrayDepth = openBracketsBefore - closeBracketsBefore;
+    } else {
+      arrayDepth += openBrackets - closeBrackets;
+    }
+    
+    // If we found "use: [" pattern and we're in positive array depth
+    if (useArrayPattern.test(line) && arrayDepth > 0) {
+      arrayStartLine = i;
+      break;
+    }
+    
+    // If we hit a line that starts a new task or other structure, stop looking
+    if (/^\s*-\s+(key|call|use|run|with):\s/.test(line) && i < currentLineIndex) {
+      break;
+    }
+  }
+  
+  // Only return true for multi-line arrays (not single-line arrays like "use: []")
+  return arrayStartLine !== -1 && arrayStartLine < currentLineIndex;
 }
 
 // This handler provides the initial list of the completion items.
@@ -906,9 +944,92 @@ connection.onCompletion(
     if (isInUseContext(document, textDocumentPosition.position)) {
       try {
         // Parse the document to get available task keys
-        const text = document.getText();
+        let text = document.getText();
         const snippets = new Map();
         const fileName = document.uri.replace("file://", "");
+        
+        // If we have incomplete array syntax, try to complete it temporarily for parsing
+        const lines = text.split('\n');
+        const currentLineIndex = textDocumentPosition.position.line;
+        const currentLine = lines[currentLineIndex] || "";
+        
+        // Check if current line ends with "use: [" and complete it temporarily
+        if (currentLine.trim().endsWith('use: [')) {
+          lines[currentLineIndex] = currentLine + ']';
+          text = lines.join('\n');
+        } else if (currentLine.includes('use: [') && currentLine.includes(']')) {
+          // Single-line array with closing bracket - no modification needed
+          // The YAML is already complete
+        } else {
+          // Check for multi-line array completion
+          // Look backward to find "use: [" without closing "]"
+          let needsClosing = false;
+          let arrayDepth = 0;
+          
+          for (let i = currentLineIndex; i >= 0; i--) {
+            const line = lines[i];
+            if (!line) continue;
+            
+            // Count brackets on this line
+            const openBrackets = (line.match(/\[/g) || []).length;
+            const closeBrackets = (line.match(/\]/g) || []).length;
+            
+            if (i === currentLineIndex) {
+              // For current line, only count brackets before cursor
+              const beforeCursorLine = line.substring(0, textDocumentPosition.position.character);
+              const openBracketsBefore = (beforeCursorLine.match(/\[/g) || []).length;
+              const closeBracketsBefore = (beforeCursorLine.match(/\]/g) || []).length;
+              arrayDepth = openBracketsBefore - closeBracketsBefore;
+            } else {
+              arrayDepth += openBrackets - closeBrackets;
+            }
+            
+            // If we found "use: [" pattern and we're in positive array depth
+            if (/use:\s*\[/.test(line) && arrayDepth > 0) {
+              needsClosing = true;
+              break;
+            }
+            
+            // If we hit a line that starts a new task, stop looking
+            if (/^\s*-\s+(key|call|use|run|with):\s/.test(line) && i < currentLineIndex) {
+              break;
+            }
+          }
+          
+          // If we need to close the array, add a closing bracket after the current line
+          if (needsClosing) {
+            // Check if a closing bracket already exists in the remaining lines
+            let hasClosingBracket = false;
+            for (let i = currentLineIndex + 1; i < lines.length; i++) {
+              const line = lines[i];
+              if (line && line.includes(']')) {
+                hasClosingBracket = true;
+                break;
+              }
+              // Stop if we hit a new task definition
+              if (line && /^\s*-\s+(key|call|use|run|with):\s/.test(line)) {
+                break;
+              }
+            }
+            
+            // Only add closing bracket if one doesn't already exist
+            if (!hasClosingBracket) {
+              // Find the appropriate indentation for the closing bracket
+              const useLineIndex = lines.findIndex((line, idx) => 
+                idx <= currentLineIndex && /use:\s*\[/.test(line)
+              );
+              if (useLineIndex !== -1) {
+                const useLine = lines[useLineIndex];
+                if (useLine) {
+                  const useIndent = useLine.match(/^\s*/)?.[0] || "";
+                  lines.splice(currentLineIndex + 1, 0, `${useIndent}]`);
+                  text = lines.join('\n');
+                }
+              }
+            }
+          }
+        }
+        
         const result = await YamlParser.safelyParseRun(
           fileName,
           text,
@@ -981,7 +1102,6 @@ connection.onCompletion(
             label: packageName,
             kind: CompletionItemKind.Module,
             detail: `v${packageInfo.version}`,
-            documentation: packageInfo.description,
             data: `package-${index}`,
             insertText: `${packageName} ${packageInfo.version}`,
           })
@@ -1804,52 +1924,122 @@ connection.onReferences((params: ReferenceParams): Location[] => {
 });
 
 // Code action provider
-connection.onCodeAction((params: CodeActionParams): CodeAction[] => {
-  const codeActions: CodeAction[] = [];
+connection.onCodeAction(
+  async (params: CodeActionParams): Promise<CodeAction[]> => {
+    const codeActions: CodeAction[] = [];
+    const document = documents.get(params.textDocument.uri);
 
-  // Check for outdated version diagnostics
-  const outdatedDiagnostics = params.context.diagnostics.filter(
-    (diagnostic) =>
-      diagnostic.code === "outdated-version" && diagnostic.source === "rwx"
-  );
-
-  for (const diagnostic of outdatedDiagnostics) {
-    if (diagnostic.data) {
-      const data = diagnostic.data as {
-        packageName: string;
-        currentVersion: string;
-        latestVersion: string;
-        line: number;
-        versionStart: number;
-        versionEnd: number;
-      };
-
-      // Create a code action to update to the latest version
-      const codeAction: CodeAction = {
-        title: `Update to latest version (${data.latestVersion})`,
-        kind: CodeActionKind.QuickFix,
-        diagnostics: [diagnostic],
-        edit: {
-          changes: {
-            [params.textDocument.uri]: [
-              TextEdit.replace(
-                Range.create(
-                  Position.create(data.line, data.versionStart),
-                  Position.create(data.line, data.versionEnd)
-                ),
-                data.latestVersion
-              ),
-            ],
-          },
-        },
-      };
-
-      codeActions.push(codeAction);
+    if (!document || !isRwxRunFile(document)) {
+      return codeActions;
     }
-  }
 
-  return codeActions;
-});
+    // Check for outdated version diagnostics
+    const outdatedDiagnostics = params.context.diagnostics.filter(
+      (diagnostic) =>
+        diagnostic.code === "outdated-version" && diagnostic.source === "rwx"
+    );
+
+    for (const diagnostic of outdatedDiagnostics) {
+      if (diagnostic.data) {
+        const data = diagnostic.data as {
+          packageName: string;
+          currentVersion: string;
+          latestVersion: string;
+          line: number;
+          versionStart: number;
+          versionEnd: number;
+        };
+
+        // Create a code action to update to the latest version
+        const codeAction: CodeAction = {
+          title: `Update to latest version (${data.latestVersion})`,
+          kind: CodeActionKind.QuickFix,
+          diagnostics: [diagnostic],
+          edit: {
+            changes: {
+              [params.textDocument.uri]: [
+                TextEdit.replace(
+                  Range.create(
+                    Position.create(data.line, data.versionStart),
+                    Position.create(data.line, data.versionEnd)
+                  ),
+                  data.latestVersion
+                ),
+              ],
+            },
+          },
+        };
+
+        codeActions.push(codeAction);
+      }
+    }
+
+    // If no diagnostics, check if cursor is on a package call line
+    if (outdatedDiagnostics.length === 0) {
+      const latestPackages = await fetchRWXPackages();
+      if (latestPackages) {
+        const lines = document.getText().split("\n");
+        const startLine = params.range.start.line;
+        const endLine = params.range.end.line;
+
+        for (
+          let lineNum = startLine;
+          lineNum <= endLine && lineNum < lines.length;
+          lineNum++
+        ) {
+          const line = lines[lineNum];
+          if (!line) continue;
+
+          const packageInfo = extractPackageAndVersionFromCallLine(line);
+
+          if (packageInfo) {
+            const latestPackage = latestPackages[packageInfo.packageName];
+            if (
+              latestPackage &&
+              latestPackage.version !== packageInfo.version
+            ) {
+              // Check if the range overlaps with the package call
+              const versionIndex = line.lastIndexOf(packageInfo.version);
+              if (versionIndex !== -1) {
+                const versionStart = versionIndex;
+                const versionEnd = versionIndex + packageInfo.version.length;
+
+                // Check if the selection range includes this package
+                if (
+                  (lineNum > startLine ||
+                    params.range.start.character <= versionEnd) &&
+                  (lineNum < endLine ||
+                    params.range.end.character >= versionStart)
+                ) {
+                  const codeAction: CodeAction = {
+                    title: `Update to latest version (${latestPackage.version})`,
+                    kind: CodeActionKind.QuickFix,
+                    edit: {
+                      changes: {
+                        [params.textDocument.uri]: [
+                          TextEdit.replace(
+                            Range.create(
+                              Position.create(lineNum, versionStart),
+                              Position.create(lineNum, versionEnd)
+                            ),
+                            latestPackage.version
+                          ),
+                        ],
+                      },
+                    },
+                  };
+                  codeActions.push(codeAction);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    return codeActions;
+  }
+);
 
 // Register debug command handler
 connection.onRequest("rwx/dumpDebugData", async (params: { uri: string }) => {
