@@ -41,3 +41,17 @@ tasks:
       - support
       - package*.json
       - tsconfig*
+
+  - key: test
+    use: npm-install
+    run: npm run test
+    filter:
+      - node_modules
+      - src
+      - support
+      - package.json
+      - tsconfig*
+      - test
+    outputs:
+      test-results:
+        - path: test-results.json

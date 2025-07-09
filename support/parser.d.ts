@@ -370,6 +370,8 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
     };
     staticIps?: string;
     tmpfs?: boolean;
+    spot?: boolean;
+    placement: 'spot' | 'standard';
   };
   type: TaskType.Command;
   command: string;

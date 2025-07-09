@@ -124,6 +124,11 @@
           "$ref": "#/$defs/OutputConfiguration",
           "description": "Configure different types of task outputs including file artifacts, test result parsing, output values for other tasks, and problem detection from logs or files. Artifacts are preserved as downloadable files, test results integrate with UI display, output values enable task communication via $MINT_VALUES directory, and problems support built-in matchers (eslint, rubocop, etc.) or custom formats."
         },
+        "timeout": {
+          "type": "string",
+          "minimum": 1,
+          "description": "Maximum execution time for the task (default: 10 minutes), with a unit like 'm' or 'h' on the end (e.g. `timeout: 30m`). If the task runs longer than this timeout, it will be terminated with a SIGKILL signal (or SIGTERM if terminate-grace-period-seconds is set). The timeout applies to the entire task execution, including any background processes and their ready checks. Helps prevent runaway tasks from consuming resources indefinitely."
+        },
         "timeout-minutes": {
           "type": "integer",
           "minimum": 1,
@@ -283,6 +288,10 @@
         "tmpfs": {
           "type": "boolean",
           "description": "Whether to use tmpfs (in-memory filesystem) for improved I/O performance. Useful for tasks with heavy disk I/O that can benefit from memory-backed storage, but requires sufficient memory allocation. Benefits tasks with significant filesystem I/O that fit in ~70% of available memory."
+        },
+        "spot": {
+          "type": "boolean",
+          "description": "Whether to use spot instances for task execution. When true, uses ephemeral instances that may be preempted at any time but offer cost savings. When false or omitted, uses standard on-demand instances with guaranteed availability and stable performance. Choose spot instances for fault-tolerant workloads that can handle interruptions."
         }
       },
       "unevaluatedProperties": false
