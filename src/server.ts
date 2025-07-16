@@ -381,6 +381,88 @@ async function validateTextDocumentForDiagnostics(
       diagnostics.push(diagnostic);
     }
 
+    if (result.partialRunDefinition?.warningMessages) {
+      for (const warning of result.partialRunDefinition.warningMessages) {
+        const stackEntry = warning.stackTrace?.[0];
+        const line = stackEntry?.line ?? warning.line ?? 1;
+        const column = stackEntry?.column ?? warning.column ?? 1;
+
+        const startLine = line - 1; // Convert to 0-based
+        const startChar = column - 1; // Convert to 0-based
+        const endLine = stackEntry?.endLine
+          ? stackEntry.endLine - 1
+          : startLine;
+        const endChar = stackEntry?.endColumn
+          ? stackEntry.endColumn - 1
+          : startChar + 10;
+
+        const diagnostic: Diagnostic = {
+          severity: DiagnosticSeverity.Warning,
+          range: {
+            start: {
+              line: startLine,
+              character: startChar,
+            },
+            end: {
+              line: endLine,
+              character: endChar,
+            },
+          },
+          message: warning.message,
+          source: "rwx-run-parser",
+        };
+
+        if (warning.advice) {
+          diagnostic.message += `\n\nAdvice: ${warning.advice}`;
+        }
+
+        diagnostics.push(diagnostic);
+      }
+    }
+
+    if (result.partialRunDefinition?.tasks) {
+      for (const task of result.partialRunDefinition.tasks) {
+        if (task.warningMessages) {
+          for (const warning of task.warningMessages) {
+            const stackEntry = warning.stackTrace?.[0];
+            const line = stackEntry?.line ?? warning.line ?? 1;
+            const column = stackEntry?.column ?? warning.column ?? 1;
+
+            const startLine = line - 1; // Convert to 0-based
+            const startChar = column - 1; // Convert to 0-based
+            const endLine = stackEntry?.endLine
+              ? stackEntry.endLine - 1
+              : startLine;
+            const endChar = stackEntry?.endColumn
+              ? stackEntry.endColumn - 1
+              : startChar + 10;
+
+            const diagnostic: Diagnostic = {
+              severity: DiagnosticSeverity.Warning,
+              range: {
+                start: {
+                  line: startLine,
+                  character: startChar,
+                },
+                end: {
+                  line: endLine,
+                  character: endChar,
+                },
+              },
+              message: warning.message,
+              source: "rwx-run-parser",
+            };
+
+            if (warning.advice) {
+              diagnostic.message += `\n\nAdvice: ${warning.advice}`;
+            }
+
+            diagnostics.push(diagnostic);
+          }
+        }
+      }
+    }
+
     // Add version checking diagnostics
     const versionDiagnostics = await checkPackageVersions(textDocument);
     diagnostics.push(...versionDiagnostics);
@@ -871,10 +953,7 @@ function isInUseContext(
   const useArrayPattern = /use:\s*\[/;
 
   // Additional check: if the line contains "use: [" but cursor is after comma or space
-  if (
-    currentLine.includes("use:") &&
-    currentLine.includes("[")
-  ) {
+  if (currentLine.includes("use:") && currentLine.includes("[")) {
     // Check if we're positioned after the opening bracket
     const useArrayMatch = currentLine.match(useArrayPattern);
     if (useArrayMatch) {
@@ -890,15 +969,15 @@ function isInUseContext(
   // Look backward from current line to find "use: [" without a closing "]"
   let arrayStartLine = -1;
   let arrayDepth = 0;
-  
+
   for (let i = currentLineIndex; i >= 0; i--) {
     const line = lines[i];
     if (!line) continue;
-    
+
     // Count brackets on this line
     const openBrackets = (line.match(/\[/g) || []).length;
     const closeBrackets = (line.match(/\]/g) || []).length;
-    
+
     if (i === currentLineIndex) {
       // For current line, only count brackets before cursor
       const beforeCursorLine = line.substring(0, position.character);
@@ -908,19 +987,22 @@ function isInUseContext(
     } else {
       arrayDepth += openBrackets - closeBrackets;
     }
-    
+
     // If we found "use: [" pattern and we're in positive array depth
     if (useArrayPattern.test(line) && arrayDepth > 0) {
       arrayStartLine = i;
       break;
     }
-    
+
     // If we hit a line that starts a new task or other structure, stop looking
-    if (/^\s*-\s+(key|call|use|run|with):\s/.test(line) && i < currentLineIndex) {
+    if (
+      /^\s*-\s+(key|call|use|run|with):\s/.test(line) &&
+      i < currentLineIndex
+    ) {
       break;
     }
   }
-  
+
   // Only return true for multi-line arrays (not single-line arrays like "use: []")
   return arrayStartLine !== -1 && arrayStartLine < currentLineIndex;
 }
@@ -947,17 +1029,20 @@ connection.onCompletion(
         let text = document.getText();
         const snippets = new Map();
         const fileName = document.uri.replace("file://", "");
-        
+
         // If we have incomplete array syntax, try to complete it temporarily for parsing
-        const lines = text.split('\n');
+        const lines = text.split("\n");
         const currentLineIndex = textDocumentPosition.position.line;
         const currentLine = lines[currentLineIndex] || "";
-        
+
         // Check if current line ends with "use: [" and complete it temporarily
-        if (currentLine.trim().endsWith('use: [')) {
-          lines[currentLineIndex] = currentLine + ']';
-          text = lines.join('\n');
-        } else if (currentLine.includes('use: [') && currentLine.includes(']')) {
+        if (currentLine.trim().endsWith("use: [")) {
+          lines[currentLineIndex] = currentLine + "]";
+          text = lines.join("\n");
+        } else if (
+          currentLine.includes("use: [") &&
+          currentLine.includes("]")
+        ) {
           // Single-line array with closing bracket - no modification needed
           // The YAML is already complete
         } else {
@@ -965,44 +1050,52 @@ connection.onCompletion(
           // Look backward to find "use: [" without closing "]"
           let needsClosing = false;
           let arrayDepth = 0;
-          
+
           for (let i = currentLineIndex; i >= 0; i--) {
             const line = lines[i];
             if (!line) continue;
-            
+
             // Count brackets on this line
             const openBrackets = (line.match(/\[/g) || []).length;
             const closeBrackets = (line.match(/\]/g) || []).length;
-            
+
             if (i === currentLineIndex) {
               // For current line, only count brackets before cursor
-              const beforeCursorLine = line.substring(0, textDocumentPosition.position.character);
-              const openBracketsBefore = (beforeCursorLine.match(/\[/g) || []).length;
-              const closeBracketsBefore = (beforeCursorLine.match(/\]/g) || []).length;
+              const beforeCursorLine = line.substring(
+                0,
+                textDocumentPosition.position.character
+              );
+              const openBracketsBefore = (beforeCursorLine.match(/\[/g) || [])
+                .length;
+              const closeBracketsBefore = (beforeCursorLine.match(/\]/g) || [])
+                .length;
               arrayDepth = openBracketsBefore - closeBracketsBefore;
             } else {
               arrayDepth += openBrackets - closeBrackets;
             }
-            
+
             // If we found "use: [" pattern and we're in positive array depth
             if (/use:\s*\[/.test(line) && arrayDepth > 0) {
               needsClosing = true;
               break;
             }
-            
+
             // If we hit a line that starts a new task, stop looking
-            if (/^\s*-\s+(key|call|use|run|with):\s/.test(line) && i < currentLineIndex) {
+            if (
+              /^\s*-\s+(key|call|use|run|with):\s/.test(line) &&
+              i < currentLineIndex
+            ) {
               break;
             }
           }
-          
+
           // If we need to close the array, add a closing bracket after the current line
           if (needsClosing) {
             // Check if a closing bracket already exists in the remaining lines
             let hasClosingBracket = false;
             for (let i = currentLineIndex + 1; i < lines.length; i++) {
               const line = lines[i];
-              if (line && line.includes(']')) {
+              if (line && line.includes("]")) {
                 hasClosingBracket = true;
                 break;
               }
@@ -1011,25 +1104,25 @@ connection.onCompletion(
                 break;
               }
             }
-            
+
             // Only add closing bracket if one doesn't already exist
             if (!hasClosingBracket) {
               // Find the appropriate indentation for the closing bracket
-              const useLineIndex = lines.findIndex((line, idx) => 
-                idx <= currentLineIndex && /use:\s*\[/.test(line)
+              const useLineIndex = lines.findIndex(
+                (line, idx) => idx <= currentLineIndex && /use:\s*\[/.test(line)
               );
               if (useLineIndex !== -1) {
                 const useLine = lines[useLineIndex];
                 if (useLine) {
                   const useIndent = useLine.match(/^\s*/)?.[0] || "";
                   lines.splice(currentLineIndex + 1, 0, `${useIndent}]`);
-                  text = lines.join('\n');
+                  text = lines.join("\n");
                 }
               }
             }
           }
         }
-        
+
         const result = await YamlParser.safelyParseRun(
           fileName,
           text,

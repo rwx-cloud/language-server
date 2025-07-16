@@ -183,7 +183,11 @@
         "cache": { "$ref": "#/$defs/CacheConfiguration" },
         "parallel": { "$ref": "#/$defs/ParallelConfiguration" },
         "filter": {
-          "oneOf": [{ "$ref": "#/$defs/FilterSet" }, { "type": "string" }],
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } },
+            { "$ref": "#/$defs/FilterSet" }
+          ],
           "description": "Input filtering for package tasks specifying which workspace files should be available to the package. Uses glob patterns to include or exclude files from the package execution environment. Package tasks only support workspace filtering (not system file filtering) and cannot filter artifacts from other tasks. Helps optimize performance and cache behavior."
         }
       },
