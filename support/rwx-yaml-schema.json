@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://rwx.com/docs/rwx-ci-yaml-v1.json",
   "title": "RWX YAML Configuration Schema",
-  "description": "JSON Schema for RWX CI/CD YAML configuration files. RWX is a distributed build system and CI/CD platform that orchestrates task execution across containerized environments with sophisticated caching, artifact management, and agent-based distributed execution.",
+  "description": "YAML Schema for RWX CI/CD YAML configuration files. RWX is a distributed build system and CI/CD platform that orchestrates task execution across containerized environments with sophisticated caching, artifact management, and agent-based distributed execution.",
   "type": "object",
   "properties": {
     "tasks": {
@@ -19,20 +19,20 @@
     },
     "on": {
       "$ref": "#/$defs/Triggers",
-      "description": "Trigger configuration that defines when and how this run should execute. Mint supports five trigger types: GitHub events (push, pull_request), GitLab events (push, tag-push, merge-request), scheduled cron jobs, manual CLI execution, and API dispatch triggers. Each trigger provides rich event context accessible via template expressions (e.g., ${{ event.git.branch }}, ${{ event.github.push.head_commit.message }}). Triggers can specify conditions (if), initialization parameters (init), target tasks (target), and custom run titles (title). Event data flows into tasks through initialization parameters, enabling dynamic workflow behavior based on trigger context."
+      "description": "Trigger configuration that defines when and how this run should execute. RWX supports five trigger types: GitHub events (push, pull_request, merge_group), GitLab events (push, tag-push, merge-request), scheduled cron runs, manual CLI execution, and API dispatch triggers. Each trigger provides rich event context accessible via template expressions (e.g., ${{ event.git.branch }}, ${{ event.github.push.head_commit.message }}). Triggers can specify conditions (if), initialization parameters (init), target tasks (target), and custom run titles (title). Event data flows into tasks through initialization parameters, enabling dynamic workflow behavior based on trigger context."
     },
     "concurrency-pools": {
       "type": "array",
-      "description": "Configuration for concurrency pools that limit the number of concurrent runs executing based on pool identifiers. Pools are global to your organization (not repository-scoped) and help manage resource contention. When capacity is exceeded, you can configure whether additional runs should queue, cancel waiting runs, or cancel currently running runs. Commonly used for managing deployments, feature branch workflows, and shared resource access. Best practice is to include repository name in pool ID to avoid conflicts (e.g., 'my-org/my-repo:deployment').",
+      "description": "Configuration for concurrency pools that limit the number of concurrent runs executing based on pool identifiers. Pools are global to your organization (not repository-scoped) and help manage resource contention. When capacity is exceeded, you can configure whether additional runs should queue, cancel waiting runs, or cancel currently running runs. Concurrency pools are commonly used for ordering deployments, cancelling feature branch workflows when a newer commit is pushed, and managing shared resource access. The best practice is to include the repository name in pool ID to avoid conflicts (e.g., 'my-org/my-repo:deployment').",
       "items": { "$ref": "#/$defs/ConcurrencyPool" }
     },
     "tool-cache": {
       "$ref": "#/$defs/ToolCache",
-      "description": "Global tool cache configuration that enables incremental caching for tasks across runs. Tool caches preserve filesystem contents from previous task executions, allowing tasks like dependency installations to perform incremental updates instead of starting from scratch. When a task has a cache miss, the tool cache provides the filesystem state from the most recent execution. Tool caches are evicted after 48 hours and must be configured with a vault for security. Ideal for package managers (npm, yarn, bundle), Docker builds, and other tasks that benefit from incremental updates."
+      "description": "Global tool cache configuration that enables incremental caching for tasks across runs. Tool caches preserve filesystem contents from previous task executions, allowing tasks like dependency installations to perform incremental updates instead of starting from scratch. When a task has a cache miss, the tool cache provides the filesystem state from the most recent execution. Tool caches are evicted after 48 hours and must be configured with a vault for security. Tool caches are useful for package managers (npm, yarn, bundle), Docker builds, compilation tasks, and other tasks that benefit from incremental updates."
     },
     "base": {
       "$ref": "#/$defs/BaseLayer",
-      "description": "Base container layer configuration that defines the operating system, version, and Mint configuration tag for task execution. All tasks inherit from this base layer unless they specify their own base configuration. Currently supports Ubuntu 22.04 (tag 1.0 with Docker 26.0.1) and Ubuntu 24.04 (tag 1.1 with Docker 28.0.4). The base layer determines available system packages, pre-installed Docker version, and tool cache compatibility. Different embedded runs can specify different base layers than their parent run."
+      "description": "Base container layer configuration that defines the operating system, version, and RWX configuration tag for task execution. All tasks in the run use this base layer. The currently supported base layers are Ubuntu 22.04 (tag 1.1) and Ubuntu 24.04 (tag 1.2). The base layer determines available system packages, pre-installed Docker version, and tool cache compatibility. Different embedded runs can specify different base layers than their parent run."
     }
   },
   "required": ["tasks"],
@@ -49,51 +49,50 @@
     },
     "CommandTask": {
       "type": "object",
-      "description": "A task that executes shell commands in a containerized environment. Command tasks are the most common task type and can run any shell command, script, or executable. They support sophisticated features like parallel execution, background processes, artifact outputs, and environment variable management.",
+      "description": "A task that executes shell commands in a containerized environment. Command tasks are the most common task type and can run any shell command, script, or executable. They support sophisticated features like parallel execution, background processes, rich semantic outputs, and environment variable management.",
       "properties": {
         "key": {
           "type": "string",
           "pattern": "^[a-zA-Z0-9_][a-zA-Z0-9_\\-\\.]*$",
-          "description": "A unique identifier for the task used for dependencies, artifact references, and display purposes. Must start with a letter, number, or underscore, followed by any combination of letters, numbers, underscores, hyphens, or dots. Keys serve as display names in the UI and logs and must be unique within the run definition. Common patterns include kebab-case (build-frontend), underscore_case (set_env_one), and descriptive names (deploy-production)."
+          "description": "A unique identifier for the task used both for referencing the task and for display purposes. Must start with a letter, number, or underscore, followed by any combination of letters, numbers, underscores, or hyphens. Keys serve as display names in the UI and logs and must be unique within the run definition. Kebab-case and nouns are recommended (e.g. `frontend-build`, `gems`, `dependencies`, `unit-tests`. Avoid using verbs like `install-system-packages`, instead preferring just `system-packages`, since `use: [system-packages]` is more straightforward to read than `use: [install-system-packages]"
         },
         "run": {
           "oneOf": [
             { "type": "string" },
             { "type": "array", "items": { "type": "string" } }
           ],
-          "description": "The shell command(s) to execute in the task container. Can be a single command string, a multi-line string using YAML's pipe (|) operator, or an array of command strings executed sequentially. Commands run in a bash shell with full access to environment variables, pipes, and redirects. Supports template expressions like ${{ init.parameter }} for dynamic command generation. Multi-line strings preserve formatting and are ideal for complex scripts."
+          "description": "The shell command(s) to execute in the task container. The run command can be a single command string, a multi-line string using YAML's pipe (|) operator, or an array of command strings executed sequentially. Commands run in a bash shell with full access to environment variables, pipes, and redirects, and they support template expressions like ${{ init.parameter }} for dynamic command generation. Multi-line strings preserve formatting and are ideal for complex scripts."
         },
         "use": {
           "$ref": "#/$defs/Dependencies",
-          "description": "Specifies task dependencies that must complete successfully before this task runs. Dependencies provide both execution ordering and inheritance of file system contents and environment variables. Files from dependency tasks are merged into this task's workspace in the order specified. If multiple dependencies produce the same file, the last dependency in the list takes precedence. Environment variables exported by dependencies (via $MINT_ENV) are automatically available in this task."
+          "description": "The dependencies of this task. Used tasks provide both execution ordering and inheritance of file system contents and environment variables. Files from dependency tasks are merged into this task's workspace in the order specified. If multiple dependencies produce the same file, the last dependency in the list takes precedence. Environment variables exported by dependencies (via $RWX_ENV) are automatically available in this task."
         },
         "after": {
-          "$ref": "#/$defs/After",
-          "description": "Specifies execution ordering constraints without data inheritance. Tasks listed in 'after' must complete (successfully or not) before this task starts, but unlike 'use', no files or environment variables are inherited. Supports expressions for conditional execution based on task status (e.g., ${{ task.failed }}). Common for cleanup workflows, deployment pipelines with side effects, and build optimization scenarios."
+          "$ref": "#/$defs/Dependencies",
+          "description": "The tasks that must run before this task will execute. Unlike 'use', no files or environment variables are inherited from the specified tasks. `after` supports expressions for conditional execution based on task status (e.g., `${{ task.failed && other-task.succeeded }}`). When tasks are referenced without a status (e.g. `after: [task-one, task-two]`), this task will only execute if the referenced tasks completed successfully. If the tasks fail or are skipped, this task will also be skipped."
         },
         "if": {
           "type": "string",
-          "description": "A boolean expression that determines whether the task executes. If false, the task is skipped along with any dependent tasks. Supports template expressions with boolean operators (&&, ||), comparison operators (==, !=), regex matching (=~, !~), and utility functions (starts-with, contains, etc.). Best practice is to use init parameters for conditions to enable CLI testing with --init flags."
+          "description": "A boolean expression that determines whether the task executes. If false, the task is skipped along with any dependent tasks. Supports template expressions with boolean operators (&&, ||), comparison operators (==, !=), regex matching (=~, !~), and utility functions (starts-with, contains, etc.)."
         },
         "agent": {
           "$ref": "#/$defs/AgentSpecification",
-          "description": "Specifies compute resource requirements for the task execution agent. Default allocation is 2 CPUs, 8GB memory, and 50GB disk. Can specify memory (with units like 'gb'), CPU count, disk space (in 50GB increments), and special features like static IPs or tmpfs. Choose agent specifications based on task requirements - use larger agents for compilation or data processing, smaller agents for simple operations. Different tasks can use different agent specifications for cost optimization."
+          "description": "The compute resource requirements for the task execution agent. The  default agent is 2 CPUs, 8GB memory, and 50GB disk. Agent memory (with units like 'gb'), CPU count, disk space (in 50GB increments), and special features like static IPs or tmpfs can all be configured. Choose agent specifications based on task requirements - use larger agents for compilation or data processing, smaller agents for simple operations. Different tasks within a run can use different agent specifications for cost optimization, so a dependency install can use a large agent while a test task using those dependencies can use a small one.."
         },
         "docker": {
           "oneOf": [
             { "type": "boolean" },
-            { "type": "string", "enum": ["preserve-data"] },
-            { "type": "string" }
+            { "type": "string", "enum": ["preserve-data"] }
           ],
-          "description": "Docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is essential for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing."
+          "description": "The docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is useful for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing."
         },
         "parallel": {
           "$ref": "#/$defs/ParallelConfiguration",
-          "description": "Parallelism configuration for generating multiple task instances with different parameters. Types: 'total' (numeric value creating indexed parallel tasks), 'matrix' (all combinations of specified variable arrays), 'values' (explicit array of parameter objects). Generated tasks receive context variables like parallel.index, parallel.total, and parallel.<variable-name>. Limits: 1-256 tasks (default 16, configurable with tasks-limit)."
+          "description": "Parallelism configuration for generating multiple task instances with different parameters. Types: 'total' (numeric value creating indexed parallel tasks), 'matrix' (all combinations of specified variable arrays), 'values' (explicit array of parameter objects). Generated tasks receive context variables like parallel.index, parallel.total, and parallel.<variable-name>."
         },
         "env": {
           "$ref": "#/$defs/EnvironmentVariables",
-          "description": "Environment variable configuration for task execution context. Formats: simple key-value pairs or advanced objects with 'value' and 'cache-key' properties. Cache behavior: 'included' (default, variable value affects cache key), 'excluded' (variable ignored for caching, enabling cache hits with ephemeral values like credentials). Tasks can export variables to $MINT_ENV/ for use in dependent tasks. Variables from 'use' dependencies are automatically inherited."
+          "description": "Environment variable configuration for task execution context. Formats: simple key-value pairs or advanced objects with 'value' and 'cache-key' properties. Cache behavior: 'included' (default, variable value affects cache key), 'excluded' (variable ignored for caching, enabling cache hits with ephemeral values like credentials). Tasks can export variables to $RWX_ENV for use in dependent tasks. Variables from 'use' dependencies are automatically inherited."
         },
         "env-config": {
           "$ref": "#/$defs/EnvironmentConfiguration",
@@ -110,10 +109,18 @@
         "filter": {
           "oneOf": [
             { "type": "string" },
-            { "type": "array", "items": { "type": "string" } },
+            { 
+              "type": "array", 
+              "items": { 
+                "oneOf": [
+                  { "type": "string" },
+                  { "type": "array", "items": { "type": "string" } }
+                ]
+              }
+            },
             { "$ref": "#/$defs/InputFilesystemFilter" }
           ],
-          "description": "Specify which files from the workspace should be present for the task execution. Filters use glob patterns and improve cache hit rates by ensuring tasks only depend on relevant files. Only affects the workspace directory (/var/mint-workspace), not system files. Supports patterns: '*' (match within segment), '**' (match across segments), '{}' (comma-delimited options), '!' (negate/exclude)."
+          "description": "Specify which files from the workspace should be present for the task execution. Filters use glob patterns and improve cache hit rates by ensuring tasks only depend on relevant files. Only affects the workspace directory (/var/mint-workspace), not system files. Supports patterns: '*' (match within segment), '**' (match across segments), '{}' (comma-delimited options), '!' (negate/exclude). Arrays can contain strings or nested arrays (useful with YAML aliases)."
         },
         "background-processes": {
           "type": "array",
@@ -142,6 +149,10 @@
         "retry": {
           "$ref": "#/$defs/RetryConfiguration",
           "description": "Retry configuration that specifies how many times to retry the task if it fails and what action to take on retry. Retries help handle transient failures like network issues, resource contention, or flaky tests. Each retry attempt gets a fresh execution environment. Advanced retry actions can be configured to customize retry behavior, set debug flags, or provide retry-specific data via $MINT_RETRY_ACTIONS directory."
+        },
+        "health-timeout": {
+          "type": "string",
+          "description": "Maximum time for the agent to report its healthiness (e.g., '15m' or '1h'). If an agent has not reported that it is healthy within this time frame, the task will fail. The default value is 1 minute per 1 hour of configured timeout. This helps detect and handle unresponsive or stuck agents during task execution."
         }
       },
       "required": ["key", "run"],
@@ -173,7 +184,7 @@
           "description": "Parameters to pass to the package. Each package defines its own parameter schema that specifies required and optional parameters with their types and defaults. Parameters can use template expressions to pass dynamic values like outputs from other tasks, initialization parameters, or event context. All values are converted to strings by the system."
         },
         "use": { "$ref": "#/$defs/Dependencies" },
-        "after": { "$ref": "#/$defs/After" },
+        "after": { "$ref": "#/$defs/Dependencies" },
         "if": {
           "type": "string",
           "description": "An expression that determines whether the task should execute. If the expression evaluates to 'false', the task will be skipped."
@@ -185,10 +196,18 @@
         "filter": {
           "oneOf": [
             { "type": "string" },
-            { "type": "array", "items": { "type": "string" } },
+            { 
+              "type": "array", 
+              "items": { 
+                "oneOf": [
+                  { "type": "string" },
+                  { "type": "array", "items": { "type": "string" } }
+                ]
+              }
+            },
             { "$ref": "#/$defs/FilterSet" }
           ],
-          "description": "Input filtering for package tasks specifying which workspace files should be available to the package. Uses glob patterns to include or exclude files from the package execution environment. Package tasks only support workspace filtering (not system file filtering) and cannot filter artifacts from other tasks. Helps optimize performance and cache behavior."
+          "description": "Input filtering for package tasks specifying which workspace files should be available to the package. Uses glob patterns to include or exclude files from the package execution environment. Package tasks only support workspace filtering (not system file filtering) and cannot filter artifacts from other tasks. Helps optimize performance and cache behavior. Arrays can contain strings or nested arrays (useful with YAML aliases)."
         }
       },
       "required": ["key", "call"],
@@ -230,7 +249,7 @@
           ],
           "description": "Specific tasks within the embedded run to execute. If not specified, all tasks in the embedded run will be executed according to their dependencies. Allows selective execution of portions of larger run definitions, enabling modular workflow composition. Can be a single task key or an array of task keys. Dependencies of targeted tasks are automatically included."
         },
-        "after": { "$ref": "#/$defs/After" },
+        "after": { "$ref": "#/$defs/Dependencies" },
         "if": {
           "type": "string",
           "description": "An expression that determines whether the task should execute. If the expression evaluates to 'false', the task will be skipped."
@@ -250,25 +269,17 @@
       "description": "Task keys that must complete successfully before this task can start. Can be a single task key string or an array of task keys. Dependencies ensure proper execution order and that required outputs, artifacts, or side effects are available."
     },
 
-    "After": {
-      "oneOf": [
-        { "type": "string" },
-        { "type": "array", "items": { "type": "string" } }
-      ],
-      "description": "Task keys that must complete (successfully or not) before this task starts. Unlike dependencies, 'after' constraints don't require success."
-    },
-
     "AgentSpecification": {
       "type": "object",
-      "description": "Compute resource requirements for the task execution agent. The platform will allocate or provision an agent that meets these specifications before running the task. Default allocation is 2 CPUs, 8GB memory, and 50GB disk. Supports General Purpose (2-64 CPUs, 8gb-256gb memory), Compute Optimized (2-32 CPUs, 4gb-64gb memory), and Memory Optimized (2-64 CPUs, 16gb-512gb memory) configurations.",
+      "description": "Compute resource requirements for the task execution agent. The platform will allocate an agent that meets these specifications before running the task. Default allocation is 2 CPUs, 8GB memory, and 50GB disk. Supports General Purpose (2-64 CPUs, 8gb-256gb memory), Compute Optimized (2-32 CPUs, 4gb-64gb memory), and Memory Optimized (2-64 CPUs, 16gb-512gb memory) configurations.",
       "properties": {
         "memory": {
           "type": "string",
-          "description": "Memory allocation for the task execution environment. Specified as a string with units like 'gb', 'mb', or 'tb'. Higher memory allocations allow for more memory-intensive tasks like large builds or data processing. Mint reserves 2GB RAM for internal use. Available: 4gb-512gb depending on configuration type."
+          "description": "The memory allocation for the task execution environment, specified as a string followed by 'gb' (e.g. 16gb). Higher memory allocations allow for more memory-intensive tasks like large builds or data processing. RWX reserves 2GB RAM for internal use."
         },
         "cpus": {
           "oneOf": [{ "type": "integer", "minimum": 1 }, { "type": "string" }],
-          "description": "Number of CPU cores to allocate for the task. Can be specified as an integer or as a template expression. More CPUs enable parallel processing and faster execution for CPU-intensive tasks. Available: 2-64 CPUs depending on configuration type. Specify only CPU or memory for cost optimization - Mint selects lowest cost option."
+          "description": "The number of CPU cores to allocate for the task. Can be specified as an integer or as a template expression. More CPUs enable parallel processing and faster execution for CPU-intensive tasks."
         },
         "disk": {
           "oneOf": [
@@ -278,24 +289,24 @@
               "properties": {
                 "size": {
                   "type": "string",
-                  "description": "Disk space allocation with units like 'gb' or 'tb'"
+                  "description": "Disk space allocation followed by 'gb'"
                 }
               }
             }
           ],
-          "description": "Disk space allocation for the task execution environment. Can be specified as a simple string or as an object with a size property. Available in 50GB increments starting from 50GB (default). Larger disk allocations support tasks that generate large artifacts or work with large datasets."
+          "description": "The disk space allocation for the task execution environment, which can be specified as a simple string or as an object with a size property. Available in 50GB increments starting from 50GB (default). Larger disk allocations support tasks that generate large artifacts or work with large datasets."
         },
         "static-ips": {
           "type": "string",
-          "description": "Request for static IP addresses for the task execution environment. Useful for tasks that need to be whitelisted by external services or require consistent network identity. Requires vault configuration for static IP management. Often used with template expressions to reference vault settings."
+          "description": "A vault expression resolving to the static IPs to use for the task. Useful for tasks that need to be whitelisted by external services or require consistent network identity."
         },
         "tmpfs": {
           "type": "boolean",
-          "description": "Whether to use tmpfs (in-memory filesystem) for improved I/O performance. Useful for tasks with heavy disk I/O that can benefit from memory-backed storage, but requires sufficient memory allocation. Benefits tasks with significant filesystem I/O that fit in ~70% of available memory."
+          "description": "Whether to use tmpfs (in-memory filesystem) for improved I/O performance. Tmpfs is useful for tasks with heavy disk I/O that can benefit from memory-backed storage (e.g. task that install node modules), but requires sufficient memory allocation. Any tasks with significant filesystem I/O that fits in ~70% of available memory will benefit from tmpfs. "
         },
         "spot": {
           "type": "boolean",
-          "description": "Whether to use spot instances for task execution. When true, uses ephemeral instances that may be preempted at any time but offer cost savings. When false or omitted, uses standard on-demand instances with guaranteed availability and stable performance. Choose spot instances for fault-tolerant workloads that can handle interruptions."
+          "description": "Whether to use spot instances for task execution. When true, ephemeral instances are used that may be preempted at any time but offer cost savings. When false or omitted, standard on-demand instances are used with guaranteed availability and stable performance. Choose spot instances for fault-tolerant workloads that can handle interruptions. Tasks with spot agents that are interrupted are automatically retried by RWX."
         }
       },
       "unevaluatedProperties": false
@@ -310,17 +321,17 @@
           "properties": {
             "key": {
               "type": "string",
-              "description": "Custom naming pattern for generated parallel tasks. Supports template expressions using parallel variables (e.g., 'build-${{ parallel.os }}-${{ parallel.arch }}'). If not specified, tasks are named with numeric suffixes."
+              "description": "A custom naming pattern for generated parallel tasks. Supports template expressions using parallel variables (e.g., 'build-${{ parallel.os }}-${{ parallel.arch }}'). If not specified, tasks are named based on the parallel field and given numeric suffixes."
             },
             "tasks-limit": {
               "type": "integer",
               "minimum": 1,
               "maximum": 256,
-              "description": "Maximum number of parallel tasks to run concurrently (default: 16, max: 256). Helps control resource usage and agent allocation. Useful when matrix/values would generate more tasks than desired."
+              "description": "The maximum number of parallel tasks to run concurrently (default: 16, max: 256). This field is designed to prevent accidentally running hundreds of tasks with an incorrect parallel configuration and can be safely increased to the level of parallelism you expect to run."
             },
             "total": {
               "$ref": "#/$defs/PrimitiveValue",
-              "description": "Total number of parallel executions to create (0 to n-1). Each execution gets its own parallel.index and parallel.total variables accessible via ${{ parallel.index }} and environment variables $MINT_PARALLEL_INDEX, $MINT_PARALLEL_TOTAL."
+              "description": "The total number of parallel executions to create (0 to n-1). Each execution gets its own parallel.index and parallel.total variables accessible via ${{ parallel.index }} and environment variables $RWX_PARALLEL_INDEX, $RWX_PARALLEL_TOTAL."
             },
             "matrix": {
               "type": "object",
@@ -333,7 +344,7 @@
                   }
                 ]
               },
-              "description": "Matrix parallelism that creates all combinations of specified variable arrays. Each combination becomes a separate parallel execution with access to the matrix variables via ${{ parallel.variable-name }}. Generates the cartesian product of all specified arrays."
+              "description": "Matrix parallelism creates all combinations of specified variable arrays. Each combination becomes a separate parallel execution with access to the matrix variables via ${{ parallel.variable-name }}. The cartesian product of all specified array will be generated."
             },
             "values": {
               "oneOf": [
@@ -346,7 +357,7 @@
                   }
                 }
               ],
-              "description": "Explicit list of parameter objects for parallel execution. Each object becomes a separate parallel execution with access to the specified variables via ${{ parallel.variable-name }}. All objects must have the same keys. Alternative to matrix when you need specific combinations rather than cartesian product."
+              "description": "An explicit list of parameter objects for parallel execution. Each object becomes a separate parallel execution with access to the specified variables via ${{ parallel.variable-name }}. All objects must have the same keys. This is useful when you need specific combinations rather than the cartesian product."
             }
           },
           "unevaluatedProperties": false
@@ -592,25 +603,34 @@
           }
         },
         "filesystem": {
-          "type": "object",
-          "description": "Filesystem filtering for preserving files after task completion",
-          "properties": {
-            "filter": {
-              "oneOf": [
-                { "type": "array", "items": { "type": "string" } },
-                {
-                  "type": "object",
-                  "properties": {
-                    "workspace": {
-                      "type": "array",
-                      "items": { "type": "string" }
-                    },
-                    "system": { "type": "array", "items": { "type": "string" } }
-                  }
+          "oneOf": [
+            { "type": "boolean" },
+            {
+              "type": "object",
+              "description": "Filesystem filtering for preserving files after task completion",
+              "properties": {
+                "filter": {
+                  "oneOf": [
+                    { "type": "array", "items": { "type": "string" } },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "workspace": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        },
+                        "system": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  ]
                 }
-              ]
+              }
             }
-          }
+          ],
+          "description": "Filesystem output configuration. Set to false to disable outputting a filesystem layer from this task, or configure filtering for preserving specific files after task completion."
         }
       },
       "unevaluatedProperties": false
@@ -664,7 +684,8 @@
         "gitlab": { "$ref": "#/$defs/GitLabTriggers" },
         "cron": { "$ref": "#/$defs/CronTriggers" },
         "cli": { "$ref": "#/$defs/CLITrigger" },
-        "dispatch": { "$ref": "#/$defs/DispatchTriggers" }
+        "dispatch": { "$ref": "#/$defs/DispatchTriggers" },
+        "cache-rebuild": { "$ref": "#/$defs/CacheRebuildTriggers" }
       },
       "unevaluatedProperties": false
     },
@@ -811,7 +832,8 @@
         "if": { "type": "string" },
         "target": { "$ref": "#/$defs/TargetTasks" },
         "title": { "type": "string" },
-        "actions": { "type": "array", "items": { "type": "string" } }
+        "actions": { "type": "array", "items": { "type": "string" } },
+        "status-checks": { "$ref": "#/$defs/StatusChecks" }
       },
       "unevaluatedProperties": false
     },
@@ -918,6 +940,55 @@
       }
     },
 
+    "CacheRebuildTriggers": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "init": { "$ref": "#/$defs/InitParameters" },
+            "if": {
+              "type": "string",
+              "description": "Condition for trigger activation"
+            },
+            "target": { "$ref": "#/$defs/TargetTasks" },
+            "title": {
+              "type": "string",
+              "description": "Custom title for the cache rebuild run"
+            },
+            "ref": {
+              "type": "string",
+              "description": "Git reference (branch, tag, or commit) to run the cache rebuild on"
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "init": { "$ref": "#/$defs/InitParameters" },
+              "if": {
+                "type": "string",
+                "description": "Condition for trigger activation"
+              },
+              "target": { "$ref": "#/$defs/TargetTasks" },
+              "title": {
+                "type": "string",
+                "description": "Custom title for the cache rebuild run"
+              },
+              "ref": {
+                "type": "string",
+                "description": "Git reference (branch, tag, or commit) to run the cache rebuild on"
+              }
+            },
+            "unevaluatedProperties": false
+          }
+        }
+      ],
+      "description": "Cache rebuild triggers provide instructions to RWX about how to rebuild your content-based cache. These triggers are used to make the RWX cache even faster and more effective than it already is. Can be a single trigger object or an array of triggers. Each trigger can specify initialization parameters, conditions, target tasks, custom titles, and a git reference to run the cache rebuild on."
+    },
+
     "BaseTrigger": {
       "type": "object",
       "description": "Base trigger configuration with common properties",
@@ -925,7 +996,8 @@
         "init": { "$ref": "#/$defs/InitParameters" },
         "if": { "type": "string" },
         "target": { "$ref": "#/$defs/TargetTasks" },
-        "title": { "type": "string" }
+        "title": { "type": "string" },
+        "status-checks": { "$ref": "#/$defs/StatusChecks" }
       },
       "unevaluatedProperties": false
     },
@@ -945,19 +1017,73 @@
     },
 
     "StatusChecks": {
-      "type": "array",
-      "description": "GitHub status check configuration",
-      "items": {
-        "type": "object",
-        "properties": {
-          "tasks": { "$ref": "#/$defs/TargetTasks" },
-          "name": {
-            "type": "string",
-            "description": "Custom name for the status check"
+      "oneOf": [
+        { "type": "boolean" },
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "tasks": { "$ref": "#/$defs/TargetTasks" },
+              "name": {
+                "type": "string",
+                "description": "Custom name for the status check"
+              }
+            },
+            "required": ["tasks"]
           }
         },
-        "required": ["tasks"]
-      }
+        {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "oneOf": [{ "type": "boolean" }, { "type": "string" }],
+              "description": "Whether status checks are enabled. Can be a boolean or a template expression."
+            },
+            "name": {
+              "type": "string",
+              "description": "Default name for status checks. Supports template expressions."
+            },
+            "default": {
+              "oneOf": [
+                { "type": "boolean" },
+                { "type": "string" },
+                {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "oneOf": [{ "type": "boolean" }, { "type": "string" }],
+                      "description": "Whether the default status check is enabled"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "Name for the default status check"
+                    }
+                  }
+                }
+              ],
+              "description": "Configuration for the default status check that reports overall run status"
+            },
+            "custom": {
+              "type": "array",
+              "description": "Custom status checks for specific tasks or task groups",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "tasks": { "$ref": "#/$defs/TargetTasks" },
+                  "name": {
+                    "type": "string",
+                    "description": "Custom name for the status check"
+                  }
+                },
+                "required": ["tasks"]
+              }
+            }
+          }
+        }
+      ],
+      "description": "GitHub/GitLab status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system."
     },
 
     "ConcurrencyPool": {
