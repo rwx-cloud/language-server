@@ -109,10 +109,18 @@
         "filter": {
           "oneOf": [
             { "type": "string" },
-            { "type": "array", "items": { "type": "string" } },
+            { 
+              "type": "array", 
+              "items": { 
+                "oneOf": [
+                  { "type": "string" },
+                  { "type": "array", "items": { "type": "string" } }
+                ]
+              }
+            },
             { "$ref": "#/$defs/InputFilesystemFilter" }
           ],
-          "description": "Specify which files from the workspace should be present for the task execution. Filters use glob patterns and improve cache hit rates by ensuring tasks only depend on relevant files. Only affects the workspace directory (/var/mint-workspace), not system files. Supports patterns: '*' (match within segment), '**' (match across segments), '{}' (comma-delimited options), '!' (negate/exclude)."
+          "description": "Specify which files from the workspace should be present for the task execution. Filters use glob patterns and improve cache hit rates by ensuring tasks only depend on relevant files. Only affects the workspace directory (/var/mint-workspace), not system files. Supports patterns: '*' (match within segment), '**' (match across segments), '{}' (comma-delimited options), '!' (negate/exclude). Arrays can contain strings or nested arrays (useful with YAML aliases)."
         },
         "background-processes": {
           "type": "array",
@@ -141,6 +149,10 @@
         "retry": {
           "$ref": "#/$defs/RetryConfiguration",
           "description": "Retry configuration that specifies how many times to retry the task if it fails and what action to take on retry. Retries help handle transient failures like network issues, resource contention, or flaky tests. Each retry attempt gets a fresh execution environment. Advanced retry actions can be configured to customize retry behavior, set debug flags, or provide retry-specific data via $MINT_RETRY_ACTIONS directory."
+        },
+        "health-timeout": {
+          "type": "string",
+          "description": "Maximum time for the agent to report its healthiness (e.g., '15m' or '1h'). If an agent has not reported that it is healthy within this time frame, the task will fail. The default value is 1 minute per 1 hour of configured timeout. This helps detect and handle unresponsive or stuck agents during task execution."
         }
       },
       "required": ["key", "run"],
@@ -172,7 +184,7 @@
           "description": "Parameters to pass to the package. Each package defines its own parameter schema that specifies required and optional parameters with their types and defaults. Parameters can use template expressions to pass dynamic values like outputs from other tasks, initialization parameters, or event context. All values are converted to strings by the system."
         },
         "use": { "$ref": "#/$defs/Dependencies" },
-        "after": { "$ref": "#/$defs/After" },
+        "after": { "$ref": "#/$defs/Dependencies" },
         "if": {
           "type": "string",
           "description": "An expression that determines whether the task should execute. If the expression evaluates to 'false', the task will be skipped."
@@ -184,10 +196,18 @@
         "filter": {
           "oneOf": [
             { "type": "string" },
-            { "type": "array", "items": { "type": "string" } },
+            { 
+              "type": "array", 
+              "items": { 
+                "oneOf": [
+                  { "type": "string" },
+                  { "type": "array", "items": { "type": "string" } }
+                ]
+              }
+            },
             { "$ref": "#/$defs/FilterSet" }
           ],
-          "description": "Input filtering for package tasks specifying which workspace files should be available to the package. Uses glob patterns to include or exclude files from the package execution environment. Package tasks only support workspace filtering (not system file filtering) and cannot filter artifacts from other tasks. Helps optimize performance and cache behavior."
+          "description": "Input filtering for package tasks specifying which workspace files should be available to the package. Uses glob patterns to include or exclude files from the package execution environment. Package tasks only support workspace filtering (not system file filtering) and cannot filter artifacts from other tasks. Helps optimize performance and cache behavior. Arrays can contain strings or nested arrays (useful with YAML aliases)."
         }
       },
       "required": ["key", "call"],
@@ -229,7 +249,7 @@
           ],
           "description": "Specific tasks within the embedded run to execute. If not specified, all tasks in the embedded run will be executed according to their dependencies. Allows selective execution of portions of larger run definitions, enabling modular workflow composition. Can be a single task key or an array of task keys. Dependencies of targeted tasks are automatically included."
         },
-        "after": { "$ref": "#/$defs/After" },
+        "after": { "$ref": "#/$defs/Dependencies" },
         "if": {
           "type": "string",
           "description": "An expression that determines whether the task should execute. If the expression evaluates to 'false', the task will be skipped."
@@ -583,25 +603,34 @@
           }
         },
         "filesystem": {
-          "type": "object",
-          "description": "Filesystem filtering for preserving files after task completion",
-          "properties": {
-            "filter": {
-              "oneOf": [
-                { "type": "array", "items": { "type": "string" } },
-                {
-                  "type": "object",
-                  "properties": {
-                    "workspace": {
-                      "type": "array",
-                      "items": { "type": "string" }
-                    },
-                    "system": { "type": "array", "items": { "type": "string" } }
-                  }
+          "oneOf": [
+            { "type": "boolean" },
+            {
+              "type": "object",
+              "description": "Filesystem filtering for preserving files after task completion",
+              "properties": {
+                "filter": {
+                  "oneOf": [
+                    { "type": "array", "items": { "type": "string" } },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "workspace": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        },
+                        "system": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  ]
                 }
-              ]
+              }
             }
-          }
+          ],
+          "description": "Filesystem output configuration. Set to false to disable outputting a filesystem layer from this task, or configure filtering for preserving specific files after task completion."
         }
       },
       "unevaluatedProperties": false
@@ -655,7 +684,8 @@
         "gitlab": { "$ref": "#/$defs/GitLabTriggers" },
         "cron": { "$ref": "#/$defs/CronTriggers" },
         "cli": { "$ref": "#/$defs/CLITrigger" },
-        "dispatch": { "$ref": "#/$defs/DispatchTriggers" }
+        "dispatch": { "$ref": "#/$defs/DispatchTriggers" },
+        "cache-rebuild": { "$ref": "#/$defs/CacheRebuildTriggers" }
       },
       "unevaluatedProperties": false
     },
@@ -802,7 +832,8 @@
         "if": { "type": "string" },
         "target": { "$ref": "#/$defs/TargetTasks" },
         "title": { "type": "string" },
-        "actions": { "type": "array", "items": { "type": "string" } }
+        "actions": { "type": "array", "items": { "type": "string" } },
+        "status-checks": { "$ref": "#/$defs/StatusChecks" }
       },
       "unevaluatedProperties": false
     },
@@ -909,6 +940,55 @@
       }
     },
 
+    "CacheRebuildTriggers": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "init": { "$ref": "#/$defs/InitParameters" },
+            "if": {
+              "type": "string",
+              "description": "Condition for trigger activation"
+            },
+            "target": { "$ref": "#/$defs/TargetTasks" },
+            "title": {
+              "type": "string",
+              "description": "Custom title for the cache rebuild run"
+            },
+            "ref": {
+              "type": "string",
+              "description": "Git reference (branch, tag, or commit) to run the cache rebuild on"
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "init": { "$ref": "#/$defs/InitParameters" },
+              "if": {
+                "type": "string",
+                "description": "Condition for trigger activation"
+              },
+              "target": { "$ref": "#/$defs/TargetTasks" },
+              "title": {
+                "type": "string",
+                "description": "Custom title for the cache rebuild run"
+              },
+              "ref": {
+                "type": "string",
+                "description": "Git reference (branch, tag, or commit) to run the cache rebuild on"
+              }
+            },
+            "unevaluatedProperties": false
+          }
+        }
+      ],
+      "description": "Cache rebuild triggers provide instructions to RWX about how to rebuild your content-based cache. These triggers are used to make the RWX cache even faster and more effective than it already is. Can be a single trigger object or an array of triggers. Each trigger can specify initialization parameters, conditions, target tasks, custom titles, and a git reference to run the cache rebuild on."
+    },
+
     "BaseTrigger": {
       "type": "object",
       "description": "Base trigger configuration with common properties",
@@ -916,7 +996,8 @@
         "init": { "$ref": "#/$defs/InitParameters" },
         "if": { "type": "string" },
         "target": { "$ref": "#/$defs/TargetTasks" },
-        "title": { "type": "string" }
+        "title": { "type": "string" },
+        "status-checks": { "$ref": "#/$defs/StatusChecks" }
       },
       "unevaluatedProperties": false
     },
@@ -936,19 +1017,73 @@
     },
 
     "StatusChecks": {
-      "type": "array",
-      "description": "GitHub status check configuration",
-      "items": {
-        "type": "object",
-        "properties": {
-          "tasks": { "$ref": "#/$defs/TargetTasks" },
-          "name": {
-            "type": "string",
-            "description": "Custom name for the status check"
+      "oneOf": [
+        { "type": "boolean" },
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "tasks": { "$ref": "#/$defs/TargetTasks" },
+              "name": {
+                "type": "string",
+                "description": "Custom name for the status check"
+              }
+            },
+            "required": ["tasks"]
           }
         },
-        "required": ["tasks"]
-      }
+        {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "oneOf": [{ "type": "boolean" }, { "type": "string" }],
+              "description": "Whether status checks are enabled. Can be a boolean or a template expression."
+            },
+            "name": {
+              "type": "string",
+              "description": "Default name for status checks. Supports template expressions."
+            },
+            "default": {
+              "oneOf": [
+                { "type": "boolean" },
+                { "type": "string" },
+                {
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "oneOf": [{ "type": "boolean" }, { "type": "string" }],
+                      "description": "Whether the default status check is enabled"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "Name for the default status check"
+                    }
+                  }
+                }
+              ],
+              "description": "Configuration for the default status check that reports overall run status"
+            },
+            "custom": {
+              "type": "array",
+              "description": "Custom status checks for specific tasks or task groups",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "tasks": { "$ref": "#/$defs/TargetTasks" },
+                  "name": {
+                    "type": "string",
+                    "description": "Custom name for the status check"
+                  }
+                },
+                "required": ["tasks"]
+              }
+            }
+          }
+        }
+      ],
+      "description": "GitHub/GitLab status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system."
     },
 
     "ConcurrencyPool": {
