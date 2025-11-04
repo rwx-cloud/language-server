@@ -202,7 +202,7 @@ Each test follows this pattern:
 The `support/parser.js` file is built from another repository. When updating:
 
 1. Build the parser in the `mint` repository using `cd ~/code/mint && pnpm run build-parser`
-2. Copy the compiled JavaScript to `support/parser.js`
+2. Copy the compiled JavaScript to `support/parser.js` (if it's not already there)
 3. Run tests to ensure compatibility
 4. Update type definitions if parser interface changes
 
