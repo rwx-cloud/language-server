@@ -685,7 +685,8 @@
         "cron": { "$ref": "#/$defs/CronTriggers" },
         "cli": { "$ref": "#/$defs/CLITrigger" },
         "dispatch": { "$ref": "#/$defs/DispatchTriggers" },
-        "cache-rebuild": { "$ref": "#/$defs/CacheRebuildTriggers" }
+        "cache-rebuild": { "$ref": "#/$defs/CacheRebuildTriggers" },
+        "webhook": { "$ref": "#/$defs/WebhookTriggers" }
       },
       "unevaluatedProperties": false
     },
@@ -891,7 +892,7 @@
 
     "DispatchTriggers": {
       "type": "array",
-      "description": "API dispatch triggers for programmatic run execution. Allows on-demand execution via CLI (`mint dispatch`), API calls, or Cloud UI. Each trigger requires a globally unique key and can define parameters for user input. Parameters are accessible via event.dispatch.params context and must be explicitly mapped to initialization parameters. Provides flexible workflow orchestration for deployment pipelines, manual testing, or external integrations.",
+      "description": "API dispatch triggers for programmatic run execution. Allows on-demand execution via CLI (`rwx dispatch`), API calls, or Cloud UI. Each trigger requires a unique key within your organization and can define parameters for user input. Parameters are accessible via event.dispatch.params context and must be explicitly mapped to initialization parameters. Provides flexible workflow orchestration for deployment pipelines, manual testing, or external integrations.",
       "items": {
         "type": "object",
         "properties": {
@@ -901,7 +902,7 @@
           "title": { "type": "string" },
           "key": {
             "type": "string",
-            "description": "Globally unique key for the dispatch trigger. Must be unique across your organization. Used for CLI dispatch commands (`mint dispatch <key>`), API calls, and UI identification. Should be descriptive of the dispatch purpose (e.g., 'deploy-application', 'run-integration-tests')."
+            "description": "Unique key for the dispatch trigger within your organization. Used for CLI dispatch commands (`rwx dispatch <key>`), API calls, and UI identification. Should be descriptive of the dispatch purpose (e.g., 'deploy-application', 'run-integration-tests')."
           },
           "params": {
             "type": "array",
@@ -941,52 +942,54 @@
     },
 
     "CacheRebuildTriggers": {
-      "oneOf": [
-        {
-          "type": "object",
-          "properties": {
-            "init": { "$ref": "#/$defs/InitParameters" },
-            "if": {
-              "type": "string",
-              "description": "Condition for trigger activation"
-            },
-            "target": { "$ref": "#/$defs/TargetTasks" },
-            "title": {
-              "type": "string",
-              "description": "Custom title for the cache rebuild run"
-            },
-            "ref": {
-              "type": "string",
-              "description": "Git reference (branch, tag, or commit) to run the cache rebuild on"
-            }
+      "type": "array",
+      "description": "Cache rebuild triggers provide instructions to RWX about how to rebuild your content-based cache. These triggers are used to make the RWX cache even faster and more effective than it already is. Each trigger can specify initialization parameters, conditions, target tasks, custom titles, and a git reference to run the cache rebuild on.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "init": { "$ref": "#/$defs/InitParameters" },
+          "if": {
+            "type": "string",
+            "description": "Condition for trigger activation"
           },
-          "unevaluatedProperties": false
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "init": { "$ref": "#/$defs/InitParameters" },
-              "if": {
-                "type": "string",
-                "description": "Condition for trigger activation"
-              },
-              "target": { "$ref": "#/$defs/TargetTasks" },
-              "title": {
-                "type": "string",
-                "description": "Custom title for the cache rebuild run"
-              },
-              "ref": {
-                "type": "string",
-                "description": "Git reference (branch, tag, or commit) to run the cache rebuild on"
-              }
-            },
-            "unevaluatedProperties": false
+          "target": { "$ref": "#/$defs/TargetTasks" },
+          "title": {
+            "type": "string",
+            "description": "Custom title for the cache rebuild run"
+          },
+          "ref": {
+            "type": "string",
+            "description": "Git reference (branch, tag, or commit) to run the cache rebuild on"
           }
-        }
-      ],
-      "description": "Cache rebuild triggers provide instructions to RWX about how to rebuild your content-based cache. These triggers are used to make the RWX cache even faster and more effective than it already is. Can be a single trigger object or an array of triggers. Each trigger can specify initialization parameters, conditions, target tasks, custom titles, and a git reference to run the cache rebuild on."
+        },
+        "unevaluatedProperties": false
+      }
+    },
+
+    "WebhookTriggers": {
+      "type": "array",
+      "description": "Webhook triggers allow external systems to trigger runs via HTTP POST requests. Each webhook trigger requires a unique key within your organization that is used to generate the webhook URL. Webhooks can specify initialization parameters, conditions, target tasks, and custom run titles. Useful for integrating with external services, deployment systems, or custom automation tools.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Unique key for the webhook trigger within your organization. Used for webhook URL generation."
+          },
+          "init": { "$ref": "#/$defs/InitParameters" },
+          "if": {
+            "type": "string",
+            "description": "Condition for trigger activation"
+          },
+          "target": { "$ref": "#/$defs/TargetTasks" },
+          "title": {
+            "type": "string",
+            "description": "Custom title for the webhook run"
+          }
+        },
+        "required": ["key"],
+        "unevaluatedProperties": false
+      }
     },
 
     "BaseTrigger": {
