@@ -323,12 +323,22 @@ export type DispatchTrigger = BaseTrigger & {
   }>;
 };
 
+export type CacheRebuildTrigger = BaseTrigger & {
+  ref?: string;
+};
+
+export type WebhookTrigger = BaseTrigger & {
+  key: string;
+};
+
 export type Triggers = {
   github: GitHubTriggers;
   gitlab: GitlabTriggers;
   cron: CronTrigger[];
   cli: CliTrigger;
   dispatch: DispatchTrigger[];
+  cacheRebuild: CacheRebuildTrigger[];
+  webhook: WebhookTrigger[];
 };
 
 export type SharedTaskDefinition = {
