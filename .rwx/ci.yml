@@ -3,6 +3,9 @@ on:
     push:
       init:
         ref: ${{ event.git.sha }}
+  cli:
+    init:
+      ref: ${{ event.git.sha }}
 
 base:
   image: ubuntu:24.04
@@ -55,3 +58,17 @@ tasks:
     outputs:
       test-results:
         - path: test-results.json
+
+  - key: bundle
+    use: npm-install
+    run: npm run bundle
+    filter:
+      - node_modules
+      - src
+      - support
+      - package*.json
+      - tsconfig*
+
+  - key: test-bundle
+    use: bundle
+    run: node ${{ run.dir }}/test-bundle.js
