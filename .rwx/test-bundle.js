@@ -1,6 +1,12 @@
 const { spawn } = require("child_process");
 
-const server = spawn("node", ["dist/server.js", "--stdio"]);
+const bundlePath = process.argv[2];
+if (!bundlePath) {
+  console.error("Usage: node test-bundle.js <path-to-bundle>");
+  process.exit(1);
+}
+
+const server = spawn("node", [bundlePath, "--stdio"]);
 let response = "";
 
 server.stdout.on("data", (data) => {

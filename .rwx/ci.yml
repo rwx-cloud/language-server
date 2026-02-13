@@ -63,3 +63,7 @@ tasks:
     call: ${{ run.dir }}/build.yml
     init:
       ref: ${{ init.ref }}
+
+  - key: test-bundle
+    use: node
+    run: node ${{ run.dir }}/test-bundle.js ${{ tasks.bundle.tasks.build.artifacts.bundle }}
