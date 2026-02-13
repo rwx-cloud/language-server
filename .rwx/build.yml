@@ -1,12 +1,3 @@
-on:
-  github:
-    push:
-      init:
-        ref: ${{ event.git.sha }}
-  cli:
-    init:
-      ref: ${{ event.git.sha }}
-
 base:
   image: ubuntu:24.04
   config: rwx/base 1.0.0
@@ -35,31 +26,20 @@ tasks:
       - package.json
       - package-lock.json
 
-  - key: compile
+  - key: build
     use: npm-install
-    run: npm run compile
+    run: npm run bundle
     filter:
       - node_modules
       - src
       - support
       - package*.json
       - tsconfig*
-
-  - key: test
-    use: npm-install
-    run: npm run test
-    filter:
-      - node_modules
-      - src
-      - support
-      - package.json
-      - tsconfig*
-      - test
     outputs:
-      test-results:
-        - path: test-results.json
+      artifacts:
+        - key: bundle
+          path: dist/server.js
 
-  - key: bundle
-    call: ${{ run.dir }}/build.yml
-    init:
-      ref: ${{ init.ref }}
+  - key: test-bundle
+    use: build
+    run: node ${{ run.dir }}/test-bundle.js
