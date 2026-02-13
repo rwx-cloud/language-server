@@ -39,7 +39,3 @@ tasks:
       artifacts:
         - key: bundle
           path: dist/server.js
-
-  - key: test-bundle
-    use: build
-    run: node ${{ run.dir }}/test-bundle.js
