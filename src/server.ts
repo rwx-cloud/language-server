@@ -24,6 +24,7 @@ import {
   TextEdit,
   Location,
   ReferenceParams,
+  DiagnosticRelatedInformation,
 } from "vscode-languageserver/node";
 
 import { TextDocument } from "vscode-languageserver-textdocument";
@@ -315,6 +316,25 @@ connection.languages.diagnostics.on(async (params) => {
   }
 });
 
+function stackTraceToRelatedInformation(
+  stackTrace: Array<{ fileName: string; line: number; column: number; name?: string; endLine?: number; endColumn?: number }> | undefined
+): DiagnosticRelatedInformation[] | undefined {
+  if (!stackTrace || stackTrace.length <= 1) return undefined;
+  return stackTrace.slice(1).map((entry) => ({
+    location: {
+      uri: `file://${entry.fileName}`,
+      range: Range.create(
+        Position.create(entry.line - 1, entry.column - 1),
+        Position.create(
+          entry.endLine ? entry.endLine - 1 : entry.line - 1,
+          entry.endColumn ? entry.endColumn - 1 : entry.column - 1 + 10
+        )
+      ),
+    },
+    message: entry.name ?? "",
+  }));
+}
+
 async function validateTextDocumentForDiagnostics(
   textDocument: TextDocument
 ): Promise<Diagnostic[]> {
@@ -378,6 +398,9 @@ async function validateTextDocumentForDiagnostics(
         diagnostic.message += `\n\nAdvice: ${error.advice}`;
       }
 
+      const relatedInfo = stackTraceToRelatedInformation(error.stackTrace);
+      if (relatedInfo) diagnostic.relatedInformation = relatedInfo;
+
       diagnostics.push(diagnostic);
     }
 
@@ -415,6 +438,9 @@ async function validateTextDocumentForDiagnostics(
         if (warning.advice) {
           diagnostic.message += `\n\nAdvice: ${warning.advice}`;
         }
+
+        const relatedInfo = stackTraceToRelatedInformation(warning.stackTrace);
+        if (relatedInfo) diagnostic.relatedInformation = relatedInfo;
 
         diagnostics.push(diagnostic);
       }
@@ -456,6 +482,9 @@ async function validateTextDocumentForDiagnostics(
             if (warning.advice) {
               diagnostic.message += `\n\nAdvice: ${warning.advice}`;
             }
+
+            const relatedInfo = stackTraceToRelatedInformation(warning.stackTrace);
+            if (relatedInfo) diagnostic.relatedInformation = relatedInfo;
 
             diagnostics.push(diagnostic);
           }
