@@ -1,0 +1,93 @@
+on:
+  cron:
+    - key: parser-update
+      schedule: "0 7 * * * America/New_York" # At 7am daily
+
+base:
+  image: ubuntu:24.04
+  config: rwx/base 1.0.0
+
+tasks:
+  - key: code
+    call: git/clone 2.0.3
+    with:
+      repository: https://github.com/rwx-cloud/language-server.git
+      ref: main
+      github-token: ${{ github['rwx-cloud'].token }}
+      preserve-git-dir: true
+
+  - key: mint
+    call: git/clone 2.0.3
+    with:
+      repository: https://github.com/rwx-cloud/mint.git
+      ref: main
+      github-token: ${{ github['rwx-cloud'].token }}
+      path: ./mint-repo
+
+  - key: node
+    call: nodejs/install 1.1.11
+    with:
+      node-version: 24.11.0
+
+  - key: install-mint-deps
+    use: [mint, node]
+    run: |
+      corepack enable
+      cd mint-repo
+      pnpm install --frozen-lockfile
+    filter:
+      - mint-repo/package.json
+      - mint-repo/pnpm-lock.yaml
+      - mint-repo/pnpm-workspace.yaml
+      - mint-repo/packages/*/package.json
+
+  - key: build-parser
+    use: [code, install-mint-deps]
+    cache: false
+    run: |
+      echo "$RWX_RUN_URL" > "$RWX_VALUES/run-url"
+
+      cd mint-repo
+      npx esbuild packages/task-parser/yaml-dsl/parser2.ts \
+        --log-level=warning \
+        --bundle \
+        --platform=node \
+        --target=node18 \
+        --outfile=../support/parser.js
+
+      cd ..
+      rm -rf mint-repo
+
+      if git diff --quiet support/parser.js; then
+        echo "parser.js is already up to date"
+        exit 0
+      fi
+
+  - key: npm-install
+    use: [node, build-parser]
+    run: npm install
+    filter:
+      - package.json
+      - package-lock.json
+
+  - key: type-check
+    use: npm-install
+    run: npx tsc --noEmit
+
+  - key: create-pull-request
+    call: github/create-pull-request 1.0.3
+    use: type-check
+    with:
+      github-token: ${{ github-apps.rwx-cloud-bot.token }}
+      branch-prefix: parser-update
+      pull-request-title: Update parser.js from mint repo
+      pull-request-body: |
+        This PR was generated from ${{ tasks.build-parser.values.run-url }}
+
+        Updates `support/parser.js` to the latest build from the mint repository.
+
+        ## Review checklist
+
+        - [ ] Check if `support/parser.d.ts` needs updating to reflect any type changes
+        - [ ] Check if `src/key-descriptions.ts` needs new entries for any added YAML keys
+        - [ ] Check if the `arrayKeys` set in `src/server.ts` needs updating for new array-type keys
