@@ -258,6 +258,203 @@ tasks:
     });
   });
 
+  describe("YAML Key Hover Documentation", () => {
+    it("provides hover for a top-level key", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: echo hi`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "top-level.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const hover = await server.sendRequest<Hover>("textDocument/hover", {
+        textDocument: { uri: textDocument.uri },
+        position: Position.create(0, 2),
+      });
+
+      assert(hover);
+      const contents = hover.contents as MarkupContent;
+      expect(contents.kind).toBe(MarkupKind.Markdown);
+      expect(contents.value).toContain("**`tasks`**");
+      expect(contents.value).toContain("task definitions");
+    });
+
+    it("provides hover for a task property key", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: echo hi`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "task-prop.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const hover = await server.sendRequest<Hover>("textDocument/hover", {
+        textDocument: { uri: textDocument.uri },
+        position: Position.create(2, 5),
+      });
+
+      assert(hover);
+      const contents = hover.contents as MarkupContent;
+      expect(contents.kind).toBe(MarkupKind.Markdown);
+      expect(contents.value).toContain("**`run`**");
+      expect(contents.value).toContain("shell command");
+    });
+
+    it("provides hover for a nested key under agent", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    agent:
+      memory: 16gb`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "nested.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const hover = await server.sendRequest<Hover>("textDocument/hover", {
+        textDocument: { uri: textDocument.uri },
+        position: Position.create(3, 8),
+      });
+
+      assert(hover);
+      const contents = hover.contents as MarkupContent;
+      expect(contents.kind).toBe(MarkupKind.Markdown);
+      expect(contents.value).toContain("**`memory`**");
+      expect(contents.value).toContain("memory allocation");
+    });
+
+    it("provides hover for a base layer key", async () => {
+      const yamlContent = `base:
+  image: ubuntu:24.04
+tasks:
+  - key: build
+    run: echo hi`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "base-layer.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const hover = await server.sendRequest<Hover>("textDocument/hover", {
+        textDocument: { uri: textDocument.uri },
+        position: Position.create(1, 3),
+      });
+
+      assert(hover);
+      const contents = hover.contents as MarkupContent;
+      expect(contents.kind).toBe(MarkupKind.Markdown);
+      expect(contents.value).toContain("**`image`**");
+      expect(contents.value).toContain("Docker image");
+    });
+
+    it("does not provide hover when cursor is on a value", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: echo hi`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "no-value-hover.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      // Position after the colon on "run: echo hi" — on the value
+      const hover = await server.sendRequest<Hover>("textDocument/hover", {
+        textDocument: { uri: textDocument.uri },
+        position: Position.create(2, 10),
+      });
+
+      expect(hover).toBe(null);
+    });
+
+    it("combines key description with package hover on call line", async () => {
+      const yamlContent = `tasks:
+  - key: deploy
+    call: rwx/greeting 1.0.5
+    with:
+      name: "my-name"`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "combined.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      // Hover on the "call" key itself
+      const hover = await server.sendRequest<Hover>("textDocument/hover", {
+        textDocument: { uri: textDocument.uri },
+        position: Position.create(2, 5),
+      });
+
+      assert(hover);
+      const contents = hover.contents as MarkupContent;
+      // Should have both the key description and the package info
+      expect(contents.value).toContain("**`call`**");
+      expect(contents.value).toContain("rwx/greeting");
+    });
+  });
+
   describe("Non-RWX Files", () => {
     it("returns null for files outside .mint/.rwx directories", async () => {
       const yamlContent = `tasks:

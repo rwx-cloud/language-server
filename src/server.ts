@@ -31,6 +31,7 @@ import { TextDocument } from "vscode-languageserver-textdocument";
 import * as path from "path";
 import * as fs from "fs";
 import { YamlParser } from "../support/parser";
+import { keyDescriptions } from "./key-descriptions";
 
 // RWX Package types
 interface RWXPackage {
@@ -1528,6 +1529,86 @@ function findYamlAliasReferences(
   return locations;
 }
 
+// Keys that contain arrays of objects, so child properties get [] in their path
+const arrayKeys = new Set([
+  "tasks",
+  "concurrency-pools",
+  "background-processes",
+  "test-results",
+  "artifacts",
+  "problems",
+  "cron",
+  "dispatch",
+  "cache-rebuild",
+  "webhook",
+  "values",
+  "custom",
+  "params",
+]);
+
+// Determine the full dotted key path for the YAML key at the given position.
+// Returns null if the cursor is not on a key name (e.g. it's on a value).
+function getYamlKeyPathAtPosition(
+  document: TextDocument,
+  position: Position
+): string | null {
+  const lines = document.getText().split("\n");
+  const currentLine = lines[position.line];
+  if (!currentLine) return null;
+
+  // Match a YAML key at the start of the line (possibly preceded by "- ")
+  const keyMatch = currentLine.match(/^(\s*)(-\s+)?([a-zA-Z0-9_-]+)\s*:/);
+  if (!keyMatch || !keyMatch[3]) return null;
+
+  const keyName = keyMatch[3];
+  const leadingWhitespace = keyMatch[1] ?? "";
+  const listPrefix = keyMatch[2] ?? "";
+  const keyStart = leadingWhitespace.length + listPrefix.length;
+  const keyEnd = keyStart + keyName.length;
+
+  // Cursor must be on the key portion (not the value after the colon)
+  if (position.character < keyStart || position.character > keyEnd) {
+    return null;
+  }
+
+  // Build the path by walking backward through parent keys based on indentation
+  const pathParts: string[] = [keyName];
+  // The indentation level that owns the current key — for list items, the
+  // effective indent for finding the parent is the indent of the "- " prefix,
+  // not the key itself.
+  let currentIndent = leadingWhitespace.length;
+
+  for (let i = position.line - 1; i >= 0; i--) {
+    const line = lines[i];
+    if (!line || line.trim() === "") continue;
+
+    const parentMatch = line.match(/^(\s*)(-\s+)?([a-zA-Z0-9_-]+)\s*:/);
+    if (!parentMatch || !parentMatch[3]) continue;
+
+    const parentWhitespace = (parentMatch[1] ?? "").length;
+    const parentListPrefix = parentMatch[2] ?? "";
+    const parentKey = parentMatch[3];
+
+    // A parent must be at a strictly lower indentation level
+    const parentEffectiveIndent = parentWhitespace + parentListPrefix.length;
+    if (parentEffectiveIndent >= currentIndent) continue;
+
+    // If this parent is an array key, insert [] into the path
+    if (arrayKeys.has(parentKey)) {
+      pathParts.unshift(parentKey + "[]");
+    } else {
+      pathParts.unshift(parentKey);
+    }
+
+    currentIndent = parentWhitespace;
+
+    // Reached the root (zero indent)
+    if (currentIndent === 0) break;
+  }
+
+  return pathParts.join(".");
+}
+
 // Helper function to detect if cursor is on a task key definition
 function getTaskKeyAtPosition(
   document: TextDocument,
@@ -1765,11 +1846,22 @@ connection.onHover(
       return null;
     }
 
-    // ONLY handle our specific hover cases:
-    // 1. YAML aliases (*alias-name)
-    // 2. Package hovers (call: package version)
-    // 3. Parameter hovers in 'with' blocks
-    // Let the YAML extension handle all other field hovers
+    // Handle hover cases:
+    // 1. YAML aliases (*alias-name) — standalone, no key description needed
+    // 2. Key description from schema — computed early so it can be combined with value hovers
+    // 3. Package hovers (call: package version) — combined with key description when on key
+    // 4. Parameter hovers in 'with' blocks — combined with key description when on key
+    // 5. Key description alone if no value hover matched
+
+    // Compute key description up front so we can combine it with value-specific hovers
+    const keyPath = getYamlKeyPathAtPosition(document, params.position);
+    let keyHoverPrefix: string | null = null;
+    if (keyPath) {
+      const description = keyDescriptions[keyPath];
+      if (description) {
+        keyHoverPrefix = `**\`${keyPath.split(".").pop()}\`**\n\n${description}`;
+      }
+    }
 
     // Check if we're hovering over a YAML alias
     const aliasInfo = getYamlAliasAtPosition(document, params.position);
@@ -1870,13 +1962,16 @@ connection.onHover(
           });
         }
 
-        const hoverContent = {
-          kind: MarkupKind.Markdown,
-          value: hoverParts.join("\n"),
-        };
+        let value = hoverParts.join("\n");
+        if (keyHoverPrefix) {
+          value = keyHoverPrefix + "\n\n---\n\n" + value;
+        }
 
         return {
-          contents: hoverContent,
+          contents: {
+            kind: MarkupKind.Markdown,
+            value,
+          },
         };
       } catch (error) {
         connection.console.error(
@@ -1952,7 +2047,16 @@ connection.onHover(
       }
     }
 
-    // Return null for all other cases - let YAML extension handle schema-based hovers
+    // Return key description alone if no value-specific hover matched
+    if (keyHoverPrefix) {
+      return {
+        contents: {
+          kind: MarkupKind.Markdown,
+          value: keyHoverPrefix,
+        },
+      };
+    }
+
     return null;
   }
 );
