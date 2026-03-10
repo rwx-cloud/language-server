@@ -1288,7 +1288,45 @@ connection.onCompletion(
       }
     }
 
-    // Don't provide any completions if we're not in use context - let other extensions handle it
+    // Offer YAML key completions based on the current context
+    if (isAtYamlKeyPosition(document, textDocumentPosition.position)) {
+      const parentPath = getYamlParentContext(
+        document,
+        textDocumentPosition.position
+      );
+      const childKeys = keyCompletionMap.get(parentPath);
+      if (childKeys && childKeys.length > 0) {
+        // Determine which keys are already present at this level so we can
+        // avoid suggesting duplicates
+        const existingKeys = getExistingSiblingKeys(
+          document,
+          textDocumentPosition.position
+        );
+
+        return childKeys
+          .filter((key) => !existingKeys.has(key))
+          .map((key, index) => {
+            const fullPath = parentPath ? `${parentPath}.${key}` : key;
+            // Look up description — try with [] suffix for array keys too
+            const description =
+              keyDescriptions[fullPath] ||
+              keyDescriptions[fullPath + "[]"] ||
+              keyDescriptions[`${fullPath}[].key`]
+                ? keyDescriptions[fullPath] || keyDescriptions[fullPath + "[]"]
+                : undefined;
+            return {
+              label: key,
+              kind: CompletionItemKind.Property,
+              detail: "RWX YAML key",
+              documentation: description,
+              data: `yaml-key-${index}`,
+              sortText: String(index).padStart(4, "0"),
+              insertText: `${key}: `,
+            };
+          });
+      }
+    }
+
     return [];
   }
 );
@@ -1530,6 +1568,175 @@ function findYamlAliasReferences(
 }
 
 // Keys that contain arrays of objects, so child properties get [] in their path
+// Build a map from parent key paths to their valid child key names,
+// derived from keyDescriptions. For example, "tasks[]" -> ["key", "run", "use", ...]
+function buildKeyCompletionMap(): Map<string, string[]> {
+  const map = new Map<string, string[]>();
+  for (const fullPath of Object.keys(keyDescriptions)) {
+    const lastDot = fullPath.lastIndexOf(".");
+    const parent = lastDot === -1 ? "" : fullPath.substring(0, lastDot);
+    let childKey = lastDot === -1 ? fullPath : fullPath.substring(lastDot + 1);
+    // Strip trailing [] from child keys (e.g. "tasks[]" at top level -> "tasks")
+    // and strip wildcard segments like "env.*" -> just use "env" entries with a value property
+    if (childKey.endsWith("[]")) {
+      childKey = childKey.slice(0, -2);
+    }
+    // Skip wildcard entries like "*.value" or "*.cache-key"
+    if (childKey === "*") continue;
+
+    if (!map.has(parent)) {
+      map.set(parent, []);
+    }
+    const children = map.get(parent)!;
+    if (!children.includes(childKey)) {
+      children.push(childKey);
+    }
+  }
+  return map;
+}
+
+const keyCompletionMap = buildKeyCompletionMap();
+
+// Determine the parent YAML key path for the cursor position, used to offer
+// key completions. Unlike getYamlKeyPathAtPosition (which resolves the key the
+// cursor is *on*), this returns the path of the enclosing parent context so we
+// know which child keys to suggest.
+function getYamlParentContext(
+  document: TextDocument,
+  position: Position
+): string {
+  const lines = document.getText().split("\n");
+  const currentLine = lines[position.line] || "";
+
+  // Determine the indentation level of the cursor / current line.
+  // On empty or whitespace-only lines the actual text indent may be 0 while
+  // the cursor sits at an indented column (VS Code virtual whitespace), so
+  // fall back to the cursor's character position.
+  const lineTextIndent = (currentLine.match(/^(\s*)/)?.[1] ?? "").length;
+  const isBlankLine = currentLine.trim() === "";
+  const rawIndent = isBlankLine
+    ? position.character
+    : lineTextIndent;
+
+  // If the current line has "- " list prefix, the effective indent for finding
+  // the parent is the indent of the dash, not the key after it
+  const hasDash = /^\s*-\s/.test(currentLine);
+  const currentIndent = rawIndent;
+
+  // Walk backward to build the parent path
+  const pathParts: string[] = [];
+  let searchIndent = currentIndent;
+
+  // If we're on an empty/whitespace-only line or just started typing a key,
+  // we want to find the parent at a strictly lower indent
+  for (let i = position.line - (hasDash ? 0 : 1); i >= 0; i--) {
+    // When starting from the current line (hasDash case), skip it on first pass
+    if (i === position.line) continue;
+
+    const line = lines[i];
+    if (!line || line.trim() === "") continue;
+
+    const parentMatch = line.match(/^(\s*)(-\s+)?([a-zA-Z0-9_-]+)\s*:/);
+    if (!parentMatch || !parentMatch[3]) continue;
+
+    const parentWhitespace = (parentMatch[1] ?? "").length;
+    const parentListPrefix = parentMatch[2] ?? "";
+    const parentKey = parentMatch[3];
+    const parentEffectiveIndent =
+      parentWhitespace + parentListPrefix.length;
+
+    if (parentEffectiveIndent >= searchIndent) continue;
+
+    if (arrayKeys.has(parentKey)) {
+      pathParts.unshift(parentKey + "[]");
+    } else {
+      pathParts.unshift(parentKey);
+    }
+
+    searchIndent = parentWhitespace;
+    if (searchIndent === 0) break;
+  }
+
+  return pathParts.join(".");
+}
+
+// Check if the cursor is at a position where a YAML key could be typed
+function isAtYamlKeyPosition(
+  document: TextDocument,
+  position: Position
+): boolean {
+  const lines = document.getText().split("\n");
+  const currentLine = lines[position.line] || "";
+  const beforeCursor = currentLine.substring(0, position.character);
+
+  // Empty or whitespace-only before cursor — new key position
+  if (/^\s*$/.test(beforeCursor)) return true;
+
+  // After "- " list item prefix, possibly with partial key typed
+  if (/^\s*-\s+[a-zA-Z0-9_-]*$/.test(beforeCursor)) return true;
+
+  // Partial key being typed (no colon yet on this segment)
+  if (/^\s+[a-zA-Z0-9_-]*$/.test(beforeCursor)) return true;
+
+  return false;
+}
+
+// Collect keys already defined at the same indentation level as the cursor,
+// so we can filter them out of completion suggestions.
+function getExistingSiblingKeys(
+  document: TextDocument,
+  position: Position
+): Set<string> {
+  const lines = document.getText().split("\n");
+  const currentLine = lines[position.line] || "";
+  const isBlankLine = currentLine.trim() === "";
+
+  // On blank lines, use the cursor column as the effective indent
+  const currentEffectiveIndent = isBlankLine
+    ? position.character
+    : (() => {
+        const m = currentLine.match(/^(\s*)(-\s+)?/);
+        return m
+          ? (m[1] ?? "").length + (m[2] ?? "").length
+          : 0;
+      })();
+
+  const keys = new Set<string>();
+
+  // Scan backward and forward from the cursor to find sibling keys
+  for (let dir = -1; dir <= 1; dir += 2) {
+    const start = dir === -1 ? position.line - 1 : position.line + 1;
+    const end = dir === -1 ? -1 : lines.length;
+    for (
+      let i = start;
+      dir === -1 ? i > end : i < end;
+      i += dir
+    ) {
+      const line = lines[i];
+      if (!line || line.trim() === "") continue;
+
+      const match = line.match(/^(\s*)(-\s+)?([a-zA-Z0-9_-]+)\s*:/);
+      if (!match || !match[3]) continue;
+
+      const lineEffectiveIndent =
+        (match[1] ?? "").length + (match[2] ?? "").length;
+
+      // Same indent level — sibling key
+      if (lineEffectiveIndent === currentEffectiveIndent) {
+        keys.add(match[3]);
+        continue;
+      }
+
+      // Lower indent — we've left the current block
+      if (lineEffectiveIndent < currentEffectiveIndent) break;
+
+      // Higher indent — child of a sibling, skip
+    }
+  }
+
+  return keys;
+}
+
 const arrayKeys = new Set([
   "tasks",
   "concurrency-pools",
