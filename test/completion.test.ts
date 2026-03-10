@@ -875,4 +875,349 @@ tasks:
       expect(completions).toHaveLength(0);
     });
   });
+
+  describe("YAML Key Completion", () => {
+    it("provides top-level key completions on empty line", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: echo hi
+`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "keys.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(3, 0),
+        }
+      );
+
+      const labels = completions.map((c) => c.label);
+      // Should include top-level keys like "on", "concurrency-pools", etc.
+      // but NOT "tasks" since it's already present
+      expect(labels).toContain("on");
+      expect(labels).toContain("concurrency-pools");
+      expect(labels).toContain("base");
+      expect(labels).not.toContain("tasks");
+
+      // All should be Property kind with "RWX YAML key" detail
+      for (const completion of completions) {
+        expect(completion.kind).toBe(CompletionItemKind.Property);
+        expect(completion.detail).toBe("RWX YAML key");
+        expect(completion.data).toMatch(/^yaml-key-/);
+        expect(completion.insertText).toMatch(/: $/);
+      }
+    });
+
+    it("provides task-level key completions inside a task", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: echo hi
+    `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "task-keys.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(3, 4),
+        }
+      );
+
+      const labels = completions.map((c) => c.label);
+      // Should include task-level keys
+      expect(labels).toContain("use");
+      expect(labels).toContain("after");
+      expect(labels).toContain("call");
+      expect(labels).toContain("env");
+      expect(labels).toContain("cache");
+      expect(labels).toContain("filter");
+      // Should NOT include keys already present
+      expect(labels).not.toContain("key");
+      expect(labels).not.toContain("run");
+    });
+
+    it("filters out sibling keys already present in the block", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: echo hi
+    use: setup
+    env:
+      FOO: bar
+    `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "filter-keys.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(6, 4),
+        }
+      );
+
+      const labels = completions.map((c) => c.label);
+      // Already-present keys should be filtered out
+      expect(labels).not.toContain("key");
+      expect(labels).not.toContain("run");
+      expect(labels).not.toContain("use");
+      expect(labels).not.toContain("env");
+      // Other task keys should still be offered
+      expect(labels).toContain("after");
+      expect(labels).toContain("call");
+      expect(labels).toContain("cache");
+    });
+
+    it("provides completions with documentation from keyDescriptions", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "docs-keys.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(2, 4),
+        }
+      );
+
+      // "run" should have documentation from keyDescriptions
+      const runCompletion = completions.find((c) => c.label === "run");
+      assert(runCompletion);
+      expect(runCompletion.documentation).toBeDefined();
+      expect(runCompletion.documentation).toContain("shell command");
+    });
+
+    it("provides completions with correct sortText ordering", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "sort-keys.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(2, 4),
+        }
+      );
+
+      // sortText should be zero-padded indices
+      expect(completions.length).toBeGreaterThan(0);
+      for (let i = 0; i < completions.length; i++) {
+        expect(completions[i]!.sortText).toBe(String(i).padStart(4, "0"));
+      }
+    });
+
+    it("does not provide key completions in value position", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "value-pos.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(2, 9),
+        }
+      );
+
+      // Should not return YAML key completions when cursor is in value position
+      const yamlKeyCompletions = completions.filter(
+        (c) => c.detail === "RWX YAML key"
+      );
+      expect(yamlKeyCompletions).toHaveLength(0);
+    });
+
+    it("provides completions after list item dash prefix", async () => {
+      const yamlContent = `tasks:
+  - `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "dash-prefix.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(1, 4),
+        }
+      );
+
+      const labels = completions.map((c) => c.label);
+      // Should offer task-level keys after "- "
+      expect(labels).toContain("key");
+      expect(labels).toContain("run");
+      expect(labels).toContain("call");
+    });
+
+    it("returns empty completions for unknown parent context", async () => {
+      // A deeply nested unknown key shouldn't match any parent path
+      const yamlContent = `tasks:
+  - key: build
+    run: echo hi
+    unknown-key:
+      nested:
+        `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "unknown-parent.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(5, 8),
+        }
+      );
+
+      const yamlKeyCompletions = completions.filter(
+        (c) => c.detail === "RWX YAML key"
+      );
+      expect(yamlKeyCompletions).toHaveLength(0);
+    });
+
+    it("provides nested key completions for agent block", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    agent:
+      `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "agent-keys.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(3, 6),
+        }
+      );
+
+      const labels = completions.map((c) => c.label);
+      expect(labels).toContain("memory");
+      expect(labels).toContain("cpus");
+    });
+  });
 });
