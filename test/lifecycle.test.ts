@@ -51,7 +51,6 @@ describe("LSP Server Lifecycle and Configuration", () => {
       );
       expect(result.capabilities.completionProvider).toEqual({
         resolveProvider: true,
-        triggerCharacters: [" ", "[", ",", ":", "\n", "/"],
       });
       expect(result.capabilities.diagnosticProvider).toEqual({
         interFileDependencies: false,

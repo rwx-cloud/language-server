@@ -191,7 +191,6 @@ connection.onInitialize((params: InitializeParams) => {
       textDocumentSync: TextDocumentSyncKind.Incremental,
       completionProvider: {
         resolveProvider: true,
-        triggerCharacters: [" ", "[", ",", ":", "\n", "/"],
       },
       diagnosticProvider: {
         interFileDependencies: false,
