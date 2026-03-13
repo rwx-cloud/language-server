@@ -13,7 +13,8 @@
     "bundle": "npm run compile && esbuild out/server.js --bundle --platform=node --target=node18 --outfile=dist/server.js --minify",
     "watch": "npm run compile -- -w",
     "test": "npm run compile && vitest run --reporter=default --reporter=json --outputFile=test-results.json",
-    "test:coverage": "npm run compile && NODE_V8_COVERAGE=coverage vitest run --reporter=default --reporter=json --outputFile=test-results.json && NODE_V8_COVERAGE=coverage npx c8 report --temp-directory=coverage --reporter=text --reporter=html --reporter=json"
+    "test:coverage": "npm run compile && NODE_V8_COVERAGE=coverage vitest run --reporter=default --reporter=json --outputFile=test-results.json && NODE_V8_COVERAGE=coverage npx c8 report --temp-directory=coverage --reporter=text --reporter=html --reporter=json",
+    "check-key-descriptions": "npx tsx scripts/compare-parser-keys.ts"
   },
   "dependencies": {
     "vscode-languageserver": "^8.1.0",
@@ -27,6 +28,7 @@
     "c8": "^10.1.3",
     "esbuild": "^0.27.3",
     "tmp-promise": "^3.0.3",
+    "tsx": "^4.21.0",
     "typescript": "^5.0.0",
     "vitest": "^1.0.0",
     "vscode-languageserver-protocol": "^3.17.5",

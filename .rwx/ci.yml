@@ -59,6 +59,16 @@ tasks:
       test-results:
         - path: test-results.json
 
+  - key: check-key-descriptions
+    use: npm-install
+    run: npm run check-key-descriptions
+    filter:
+      - node_modules
+      - src/key-descriptions.ts
+      - scripts/compare-parser-keys.ts
+      - support/parser.js
+      - package.json
+
   - key: bundle
     call: ${{ run.dir }}/build.yml
     init:

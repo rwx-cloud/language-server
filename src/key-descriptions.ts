@@ -1,7 +1,39 @@
 // Flat mapping of dotted key paths to their descriptions, extracted from the RWX YAML JSON schema.
 // Used to provide hover information and documentation for keys in RWX YAML files.
 
-export const keyDescriptions: Record<string, string> = {
+export interface KeyDescriptionEntry {
+  description: string | null;
+  documented?: boolean; // default true
+  autocomplete?: boolean; // default true
+}
+
+export type KeyDescriptionValue = string | KeyDescriptionEntry;
+
+/** Returns the human-readable description for a key path, or null if missing/suppressed. */
+export function getKeyDescription(path: string): string | null {
+  const entry = keyDescriptions[path];
+  if (entry === undefined) return null;
+  if (typeof entry === "string") return entry;
+  return entry.description;
+}
+
+/** Whether the key should appear in autocomplete suggestions (default true). */
+export function isKeyAutocomplete(path: string): boolean {
+  const entry = keyDescriptions[path];
+  if (entry === undefined) return true;
+  if (typeof entry === "string") return true;
+  return entry.autocomplete !== false;
+}
+
+/** Whether the key should appear in hover docs (default true). */
+export function isKeyDocumented(path: string): boolean {
+  const entry = keyDescriptions[path];
+  if (entry === undefined) return true;
+  if (typeof entry === "string") return true;
+  return entry.documented !== false;
+}
+
+export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // Top-level properties
   "tasks":
     "An array of task definitions that form the core execution units of your workflow. Each task represents a discrete unit of work that executes in an isolated containerized environment. Tasks can execute shell commands, call reusable packages, or embed other run definitions. Tasks support sophisticated dependency management through 'use' (inherits outputs and filesystem) and 'after' (ordering only), enabling complex workflows with parallel execution, content-based caching, and flexible artifact management.",
@@ -13,6 +45,8 @@ export const keyDescriptions: Record<string, string> = {
     "Global tool cache configuration that enables incremental caching for tasks across runs. Tool caches preserve filesystem contents from previous task executions, allowing tasks like dependency installations to perform incremental updates instead of starting from scratch. When a task has a cache miss, the tool cache provides the filesystem state from the most recent execution. Tool caches are evicted after 48 hours and must be configured with a vault for security. Tool caches are useful for package managers (npm, yarn, bundle), Docker builds, compilation tasks, and other tasks that benefit from incremental updates.",
   "base":
     "Base container layer configuration that defines the operating system, version, and RWX configuration tag for task execution. All tasks in the run use this base layer. The currently supported base layers are Ubuntu 22.04 (tag 1.1) and Ubuntu 24.04 (tag 1.2). The base layer determines available system packages, pre-installed Docker version, and tool cache compatibility. Different embedded runs can specify different base layers than their parent run.",
+  "aliases":
+    "YAML aliases defined at the top level for reuse across the run definition. Aliases allow you to define common configurations once and reference them throughout the file using YAML anchors (&name) and aliases (*name).",
 
   // Task properties (merged from CommandTask, PackageTask, EmbeddedRunTask)
   "tasks[].key":
@@ -57,10 +91,11 @@ export const keyDescriptions: Record<string, string> = {
     "Maximum time for the agent to report its healthiness (e.g., '15m' or '1h'). If an agent has not reported that it is healthy within this time frame, the task will fail. The default value is 1 minute per 1 hour of configured timeout. This helps detect and handle unresponsive or stuck agents during task execution.",
   "tasks[].auto-cancel":
     "Whether to automatically cancel this task when superseded by a newer run. Supports template expressions.",
-  "tasks[].deduplicate-output-filesystem":
-    "Whether to deduplicate the output filesystem for this task. Supports template expressions.",
-  "tasks[].bootstrapping":
-    "Whether this task is a bootstrapping task. Bootstrapping tasks run in a minimal environment before the full base layer is available.",
+  "tasks[].bootstrapping": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "tasks[].call":
     "The package identifier or embedded run source. For packages: use name/version format (e.g., 'namespace/package-name 1.2.0') for semantic versioning or SHA-256 digest for exact version pinning. For embedded runs: a file path relative to the current run definition, an absolute path, or a template expression (commonly using ${{ run.mint-dir }}).",
   "tasks[].with":
@@ -87,8 +122,11 @@ export const keyDescriptions: Record<string, string> = {
     "Whether to use tmpfs (in-memory filesystem) for improved I/O performance. Tmpfs is useful for tasks with heavy disk I/O that can benefit from memory-backed storage (e.g. task that install node modules), but requires sufficient memory allocation. Any tasks with significant filesystem I/O that fits in ~70% of available memory will benefit from tmpfs.",
   "tasks[].agent.spot":
     "Whether to use spot instances for task execution. When true, ephemeral instances are used that may be preempted at any time but offer cost savings. When false or omitted, standard on-demand instances are used with guaranteed availability and stable performance. Choose spot instances for fault-tolerant workloads that can handle interruptions. Tasks with spot agents that are interrupted are automatically retried by RWX.",
-  "tasks[].agent.placement":
-    "Agent placement strategy. 'spot' uses ephemeral instances that may be preempted but offer cost savings; 'standard' uses on-demand instances with guaranteed availability. Preferred over the 'spot' boolean property.",
+  "tasks[].agent.placement": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "tasks[].agent.ipv6":
     "Whether to enable IPv6 networking for the task agent. Supports template expressions.",
 
@@ -109,6 +147,11 @@ export const keyDescriptions: Record<string, string> = {
   // Environment variable object properties
   "tasks[].env.*.value":
     "The environment variable value. Supports template expressions for dynamic values from other tasks, initialization parameters, or event context.",
+  "tasks[].env.*.cache": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "tasks[].env.*.cache-key":
     "Whether this environment variable should be included in cache key generation. 'included' (default): variable value affects cache key. 'excluded': variable ignored for caching, enabling cache hits with ephemeral values like credentials.",
 
@@ -117,6 +160,8 @@ export const keyDescriptions: Record<string, string> = {
     "Inherit environment variables from dependency tasks. 'all-used-tasks' inherits from all tasks listed in 'use', or specify an array of specific task keys. Note: inheritance is automatic for 'use' dependencies; this setting provides explicit control.",
   "tasks[].env-config.merge":
     "Merge strategies for environment variables with the same name from multiple sources.",
+  "tasks[].env-config.merge.*.strategy":
+    "Merge strategy for this environment variable. Use 'join' to concatenate values from multiple sources with a separator.",
   "tasks[].env-config.merge.*.by":
     "Separator string for join strategy. Common values: ':' for PATH-like variables, ',' for comma-separated lists, ' ' for space-separated values.",
 
@@ -175,6 +220,14 @@ export const keyDescriptions: Record<string, string> = {
     "File or directory path to collect.",
   "tasks[].outputs.filesystem":
     "Filesystem output configuration. Set to false to disable outputting a filesystem layer from this task, or configure filtering for preserving specific files after task completion.",
+  "tasks[].outputs.filesystem.deduplicate":
+    "Whether to deduplicate the output filesystem for this task. Deduplication reduces storage by eliminating duplicate file content.",
+  "tasks[].outputs.filesystem.filter":
+    "Filter configuration for filesystem outputs, specifying which files to preserve after task completion.",
+  "tasks[].outputs.filesystem.filter.workspace":
+    "Filter files from the workspace directory in filesystem output.",
+  "tasks[].outputs.filesystem.filter.system":
+    "Filter files from the system directory in filesystem output.",
 
   // Retry configuration (tasks[].retry.*)
   "tasks[].retry.count":
@@ -184,15 +237,18 @@ export const keyDescriptions: Record<string, string> = {
   "tasks[].retry.action":
     "Action to take on retry.",
 
-  // Filter object properties
+  // Filter object properties (uses parseGenericRecord — workspace is fixed, other keys are task names)
+  "tasks[].filter.*": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "tasks[].filter.workspace":
     "Filter files from the workspace directory.",
-  "tasks[].filter.artifacts":
-    "Filter files from artifact dependencies. Keys are task keys, values are filter sets specifying which artifact files to include.",
 
   // Trigger properties (on.*)
   "on.github":
-    "GitHub event triggers for automated run execution. Supports push events (on branch updates), pull_request events (on PR lifecycle), and merge_group events. Each trigger provides rich event context accessible via template expressions.",
+    "GitHub event triggers for automated run execution. Supports push events (on branch updates) and pull_request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
   "on.gitlab":
     "GitLab event triggers for automated run execution. Supports push events (branch updates), tag-push events (tag creation), and merge-request events (MR lifecycle). Each trigger provides GitLab-specific event context and supports conditional execution, initialization parameters, target tasks, and custom run titles.",
   "on.cron":
@@ -211,9 +267,6 @@ export const keyDescriptions: Record<string, string> = {
     "Triggers for GitHub push events (branch updates, tag pushes). Can be a single trigger object or an array of trigger objects for different configurations. Provides event context: event.git.branch, event.git.sha, event.git.ref, event.git.tag, event.github.push.head_commit.message, event.github.push.repository.clone_url, event.github.push.sender.login.",
   "on.github.pull_request":
     "Triggers for GitHub pull request events (opened, reopened, synchronize, closed). Can be a single trigger object or an array of trigger objects. Default actions: [opened, reopened, synchronize]. Provides event context: event.git.branch, event.git.sha, event.git.ref, event.github.pull_request.number, event.github.pull_request.pull_request.title.",
-  "on.github.merge_group":
-    "Triggers for GitHub merge group events. Can be a single trigger object or an array of trigger objects.",
-
   // GitHub push trigger properties
   "on.github.push.init":
     "Initialization parameters passed to the run or embedded run.",
@@ -248,24 +301,6 @@ export const keyDescriptions: Record<string, string> = {
   "on.github.pull_request.status-checks":
     "GitHub/GitLab status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
-  // GitHub merge_group trigger properties
-  "on.github.merge_group.init":
-    "Initialization parameters passed to the run or embedded run.",
-  "on.github.merge_group.if":
-    "Condition for trigger activation.",
-  "on.github.merge_group.target":
-    "Specific tasks to execute when triggered.",
-  "on.github.merge_group.title":
-    "Custom title for the run.",
-  "on.github.merge_group.start":
-    "Whether the run starts automatically when triggered or must be started manually.",
-  "on.github.merge_group.region":
-    "The region in which to execute the run when this trigger fires.",
-  "on.github.merge_group.actions":
-    "Merge group actions that trigger the run.",
-  "on.github.merge_group.status-checks":
-    "GitHub/GitLab status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
-
   // GitLab trigger properties
   "on.gitlab.push":
     "Triggers for GitLab push events (branch updates).",
@@ -274,21 +309,31 @@ export const keyDescriptions: Record<string, string> = {
   "on.gitlab.merge-request":
     "Triggers for GitLab merge request events (MR lifecycle).",
 
-  // GitLab push/tag-push trigger properties
+  // GitLab push trigger properties
   "on.gitlab.push.init":
     "Initialization parameters passed to the run or embedded run.",
+  "on.gitlab.push.if":
+    "Condition for trigger activation.",
   "on.gitlab.push.target":
     "Specific tasks to execute when triggered.",
+  "on.gitlab.push.title":
+    "Custom title for the run.",
   "on.gitlab.push.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.gitlab.push.region":
     "The region in which to execute the run when this trigger fires.",
   "on.gitlab.push.status-checks":
     "GitHub/GitLab status check configuration. Status checks report task execution status back to the version control system.",
+
+  // GitLab tag-push trigger properties
   "on.gitlab.tag-push.init":
     "Initialization parameters passed to the run or embedded run.",
+  "on.gitlab.tag-push.if":
+    "Condition for trigger activation.",
   "on.gitlab.tag-push.target":
     "Specific tasks to execute when triggered.",
+  "on.gitlab.tag-push.title":
+    "Custom title for the run.",
   "on.gitlab.tag-push.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.gitlab.tag-push.region":
@@ -299,12 +344,18 @@ export const keyDescriptions: Record<string, string> = {
   // GitLab merge-request trigger properties
   "on.gitlab.merge-request.init":
     "Initialization parameters passed to the run or embedded run.",
+  "on.gitlab.merge-request.if":
+    "Condition for trigger activation.",
   "on.gitlab.merge-request.target":
     "Specific tasks to execute when triggered.",
+  "on.gitlab.merge-request.title":
+    "Custom title for the run.",
   "on.gitlab.merge-request.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.gitlab.merge-request.region":
     "The region in which to execute the run when this trigger fires.",
+  "on.gitlab.merge-request.actions":
+    "Merge request actions that trigger the run.",
   "on.gitlab.merge-request.status-checks":
     "GitHub/GitLab status check configuration. Status checks report task execution status back to the version control system.",
 
@@ -403,10 +454,6 @@ export const keyDescriptions: Record<string, string> = {
     "The region in which to execute the run when this trigger fires.",
 
   // Status checks properties
-  "status-checks.enabled":
-    "Whether status checks are enabled. Can be a boolean or a template expression.",
-  "status-checks.name":
-    "Default name for status checks. Supports template expressions.",
   "status-checks.default":
     "Configuration for the default status check that reports overall run status.",
   "status-checks.default.enabled":
