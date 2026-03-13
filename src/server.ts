@@ -191,7 +191,6 @@ connection.onInitialize((params: InitializeParams) => {
       textDocumentSync: TextDocumentSyncKind.Incremental,
       completionProvider: {
         resolveProvider: true,
-        triggerCharacters: [" ", "[", ",", ":", "\n", "/"],
       },
       diagnosticProvider: {
         interFileDependencies: false,
@@ -1584,6 +1583,9 @@ function buildKeyCompletionMap(): Map<string, string[]> {
     // Skip wildcard entries like "*.value" or "*.cache-key"
     if (childKey === "*") continue;
 
+    // Skip internal keys that shouldn't be suggested to users
+    if (childKey === "bootstrapping") continue;
+
     if (!map.has(parent)) {
       map.set(parent, []);
     }
@@ -1701,6 +1703,9 @@ function getExistingSiblingKeys(
           : 0;
       })();
 
+  // Check if the current line itself starts a new list item
+  const currentHasDash = /^\s*-\s/.test(currentLine);
+
   const keys = new Set<string>();
 
   // Scan backward and forward from the cursor to find sibling keys
@@ -1718,11 +1723,37 @@ function getExistingSiblingKeys(
       const match = line.match(/^(\s*)(-\s+)?([a-zA-Z0-9_-]+)\s*:/);
       if (!match || !match[3]) continue;
 
+      const hasDash = !!match[2];
       const lineEffectiveIndent =
         (match[1] ?? "").length + (match[2] ?? "").length;
 
       // Same indent level — sibling key
       if (lineEffectiveIndent === currentEffectiveIndent) {
+        // When the cursor is on a dash line (start of a new list item),
+        // everything backward belongs to a previous item — stop scanning.
+        // Forward non-dash lines are properties of this item (siblings).
+        if (currentHasDash) {
+          if (dir === -1) {
+            break;
+          }
+          if (hasDash) {
+            break;
+          }
+          keys.add(match[3]);
+          continue;
+        }
+
+        // When the cursor is NOT on a dash line, a dash at the same
+        // effective indent marks a list item boundary:
+        //   backward: include the dash line's key (it starts this item)
+        //     then stop — anything further belongs to a previous item.
+        //   forward: a dash starts a new item — stop before including it.
+        if (hasDash) {
+          if (dir === -1) {
+            keys.add(match[3]);
+          }
+          break;
+        }
         keys.add(match[3]);
         continue;
       }
