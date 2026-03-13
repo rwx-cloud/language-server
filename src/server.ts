@@ -1584,6 +1584,9 @@ function buildKeyCompletionMap(): Map<string, string[]> {
     // Skip wildcard entries like "*.value" or "*.cache-key"
     if (childKey === "*") continue;
 
+    // Skip internal keys that shouldn't be suggested to users
+    if (childKey === "bootstrapping") continue;
+
     if (!map.has(parent)) {
       map.set(parent, []);
     }
