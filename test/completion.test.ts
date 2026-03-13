@@ -1009,6 +1009,49 @@ tasks:
       expect(labels).toContain("cache");
     });
 
+    it("does not leak sibling keys across task boundaries", async () => {
+      const yamlContent = `tasks:
+  - key: first-task
+    run: echo first
+    filter:
+      workspace: "src/**"
+  - key: second-task
+    run: echo second
+    `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "cross-task.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(8, 4),
+        }
+      );
+
+      const labels = completions.map((c) => c.label);
+      // key and run are in the current task — should be excluded
+      expect(labels).not.toContain("key");
+      expect(labels).not.toContain("run");
+      // filter is only in the previous task — should still be offered
+      expect(labels).toContain("filter");
+      expect(labels).toContain("after");
+      expect(labels).toContain("call");
+    });
+
     it("provides completions with documentation from keyDescriptions", async () => {
       const yamlContent = `tasks:
   - key: build
