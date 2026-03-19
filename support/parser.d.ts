@@ -1,35 +1,39 @@
-import * as YAML from 'yaml';
+import * as YAML from "yaml";
 
-export type Snippets = Map<string, { filePath: string; fileContents: string; yamlNode: YAML.ParsedNode }>;
+export type Snippets = Map<
+  string,
+  { filePath: string; fileContents: string; yamlNode: YAML.ParsedNode }
+>;
 
 export enum EnvironmentVariableCacheKey {
-  Included = 'included',
-  Excluded = 'excluded',
+  Included = "included",
+  Excluded = "excluded",
 }
 
 export enum ParallelismType {
-  Matrix = 'matrix',
-  Total = 'total',
-  Values = 'values',
+  Matrix = "matrix",
+  Total = "total",
+  Values = "values",
 }
 
 export enum TaskType {
-  Command = 'command',
-  Leaf = 'leaf',
-  EmbeddedRun = 'embedded-run',
-  Parallel = 'parallel',
+  Command = "command",
+  Leaf = "leaf",
+  EmbeddedRun = "embedded-run",
+  Parallel = "parallel",
+  AmbiguousCall = "ambiguous-call",
 }
 
 export enum Severity {
-  Error = 'error',
-  Warning = 'warning',
-  Info = 'info',
+  Error = "error",
+  Warning = "warning",
+  Info = "info",
 }
 
 export enum OnOverflow {
-  CancelWaiting = 'cancel-waiting',
-  CancelRunning = 'cancel-running',
-  Queue = 'queue',
+  CancelWaiting = "cancel-waiting",
+  CancelRunning = "cancel-running",
+  Queue = "queue",
 }
 
 export const DEFAULT_FOREGROUND_TERM_GRACE_PERIOD_SECONDS = 0;
@@ -42,7 +46,7 @@ export type Source = {
 };
 
 export enum DependencyType {
-  Standard = 'standard',
+  Standard = "standard",
 }
 
 export type StandardDependencies = {
@@ -56,17 +60,17 @@ export type Dependencies = {
 };
 
 export type EnvJoinMergeStrategy = {
-  strategy: 'join';
+  strategy: "join";
   by: string;
 };
 
 export type EnvOverrideMergeStrategy = {
-  strategy: 'override';
+  strategy: "override";
 };
 
 export type EnvMergeStrategy = EnvJoinMergeStrategy | EnvOverrideMergeStrategy;
 
-export type EnvInherit = 'all-used-tasks' | string[];
+export type EnvInherit = "all-used-tasks" | string[];
 
 export type EnvDescriptor = {
   value?: string;
@@ -109,27 +113,9 @@ export type CacheConfiguration = {
   ttl?: string;
 };
 
-export enum LeafIdentifierType {
-  NameVersion = 'name-version',
-  Digest = 'digest',
-}
-
-export type LeafName = {
-  type: LeafIdentifierType.NameVersion;
-  name: string;
-  version: string;
-};
-
-export type LeafDigest = {
-  type: LeafIdentifierType.Digest;
-  digest: string;
-};
-
-export type LeafIdentifier = LeafName | LeafDigest;
-
 export enum ToolCacheNameType {
-  TaskKey = 'task-key',
-  LiteralString = 'literal-string',
+  TaskKey = "task-key",
+  LiteralString = "literal-string",
 }
 
 export type ToolCacheNameTaskKey = {
@@ -171,7 +157,10 @@ export type ValuesParallelism = {
   values: string | Record<string, string>[];
 };
 
-export type Parallelism = TotalParallelism | MatrixParallelism | ValuesParallelism;
+export type Parallelism =
+  | TotalParallelism
+  | MatrixParallelism
+  | ValuesParallelism;
 
 export type PartialParallelConfiguration = {
   key: string | null;
@@ -205,20 +194,29 @@ export type ScopedTaskKey = string & {
   __scopedTaskKey: never;
 };
 
-export const KEY_PATTERN = '^[A-Za-z0-9_-]+$';
+export const KEY_PATTERN = "^[A-Za-z0-9_-]+$";
 export const KEY_REGEXP: RegExp;
 export const KEY_INVALID_CHARSET_REGEXP: RegExp;
-export const SAFE_TASK_KEY_DELIMITER = '.';
+export const SAFE_TASK_KEY_DELIMITER = ".";
 export const RUN_SCOPE: ScopedTaskKey;
 
-export function getScopedKey({ key, scope }: ScopedTaskDefinition): ScopedTaskKey;
+export function getScopedKey({
+  key,
+  scope,
+}: ScopedTaskDefinition): ScopedTaskKey;
 export function unscopeKey(scopedKey: ScopedTaskKey): {
   scope: string[];
   key: string;
 };
 export function scopeEqual(lhs: string[], rhs: string[]): boolean;
-export function taskScopeEquals(scopedKey: ScopedTaskKey, scope: string[]): boolean;
-export function relativeScopedKey(currentScope: string[], scopedKey: ScopedTaskKey): ScopedTaskKey;
+export function taskScopeEquals(
+  scopedKey: ScopedTaskKey,
+  scope: string[],
+): boolean;
+export function relativeScopedKey(
+  currentScope: string[],
+  scopedKey: ScopedTaskKey,
+): ScopedTaskKey;
 
 export type StackEntry = {
   fileName: string;
@@ -240,7 +238,14 @@ export type UserMessage = {
 };
 
 export interface YamlParser {
-  safelyParseRun(fileName: string, source: string, snippets: Snippets): Promise<{ partialRunDefinition: PartialRunDefinition; errors: UserMessage[] }>;
+  safelyParseRun(
+    fileName: string,
+    source: string,
+    snippets: Snippets,
+  ): Promise<{
+    partialRunDefinition: PartialRunDefinition;
+    errors: UserMessage[];
+  }>;
 }
 
 export namespace YamlParser {
@@ -248,7 +253,10 @@ export namespace YamlParser {
     fileName: string,
     source: string,
     snippets: Snippets,
-  ): Promise<{ partialRunDefinition: PartialRunDefinition; errors: UserMessage[] }>;
+  ): Promise<{
+    partialRunDefinition: PartialRunDefinition;
+    errors: UserMessage[];
+  }>;
 }
 
 export type BaseTrigger = {
@@ -262,7 +270,7 @@ export type GithubPushTrigger = BaseTrigger & {
   statusChecks: Array<{
     tasks: string[];
     name?: string;
-    status: 'success' | 'failure' | 'pending';
+    status: "success" | "failure" | "pending";
   }>;
 };
 
@@ -271,7 +279,7 @@ export type GitHubPullRequestTrigger = BaseTrigger & {
   statusChecks: Array<{
     tasks: string[];
     name?: string;
-    status: 'success' | 'failure' | 'pending';
+    status: "success" | "failure" | "pending";
   }>;
 };
 
@@ -280,7 +288,7 @@ export type GitHubMergeGroupTrigger = BaseTrigger & {
   statusChecks: Array<{
     tasks: string[];
     name?: string;
-    status: 'success' | 'failure' | 'pending';
+    status: "success" | "failure" | "pending";
   }>;
 };
 
@@ -344,8 +352,13 @@ export type Triggers = {
 export type SharedTaskDefinition = {
   key: string;
   filter?: {
-    workspace?: string | (string | { path: string; cacheKey: 'included' | 'excluded' })[];
-    artifacts?: Record<string, string | (string | { path: string; cacheKey: 'included' | 'excluded' })[]>;
+    workspace?:
+      | string
+      | (string | { path: string; cacheKey: "included" | "excluded" })[];
+    artifacts?: Record<
+      string,
+      string | (string | { path: string; cacheKey: "included" | "excluded" })[]
+    >;
   };
   dependencies: Dependencies;
   after?: After;
@@ -381,7 +394,7 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
     staticIps?: string;
     tmpfs?: boolean;
     spot?: boolean;
-    placement: 'spot' | 'standard';
+    placement: "spot" | "standard";
   };
   type: TaskType.Command;
   command: string;
@@ -415,31 +428,37 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
   }>;
   problemPaths: Array<{
     path: string;
-    format: 'auto' | 'problem-json' | 'github-annotation-json' | 'github-annotations-action-json';
+    format:
+      | "auto"
+      | "problem-json"
+      | "github-annotation-json"
+      | "github-annotations-action-json";
   }>;
   env?: TaskDefinitionEnv;
   timeoutMinutes?: number;
   terminateGracePeriodSeconds?: number;
   toolCache?: ToolCacheName;
   parallel?: PartialParallelConfiguration;
-  docker?: boolean | 'preserve-data' | (string & {});
+  docker?: boolean | "preserve-data" | (string & {});
   outputFilesystemFilter: {
     workspace?: string[];
     system?: string[];
   };
+  autoCancel: string;
 };
 
 export type LeafTaskDefinition = SharedTaskDefinition & {
   type: TaskType.Leaf;
-  leaf: LeafIdentifier;
-  parameters?: Record<string, string>;
-  env?: TaskDefinitionEnv;
+  leaf: string;
+  parameters: Record<string, string>;
+  env: TaskDefinitionEnv;
   parallel?: PartialParallelConfiguration;
+  autoCancel: string;
 };
 
 export enum EmbeddedRunDefinitionSourceType {
-  InMemoryMintDir = 'in-memory-mint-dir',
-  TaskArtifact = 'task-artifact',
+  InMemoryMintDir = "in-memory-mint-dir",
+  TaskArtifact = "task-artifact",
 }
 
 export type InMemoryMintDirEmbeddedRunDefinitionSource = {
@@ -452,7 +471,9 @@ export type TaskArtifactEmbeddedRunDefinitionSource = {
   expression: string;
 };
 
-export type EmbeddedRunDefinitionSource = InMemoryMintDirEmbeddedRunDefinitionSource | TaskArtifactEmbeddedRunDefinitionSource;
+export type EmbeddedRunDefinitionSource =
+  | InMemoryMintDirEmbeddedRunDefinitionSource
+  | TaskArtifactEmbeddedRunDefinitionSource;
 
 export type EmbeddedRunTaskDefinition = {
   key: string;
@@ -482,9 +503,43 @@ export type EmbeddedRunTaskDefinition = {
   parameters?: Record<string, string>;
   parallel?: PartialParallelConfiguration;
   targets?: string[];
+  autoCancel: string;
 };
 
-export type PartialTaskDefinition = CommandTaskDefinition | LeafTaskDefinition | EmbeddedRunTaskDefinition;
+export type AmbiguousCallTaskDefinition = {
+  key: string;
+  after?: After;
+  if?: string;
+  cacheConfiguration?: CacheConfiguration;
+  warningMessages: Array<{
+    type: string;
+    message: string;
+    advice?: string;
+    fileName?: string;
+    line?: number;
+    column?: number;
+    stackTrace?: Array<{
+      fileName: string;
+      line: number;
+      column: number;
+      name?: string;
+      endLine?: number;
+      endColumn?: number;
+    }>;
+    frame?: string;
+  }>;
+  rawSource?: Source;
+  type: TaskType.AmbiguousCall;
+  ambiguousCallTemplate: string;
+  parallel?: PartialParallelConfiguration;
+  autoCancel: string;
+};
+
+export type PartialTaskDefinition =
+  | CommandTaskDefinition
+  | LeafTaskDefinition
+  | EmbeddedRunTaskDefinition
+  | AmbiguousCallTaskDefinition;
 
 export type PartialRunDefinition = {
   concurrencyPools?: PartialConcurrencyPool[];

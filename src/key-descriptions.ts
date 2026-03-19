@@ -35,17 +35,15 @@ export function isKeyDocumented(path: string): boolean {
 
 export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // Top-level properties
-  "tasks":
+  tasks:
     "An array of task definitions that form the core execution units of your workflow. Each task represents a discrete unit of work that executes in an isolated containerized environment. Tasks can execute shell commands, call reusable packages, or embed other run definitions. Tasks support sophisticated dependency management through 'use' (inherits outputs and filesystem) and 'after' (ordering only), enabling complex workflows with parallel execution, content-based caching, and flexible artifact management.",
-  "on":
-    "Trigger configuration that defines when and how this run should execute. RWX supports five trigger types: GitHub events (push, pull_request, merge_group), GitLab events (push, tag-push, merge-request), scheduled cron runs, manual CLI execution, and API dispatch triggers. Each trigger provides rich event context accessible via template expressions (e.g., ${{ event.git.branch }}, ${{ event.github.push.head_commit.message }}). Triggers can specify conditions (if), initialization parameters (init), target tasks (target), and custom run titles (title). Event data flows into tasks through initialization parameters, enabling dynamic workflow behavior based on trigger context.",
+  on: "Trigger configuration that defines when and how this run should execute. RWX supports five trigger types: GitHub events (push, pull_request, merge_group), GitLab events (push, tag-push, merge-request), scheduled cron runs, manual CLI execution, and API dispatch triggers. Each trigger provides rich event context accessible via template expressions (e.g., ${{ event.git.branch }}, ${{ event.github.push.head_commit.message }}). Triggers can specify conditions (if), initialization parameters (init), target tasks (target), and custom run titles (title). Event data flows into tasks through initialization parameters, enabling dynamic workflow behavior based on trigger context.",
   "concurrency-pools":
     "Configuration for concurrency pools that limit the number of concurrent runs executing based on pool identifiers. Pools are global to your organization (not repository-scoped) and help manage resource contention. When capacity is exceeded, you can configure whether additional runs should queue, cancel waiting runs, or cancel currently running runs. Concurrency pools are commonly used for ordering deployments, cancelling feature branch workflows when a newer commit is pushed, and managing shared resource access. The best practice is to include the repository name in pool ID to avoid conflicts (e.g., 'my-org/my-repo:deployment').",
   "tool-cache":
     "Global tool cache configuration that enables incremental caching for tasks across runs. Tool caches preserve filesystem contents from previous task executions, allowing tasks like dependency installations to perform incremental updates instead of starting from scratch. When a task has a cache miss, the tool cache provides the filesystem state from the most recent execution. Tool caches are evicted after 48 hours and must be configured with a vault for security. Tool caches are useful for package managers (npm, yarn, bundle), Docker builds, compilation tasks, and other tasks that benefit from incremental updates.",
-  "base":
-    "Base container layer configuration that defines the operating system, version, and RWX configuration tag for task execution. All tasks in the run use this base layer. The currently supported base layers are Ubuntu 22.04 (tag 1.1) and Ubuntu 24.04 (tag 1.2). The base layer determines available system packages, pre-installed Docker version, and tool cache compatibility. Different embedded runs can specify different base layers than their parent run.",
-  "aliases":
+  base: "Base container layer configuration that defines the operating system, version, and RWX configuration tag for task execution. All tasks in the run use this base layer. The currently supported base layers are Ubuntu 22.04 (tag 1.1) and Ubuntu 24.04 (tag 1.2). The base layer determines available system packages, pre-installed Docker version, and tool cache compatibility. Different embedded runs can specify different base layers than their parent run.",
+  aliases:
     "YAML aliases defined at the top level for reuse across the run definition. Aliases allow you to define common configurations once and reference them throughout the file using YAML anchors (&name) and aliases (*name).",
 
   // Task properties (merged from CommandTask, PackageTask, EmbeddedRunTask)
@@ -114,8 +112,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "The number of CPU cores to allocate for the task. Can be specified as an integer or as a template expression. More CPUs enable parallel processing and faster execution for CPU-intensive tasks.",
   "tasks[].agent.disk":
     "The disk space allocation for the task execution environment, which can be specified as a simple string or as an object with a size property. Available in 50GB increments starting from 50GB (default). Larger disk allocations support tasks that generate large artifacts or work with large datasets.",
-  "tasks[].agent.disk.size":
-    "Disk space allocation followed by 'gb'.",
+  "tasks[].agent.disk.size": "Disk space allocation followed by 'gb'.",
   "tasks[].agent.static-ips":
     "A vault expression resolving to the static IPs to use for the task. Useful for tasks that need to be whitelisted by external services or require consistent network identity.",
   "tasks[].agent.tmpfs":
@@ -166,8 +163,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Separator string for join strategy. Common values: ':' for PATH-like variables, ',' for comma-separated lists, ' ' for space-separated values.",
 
   // Cache configuration (tasks[].cache.*)
-  "tasks[].cache.enabled":
-    "Whether caching is enabled for this task.",
+  "tasks[].cache.enabled": "Whether caching is enabled for this task.",
   "tasks[].cache.ttl":
     "Time-to-live for cache entries. Supported formats: '1 min', '1 minute', '2 mins', '2 minutes', '1 hr', '1 hour', '2 hrs', '2 hours', '1 day', '2 days'. Cache entries automatically expire after the specified duration.",
 
@@ -194,30 +190,22 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Exit codes that should be considered successful completion.",
   "tasks[].outputs.test-results":
     "Test result files to process and display in the UI.",
-  "tasks[].outputs.test-results[].path":
-    "Path to test result file.",
+  "tasks[].outputs.test-results[].path": "Path to test result file.",
   "tasks[].outputs.test-results[].options":
     "Options for test result processing.",
-  "tasks[].outputs.test-results[].options.framework":
-    "Test framework name.",
-  "tasks[].outputs.test-results[].options.language":
-    "Programming language.",
+  "tasks[].outputs.test-results[].options.framework": "Test framework name.",
+  "tasks[].outputs.test-results[].options.language": "Programming language.",
   "tasks[].outputs.values":
     "Names of output values that other tasks can reference.",
   "tasks[].outputs.problems":
     "Problem detection configuration for parsing errors, warnings, and issues from task output.",
-  "tasks[].outputs.problems[].matcher":
-    "Problem matcher name or URL.",
-  "tasks[].outputs.problems[].path":
-    "Path to problem file.",
-  "tasks[].outputs.problems[].format":
-    "Format of the problem file.",
+  "tasks[].outputs.problems[].matcher": "Problem matcher name or URL.",
+  "tasks[].outputs.problems[].path": "Path to problem file.",
+  "tasks[].outputs.problems[].format": "Format of the problem file.",
   "tasks[].outputs.artifacts":
     "Files or directories to collect as artifacts after task completion.",
-  "tasks[].outputs.artifacts[].key":
-    "Unique identifier for the artifact.",
-  "tasks[].outputs.artifacts[].path":
-    "File or directory path to collect.",
+  "tasks[].outputs.artifacts[].key": "Unique identifier for the artifact.",
+  "tasks[].outputs.artifacts[].path": "File or directory path to collect.",
   "tasks[].outputs.filesystem":
     "Filesystem output configuration. Set to false to disable outputting a filesystem layer from this task, or configure filtering for preserving specific files after task completion.",
   "tasks[].outputs.filesystem.deduplicate":
@@ -230,12 +218,10 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Filter files from the system directory in filesystem output.",
 
   // Retry configuration (tasks[].retry.*)
-  "tasks[].retry.count":
-    "Number of retry attempts.",
+  "tasks[].retry.count": "Number of retry attempts.",
   "tasks[].retry.if":
     "Condition for retrying. Supports template expressions to determine whether a retry should be attempted based on the failure context.",
-  "tasks[].retry.action":
-    "Action to take on retry.",
+  "tasks[].retry.action": "Action to take on retry.",
 
   // Filter object properties (uses parseGenericRecord — workspace is fixed, other keys are task names)
   "tasks[].filter.*": {
@@ -243,8 +229,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     documented: false,
     autocomplete: false,
   },
-  "tasks[].filter.workspace":
-    "Filter files from the workspace directory.",
+  "tasks[].filter.workspace": "Filter files from the workspace directory.",
 
   // Trigger properties (on.*)
   "on.github":
@@ -253,8 +238,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "GitLab event triggers for automated run execution. Supports push events (branch updates), tag-push events (tag creation), and merge-request events (MR lifecycle). Each trigger provides GitLab-specific event context and supports conditional execution, initialization parameters, target tasks, and custom run titles.",
   "on.cron":
     "Scheduled cron triggers for automated run execution using cron expressions with optional timezone specification. Each trigger requires a unique key and schedule. Provides rich event context including time fields in both schedule timezone and UTC. Useful for recurring workflows like nightly builds, cache warming, or scheduled deployments.",
-  "on.cli":
-    "Configuration for manual CLI-triggered runs.",
+  "on.cli": "Configuration for manual CLI-triggered runs.",
   "on.dispatch":
     "API dispatch triggers for programmatic run execution. Allows on-demand execution via CLI (`rwx dispatch`), API calls, or Cloud UI. Each trigger requires a unique key within your organization and can define parameters for user input. Parameters are accessible via event.dispatch.params context and must be explicitly mapped to initialization parameters. Provides flexible workflow orchestration for deployment pipelines, manual testing, or external integrations.",
   "on.cache-rebuild":
@@ -270,12 +254,9 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // GitHub push trigger properties
   "on.github.push.init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.github.push.if":
-    "Condition for trigger activation.",
-  "on.github.push.target":
-    "Specific tasks to execute when triggered.",
-  "on.github.push.title":
-    "Custom title for the run.",
+  "on.github.push.if": "Condition for trigger activation.",
+  "on.github.push.target": "Specific tasks to execute when triggered.",
+  "on.github.push.title": "Custom title for the run.",
   "on.github.push.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.github.push.region":
@@ -286,12 +267,9 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // GitHub pull_request trigger properties
   "on.github.pull_request.init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.github.pull_request.if":
-    "Condition for trigger activation.",
-  "on.github.pull_request.target":
-    "Specific tasks to execute when triggered.",
-  "on.github.pull_request.title":
-    "Custom title for the run.",
+  "on.github.pull_request.if": "Condition for trigger activation.",
+  "on.github.pull_request.target": "Specific tasks to execute when triggered.",
+  "on.github.pull_request.title": "Custom title for the run.",
   "on.github.pull_request.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.github.pull_request.region":
@@ -302,22 +280,17 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "GitHub/GitLab status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
   // GitLab trigger properties
-  "on.gitlab.push":
-    "Triggers for GitLab push events (branch updates).",
-  "on.gitlab.tag-push":
-    "Triggers for GitLab tag-push events (tag creation).",
+  "on.gitlab.push": "Triggers for GitLab push events (branch updates).",
+  "on.gitlab.tag-push": "Triggers for GitLab tag-push events (tag creation).",
   "on.gitlab.merge-request":
     "Triggers for GitLab merge request events (MR lifecycle).",
 
   // GitLab push trigger properties
   "on.gitlab.push.init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.gitlab.push.if":
-    "Condition for trigger activation.",
-  "on.gitlab.push.target":
-    "Specific tasks to execute when triggered.",
-  "on.gitlab.push.title":
-    "Custom title for the run.",
+  "on.gitlab.push.if": "Condition for trigger activation.",
+  "on.gitlab.push.target": "Specific tasks to execute when triggered.",
+  "on.gitlab.push.title": "Custom title for the run.",
   "on.gitlab.push.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.gitlab.push.region":
@@ -328,12 +301,9 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // GitLab tag-push trigger properties
   "on.gitlab.tag-push.init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.gitlab.tag-push.if":
-    "Condition for trigger activation.",
-  "on.gitlab.tag-push.target":
-    "Specific tasks to execute when triggered.",
-  "on.gitlab.tag-push.title":
-    "Custom title for the run.",
+  "on.gitlab.tag-push.if": "Condition for trigger activation.",
+  "on.gitlab.tag-push.target": "Specific tasks to execute when triggered.",
+  "on.gitlab.tag-push.title": "Custom title for the run.",
   "on.gitlab.tag-push.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.gitlab.tag-push.region":
@@ -344,12 +314,9 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // GitLab merge-request trigger properties
   "on.gitlab.merge-request.init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.gitlab.merge-request.if":
-    "Condition for trigger activation.",
-  "on.gitlab.merge-request.target":
-    "Specific tasks to execute when triggered.",
-  "on.gitlab.merge-request.title":
-    "Custom title for the run.",
+  "on.gitlab.merge-request.if": "Condition for trigger activation.",
+  "on.gitlab.merge-request.target": "Specific tasks to execute when triggered.",
+  "on.gitlab.merge-request.title": "Custom title for the run.",
   "on.gitlab.merge-request.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.gitlab.merge-request.region":
@@ -366,26 +333,19 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Cron expression for scheduling with optional timezone. Standard format: 'minute hour day-of-month month day-of-week'. With timezone: '30 9 * * * America/New_York'. Default timezone: UTC. Provides event context: event.cron.year, event.cron.hour, event.cron.utc.hour, etc.",
   "on.cron[].init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.cron[].if":
-    "Condition for trigger activation.",
-  "on.cron[].target":
-    "Specific tasks to execute when triggered.",
-  "on.cron[].title":
-    "Custom title for the run.",
-  "on.cron[].branch":
-    "Git branch to use for the run.",
-  "on.cron[].reset-tool-cache":
-    "Whether to reset tool cache.",
+  "on.cron[].if": "Condition for trigger activation.",
+  "on.cron[].target": "Specific tasks to execute when triggered.",
+  "on.cron[].title": "Custom title for the run.",
+  "on.cron[].branch": "Git branch to use for the run.",
+  "on.cron[].reset-tool-cache": "Whether to reset tool cache.",
   "on.cron[].start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.cron[].region":
     "The region in which to execute the run when this trigger fires.",
 
   // CLI trigger properties
-  "on.cli.init":
-    "Initialization parameters passed to the run or embedded run.",
-  "on.cli.title":
-    "Custom title for CLI runs.",
+  "on.cli.init": "Initialization parameters passed to the run or embedded run.",
+  "on.cli.title": "Custom title for CLI runs.",
   "on.cli.start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.cli.region":
@@ -396,12 +356,9 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Unique key for the dispatch trigger within your organization. Used for CLI dispatch commands (`rwx dispatch <key>`), API calls, and UI identification. Should be descriptive of the dispatch purpose (e.g., 'deploy-application', 'run-integration-tests').",
   "on.dispatch[].init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.dispatch[].if":
-    "Condition for trigger activation.",
-  "on.dispatch[].target":
-    "Specific tasks to execute when triggered.",
-  "on.dispatch[].title":
-    "Custom title for the dispatch run.",
+  "on.dispatch[].if": "Condition for trigger activation.",
+  "on.dispatch[].target": "Specific tasks to execute when triggered.",
+  "on.dispatch[].title": "Custom title for the dispatch run.",
   "on.dispatch[].params":
     "Parameters that can be provided when dispatching. Each parameter defines input fields for users to specify when triggering the dispatch. Parameters are accessible via ${{ event.dispatch.params.parameter-key }} and must be mapped to initialization parameters in the 'init' section. Supports default values and required validation.",
   "on.dispatch[].start":
@@ -414,22 +371,16 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Parameter key for referencing via ${{ event.dispatch.params.key-name }}. Should be descriptive and follow naming conventions.",
   "on.dispatch[].params[].name":
     "Human-readable display name shown in UI and CLI prompts. Should be clear and descriptive for users.",
-  "on.dispatch[].params[].description":
-    "Parameter description.",
-  "on.dispatch[].params[].default":
-    "Default value.",
-  "on.dispatch[].params[].required":
-    "Whether parameter is required.",
+  "on.dispatch[].params[].description": "Parameter description.",
+  "on.dispatch[].params[].default": "Default value.",
+  "on.dispatch[].params[].required": "Whether parameter is required.",
 
   // Cache rebuild trigger properties
   "on.cache-rebuild[].init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.cache-rebuild[].if":
-    "Condition for trigger activation.",
-  "on.cache-rebuild[].target":
-    "Specific tasks to execute when triggered.",
-  "on.cache-rebuild[].title":
-    "Custom title for the cache rebuild run.",
+  "on.cache-rebuild[].if": "Condition for trigger activation.",
+  "on.cache-rebuild[].target": "Specific tasks to execute when triggered.",
+  "on.cache-rebuild[].title": "Custom title for the cache rebuild run.",
   "on.cache-rebuild[].ref":
     "Git reference (branch, tag, or commit) to run the cache rebuild on.",
   "on.cache-rebuild[].start":
@@ -442,12 +393,9 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Unique key for the webhook trigger within your organization. Used for webhook URL generation.",
   "on.webhook[].init":
     "Initialization parameters passed to the run or embedded run.",
-  "on.webhook[].if":
-    "Condition for trigger activation.",
-  "on.webhook[].target":
-    "Specific tasks to execute when triggered.",
-  "on.webhook[].title":
-    "Custom title for the webhook run.",
+  "on.webhook[].if": "Condition for trigger activation.",
+  "on.webhook[].target": "Specific tasks to execute when triggered.",
+  "on.webhook[].title": "Custom title for the webhook run.",
   "on.webhook[].start":
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.webhook[].region":
@@ -458,28 +406,24 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Configuration for the default status check that reports overall run status.",
   "status-checks.default.enabled":
     "Whether the default status check is enabled.",
-  "status-checks.default.name":
-    "Name for the default status check.",
+  "status-checks.default.name": "Name for the default status check.",
+  "status-checks.default.start-manually-behavior":
+    "Behavior of the status check when the run is configured to start manually. Controls whether the check is reported immediately or waits until the run is started.",
   "status-checks.custom":
     "Custom status checks for specific tasks or task groups.",
-  "status-checks.custom[].tasks":
-    "Specific tasks to execute when triggered.",
-  "status-checks.custom[].name":
-    "Custom name for the status check.",
+  "status-checks.custom[].tasks": "Specific tasks to execute when triggered.",
+  "status-checks.custom[].name": "Custom name for the status check.",
 
   // Concurrency pool properties
-  "concurrency-pools[].id":
-    "Unique identifier for the concurrency pool.",
+  "concurrency-pools[].id": "Unique identifier for the concurrency pool.",
   "concurrency-pools[].capacity":
     "Maximum number of concurrent tasks in this pool.",
   "concurrency-pools[].on-overflow":
     "Action to take when pool capacity is exceeded.",
-  "concurrency-pools[].if":
-    "Condition for pool activation.",
+  "concurrency-pools[].if": "Condition for pool activation.",
 
   // Tool cache properties
-  "tool-cache.vault":
-    "Vault to use for tool cache.",
+  "tool-cache.vault": "Vault to use for tool cache.",
 
   // Base layer properties
   "base.os":
