@@ -31,7 +31,11 @@ import { TextDocument } from "vscode-languageserver-textdocument";
 import * as path from "path";
 import * as fs from "fs";
 import { YamlParser } from "../support/parser";
-import { keyDescriptions } from "./key-descriptions";
+import {
+  keyDescriptions,
+  getKeyDescription,
+  isKeyAutocomplete,
+} from "./key-descriptions";
 
 // RWX Package types
 interface RWXPackage {
@@ -1308,11 +1312,12 @@ connection.onCompletion(
             const fullPath = parentPath ? `${parentPath}.${key}` : key;
             // Look up description — try with [] suffix for array keys too
             const description =
-              keyDescriptions[fullPath] ||
-              keyDescriptions[fullPath + "[]"] ||
-              keyDescriptions[`${fullPath}[].key`]
-                ? keyDescriptions[fullPath] || keyDescriptions[fullPath + "[]"]
-                : undefined;
+              getKeyDescription(fullPath) ??
+              getKeyDescription(fullPath + "[]") ??
+              (getKeyDescription(`${fullPath}[].key`)
+                ? getKeyDescription(fullPath) ?? getKeyDescription(fullPath + "[]")
+                : null) ??
+              undefined;
             return {
               label: key,
               kind: CompletionItemKind.Property,
@@ -1583,8 +1588,8 @@ function buildKeyCompletionMap(): Map<string, string[]> {
     // Skip wildcard entries like "*.value" or "*.cache-key"
     if (childKey === "*") continue;
 
-    // Skip internal keys that shouldn't be suggested to users
-    if (childKey === "bootstrapping") continue;
+    // Skip keys marked as not autocomplete-eligible
+    if (!isKeyAutocomplete(fullPath)) continue;
 
     if (!map.has(parent)) {
       map.set(parent, []);
@@ -2095,7 +2100,7 @@ connection.onHover(
     const keyPath = getYamlKeyPathAtPosition(document, params.position);
     let keyHoverPrefix: string | null = null;
     if (keyPath) {
-      const description = keyDescriptions[keyPath];
+      const description = getKeyDescription(keyPath);
       if (description) {
         keyHoverPrefix = `**\`${keyPath.split(".").pop()}\`**\n\n${description}`;
       }
