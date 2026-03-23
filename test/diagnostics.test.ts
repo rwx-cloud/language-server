@@ -1,3 +1,4 @@
+import assert from "node:assert";
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { TestLanguageServer } from "./test-helpers/test-server";
 import {
@@ -48,7 +49,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         testEnv.mintDir,
         "test.yml",
-        createYAMLContent("simple-task")
+        createYAMLContent("simple-task"),
       );
 
       const textDocument = {
@@ -64,7 +65,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -79,7 +80,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         rwxEnv.mintDir,
         "test.yml",
-        createYAMLContent("simple-task")
+        createYAMLContent("simple-task"),
       );
 
       const textDocument = {
@@ -95,7 +96,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -111,7 +112,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         nestedDir,
         "build.yml",
-        createYAMLContent("simple-task")
+        createYAMLContent("simple-task"),
       );
 
       const textDocument = {
@@ -127,7 +128,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -143,7 +144,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         nestedDir,
         "production.yml",
-        createYAMLContent("simple-task")
+        createYAMLContent("simple-task"),
       );
 
       const textDocument = {
@@ -159,7 +160,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -174,7 +175,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         testEnv.rootDir,
         "test.yml",
-        createYAMLContent("simple-task")
+        createYAMLContent("simple-task"),
       );
 
       const textDocument = {
@@ -190,7 +191,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -203,7 +204,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         testEnv.mintDir,
         "test.yml",
-        createYAMLContent("simple-task")
+        createYAMLContent("simple-task"),
       );
 
       // Test with file:// prefix
@@ -220,7 +221,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -233,7 +234,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         testEnv.mintDir,
         "test.yml",
-        createYAMLContent("simple-task")
+        createYAMLContent("simple-task"),
       );
 
       // Test with backslashes (Windows-style) in URI
@@ -252,7 +253,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -268,7 +269,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         testEnv.rootDir,
         "not-rwx.yml",
-        createYAMLContent("simple-task")
+        createYAMLContent("simple-task"),
       );
 
       const textDocument = {
@@ -284,7 +285,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -297,7 +298,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         testEnv.mintDir,
         "invalid.yml",
-        createYAMLContent("invalid-yaml")
+        createYAMLContent("invalid-yaml"),
       );
 
       const textDocument = {
@@ -313,7 +314,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -333,7 +334,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         testEnv.mintDir,
         "error.yml",
-        createYAMLContent("invalid-yaml")
+        createYAMLContent("invalid-yaml"),
       );
 
       const textDocument = {
@@ -349,7 +350,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -370,7 +371,7 @@ describe("Document Validation", () => {
       const filePath = await createTestFile(
         testEnv.mintDir,
         "error.yml",
-        "invalid: yaml: content: here"
+        "invalid: yaml: content: here",
       );
 
       const textDocument = {
@@ -386,7 +387,7 @@ describe("Document Validation", () => {
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -409,7 +410,7 @@ tasks:
       const filePath = await createTestFile(
         testEnv.mintDir,
         "duplicate.yml",
-        yamlWithIssue
+        yamlWithIssue,
       );
 
       const textDocument = {
@@ -425,7 +426,7 @@ tasks:
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -453,7 +454,7 @@ tasks:
       const filePath = await createTestFile(
         testEnv.mintDir,
         "many-errors.yml",
-        yamlWithManyErrors
+        yamlWithManyErrors,
       );
 
       const textDocument = {
@@ -469,7 +470,7 @@ tasks:
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -491,7 +492,7 @@ tasks:
       const filePath = await createTestFile(
         testEnv.mintDir,
         "malformed.yml",
-        malformedYaml
+        malformedYaml,
       );
 
       const textDocument = {
@@ -507,7 +508,7 @@ tasks:
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -536,7 +537,7 @@ tasks:
       const filePath = await createTestFile(
         testEnv.mintDir,
         "package.yml",
-        yamlWithPackage
+        yamlWithPackage,
       );
 
       const textDocument = {
@@ -555,7 +556,7 @@ tasks:
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -584,7 +585,7 @@ tasks:
       const filePath = await createTestFile(
         testEnv.mintDir,
         "mixed.yml",
-        yamlWithIssues
+        yamlWithIssues,
       );
 
       const textDocument = {
@@ -603,7 +604,7 @@ tasks:
         "textDocument/diagnostic",
         {
           textDocument: { uri: textDocument.uri },
-        }
+        },
       );
 
       expect(result.kind).toBe("full");
@@ -615,6 +616,52 @@ tasks:
       if ("items" in result) {
         expect(result.items.length).toBeGreaterThanOrEqual(0);
       }
+    });
+  });
+
+  describe("Package Validation via Leaves API", () => {
+    it("validates a real package without Leaves Api errors", async () => {
+      const yamlWithRealPackage = `
+base:
+  os: ubuntu
+  tag: "24.04"
+
+tasks:
+  - key: code
+    call: git/clone 2.0.7
+    with:
+      repository: https://github.com/rwx-cloud/mint.git
+      ref: main
+`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "real-package.yml",
+        yamlWithRealPackage,
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlWithRealPackage,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const result = await server.sendRequest<DocumentDiagnosticReport>(
+        "textDocument/diagnostic",
+        {
+          textDocument: { uri: textDocument.uri },
+        },
+      );
+
+      expect(result.kind).toBe("full");
+      assert("items" in result);
+      const errors = result.items.filter(
+        (d) => d.severity === DiagnosticSeverity.Error,
+      );
+      expect(errors).toEqual([]);
     });
   });
 });
