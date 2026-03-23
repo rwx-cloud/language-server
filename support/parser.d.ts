@@ -568,3 +568,22 @@ export type PartialRunDefinition = {
 
 export const DEFAULT_PARALLEL_TASKS_LIMIT = 16;
 export const MAXIMUM_PARALLEL_TASKS_LIMIT = 256;
+
+type PackageIdentifier =
+  | { type: "nameAndVersion"; name: string; version: string }
+  | { type: "digest"; digest: string };
+
+type GetLeafResult =
+  | { success: true; metadata: { definition: string; digest: string } }
+  | { success: false; error: "NOT_FOUND" };
+
+interface LeavesApi {
+  getLeaf(packageIdentifier: PackageIdentifier): Promise<GetLeafResult>;
+}
+
+export const Leaves: {
+  set(instance: LeavesApi): void;
+  get(): LeavesApi;
+  tryGet(): LeavesApi | undefined;
+  reset(): void;
+};

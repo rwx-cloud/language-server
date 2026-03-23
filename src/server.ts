@@ -30,12 +30,59 @@ import {
 import { TextDocument } from "vscode-languageserver-textdocument";
 import * as path from "path";
 import * as fs from "fs";
-import { YamlParser } from "../support/parser";
+import { YamlParser, Leaves } from "../support/parser";
 import {
   keyDescriptions,
   getKeyDescription,
   isKeyAutocomplete,
 } from "./key-descriptions";
+
+// Set up the Leaves API so the parser can validate packages against the public resolve endpoint
+const LEAVES_RESOLVE_URL = "https://cloud.rwx.com/mint/api/leaves/resolve";
+
+Leaves.set({
+  async getLeaf(packageIdentifier) {
+    try {
+      const body =
+        packageIdentifier.type === "digest"
+          ? { digest: packageIdentifier.digest }
+          : {
+              name: packageIdentifier.name,
+              version: packageIdentifier.version,
+            };
+
+      const response = await fetch(LEAVES_RESOLVE_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "User-Agent": "rwx-language-server/1",
+        },
+        body: JSON.stringify(body),
+      });
+
+      if (response.status === 404) {
+        return { success: false, error: "NOT_FOUND" };
+      }
+
+      if (!response.ok) {
+        return { success: false, error: "NOT_FOUND" };
+      }
+
+      const data = (await response.json()) as {
+        digest: string;
+        raw_leaf_spec: string;
+      };
+
+      return {
+        success: true,
+        metadata: { definition: data.raw_leaf_spec, digest: data.digest },
+      };
+    } catch {
+      return { success: false, error: "NOT_FOUND" };
+    }
+  },
+});
 
 // RWX Package types
 interface RWXPackage {
@@ -97,14 +144,14 @@ async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
           Accept: "application/json,*/*",
           "User-Agent": USER_AGENT,
         },
-      }
+      },
     );
 
     if (!response.ok) {
       console.error(
         "Failed to fetch RWX packages:",
         response.status,
-        response.statusText
+        response.statusText,
       );
       return packageCache.data; // Return cached data if available
     }
@@ -125,7 +172,7 @@ async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
 // Fetch detailed package information for a specific version
 async function fetchPackageDetails(
   packageName: string,
-  version: string
+  version: string,
 ): Promise<RWXPackageDetails | null> {
   const cacheKey = `${packageName}@${version}`;
 
@@ -136,7 +183,7 @@ async function fetchPackageDetails(
 
   try {
     const url = `https://cloud.rwx.com/mint/api/leaves/${packageName}/${encodeURIComponent(
-      version
+      version,
     )}/documentation`;
     console.log("Fetching package details from:", url); // Debug logging
 
@@ -153,7 +200,7 @@ async function fetchPackageDetails(
         response.status,
         response.statusText,
         "URL:",
-        url
+        url,
       );
       return null;
     }
@@ -223,7 +270,7 @@ connection.onInitialized(() => {
     // Register for all configuration changes.
     void connection.client.register(
       DidChangeConfigurationNotification.type,
-      undefined
+      undefined,
     );
   }
   if (hasWorkspaceFolderCapability) {
@@ -264,7 +311,7 @@ connection.onDidChangeConfiguration((change) => {
 });
 
 function getDocumentSettings(
-  resource: string
+  resource: string,
 ): Thenable<RwxLanguageServerSettings> {
   if (!hasConfigurationCapability) {
     return Promise.resolve(globalSettings);
@@ -321,7 +368,16 @@ connection.languages.diagnostics.on(async (params) => {
 });
 
 function stackTraceToRelatedInformation(
-  stackTrace: Array<{ fileName: string; line: number; column: number; name?: string; endLine?: number; endColumn?: number }> | undefined
+  stackTrace:
+    | Array<{
+        fileName: string;
+        line: number;
+        column: number;
+        name?: string;
+        endLine?: number;
+        endColumn?: number;
+      }>
+    | undefined,
 ): DiagnosticRelatedInformation[] | undefined {
   if (!stackTrace || stackTrace.length <= 1) return undefined;
   return stackTrace.slice(1).map((entry) => ({
@@ -331,8 +387,8 @@ function stackTraceToRelatedInformation(
         Position.create(entry.line - 1, entry.column - 1),
         Position.create(
           entry.endLine ? entry.endLine - 1 : entry.line - 1,
-          entry.endColumn ? entry.endColumn - 1 : entry.column - 1 + 10
-        )
+          entry.endColumn ? entry.endColumn - 1 : entry.column - 1 + 10,
+        ),
       ),
     },
     message: entry.name ?? "",
@@ -340,7 +396,7 @@ function stackTraceToRelatedInformation(
 }
 
 async function validateTextDocumentForDiagnostics(
-  textDocument: TextDocument
+  textDocument: TextDocument,
 ): Promise<Diagnostic[]> {
   // Only validate YAML files in .mint or .rwx directories
   if (!isRwxRunFile(textDocument)) {
@@ -354,7 +410,7 @@ async function validateTextDocumentForDiagnostics(
     connection.console.error(
       `Failed to get document settings: ${
         error instanceof Error ? error.message : String(error)
-      }`
+      }`,
     );
     settings = defaultSettings;
   }
@@ -487,7 +543,9 @@ async function validateTextDocumentForDiagnostics(
               diagnostic.message += `\n\nAdvice: ${warning.advice}`;
             }
 
-            const relatedInfo = stackTraceToRelatedInformation(warning.stackTrace);
+            const relatedInfo = stackTraceToRelatedInformation(
+              warning.stackTrace,
+            );
             if (relatedInfo) diagnostic.relatedInformation = relatedInfo;
 
             diagnostics.push(diagnostic);
@@ -534,7 +592,7 @@ function extractTaskKeys(result: any): string[] {
 // Helper function to find task definition location in document
 function findTaskDefinition(
   document: TextDocument,
-  taskKey: string
+  taskKey: string,
 ): Position | null {
   const lines = document.getText().split("\n");
 
@@ -544,7 +602,7 @@ function findTaskDefinition(
 
     // Look for "- key: taskKey" or "  key: taskKey" patterns
     const keyPattern = new RegExp(
-      `^\\s*(?:-\\s+)?key:\\s*['"]?${escapeRegExp(taskKey)}['"]?\\s*$`
+      `^\\s*(?:-\\s+)?key:\\s*['"]?${escapeRegExp(taskKey)}['"]?\\s*$`,
     );
     if (keyPattern.test(line)) {
       const keyIndex = line.indexOf(taskKey);
@@ -582,7 +640,7 @@ function findMintDirectory(filePath: string): string | null {
 async function getFileCompletions(
   baseDir: string,
   relativePath: string = "",
-  currentFilePath: string = ""
+  currentFilePath: string = "",
 ): Promise<CompletionItem[]> {
   try {
     const searchDir = path.join(baseDir, relativePath);
@@ -654,7 +712,7 @@ async function getFileCompletions(
     connection.console.error(
       `Error getting file completions: ${
         error instanceof Error ? error.message : String(error)
-      }`
+      }`,
     );
     return [];
   }
@@ -662,7 +720,7 @@ async function getFileCompletions(
 
 // Helper function to extract package name and version from a call line
 function extractPackageAndVersionFromCallLine(
-  line: string
+  line: string,
 ): { packageName: string; version: string } | null {
   // Skip embedded run calls
   if (line.includes("${{")) {
@@ -680,7 +738,7 @@ function extractPackageAndVersionFromCallLine(
 // Helper function to check if position is in a 'call' context
 function isInPackageCallContext(
   document: TextDocument,
-  position: { line: number; character: number }
+  position: { line: number; character: number },
 ): boolean {
   const lines = document.getText().split("\n");
   const currentLineIndex = position.line;
@@ -705,7 +763,7 @@ function isInPackageCallContext(
 // Helper function to check if position is in an embedded run call context
 function isInEmbeddedRunCallContext(
   document: TextDocument,
-  position: { line: number; character: number }
+  position: { line: number; character: number },
 ): { isInContext: boolean; relativePath: string } {
   const lines = document.getText().split("\n");
   const currentLineIndex = position.line;
@@ -748,7 +806,7 @@ function extractEmbeddedRunFilePath(line: string): string | null {
 // Helper function to check if position is within an embedded run file path for go-to-definition
 function getEmbeddedRunFilePathAtPosition(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): { filePath: string; range: Range } | null {
   const lines = document.getText().split("\n");
   const currentLine = lines[position.line];
@@ -782,7 +840,7 @@ function getEmbeddedRunFilePathAtPosition(
   ) {
     const range = Range.create(
       Position.create(position.line, filePathStart),
-      Position.create(position.line, filePathEnd)
+      Position.create(position.line, filePathEnd),
     );
 
     return { filePath, range };
@@ -794,7 +852,7 @@ function getEmbeddedRunFilePathAtPosition(
 // Helper function to check if position is in a 'with:' parameter context
 function isInWithContext(
   document: TextDocument,
-  position: { line: number; character: number }
+  position: { line: number; character: number },
 ): boolean {
   const lines = document.getText().split("\n");
   const currentLineIndex = position.line;
@@ -837,7 +895,7 @@ function isInWithContext(
 // Helper function to find the call package for a with block
 function findCallPackageForWithBlock(
   document: TextDocument,
-  withLineIndex: number
+  withLineIndex: number,
 ): { packageName: string; version: string } | null {
   const lines = document.getText().split("\n");
 
@@ -903,7 +961,7 @@ function extractAllCallLines(document: TextDocument): Array<{
 
 // Helper function to check if a package version is outdated
 async function checkPackageVersions(
-  document: TextDocument
+  document: TextDocument,
 ): Promise<Diagnostic[]> {
   const diagnostics: Diagnostic[] = [];
 
@@ -946,7 +1004,7 @@ async function checkPackageVersions(
     connection.console.error(
       `Error checking package versions: ${
         error instanceof Error ? error.message : String(error)
-      }`
+      }`,
     );
   }
 
@@ -956,7 +1014,7 @@ async function checkPackageVersions(
 // Helper function to check if position is in a 'use' context
 function isInUseContext(
   document: TextDocument,
-  position: { line: number; character: number }
+  position: { line: number; character: number },
 ): boolean {
   const lines = document.getText().split("\n");
   const currentLineIndex = position.line;
@@ -1043,7 +1101,7 @@ function isInUseContext(
 // This handler provides the initial list of the completion items.
 connection.onCompletion(
   async (
-    textDocumentPosition: TextDocumentPositionParams
+    textDocumentPosition: TextDocumentPositionParams,
   ): Promise<CompletionItem[]> => {
     const document = documents.get(textDocumentPosition.textDocument.uri);
     if (!document) {
@@ -1096,7 +1154,7 @@ connection.onCompletion(
               // For current line, only count brackets before cursor
               const beforeCursorLine = line.substring(
                 0,
-                textDocumentPosition.position.character
+                textDocumentPosition.position.character,
               );
               const openBracketsBefore = (beforeCursorLine.match(/\[/g) || [])
                 .length;
@@ -1142,7 +1200,8 @@ connection.onCompletion(
             if (!hasClosingBracket) {
               // Find the appropriate indentation for the closing bracket
               const useLineIndex = lines.findIndex(
-                (line, idx) => idx <= currentLineIndex && /use:\s*\[/.test(line)
+                (line, idx) =>
+                  idx <= currentLineIndex && /use:\s*\[/.test(line),
               );
               if (useLineIndex !== -1) {
                 const useLine = lines[useLineIndex];
@@ -1159,7 +1218,7 @@ connection.onCompletion(
         const result = await YamlParser.safelyParseRun(
           fileName,
           text,
-          snippets
+          snippets,
         );
 
         const taskKeys = extractTaskKeys(result);
@@ -1177,7 +1236,7 @@ connection.onCompletion(
         connection.console.error(
           `Error getting task completions: ${
             error instanceof Error ? error.message : String(error)
-          }`
+          }`,
         );
         return [];
       }
@@ -1186,7 +1245,7 @@ connection.onCompletion(
     // Check if we're in an embedded run call context for file path completions
     const embeddedRunContext = isInEmbeddedRunCallContext(
       document,
-      textDocumentPosition.position
+      textDocumentPosition.position,
     );
     if (embeddedRunContext.isInContext) {
       try {
@@ -1202,13 +1261,13 @@ connection.onCompletion(
         return await getFileCompletions(
           mintDir,
           embeddedRunContext.relativePath,
-          filePath
+          filePath,
         );
       } catch (error) {
         connection.console.error(
           `Error getting file path completions: ${
             error instanceof Error ? error.message : String(error)
-          }`
+          }`,
         );
         return [];
       }
@@ -1230,13 +1289,13 @@ connection.onCompletion(
             detail: `v${packageInfo.version}`,
             data: `package-${index}`,
             insertText: `${packageName} ${packageInfo.version}`,
-          })
+          }),
         );
       } catch (error) {
         connection.console.error(
           `Error getting package completions: ${
             error instanceof Error ? error.message : String(error)
-          }`
+          }`,
         );
         return [];
       }
@@ -1248,7 +1307,7 @@ connection.onCompletion(
         // Find the associated call package
         const packageInfo = findCallPackageForWithBlock(
           document,
-          textDocumentPosition.position.line
+          textDocumentPosition.position.line,
         );
         if (!packageInfo) {
           return [];
@@ -1257,7 +1316,7 @@ connection.onCompletion(
         // Fetch detailed package information to get parameters
         const packageDetails = await fetchPackageDetails(
           packageInfo.packageName,
-          packageInfo.version
+          packageInfo.version,
         );
         if (!packageDetails || !packageDetails.parameters) {
           return [];
@@ -1285,7 +1344,7 @@ connection.onCompletion(
         connection.console.error(
           `Error getting parameter completions: ${
             error instanceof Error ? error.message : String(error)
-          }`
+          }`,
         );
         return [];
       }
@@ -1295,7 +1354,7 @@ connection.onCompletion(
     if (isAtYamlKeyPosition(document, textDocumentPosition.position)) {
       const parentPath = getYamlParentContext(
         document,
-        textDocumentPosition.position
+        textDocumentPosition.position,
       );
       const childKeys = keyCompletionMap.get(parentPath);
       if (childKeys && childKeys.length > 0) {
@@ -1303,7 +1362,7 @@ connection.onCompletion(
         // avoid suggesting duplicates
         const existingKeys = getExistingSiblingKeys(
           document,
-          textDocumentPosition.position
+          textDocumentPosition.position,
         );
 
         return childKeys
@@ -1315,7 +1374,8 @@ connection.onCompletion(
               getKeyDescription(fullPath) ??
               getKeyDescription(fullPath + "[]") ??
               (getKeyDescription(`${fullPath}[].key`)
-                ? getKeyDescription(fullPath) ?? getKeyDescription(fullPath + "[]")
+                ? (getKeyDescription(fullPath) ??
+                  getKeyDescription(fullPath + "[]"))
                 : null) ??
               undefined;
             return {
@@ -1332,7 +1392,7 @@ connection.onCompletion(
     }
 
     return [];
-  }
+  },
 );
 
 // This handler resolves additional information for the item selected in
@@ -1351,7 +1411,7 @@ connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
 // Helper function to get the word and its range at a position
 function getWordRangeAtPosition(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): { word: string; range: Range } | null {
   const line = document.getText().split("\n")[position.line];
   if (!line) return null;
@@ -1384,7 +1444,7 @@ function getWordRangeAtPosition(
 // Helper function to detect YAML alias at position and extract alias name
 function getYamlAliasAtPosition(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): { aliasName: string; range: Range } | null {
   const line = document.getText().split("\n")[position.line];
   if (!line) return null;
@@ -1404,7 +1464,7 @@ function getYamlAliasAtPosition(
           aliasName: match[1],
           range: Range.create(
             Position.create(position.line, aliasStart),
-            Position.create(position.line, aliasEnd)
+            Position.create(position.line, aliasEnd),
           ),
         };
       }
@@ -1417,7 +1477,7 @@ function getYamlAliasAtPosition(
 // Helper function to find YAML anchor definition in document
 function findYamlAnchor(
   document: TextDocument,
-  anchorName: string
+  anchorName: string,
 ): Position | null {
   const lines = document.getText().split("\n");
 
@@ -1427,7 +1487,7 @@ function findYamlAnchor(
 
     // Look for anchor pattern: &anchorName
     const anchorPattern = new RegExp(
-      `&${escapeRegExp(anchorName)}(?![a-zA-Z0-9_-])`
+      `&${escapeRegExp(anchorName)}(?![a-zA-Z0-9_-])`,
     );
     const match = line.match(anchorPattern);
     if (match && match.index !== undefined) {
@@ -1441,7 +1501,7 @@ function findYamlAnchor(
 // Helper function to extract YAML anchor content for display
 function getYamlAnchorContent(
   document: TextDocument,
-  anchorName: string
+  anchorName: string,
 ): string | null {
   const lines = document.getText().split("\n");
 
@@ -1451,7 +1511,7 @@ function getYamlAnchorContent(
 
     // Look for anchor pattern: &anchorName
     const anchorPattern = new RegExp(
-      `&${escapeRegExp(anchorName)}(?![a-zA-Z0-9_-])`
+      `&${escapeRegExp(anchorName)}(?![a-zA-Z0-9_-])`,
     );
     const match = line.match(anchorPattern);
     if (match && match.index !== undefined) {
@@ -1503,7 +1563,7 @@ function getYamlAnchorContent(
 // Helper function to detect YAML anchor at position and extract anchor name
 function getYamlAnchorAtPosition(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): { anchorName: string; range: Range } | null {
   const line = document.getText().split("\n")[position.line];
   if (!line) return null;
@@ -1523,7 +1583,7 @@ function getYamlAnchorAtPosition(
           anchorName: match[1],
           range: Range.create(
             Position.create(position.line, anchorStart),
-            Position.create(position.line, anchorEnd)
+            Position.create(position.line, anchorEnd),
           ),
         };
       }
@@ -1536,7 +1596,7 @@ function getYamlAnchorAtPosition(
 // Helper function to find all aliases that reference a given anchor
 function findYamlAliasReferences(
   document: TextDocument,
-  anchorName: string
+  anchorName: string,
 ): Location[] {
   const lines = document.getText().split("\n");
   const locations: Location[] = [];
@@ -1548,7 +1608,7 @@ function findYamlAliasReferences(
     // Find all alias occurrences in this line
     const aliasRegex = new RegExp(
       `\\*${escapeRegExp(anchorName)}(?![a-zA-Z0-9_-])`,
-      "g"
+      "g",
     );
     let match;
 
@@ -1560,7 +1620,7 @@ function findYamlAliasReferences(
         uri: document.uri,
         range: Range.create(
           Position.create(i, aliasStart),
-          Position.create(i, aliasEnd)
+          Position.create(i, aliasEnd),
         ),
       };
 
@@ -1610,7 +1670,7 @@ const keyCompletionMap = buildKeyCompletionMap();
 // know which child keys to suggest.
 function getYamlParentContext(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): string {
   const lines = document.getText().split("\n");
   const currentLine = lines[position.line] || "";
@@ -1621,9 +1681,7 @@ function getYamlParentContext(
   // fall back to the cursor's character position.
   const lineTextIndent = (currentLine.match(/^(\s*)/)?.[1] ?? "").length;
   const isBlankLine = currentLine.trim() === "";
-  const rawIndent = isBlankLine
-    ? position.character
-    : lineTextIndent;
+  const rawIndent = isBlankLine ? position.character : lineTextIndent;
 
   // If the current line has "- " list prefix, the effective indent for finding
   // the parent is the indent of the dash, not the key after it
@@ -1649,8 +1707,7 @@ function getYamlParentContext(
     const parentWhitespace = (parentMatch[1] ?? "").length;
     const parentListPrefix = parentMatch[2] ?? "";
     const parentKey = parentMatch[3];
-    const parentEffectiveIndent =
-      parentWhitespace + parentListPrefix.length;
+    const parentEffectiveIndent = parentWhitespace + parentListPrefix.length;
 
     if (parentEffectiveIndent >= searchIndent) continue;
 
@@ -1670,7 +1727,7 @@ function getYamlParentContext(
 // Check if the cursor is at a position where a YAML key could be typed
 function isAtYamlKeyPosition(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): boolean {
   const lines = document.getText().split("\n");
   const currentLine = lines[position.line] || "";
@@ -1692,7 +1749,7 @@ function isAtYamlKeyPosition(
 // so we can filter them out of completion suggestions.
 function getExistingSiblingKeys(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): Set<string> {
   const lines = document.getText().split("\n");
   const currentLine = lines[position.line] || "";
@@ -1703,9 +1760,7 @@ function getExistingSiblingKeys(
     ? position.character
     : (() => {
         const m = currentLine.match(/^(\s*)(-\s+)?/);
-        return m
-          ? (m[1] ?? "").length + (m[2] ?? "").length
-          : 0;
+        return m ? (m[1] ?? "").length + (m[2] ?? "").length : 0;
       })();
 
   // Check if the current line itself starts a new list item
@@ -1717,11 +1772,7 @@ function getExistingSiblingKeys(
   for (let dir = -1; dir <= 1; dir += 2) {
     const start = dir === -1 ? position.line - 1 : position.line + 1;
     const end = dir === -1 ? -1 : lines.length;
-    for (
-      let i = start;
-      dir === -1 ? i > end : i < end;
-      i += dir
-    ) {
+    for (let i = start; dir === -1 ? i > end : i < end; i += dir) {
       const line = lines[i];
       if (!line || line.trim() === "") continue;
 
@@ -1793,7 +1844,7 @@ const arrayKeys = new Set([
 // Returns null if the cursor is not on a key name (e.g. it's on a value).
 function getYamlKeyPathAtPosition(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): string | null {
   const lines = document.getText().split("\n");
   const currentLine = lines[position.line];
@@ -1855,7 +1906,7 @@ function getYamlKeyPathAtPosition(
 // Helper function to detect if cursor is on a task key definition
 function getTaskKeyAtPosition(
   document: TextDocument,
-  position: Position
+  position: Position,
 ): { taskKey: string; range: Range } | null {
   const line = document.getText().split("\n")[position.line];
   if (!line) return null;
@@ -1877,7 +1928,7 @@ function getTaskKeyAtPosition(
         taskKey,
         range: Range.create(
           Position.create(position.line, keyIndex),
-          Position.create(position.line, keyIndex + taskKey.length)
+          Position.create(position.line, keyIndex + taskKey.length),
         ),
       };
     }
@@ -1889,7 +1940,7 @@ function getTaskKeyAtPosition(
 // Helper function to find all use references to a task key
 function findTaskUseReferences(
   document: TextDocument,
-  taskKey: string
+  taskKey: string,
 ): Location[] {
   const lines = document.getText().split("\n");
   const locations: Location[] = [];
@@ -1900,7 +1951,7 @@ function findTaskUseReferences(
 
     // Find task key in simple use context: "use: taskKey"
     const simpleUsePattern = new RegExp(
-      `use:\\s*['"]?${escapeRegExp(taskKey)}['"]?\\s*$`
+      `use:\\s*['"]?${escapeRegExp(taskKey)}['"]?\\s*$`,
     );
     if (simpleUsePattern.test(line)) {
       const keyIndex = line.lastIndexOf(taskKey);
@@ -1909,7 +1960,7 @@ function findTaskUseReferences(
           uri: document.uri,
           range: Range.create(
             Position.create(i, keyIndex),
-            Position.create(i, keyIndex + taskKey.length)
+            Position.create(i, keyIndex + taskKey.length),
           ),
         });
       }
@@ -1936,7 +1987,7 @@ function findTaskUseReferences(
             uri: document.uri,
             range: Range.create(
               Position.create(i, keyStart),
-              Position.create(i, keyStart + taskKey.length)
+              Position.create(i, keyStart + taskKey.length),
             ),
           });
         }
@@ -1951,7 +2002,7 @@ function findTaskUseReferences(
 // Definition provider
 connection.onDefinition(
   async (
-    params: TextDocumentPositionParams
+    params: TextDocumentPositionParams,
   ): Promise<LocationLink[] | null> => {
     const document = documents.get(params.textDocument.uri);
     if (!document || !isRwxRunFile(document)) {
@@ -1971,7 +2022,7 @@ connection.onDefinition(
         // Create a range that covers the entire anchor at the definition
         const anchorEnd = Position.create(
           anchorPosition.line,
-          anchorPosition.character + aliasInfo.aliasName.length + 1
+          anchorPosition.character + aliasInfo.aliasName.length + 1,
         ); // +1 for the &
         const anchorRange = Range.create(anchorPosition, anchorEnd);
 
@@ -1988,7 +2039,7 @@ connection.onDefinition(
         connection.console.error(
           `Error in YAML alias go-to-definition: ${
             error instanceof Error ? error.message : String(error)
-          }`
+          }`,
         );
         return null;
       }
@@ -1997,7 +2048,7 @@ connection.onDefinition(
     // Check if we're clicking on an embedded run file path
     const embeddedRunInfo = getEmbeddedRunFilePathAtPosition(
       document,
-      params.position
+      params.position,
     );
     if (embeddedRunInfo) {
       try {
@@ -2026,11 +2077,11 @@ connection.onDefinition(
           targetUri: targetUri,
           targetRange: Range.create(
             Position.create(0, 0),
-            Position.create(0, 0)
+            Position.create(0, 0),
           ),
           targetSelectionRange: Range.create(
             Position.create(0, 0),
-            Position.create(0, 0)
+            Position.create(0, 0),
           ),
         };
 
@@ -2039,7 +2090,7 @@ connection.onDefinition(
         connection.console.error(
           `Error in embedded run go-to-definition: ${
             error instanceof Error ? error.message : String(error)
-          }`
+          }`,
         );
         return null;
       }
@@ -2065,7 +2116,7 @@ connection.onDefinition(
     // Create a range that covers the entire task key at the definition
     const definitionEnd = Position.create(
       definitionPosition.line,
-      definitionPosition.character + wordInfo.word.length
+      definitionPosition.character + wordInfo.word.length,
     );
     const definitionRange = Range.create(definitionPosition, definitionEnd);
 
@@ -2078,7 +2129,7 @@ connection.onDefinition(
     };
 
     return [locationLink];
-  }
+  },
 );
 
 // Hover provider - only handle specific RWX features, let YAML extension handle schema
@@ -2113,7 +2164,7 @@ connection.onHover(
         // Get the anchor content
         const anchorContent = getYamlAnchorContent(
           document,
-          aliasInfo.aliasName
+          aliasInfo.aliasName,
         );
 
         if (anchorContent) {
@@ -2131,7 +2182,7 @@ connection.onHover(
         connection.console.error(
           `Error getting YAML alias hover info: ${
             error instanceof Error ? error.message : String(error)
-          }`
+          }`,
         );
       }
     }
@@ -2150,7 +2201,7 @@ connection.onHover(
         // Fetch detailed package information for the specific version
         const packageDetails = await fetchPackageDetails(
           packageInfo.packageName,
-          packageInfo.version
+          packageInfo.version,
         );
         if (!packageDetails) {
           return null;
@@ -2173,7 +2224,7 @@ connection.onHover(
         if (packageDetails.issue_tracker_url) {
           hoverParts.push(
             "",
-            `**Issues:** ${packageDetails.issue_tracker_url}`
+            `**Issues:** ${packageDetails.issue_tracker_url}`,
           );
         }
 
@@ -2220,7 +2271,7 @@ connection.onHover(
         connection.console.error(
           `Error getting hover info: ${
             error instanceof Error ? error.message : String(error)
-          }`
+          }`,
         );
         return null;
       }
@@ -2237,7 +2288,7 @@ connection.onHover(
           // Find the associated call package
           const packageInfo = findCallPackageForWithBlock(
             document,
-            params.position.line
+            params.position.line,
           );
           if (!packageInfo) {
             return null;
@@ -2246,7 +2297,7 @@ connection.onHover(
           // Fetch detailed package information to get parameter details
           const packageDetails = await fetchPackageDetails(
             packageInfo.packageName,
-            packageInfo.version
+            packageInfo.version,
           );
           if (!packageDetails || !packageDetails.parameters) {
             return null;
@@ -2254,7 +2305,7 @@ connection.onHover(
 
           // Find the specific parameter
           const parameter = packageDetails.parameters.find(
-            (p) => p.name === paramName
+            (p) => p.name === paramName,
           );
           if (!parameter) {
             return null;
@@ -2283,7 +2334,7 @@ connection.onHover(
           connection.console.error(
             `Error getting parameter hover info: ${
               error instanceof Error ? error.message : String(error)
-            }`
+            }`,
           );
           return null;
         }
@@ -2301,7 +2352,7 @@ connection.onHover(
     }
 
     return null;
-  }
+  },
 );
 
 // References provider
@@ -2318,7 +2369,7 @@ connection.onReferences((params: ReferenceParams): Location[] => {
       // Find all aliases that reference this anchor
       const references = findYamlAliasReferences(
         document,
-        anchorInfo.anchorName
+        anchorInfo.anchorName,
       );
 
       // If includeDeclaration is true, also include the anchor itself
@@ -2343,7 +2394,7 @@ connection.onReferences((params: ReferenceParams): Location[] => {
       if (anchorPosition && params.context.includeDeclaration) {
         const anchorEnd = Position.create(
           anchorPosition.line,
-          anchorPosition.character + aliasInfo.aliasName.length + 1
+          anchorPosition.character + aliasInfo.aliasName.length + 1,
         );
         const anchorRange = Range.create(anchorPosition, anchorEnd);
         references.push({
@@ -2375,7 +2426,7 @@ connection.onReferences((params: ReferenceParams): Location[] => {
       // Find all use references to this task key
       const useReferences = findTaskUseReferences(
         document,
-        taskKeyInfo.taskKey
+        taskKeyInfo.taskKey,
       );
       references.push(...useReferences);
 
@@ -2385,7 +2436,7 @@ connection.onReferences((params: ReferenceParams): Location[] => {
     connection.console.error(
       `Error in references provider: ${
         error instanceof Error ? error.message : String(error)
-      }`
+      }`,
     );
   }
 
@@ -2405,7 +2456,7 @@ connection.onCodeAction(
     // Check for outdated version diagnostics
     const outdatedDiagnostics = params.context.diagnostics.filter(
       (diagnostic) =>
-        diagnostic.code === "outdated-version" && diagnostic.source === "rwx"
+        diagnostic.code === "outdated-version" && diagnostic.source === "rwx",
     );
 
     for (const diagnostic of outdatedDiagnostics) {
@@ -2430,9 +2481,9 @@ connection.onCodeAction(
                 TextEdit.replace(
                   Range.create(
                     Position.create(data.line, data.versionStart),
-                    Position.create(data.line, data.versionEnd)
+                    Position.create(data.line, data.versionEnd),
                   ),
-                  data.latestVersion
+                  data.latestVersion,
                 ),
               ],
             },
@@ -2489,9 +2540,9 @@ connection.onCodeAction(
                           TextEdit.replace(
                             Range.create(
                               Position.create(lineNum, versionStart),
-                              Position.create(lineNum, versionEnd)
+                              Position.create(lineNum, versionEnd),
                             ),
-                            latestPackage.version
+                            latestPackage.version,
                           ),
                         ],
                       },
@@ -2507,7 +2558,7 @@ connection.onCodeAction(
     }
 
     return codeActions;
-  }
+  },
 );
 
 // Register debug command handler
