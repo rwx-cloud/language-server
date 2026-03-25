@@ -59,6 +59,21 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "A boolean expression that determines whether the task executes. If false, the task is skipped along with any dependent tasks. Supports template expressions with boolean operators (&&, ||), comparison operators (==, !=), regex matching (=~, !~), and utility functions (starts-with, contains, etc.).",
   "tasks[].agent":
     "The compute resource requirements for the task execution agent. The default agent is 2 CPUs, 8GB memory, and 50GB disk. Agent memory (with units like 'gb'), CPU count, disk space (in 50GB increments), and special features like static IPs or tmpfs can all be configured. Choose agent specifications based on task requirements - use larger agents for compilation or data processing, smaller agents for simple operations. Different tasks within a run can use different agent specifications for cost optimization, so a dependency install can use a large agent while a test task using those dependencies can use a small one.",
+  "tasks[].app": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "tasks[].app.endpoint": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "tasks[].app.port": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "tasks[].docker":
     "The docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is useful for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing.",
   "tasks[].parallel":
