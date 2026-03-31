@@ -110,7 +110,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     autocomplete: false,
   },
   "tasks[].call":
-    "The package identifier or embedded run source. For packages: use name/version format (e.g., 'namespace/package-name 1.2.0') for semantic versioning or SHA-256 digest for exact version pinning. For embedded runs: a file path relative to the current run definition, an absolute path, or a template expression (commonly using ${{ run.mint-dir }}).",
+    "The package identifier or embedded run source. For packages: use name/version format (e.g., 'namespace/package-name 1.2.0') for semantic versioning or SHA-256 digest for exact version pinning. For embedded runs: a file path relative to the current run definition or a template expression using ${{ run.dir }} (e.g., '${{ run.dir }}/path/to/file.yml').",
   "tasks[].with":
     "Parameters to pass to the package. Each package defines its own parameter schema that specifies required and optional parameters with their types and defaults. Parameters can use template expressions to pass dynamic values like outputs from other tasks, initialization parameters, or event context. All values are converted to strings by the system.",
   "tasks[].init":
