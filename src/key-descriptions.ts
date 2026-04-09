@@ -357,6 +357,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.cron[].region":
     "The region in which to execute the run when this trigger fires.",
+  "on.cron[].status-checks":
+    "GitHub/GitLab status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
   // CLI trigger properties
   "on.cli.init": "Initialization parameters passed to the run or embedded run.",
@@ -380,6 +382,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.dispatch[].region":
     "The region in which to execute the run when this trigger fires.",
+  "on.dispatch[].status-checks":
+    "GitHub/GitLab status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
   // Dispatch param properties
   "on.dispatch[].params[].key":
@@ -415,6 +419,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.webhook[].region":
     "The region in which to execute the run when this trigger fires.",
+  "on.webhook[].status-checks":
+    "GitHub/GitLab status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
   // Status checks properties
   "status-checks.default":

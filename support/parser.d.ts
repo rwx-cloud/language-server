@@ -266,30 +266,31 @@ export type BaseTrigger = {
   title?: string;
 };
 
-export type GithubPushTrigger = BaseTrigger & {
-  statusChecks: Array<{
+export type StatusChecks = {
+  default: {
+    enabled: string;
+    name?: string;
+    startManuallyBehavior: "unspecified" | "succeeded" | "waiting";
+  };
+  custom: Array<{
     tasks: string[];
     name?: string;
-    status: "success" | "failure" | "pending";
+    status: "pending";
   }>;
+};
+
+export type GithubPushTrigger = BaseTrigger & {
+  statusChecks: StatusChecks;
 };
 
 export type GitHubPullRequestTrigger = BaseTrigger & {
   actions?: string[];
-  statusChecks: Array<{
-    tasks: string[];
-    name?: string;
-    status: "success" | "failure" | "pending";
-  }>;
+  statusChecks: StatusChecks;
 };
 
 export type GitHubMergeGroupTrigger = BaseTrigger & {
   actions?: string[];
-  statusChecks: Array<{
-    tasks: string[];
-    name?: string;
-    status: "success" | "failure" | "pending";
-  }>;
+  statusChecks: StatusChecks;
 };
 
 export type GitHubTriggers = {
@@ -313,6 +314,7 @@ export type CronTrigger = BaseTrigger & {
   schedule: string;
   branch?: string;
   resetToolCache?: boolean;
+  statusChecks: StatusChecks;
 };
 
 export type CliTrigger = {
@@ -329,6 +331,7 @@ export type DispatchTrigger = BaseTrigger & {
     default?: string;
     required: boolean;
   }>;
+  statusChecks: StatusChecks;
 };
 
 export type CacheRebuildTrigger = BaseTrigger & {
@@ -337,6 +340,7 @@ export type CacheRebuildTrigger = BaseTrigger & {
 
 export type WebhookTrigger = BaseTrigger & {
   key: string;
+  statusChecks: StatusChecks;
 };
 
 export type Triggers = {
