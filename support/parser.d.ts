@@ -180,8 +180,10 @@ export type PartialRunToolCache = {
 };
 
 export type PartialBaseLayer = {
-  os: string;
-  tag: string;
+  os?: string;
+  image?: string;
+  config?: string;
+  tag?: string;
   arch?: string;
 };
 
