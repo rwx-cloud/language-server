@@ -43,6 +43,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "tool-cache":
     "Global tool cache configuration that enables incremental caching for tasks across runs. Tool caches preserve filesystem contents from previous task executions, allowing tasks like dependency installations to perform incremental updates instead of starting from scratch. When a task has a cache miss, the tool cache provides the filesystem state from the most recent execution. Tool caches are evicted after 48 hours and must be configured with a vault for security. Tool caches are useful for package managers (npm, yarn, bundle), Docker builds, compilation tasks, and other tasks that benefit from incremental updates.",
   base: "Base container layer configuration that defines the operating system, version, and RWX configuration tag for task execution. All tasks in the run use this base layer. The currently supported base layers are Ubuntu 22.04 (tag 1.1) and Ubuntu 24.04 (tag 1.2). The base layer determines available system packages, pre-installed Docker version, and tool cache compatibility. Different embedded runs can specify different base layers than their parent run.",
+  defaults:
+    "Run-level defaults that apply to every task unless explicitly overridden on the task itself. Currently supports a default agent specification, letting you set memory, CPUs, disk, and other agent options once for the whole run instead of repeating them on each task.",
   aliases:
     "YAML aliases defined at the top level for reuse across the run definition. Aliases allow you to define common configurations once and reference them throughout the file using YAML anchors (&name) and aliases (*name).",
 
@@ -141,6 +143,30 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   },
   "tasks[].agent.ipv6":
     "Whether to enable IPv6 networking for the task agent. Supports template expressions.",
+
+  // Default agent specification (defaults.agent.*) — applied to every task unless the task overrides it
+  "defaults.agent":
+    "The default compute resource requirements applied to every task in the run. Tasks can override any of these fields via their own `agent` block. Useful for setting memory, CPUs, disk, or other agent options once for the whole run instead of repeating them on each task.",
+  "defaults.agent.memory":
+    "Default memory allocation for tasks, specified as a string followed by 'gb' (e.g. 16gb). Tasks can override this with their own `agent.memory`. RWX reserves 2GB RAM for internal use.",
+  "defaults.agent.cpus":
+    "Default number of CPU cores for tasks. Can be specified as an integer or as a template expression. Tasks can override this with their own `agent.cpus`.",
+  "defaults.agent.disk":
+    "Default disk space allocation for tasks, which can be specified as a simple string or as an object with a size property. Available in 50GB increments starting from 50GB. Tasks can override this with their own `agent.disk`.",
+  "defaults.agent.disk.size": "Default disk space allocation followed by 'gb'.",
+  "defaults.agent.static-ips":
+    "Default vault expression resolving to the static IPs to use for tasks. Tasks can override this with their own `agent.static-ips`.",
+  "defaults.agent.tmpfs":
+    "Default for whether tasks use tmpfs (in-memory filesystem) for improved I/O performance. Tasks can override this with their own `agent.tmpfs`. Tmpfs is useful for tasks with heavy disk I/O that fit in ~70% of available memory.",
+  "defaults.agent.spot":
+    "Default for whether tasks use spot instances. When true, ephemeral instances are used that may be preempted at any time but offer cost savings. Tasks can override this with their own `agent.spot`. Spot tasks that are interrupted are automatically retried by RWX.",
+  "defaults.agent.placement": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "defaults.agent.ipv6":
+    "Default for whether to enable IPv6 networking for task agents. Tasks can override this with their own `agent.ipv6`. Supports template expressions.",
 
   // Parallel configuration (tasks[].parallel.*)
   "tasks[].parallel.key":
