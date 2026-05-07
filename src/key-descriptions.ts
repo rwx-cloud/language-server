@@ -44,7 +44,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Global tool cache configuration that enables incremental caching for tasks across runs. Tool caches preserve filesystem contents from previous task executions, allowing tasks like dependency installations to perform incremental updates instead of starting from scratch. When a task has a cache miss, the tool cache provides the filesystem state from the most recent execution. Tool caches are evicted after 48 hours and must be configured with a vault for security. Tool caches are useful for package managers (npm, yarn, bundle), Docker builds, compilation tasks, and other tasks that benefit from incremental updates.",
   base: "Base container layer configuration that defines the operating system, version, and RWX configuration tag for task execution. All tasks in the run use this base layer. The currently supported base layers are Ubuntu 22.04 (tag 1.1) and Ubuntu 24.04 (tag 1.2). The base layer determines available system packages, pre-installed Docker version, and tool cache compatibility. Different embedded runs can specify different base layers than their parent run.",
   defaults:
-    "Run-level defaults that apply to every task unless explicitly overridden on the task itself. Currently supports a default agent specification, letting you set memory, CPUs, disk, and other agent options once for the whole run instead of repeating them on each task.",
+    "Run-level defaults that apply to every task unless explicitly overridden on the task itself. Supports a default agent specification (memory, CPUs, disk, etc.) and a default log retention applied to every task's outputs.logs.retention.",
   aliases:
     "YAML aliases defined at the top level for reuse across the run definition. Aliases allow you to define common configurations once and reference them throughout the file using YAML anchors (&name) and aliases (*name).",
 
@@ -143,6 +143,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   },
   "tasks[].agent.ipv6":
     "Whether to enable IPv6 networking for the task agent. Supports template expressions.",
+  "tasks[].agent.nested-virtualization":
+    "Whether to enable nested virtualization for the task agent. Required for tasks that run virtual machines or container workloads that themselves rely on KVM. Supports template expressions.",
 
   // Default agent specification (defaults.agent.*) — applied to every task unless the task overrides it
   "defaults.agent":
@@ -167,6 +169,16 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   },
   "defaults.agent.ipv6":
     "Default for whether to enable IPv6 networking for task agents. Tasks can override this with their own `agent.ipv6`. Supports template expressions.",
+  "defaults.agent.nested-virtualization":
+    "Default for whether to enable nested virtualization for task agents. Tasks can override this with their own `agent.nested-virtualization`. Supports template expressions.",
+
+  // Default outputs (defaults.outputs.*) — applied to every task's outputs block
+  "defaults.outputs":
+    "Run-level default outputs configuration applied to every task. Currently supports a default log retention setting.",
+  "defaults.outputs.logs":
+    "Default configuration for task log outputs. Tasks can override this with their own `outputs.logs`.",
+  "defaults.outputs.logs.retention":
+    "Default retention duration for task logs (e.g. '7d', '30d'). Tasks can override this with their own `outputs.logs.retention`. Supports template expressions.",
 
   // Parallel configuration (tasks[].parallel.*)
   "tasks[].parallel.key":
@@ -257,6 +269,10 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Filter files from the workspace directory in filesystem output.",
   "tasks[].outputs.filesystem.filter.system":
     "Filter files from the system directory in filesystem output.",
+  "tasks[].outputs.logs":
+    "Configuration for task log outputs, such as how long the logs should be retained.",
+  "tasks[].outputs.logs.retention":
+    "Retention duration for the task's logs (e.g. '7d', '30d'). Overrides the run-level `defaults.outputs.logs.retention`. Supports template expressions.",
 
   // Retry configuration (tasks[].retry.*)
   "tasks[].retry.count": "Number of retry attempts.",
