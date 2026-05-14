@@ -1,0 +1,34 @@
+on:
+  github:
+    push:
+      if: ${{ event.git.branch == "main" }}
+      init:
+        commit-sha: ${{ event.git.sha }}
+
+base:
+  image: ubuntu:24.04
+  config: rwx/base 1.1.0
+
+tasks:
+  - key: rwx-cli
+    call: rwx/install-cli 4.0.4
+
+  - key: dispatch-cli-update
+    use: rwx-cli
+    cache: false
+    run: |
+      rwx dispatch cli-language-server-update \
+        --title "Update language-server-ref to rwx-cloud/language-server@${COMMIT_SHA:0:7}"
+    env:
+      RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
+      COMMIT_SHA: ${{ init.commit-sha }}
+
+  - key: dispatch-vscode-extension-update
+    use: rwx-cli
+    cache: false
+    run: |
+      rwx dispatch vscode-extension-language-server-update \
+        --title "Update language server to rwx-cloud/language-server@${COMMIT_SHA:0:7}"
+    env:
+      RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
+      COMMIT_SHA: ${{ init.commit-sha }}
