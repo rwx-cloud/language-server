@@ -570,6 +570,26 @@ export type PartialRunDefinition = {
     }>;
     frame?: string;
   }>;
+  tips?: Array<{
+    key: string;
+    details: {
+      type: string;
+      message: string;
+      advice?: string;
+      fileName?: string;
+      line?: number;
+      column?: number;
+      stackTrace?: Array<{
+        fileName: string;
+        line: number;
+        column: number;
+        name?: string;
+        endLine?: number;
+        endColumn?: number;
+      }>;
+      frame?: string;
+    };
+  }>;
 };
 
 export const DEFAULT_PARALLEL_TASKS_LIMIT = 16;
