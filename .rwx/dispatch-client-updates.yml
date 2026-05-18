@@ -25,7 +25,6 @@ tasks:
       repository: rwx-cloud/language-server
       base-ref: ${{ init.base-ref }}
       head-ref: ${{ init.head-ref }}
-      github-token: ${{ github['rwx-cloud'].token }}
       patterns: |
         src/**
         support/**
