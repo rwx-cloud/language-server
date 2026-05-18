@@ -4,6 +4,8 @@ on:
       if: ${{ event.git.branch == "main" }}
       init:
         commit-sha: ${{ event.git.sha }}
+        base-ref: ${{ event.github.push.before }}
+        head-ref: ${{ event.git.sha }}
 
 base:
   image: ubuntu:24.04
@@ -13,7 +15,23 @@ tasks:
   - key: rwx-cli
     call: rwx/install-cli 4.0.4
 
+  - key: github-cli
+    call: github/install-cli 1.0.10
+
+  - key: src-changes
+    use: github-cli
+    call: github/compare 1.0.8
+    with:
+      repository: rwx-cloud/language-server
+      base-ref: ${{ init.base-ref }}
+      head-ref: ${{ init.head-ref }}
+      github-token: ${{ github['rwx-cloud'].token }}
+      patterns: |
+        src/**
+        support/**
+
   - key: dispatch-cli-update
+    if: ${{ tasks.src-changes.values.have-changes }}
     use: rwx-cli
     cache: false
     run: |
@@ -24,6 +42,7 @@ tasks:
       COMMIT_SHA: ${{ init.commit-sha }}
 
   - key: dispatch-vscode-extension-update
+    if: ${{ tasks.src-changes.values.have-changes }}
     use: rwx-cli
     cache: false
     run: |
