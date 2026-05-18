@@ -6,6 +6,10 @@ on:
         commit-sha: ${{ event.git.sha }}
         base-ref: ${{ event.github.push.before }}
         head-ref: ${{ event.git.sha }}
+  cli:
+    init:
+      commit-sha: ${{ event.git.sha }}
+      head-ref: ${{ event.git.sha }}
 
 base:
   image: ubuntu:24.04
@@ -25,6 +29,7 @@ tasks:
       repository: rwx-cloud/language-server
       base-ref: ${{ init.base-ref }}
       head-ref: ${{ init.head-ref }}
+      github-token: ${{ github-apps.rwx-cloud-bot.token }}
       patterns: |
         src/**
         support/**
