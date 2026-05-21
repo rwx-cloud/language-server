@@ -401,6 +401,8 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
     tmpfs?: boolean;
     spot?: boolean;
     placement: "spot" | "standard";
+    ipv6?: string;
+    nestedVirtualization?: string;
   };
   type: TaskType.Command;
   command: string;
@@ -552,7 +554,18 @@ export type PartialRunDefinition = {
   triggers?: Triggers;
   toolCache?: PartialRunToolCache;
   tasks: PartialTaskDefinition[];
-  baseLayer?: PartialBaseLayer;
+  baseConfig?: PartialBaseLayer;
+  defaultAgentSpecification: {
+    memory: string;
+    cpus: string;
+    disk: { size: string };
+    staticIps: string;
+    tmpfs: boolean;
+    placement: "spot" | "standard";
+    ipv6?: string;
+    nestedVirtualization: string;
+  };
+  defaultLogRetention?: string;
   warningMessages: Array<{
     type: string;
     message: string;
@@ -590,6 +603,16 @@ export type PartialRunDefinition = {
       frame?: string;
     };
   }>;
+};
+
+export const DEFAULT_AGENT_SPECIFICATION: {
+  memory: string;
+  cpus: string;
+  disk: { size: string };
+  staticIps: string;
+  tmpfs: boolean;
+  placement: string;
+  nestedVirtualization: string;
 };
 
 export const DEFAULT_PARALLEL_TASKS_LIMIT = 16;
