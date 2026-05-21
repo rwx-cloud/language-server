@@ -3,9 +3,11 @@ on:
     push:
       init:
         ref: ${{ event.git.sha }}
+        force-claude: false
   cli:
     init:
       ref: ${{ event.git.sha }}
+      force-claude: false
 
 base:
   image: ubuntu:24.04
@@ -17,6 +19,8 @@ tasks:
     with:
       repository: https://github.com/rwx-cloud/language-server.git
       ref: ${{ init.ref }}
+      preserve-git-dir: true
+      github-token: ${{ github-apps.rwx-cloud-bot.token }}
 
   - key: tool-versions
     use: [code]
@@ -58,7 +62,71 @@ tasks:
       test-results:
         - path: test-results.json
 
+  - key: github-cli
+    call: github/install-cli 1.0.10
+
+  - key: check-parser-changes
+    use: github-cli
+    call: github/compare 1.0.8
+    with:
+      repository: rwx-cloud/language-server
+      base-ref: main
+      head-ref: ${{ init.ref }}
+      github-token: ${{ github-apps.rwx-cloud-bot.token }}
+      patterns: support/parser.js
+
+  - key: parser-update-exists
+    use: code
+    cache: false
+    run: |
+      if [ "$FORCE_CLAUDE" = "true" ]; then
+        echo "false" > $RWX_VALUES/parser-update-exists
+        exit 0
+      fi
+
+      BRANCH=$RWX_GIT_REF_NAME
+      git fetch origin "$BRANCH"
+      if git log "origin/$BRANCH" --format='%s' | grep -i -q 'parser update'; then
+        echo "true" > $RWX_VALUES/parser-update-exists
+      else
+        echo "false" > $RWX_VALUES/parser-update-exists
+      fi
+
+  - key: claude-cli
+    if: ${{ tasks.check-parser-changes.values.have-changes && tasks.parser-update-exists.values.parser-update-exists == "false" }}
+    use: node
+    run: npm install -g @anthropic-ai/claude-code
+
+  - key: review-parser-update
+    if: ${{ tasks.check-parser-changes.values.have-changes && tasks.parser-update-exists.values.parser-update-exists == "false" }}
+    use: [code, claude-cli]
+    run: |
+      BRANCH=$RWX_GIT_REF_NAME
+      git fetch origin "$BRANCH"
+      git reset --hard "origin/$BRANCH"
+      git checkout -B "$BRANCH"
+
+      claude \
+        -p "Run the /review-parser-update skill on the current branch. Apply changes directly to the branch. I will commit and push when you are done." \
+        --permission-mode auto \
+        --verbose \
+        --output-format json \
+        > $RWX_ARTIFACTS/claude-output.json
+
+      if [ -z "$(git diff --name-only HEAD)" ]; then
+        git commit --allow-empty -m "Review parser update (no changes)"
+        exit 0
+      fi
+       
+      git add support/parser.d.ts src/key-descriptions.ts src/server.ts
+      git commit -m "Review parser update"
+      git push -u origin "$BRANCH"
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_BOT_TOKEN }}
+      GITHUB_TOKEN: ${{ github-apps.rwx-cloud-bot.token }}
+
   - key: check-key-descriptions
+    if: ${{ tasks.parser-update-exists.values.parser-update-exists }}
     use: npm-install
     run: npm run check-key-descriptions
     filter:
@@ -69,10 +137,13 @@ tasks:
       - package.json
 
   - key: bundle
+    if: ${{ tasks.parser-update-exists.values.parser-update-exists }}
     call: ${{ run.dir }}/build.yml
     init:
       ref: ${{ init.ref }}
 
   - key: test-bundle
+    if: ${{ tasks.parser-update-exists.values.parser-update-exists }}
+    after: ${{ bundle.succeeded }}
     use: node
     run: node ${{ run.dir }}/test-bundle.js ${{ tasks.bundle.tasks.build.artifacts.bundle }}
