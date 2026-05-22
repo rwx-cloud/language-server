@@ -113,13 +113,15 @@ tasks:
         --output-format json \
         > $RWX_ARTIFACTS/claude-output.json
 
-      if [ -z "$(git diff --name-only HEAD)" ]; then
+      git add support/parser.d.ts src/key-descriptions.ts src/server.ts
+      
+      if [ -z "$(git diff --name-only --cached)" ]; then
         git commit --allow-empty -m "Review parser update (no changes)"
         exit 0
+      else
+        git commit -m "Review parser update"
       fi
-       
-      git add support/parser.d.ts src/key-descriptions.ts src/server.ts
-      git commit -m "Review parser update"
+
       git push -u origin "$BRANCH"
     env:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_BOT_TOKEN }}
@@ -137,13 +139,10 @@ tasks:
       - package.json
 
   - key: bundle
-    if: ${{ tasks.parser-update-exists.values.parser-update-exists }}
     call: ${{ run.dir }}/build.yml
     init:
       ref: ${{ init.ref }}
 
   - key: test-bundle
-    if: ${{ tasks.parser-update-exists.values.parser-update-exists }}
-    after: ${{ bundle.succeeded }}
     use: node
     run: node ${{ run.dir }}/test-bundle.js ${{ tasks.bundle.tasks.build.artifacts.bundle }}
