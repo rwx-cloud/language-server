@@ -419,9 +419,8 @@ async function validateTextDocumentForDiagnostics(
 
   try {
     // Parse the document using the Mint parser
-    const snippets = new Map();
     const fileName = textDocument.uri.replace("file://", "");
-    const result = await YamlParser.safelyParseRun(fileName, text, snippets);
+    const result = await YamlParser.safelyParseRun(fileName, text);
 
     // Convert parser errors to diagnostics
     for (const error of result.errors) {
@@ -1118,7 +1117,6 @@ connection.onCompletion(
       try {
         // Parse the document to get available task keys
         let text = document.getText();
-        const snippets = new Map();
         const fileName = document.uri.replace("file://", "");
 
         // If we have incomplete array syntax, try to complete it temporarily for parsing
@@ -1215,11 +1213,7 @@ connection.onCompletion(
           }
         }
 
-        const result = await YamlParser.safelyParseRun(
-          fileName,
-          text,
-          snippets,
-        );
+        const result = await YamlParser.safelyParseRun(fileName, text);
 
         const taskKeys = extractTaskKeys(result);
 
@@ -2578,9 +2572,8 @@ connection.onRequest("rwx/dumpDebugData", async (params: { uri: string }) => {
     }
 
     const text = document.getText();
-    const snippets = new Map();
     const fileName = document.uri.replace("file://", "");
-    const result = await YamlParser.safelyParseRun(fileName, text, snippets);
+    const result = await YamlParser.safelyParseRun(fileName, text);
 
     return {
       fileName,

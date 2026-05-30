@@ -70358,18 +70358,13 @@ var DEFAULT_AGENT_SPECIFICATION = {
   nestedVirtualization: "false"
 };
 var YamlParser = class _YamlParser {
-  constructor(fileName, fileSource, doc, snippets, errorOnMissingBase = true) {
+  constructor(fileName, fileSource, doc, errorOnMissingBase = true) {
     this.doc = doc;
-    this.snippets = snippets;
     this.errorOnMissingBase = errorOnMissingBase;
     this.stack = [];
     this.currentFileName = fileName;
     this.linesMap = { [fileName]: new LinesAndColumns(fileSource) };
     this.sourceMap = { [fileName]: fileSource };
-    for (const snippet of snippets.values()) {
-      this.linesMap[snippet.filePath] = new LinesAndColumns(snippet.fileContents);
-      this.sourceMap[snippet.filePath] = snippet.fileContents;
-    }
     for (const error of doc.errors) {
       const message = this.getUserFriendlyYamlMessage(error);
       const start = this.locationOfIndex(error.pos[0], fileName);
@@ -70454,8 +70449,8 @@ var YamlParser = class _YamlParser {
     });
     return circularAliases;
   }
-  static async parseRun(fileName, source, snippets) {
-    const parser = _YamlParser.createParser(fileName, source, snippets);
+  static async parseRun(fileName, source) {
+    const parser = _YamlParser.createParser(fileName, source);
     const partialRunDefinition = await parser.parseRun();
     const { errors } = parser.formatMessages();
     if (errors.length) {
@@ -70463,9 +70458,9 @@ var YamlParser = class _YamlParser {
     }
     return partialRunDefinition;
   }
-  static async safelyParseRun(fileName, source, snippets) {
+  static async safelyParseRun(fileName, source) {
     try {
-      const parser = _YamlParser.createParser(fileName, source, snippets, false);
+      const parser = _YamlParser.createParser(fileName, source, false);
       const partialRunDefinition = await parser.parseRun();
       const { errors } = parser.formatMessages();
       return { partialRunDefinition, errors };
@@ -70484,8 +70479,8 @@ var YamlParser = class _YamlParser {
       throw error;
     }
   }
-  static async parseTaskOrTaskList(fileName, source, snippets) {
-    const parser = _YamlParser.createParser(fileName, source, snippets);
+  static async parseTaskOrTaskList(fileName, source) {
+    const parser = _YamlParser.createParser(fileName, source);
     const partialTaskDefinitions = await parser.parseTaskOrTaskList();
     const { errors } = parser.formatMessages();
     if (errors.length) {
@@ -70494,7 +70489,7 @@ var YamlParser = class _YamlParser {
     return partialTaskDefinitions;
   }
   static async parseLeafSpec(fileName, source) {
-    const parser = _YamlParser.createParser(fileName, source, /* @__PURE__ */ new Map());
+    const parser = _YamlParser.createParser(fileName, source);
     const leafSpec = await parser.parseLeafSpec();
     const { errors } = parser.formatMessages();
     if (errors.length) {
@@ -70502,10 +70497,10 @@ var YamlParser = class _YamlParser {
     }
     return leafSpec;
   }
-  static createParser(fileName, source, snippets, errorOnMissingBase = true) {
+  static createParser(fileName, source, errorOnMissingBase = true) {
     const schemaOptions = { merge: true, prettyErrors: false, stringKeys: true };
     const doc = YAML.parseDocument(source, schemaOptions);
-    const parser = new _YamlParser(fileName, source, doc, snippets, errorOnMissingBase);
+    const parser = new _YamlParser(fileName, source, doc, errorOnMissingBase);
     const { errors } = parser.formatMessages();
     if (errors.length) {
       throw new ParsingError(errors);
@@ -72912,7 +72907,7 @@ var YamlParser = class _YamlParser {
     this.error([`Expected one trigger, or a list of triggers`], node);
     return [];
   };
-  parseList = async (seq, parser, warningCollector, { listStart = seq.range[0], minimumItems = 0, seenSnippets } = {}) => {
+  parseList = async (seq, parser, warningCollector, { listStart = seq.range[0], minimumItems = 0 } = {}) => {
     if (!YAML.isSeq(seq)) {
       this.error([`Expected a list`], seq);
       return [];
@@ -72923,72 +72918,19 @@ var YamlParser = class _YamlParser {
     }
     const result = [];
     let previousEnd = listStart;
-    const previousFileName = this.currentFileName;
-    for (let item of seq.items) {
+    for (const item of seq.items) {
       const itemEnd = item.range[1];
-      const snippetsSeenInThisCycle = seenSnippets || /* @__PURE__ */ new Set();
-      const { node, snippetFileName, success } = await this.dealias(item, (item2) => this.parseSnippetInclude(item2));
-      if (!success) {
-        continue;
-      }
-      if (snippetFileName) {
-        if (snippetsSeenInThisCycle.has(snippetFileName)) {
-          if (snippetFileName === this.currentFileName) {
-            this.error(["A snippet cannot include itself"], item, snippetFileName);
-          } else {
-            this.error([`Snippet include cycle detected: ${snippetFileName} -> ${this.currentFileName} -> ${snippetFileName}`], item, snippetFileName);
-          }
-          continue;
-        }
-        snippetsSeenInThisCycle.add(snippetFileName);
-        const { line, column } = this.locationOfIndex(item.range[0], previousFileName);
-        this.stack.push({ fileName: previousFileName, line, column, name: "include" });
-        item = node;
-        this.currentFileName = snippetFileName;
-        previousEnd = item.range[0];
-      }
       await this.dealias(item, async (item2) => {
         if (YAML.isSeq(item2)) {
-          const nestedResults = await this.parseList(item2, parser, warningCollector, { seenSnippets: snippetsSeenInThisCycle });
+          const nestedResults = await this.parseList(item2, parser, warningCollector);
           result.push(...nestedResults);
         } else {
           result.push(await parser(item2, warningCollector, previousEnd));
         }
         previousEnd = itemEnd;
-        if (snippetFileName) {
-          this.currentFileName = previousFileName;
-          this.stack.pop();
-        }
       });
     }
     return result;
-  };
-  parseSnippetInclude = (node) => {
-    if (!YAML.isMap(node)) {
-      return { node, success: true };
-    }
-    const includePair = node.items.find((pair) => YAML.isScalar(pair.key) && pair.key.value === "include");
-    if (!includePair) {
-      return { node, success: true };
-    }
-    if (!YAML.isScalar(includePair.value) || typeof includePair.value.value !== "string") {
-      this.error(["The value of `include` must be the filename of the snippet you want to include."], node);
-      return { node, success: false };
-    }
-    const snippetName = includePair.value.value;
-    if (!snippetName.startsWith("_")) {
-      this.error(["The filename of a snippet must start with `_`"], node);
-      return { node, success: false };
-    }
-    const snippet = this.snippets.get(snippetName);
-    if (snippet) {
-      return { node: snippet.yamlNode, snippetFileName: snippet.filePath, success: true };
-    } else {
-      const availableSnippets = [...this.snippets.keys()];
-      const availableSnippetsText = availableSnippets.length > 0 ? `Available snippets: ${availableSnippets.join(", ")}` : "No snippets are available.";
-      this.error([`Snippet file not found: ${snippetName}. ${availableSnippetsText}`], node);
-      return { node, success: false };
-    }
   };
   parseString = (node) => {
     if (!YAML.isScalar(node) || typeof node.value !== "string") {

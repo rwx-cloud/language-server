@@ -1,10 +1,3 @@
-import * as YAML from "yaml";
-
-export type Snippets = Map<
-  string,
-  { filePath: string; fileContents: string; yamlNode: YAML.ParsedNode }
->;
-
 export enum EnvironmentVariableCacheKey {
   Included = "included",
   Excluded = "excluded",
@@ -243,7 +236,6 @@ export interface YamlParser {
   safelyParseRun(
     fileName: string,
     source: string,
-    snippets: Snippets,
   ): Promise<{
     partialRunDefinition: PartialRunDefinition;
     errors: UserMessage[];
@@ -254,7 +246,6 @@ export namespace YamlParser {
   export function safelyParseRun(
     fileName: string,
     source: string,
-    snippets: Snippets,
   ): Promise<{
     partialRunDefinition: PartialRunDefinition;
     errors: UserMessage[];
