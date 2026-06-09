@@ -322,6 +322,7 @@ export type DispatchTrigger = BaseTrigger & {
     name?: string;
     description?: string;
     default?: string;
+    values?: string[];
     required: boolean;
   }>;
   statusChecks: StatusChecks;

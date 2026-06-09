@@ -475,6 +475,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Human-readable display name shown in UI and CLI prompts. Should be clear and descriptive for users.",
   "on.dispatch[].params[].description": "Parameter description.",
   "on.dispatch[].params[].default": "Default value.",
+  "on.dispatch[].params[].values": "Allowed values for the parameter. When specified, only these values are accepted. If a default is also set, it must be one of these values.",
   "on.dispatch[].params[].required": "Whether parameter is required.",
 
   // Cache rebuild trigger properties
