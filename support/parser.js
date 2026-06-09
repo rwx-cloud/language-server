@@ -68199,6 +68199,7 @@ var TDispatchParam = Type.Object({
   name: Type.Optional(Type.String()),
   description: Type.Optional(Type.String()),
   default: Type.Optional(Type.String()),
+  values: Type.Optional(Type.Array(Type.String())),
   required: Type.Boolean()
 });
 var TDispatchTrigger = Type.Intersect([
@@ -72148,13 +72149,14 @@ var YamlParser = class _YamlParser {
         required: false
       };
     }
-    const { fields } = await this.parseObject(
+    const { fields, keyNodes } = await this.parseObject(
       node,
       {
         key: this.parseKey,
         name: this.parseString,
         description: this.parseString,
         default: this.parseString,
+        values: (node2) => this.parseList(node2, this.parseString, warningCollector),
         required: this.parseBoolean
       },
       warningCollector
@@ -72163,11 +72165,15 @@ var YamlParser = class _YamlParser {
       this.error([`A dispatch param must have a ${codeQuote("key")}`], node);
       fields.key = "";
     }
+    if (fields.default !== void 0 && fields.values !== void 0 && !fields.values.includes(fields.default)) {
+      this.error([`A dispatch param ${codeQuote("default")} must be included in ${codeQuote("values")}`], keyNodes.default ?? node);
+    }
     return {
       key: fields.key,
       name: fields.name,
       description: fields.description,
       default: fields.default,
+      ...fields.values === void 0 ? {} : { values: fields.values },
       required: fields.required ?? false
     };
   };
