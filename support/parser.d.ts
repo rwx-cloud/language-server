@@ -392,6 +392,7 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
     tmpfs?: boolean;
     spot?: boolean;
     placement: "spot" | "standard";
+    gpu?: string;
     ipv6?: string;
     nestedVirtualization?: string;
   };
@@ -550,6 +551,7 @@ export type PartialRunDefinition = {
     memory: string;
     cpus: string;
     disk: { size: string };
+    gpu: string;
     staticIps: string;
     tmpfs: boolean;
     placement: "spot" | "standard";
@@ -600,6 +602,7 @@ export const DEFAULT_AGENT_SPECIFICATION: {
   memory: string;
   cpus: string;
   disk: { size: string };
+  gpu: string;
   staticIps: string;
   tmpfs: boolean;
   placement: string;
