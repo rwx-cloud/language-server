@@ -6,7 +6,11 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod2) => function __require() {
-  return mod2 || (0, cb[__getOwnPropNames(cb)[0]])((mod2 = { exports: {} }).exports, mod2), mod2.exports;
+  try {
+    return mod2 || (0, cb[__getOwnPropNames(cb)[0]])((mod2 = { exports: {} }).exports, mod2), mod2.exports;
+  } catch (e) {
+    throw mod2 = 0, e;
+  }
 };
 var __export = (target, all) => {
   for (var name in all)
@@ -34,13 +38,13 @@ var __toCommonJS = (mod2) => __copyProps(__defProp({}, "__esModule", { value: tr
 var require_identity = __commonJS({
   "node_modules/.pnpm/yaml@2.9.0/node_modules/yaml/dist/nodes/identity.js"(exports2) {
     "use strict";
-    var ALIAS = Symbol.for("yaml.alias");
-    var DOC = Symbol.for("yaml.document");
-    var MAP = Symbol.for("yaml.map");
-    var PAIR = Symbol.for("yaml.pair");
-    var SCALAR = Symbol.for("yaml.scalar");
-    var SEQ = Symbol.for("yaml.seq");
-    var NODE_TYPE = Symbol.for("yaml.node.type");
+    var ALIAS = /* @__PURE__ */ Symbol.for("yaml.alias");
+    var DOC = /* @__PURE__ */ Symbol.for("yaml.document");
+    var MAP = /* @__PURE__ */ Symbol.for("yaml.map");
+    var PAIR = /* @__PURE__ */ Symbol.for("yaml.pair");
+    var SCALAR = /* @__PURE__ */ Symbol.for("yaml.scalar");
+    var SEQ = /* @__PURE__ */ Symbol.for("yaml.seq");
+    var NODE_TYPE = /* @__PURE__ */ Symbol.for("yaml.node.type");
     var isAlias2 = (node) => !!node && typeof node === "object" && node[NODE_TYPE] === ALIAS;
     var isDocument = (node) => !!node && typeof node === "object" && node[NODE_TYPE] === DOC;
     var isMap2 = (node) => !!node && typeof node === "object" && node[NODE_TYPE] === MAP;
@@ -92,9 +96,9 @@ var require_visit = __commonJS({
   "node_modules/.pnpm/yaml@2.9.0/node_modules/yaml/dist/visit.js"(exports2) {
     "use strict";
     var identity = require_identity();
-    var BREAK = Symbol("break visit");
-    var SKIP = Symbol("skip children");
-    var REMOVE = Symbol("remove node");
+    var BREAK = /* @__PURE__ */ Symbol("break visit");
+    var SKIP = /* @__PURE__ */ Symbol("skip children");
+    var REMOVE = /* @__PURE__ */ Symbol("remove node");
     function visit2(node, visitor) {
       const visitor_ = initVisitor(visitor);
       if (identity.isDocument(node)) {
@@ -5554,9 +5558,9 @@ var require_cst_stringify = __commonJS({
 var require_cst_visit = __commonJS({
   "node_modules/.pnpm/yaml@2.9.0/node_modules/yaml/dist/parse/cst-visit.js"(exports2) {
     "use strict";
-    var BREAK = Symbol("break visit");
-    var SKIP = Symbol("skip children");
-    var REMOVE = Symbol("remove item");
+    var BREAK = /* @__PURE__ */ Symbol("break visit");
+    var SKIP = /* @__PURE__ */ Symbol("skip children");
+    var REMOVE = /* @__PURE__ */ Symbol("remove item");
     function visit2(cst, visitor) {
       if ("type" in cst && cst.type === "document")
         cst = { start: cst.start, value: cst.value };
@@ -20869,13 +20873,13 @@ var require_triple_beam = __commonJS({
   "node_modules/.pnpm/triple-beam@1.4.1/node_modules/triple-beam/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "LEVEL", {
-      value: Symbol.for("level")
+      value: /* @__PURE__ */ Symbol.for("level")
     });
     Object.defineProperty(exports2, "MESSAGE", {
-      value: Symbol.for("message")
+      value: /* @__PURE__ */ Symbol.for("message")
     });
     Object.defineProperty(exports2, "SPLAT", {
-      value: Symbol.for("splat")
+      value: /* @__PURE__ */ Symbol.for("splat")
     });
     Object.defineProperty(exports2, "configs", {
       value: require_config()
@@ -23710,13 +23714,13 @@ var require_async_iterator = __commonJS({
       return (hint === "string" ? String : Number)(input);
     }
     var finished = require_end_of_stream();
-    var kLastResolve = Symbol("lastResolve");
-    var kLastReject = Symbol("lastReject");
-    var kError = Symbol("error");
-    var kEnded = Symbol("ended");
-    var kLastPromise = Symbol("lastPromise");
-    var kHandlePromise = Symbol("handlePromise");
-    var kStream = Symbol("stream");
+    var kLastResolve = /* @__PURE__ */ Symbol("lastResolve");
+    var kLastReject = /* @__PURE__ */ Symbol("lastReject");
+    var kError = /* @__PURE__ */ Symbol("error");
+    var kEnded = /* @__PURE__ */ Symbol("ended");
+    var kLastPromise = /* @__PURE__ */ Symbol("lastPromise");
+    var kHandlePromise = /* @__PURE__ */ Symbol("handlePromise");
+    var kStream = /* @__PURE__ */ Symbol("stream");
     function createIterResult(value, done) {
       return {
         value,
@@ -34215,7 +34219,7 @@ var require_luxon = __commonJS({
        * Returns a string representation of this Duration appropriate for the REPL.
        * @return {string}
        */
-      [Symbol.for("nodejs.util.inspect.custom")]() {
+      [/* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom")]() {
         if (this.isValid) {
           return `Duration { values: ${JSON.stringify(this.values)} }`;
         } else {
@@ -35019,7 +35023,7 @@ var require_luxon = __commonJS({
        * Returns a string representation of this Interval appropriate for the REPL.
        * @return {string}
        */
-      [Symbol.for("nodejs.util.inspect.custom")]() {
+      [/* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom")]() {
         if (this.isValid) {
           return `Interval { start: ${this.s.toISO()}, end: ${this.e.toISO()} }`;
         } else {
@@ -37495,7 +37499,7 @@ var require_luxon = __commonJS({
        * Returns a string representation of this DateTime appropriate for the REPL.
        * @return {string}
        */
-      [Symbol.for("nodejs.util.inspect.custom")]() {
+      [/* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom")]() {
         if (this.isValid) {
           return `DateTime { ts: ${this.toISO()}, zone: ${this.zone.name}, locale: ${this.locale} }`;
         } else {
@@ -40261,11 +40265,11 @@ var TypeBoxError = class extends Error {
 };
 
 // node_modules/.pnpm/@sinclair+typebox@0.34.49/node_modules/@sinclair/typebox/build/esm/type/symbols/symbols.mjs
-var TransformKind = Symbol.for("TypeBox.Transform");
-var ReadonlyKind = Symbol.for("TypeBox.Readonly");
-var OptionalKind = Symbol.for("TypeBox.Optional");
-var Hint = Symbol.for("TypeBox.Hint");
-var Kind = Symbol.for("TypeBox.Kind");
+var TransformKind = /* @__PURE__ */ Symbol.for("TypeBox.Transform");
+var ReadonlyKind = /* @__PURE__ */ Symbol.for("TypeBox.Readonly");
+var OptionalKind = /* @__PURE__ */ Symbol.for("TypeBox.Optional");
+var Hint = /* @__PURE__ */ Symbol.for("TypeBox.Hint");
+var Kind = /* @__PURE__ */ Symbol.for("TypeBox.Kind");
 
 // node_modules/.pnpm/@sinclair+typebox@0.34.49/node_modules/@sinclair/typebox/build/esm/type/guard/kind.mjs
 function IsReadonly(value) {
@@ -45812,7 +45816,7 @@ function FromSymbol4(schema, references) {
   } else if ("value" in schema) {
     return Symbol.for(schema.value);
   } else {
-    return Symbol();
+    return /* @__PURE__ */ Symbol();
   }
 }
 function FromTemplateLiteral6(schema, references) {
@@ -71455,6 +71459,7 @@ var Singleton = class {
     this.instanceName = instanceName;
     this.#instance = initially;
   }
+  instanceName;
   #instance = void 0;
   set(instance) {
     this.#instance = instance;
@@ -72207,6 +72212,8 @@ var YamlParser = class _YamlParser {
       this.rootNode = this.synchronousDealias(doc.contents)[0];
     }
   }
+  doc;
+  errorOnMissingBase;
   messages = [];
   tipCollector = [];
   linesMap;
