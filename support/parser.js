@@ -30839,17 +30839,17 @@ var require_damerau_levenshtein = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/types.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/types.js
 var require_types = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/types.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/types.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronField.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronField.js
 var require_CronField = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronField.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronField.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronField = void 0;
@@ -30990,7 +30990,7 @@ var require_CronField = __commonJS({
        * @param currentValue - Current value to compare against
        * @param reverse - When true, search in reverse for previous smaller value
        */
-      static findNearestValueInList(values, currentValue, reverse = false) {
+      static findNearestValueInList(values, currentValue, reverse) {
         if (reverse) {
           for (let i = values.length - 1; i >= 0; i--) {
             if (values[i] < currentValue)
@@ -31010,7 +31010,7 @@ var require_CronField = __commonJS({
        * @param currentValue - Current value to compare against
        * @param reverse - When true, search in reverse for previous smaller value
        */
-      findNearestValue(currentValue, reverse = false) {
+      findNearestValue(currentValue, reverse) {
         return this.constructor.findNearestValueInList(this.values, currentValue, reverse);
       }
       /**
@@ -31060,9 +31060,9 @@ var require_CronField = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronDayOfMonth.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronDayOfMonth.js
 var require_CronDayOfMonth = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronDayOfMonth.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronDayOfMonth.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronDayOfMonth = void 0;
@@ -31105,9 +31105,9 @@ var require_CronDayOfMonth = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronDayOfWeek.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronDayOfWeek.js
 var require_CronDayOfWeek = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronDayOfWeek.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronDayOfWeek.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronDayOfWeek = void 0;
@@ -31157,9 +31157,9 @@ var require_CronDayOfWeek = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronHour.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronHour.js
 var require_CronHour = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronHour.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronHour.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronHour = void 0;
@@ -31198,9 +31198,9 @@ var require_CronHour = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronMinute.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronMinute.js
 var require_CronMinute = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronMinute.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronMinute.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronMinute = void 0;
@@ -38000,9 +38000,9 @@ var require_luxon = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronDate.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronDate.js
 var require_CronDate = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronDate.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronDate.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronDate = exports2.DAYS_IN_MONTH = exports2.DateMathOp = exports2.TimeUnit = void 0;
@@ -38505,9 +38505,9 @@ var require_CronDate = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronMonth.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronMonth.js
 var require_CronMonth = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronMonth.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronMonth.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronMonth = void 0;
@@ -38550,9 +38550,9 @@ var require_CronMonth = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronSecond.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronSecond.js
 var require_CronSecond = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/CronSecond.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/CronSecond.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronSecond = void 0;
@@ -38591,9 +38591,9 @@ var require_CronSecond = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/index.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/index.js
 var require_fields = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/fields/index.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/fields/index.js"(exports2) {
     "use strict";
     var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
@@ -38623,9 +38623,9 @@ var require_fields = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronFieldCollection.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronFieldCollection.js
 var require_CronFieldCollection = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronFieldCollection.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronFieldCollection.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronFieldCollection = void 0;
@@ -38972,9 +38972,9 @@ var require_CronFieldCollection = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronExpression.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronExpression.js
 var require_CronExpression = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronExpression.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronExpression.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronExpression = exports2.LOOPS_LIMIT_EXCEEDED_ERROR_MESSAGE = exports2.TIME_SPAN_OUT_OF_BOUNDS_ERROR_MESSAGE = void 0;
@@ -39229,7 +39229,7 @@ var require_CronExpression = __commonJS({
        * @public
        */
       reset(newDate) {
-        this.#currentDate = new CronDate_1.CronDate(newDate || this.#options.currentDate);
+        this.#currentDate = new CronDate_1.CronDate(newDate || this.#options.currentDate, this.#tz);
       }
       /**
        * Generate a string representation of the cron expression.
@@ -39342,6 +39342,10 @@ var require_CronExpression = __commonJS({
           const steps = reverse ? currentHour - nextHour : nextHour - currentHour;
           for (let i = 0; i < steps; i++) {
             currentDate.applyDateOperation(dateMathVerb, CronDate_1.TimeUnit.Hour, hours.length);
+            if (!reverse && currentDate.getHours() >= nextHour)
+              break;
+            if (reverse && currentDate.getHours() <= nextHour)
+              break;
           }
         } else {
           currentDate.setHours(nextHour);
@@ -39434,8 +39438,12 @@ var require_CronExpression = __commonJS({
       [Symbol.iterator]() {
         return {
           next: () => {
-            const schedule = this.#findSchedule();
-            return { value: schedule, done: !this.hasNext() };
+            try {
+              const schedule = this.#findSchedule();
+              return { value: schedule, done: false };
+            } catch {
+              return { value: void 0, done: true };
+            }
           }
         };
       }
@@ -39445,9 +39453,9 @@ var require_CronExpression = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/utils/random.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/utils/random.js
 var require_random2 = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/utils/random.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/utils/random.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.seededRandom = seededRandom;
@@ -39474,9 +39482,9 @@ var require_random2 = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronExpressionParser.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronExpressionParser.js
 var require_CronExpressionParser = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronExpressionParser.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronExpressionParser.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronExpressionParser = exports2.DayOfWeek = exports2.Months = exports2.CronUnit = exports2.PredefinedExpressions = void 0;
@@ -39729,7 +39737,7 @@ var require_CronExpressionParser = __commonJS({
           throw new Error(`Invalid repeat: ${val}`);
         }
         if (atoms.length === 2) {
-          if (!isNaN(parseInt(atoms[0], 10))) {
+          if (!atoms[0].includes("-")) {
             atoms[0] = `${atoms[0]}-${constraints.max}`;
           }
           return _CronExpressionParser.#parseRange(field, atoms[0], parseInt(atoms[1], 10), constraints);
@@ -39842,9 +39850,9 @@ var require_CronExpressionParser = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronFileParser.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronFileParser.js
 var require_CronFileParser = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/CronFileParser.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/CronFileParser.js"(exports2) {
     "use strict";
     var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
@@ -39956,9 +39964,9 @@ var require_CronFileParser = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/index.js
+// node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/index.js
 var require_dist2 = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.5.0/node_modules/cron-parser/dist/index.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.6.0/node_modules/cron-parser/dist/index.js"(exports2) {
     "use strict";
     var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
