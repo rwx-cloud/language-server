@@ -965,6 +965,47 @@ tasks:
       expect(labels).not.toContain("run");
     });
 
+    it("provides app configuration key completions", async () => {
+      const yamlContent = `tasks:
+  - key: web
+    app:
+      `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "app-keys.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(3, 6),
+        }
+      );
+
+      const labels = completions.map((c) => c.label);
+      expect(labels).toContain("endpoint");
+      expect(labels).toContain("port");
+      expect(labels).toContain("timeout");
+
+      const endpointCompletion = completions.find(
+        (c) => c.label === "endpoint"
+      );
+      assert(endpointCompletion);
+      expect(endpointCompletion.documentation).toContain("endpoint name");
+    });
+
     it("filters out sibling keys already present in the block", async () => {
       const yamlContent = `tasks:
   - key: build

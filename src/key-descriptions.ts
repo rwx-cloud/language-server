@@ -63,21 +63,14 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "The compute resource requirements for the task execution agent. The default agent is 2 CPUs, 8GB memory, and 50GB disk. Agent memory (with units like 'gb'), CPU count, disk space (in 50GB increments), and special features like static IPs or tmpfs can all be configured. Choose agent specifications based on task requirements - use larger agents for compilation or data processing, smaller agents for simple operations. Different tasks within a run can use different agent specifications for cost optimization, so a dependency install can use a large agent while a test task using those dependencies can use a small one.",
   "tasks[].runner":
     "The compute resource requirements for the task execution environment. The default runner is 2 CPUs, 8GB memory, and 50GB disk. Runner memory (with units like 'gb'), CPU count, disk space (in 50GB increments), and special features like static IPs or tmpfs can all be configured. Choose runner specifications based on task requirements - use larger runners for compilation or data processing, smaller runners for simple operations. Different tasks within a run can use different runner specifications for cost optimization, so a dependency install can use a large runner while a test task using those dependencies can use a small one.",
-  "tasks[].app": {
-    description: "",
-    documented: false,
-    autocomplete: false,
-  },
-  "tasks[].app.endpoint": {
-    description: "",
-    documented: false,
-    autocomplete: false,
-  },
-  "tasks[].app.port": {
-    description: "",
-    documented: false,
-    autocomplete: false,
-  },
+  "tasks[].app":
+    "Web app configuration for a task that runs a long-lived process and serves traffic on an rwx.run preview URL. App tasks start on demand, stop when idle, and are commonly used to preview branch or pull request changes before merging.",
+  "tasks[].app.endpoint":
+    "The endpoint name used in the app's friendly preview URL. It forms part of the subdomain, must use only alphanumeric characters and hyphens, and cannot start or end with a hyphen. Template expressions are supported.",
+  "tasks[].app.port":
+    "The port that binds to the server process started by the task. It must be between 1024 and 49151, or a template expression that resolves to one. RWX also exposes this value to the process as the PORT environment variable.",
+  "tasks[].app.timeout":
+    "How long RWX waits for the web app to start before failing the task. Defaults to 1 minute and can be set with a duration such as '30s' or '2m'.",
   "tasks[].docker":
     "The docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is useful for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing.",
   "tasks[].parallel":

@@ -356,6 +356,41 @@ tasks:
       expect(contents.value).toContain("memory allocation");
     });
 
+    it("provides hover for a nested app key", async () => {
+      const yamlContent = `tasks:
+  - key: web
+    app:
+      endpoint: web
+      port: 3000
+    run: npm start`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "app-key.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const hover = await server.sendRequest<Hover>("textDocument/hover", {
+        textDocument: { uri: textDocument.uri },
+        position: Position.create(4, 8),
+      });
+
+      assert(hover);
+      const contents = hover.contents as MarkupContent;
+      expect(contents.kind).toBe(MarkupKind.Markdown);
+      expect(contents.value).toContain("**`port`**");
+      expect(contents.value).toContain("binds to the server process");
+    });
+
     it("provides hover for a base layer key", async () => {
       const yamlContent = `base:
   image: ubuntu:24.04
