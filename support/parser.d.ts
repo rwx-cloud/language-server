@@ -396,6 +396,7 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
     gpu?: string;
     ipv6?: string;
     nestedVirtualization?: string;
+    selfHosted?: string;
   };
   type: TaskType.Command;
   command: string;
@@ -558,6 +559,7 @@ export type PartialRunDefinition = {
     placement: "spot" | "standard";
     ipv6?: string;
     nestedVirtualization: string;
+    selfHosted: string;
   };
   defaultLogRetention?: string;
   warningMessages: Array<{
@@ -608,6 +610,7 @@ export const DEFAULT_AGENT_SPECIFICATION: {
   tmpfs: boolean;
   placement: string;
   nestedVirtualization: string;
+  selfHosted: string;
 };
 
 export const DEFAULT_PARALLEL_TASKS_LIMIT = 16;

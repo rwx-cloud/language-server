@@ -34,7 +34,11 @@ export function isKeyDocumented(path: string): boolean {
 }
 
 export const keyDescriptions: Record<string, KeyDescriptionValue> = {
-  // Top-level properties
+  // Top-level properties (including local package declarations)
+  package:
+    "Declares this file as a local package. Set to 'true' to mark the file as a local package, enabling package-specific features like parameters and allowing tasks to be called from other run definitions via local package syntax.",
+  parameters:
+    "Parameter definitions for this local package. Each parameter is a named key with an optional description, required flag, and default value. Parameters are passed by callers using 'with' and are accessible in tasks via ${{ params.parameter-name }}.",
   tasks:
     "An array of task definitions that form the core execution units of your workflow. Each task represents a discrete unit of work that executes in an isolated containerized environment. Tasks can execute shell commands, call reusable packages, or embed other run definitions. Tasks support sophisticated dependency management through 'use' (inherits outputs and filesystem) and 'after' (ordering only), enabling complex workflows with parallel execution, content-based caching, and flexible artifact management.",
   on: "Trigger configuration that defines when and how this run should execute. RWX supports five trigger types: GitHub events (push, pull_request, merge_group), GitLab events (push, tag-push, merge-request), scheduled cron runs, manual CLI execution, and API dispatch triggers. Each trigger provides rich event context accessible via template expressions (e.g., ${{ event.git.branch }}, ${{ event.github.push.head_commit.message }}). Triggers can specify conditions (if), initialization parameters (init), target tasks (target), and custom run titles (title). Event data flows into tasks through initialization parameters, enabling dynamic workflow behavior based on trigger context.",
@@ -142,6 +146,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Whether to enable IPv6 networking for the task agent. Supports template expressions.",
   "tasks[].agent.nested-virtualization":
     "Whether to enable nested virtualization for the task agent. Required for tasks that run virtual machines or container workloads that themselves rely on KVM. Supports template expressions.",
+  "tasks[].agent.self-hosted":
+    "Self-hosted runner label for the task. When specified, the task runs on a self-hosted runner matching this label instead of an RWX-managed agent. Use 'false' or omit to use RWX-hosted agents. Supports template expressions.",
 
   // Default agent specification (defaults.agent.*) — applied to every task unless the task overrides it
   "defaults.agent":
@@ -172,6 +178,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Default for whether to enable IPv6 networking for task agents. Tasks can override this with their own `agent.ipv6`. Supports template expressions.",
   "defaults.agent.nested-virtualization":
     "Default for whether to enable nested virtualization for task agents. Tasks can override this with their own `agent.nested-virtualization`. Supports template expressions.",
+  "defaults.agent.self-hosted":
+    "Default self-hosted runner label for tasks. When specified, tasks run on a self-hosted runner matching this label instead of an RWX-managed agent. Tasks can override this with their own `agent.self-hosted`. Use 'false' or omit to use RWX-hosted agents.",
 
   // Default outputs (defaults.outputs.*) — applied to every task's outputs block
   "defaults.outputs":
