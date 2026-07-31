@@ -664,4 +664,122 @@ tasks:
       expect(errors).toEqual([]);
     });
   });
+
+  describe("Local Package Files", () => {
+    it("parses files with `package: true` as local packages, not run definitions", async () => {
+      const localPackageContent = `
+package: true
+
+tasks:
+  - key: hello
+    run: echo "Hello, World!"
+`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "packages/setup.yml",
+        localPackageContent,
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: localPackageContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const result = await server.sendRequest<DocumentDiagnosticReport>(
+        "textDocument/diagnostic",
+        {
+          textDocument: { uri: textDocument.uri },
+        },
+      );
+
+      expect(result.kind).toBe("full");
+      assert("items" in result);
+      expect(result.items).toEqual([]);
+    });
+
+    it("reports local package grammar errors", async () => {
+      const localPackageContent = `
+package: true
+
+base:
+  os: ubuntu 24.04
+
+tasks:
+  - key: hello
+    run: echo "Hello, World!"
+`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "packages/setup.yml",
+        localPackageContent,
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: localPackageContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const result = await server.sendRequest<DocumentDiagnosticReport>(
+        "textDocument/diagnostic",
+        {
+          textDocument: { uri: textDocument.uri },
+        },
+      );
+
+      expect(result.kind).toBe("full");
+      assert("items" in result);
+      const diagnostic = result.items[0];
+      assert(diagnostic);
+      expect(diagnostic.severity).toBe(DiagnosticSeverity.Error);
+      expect(diagnostic.source).toBe("rwx-run-parser");
+      expect(diagnostic.message).toContain(
+        "A local package cannot configure `base`",
+      );
+    });
+
+    it("reports an error when a local package has no tasks", async () => {
+      const localPackageContent = `package: true\n`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "packages/setup.yml",
+        localPackageContent,
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: localPackageContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const result = await server.sendRequest<DocumentDiagnosticReport>(
+        "textDocument/diagnostic",
+        {
+          textDocument: { uri: textDocument.uri },
+        },
+      );
+
+      expect(result.kind).toBe("full");
+      assert("items" in result);
+      const diagnostic = result.items[0];
+      assert(diagnostic);
+      expect(diagnostic.severity).toBe(DiagnosticSeverity.Error);
+      expect(diagnostic.message).toContain(
+        "A local package must contain a `tasks` key",
+      );
+    });
+  });
 });
