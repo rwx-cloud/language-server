@@ -30,7 +30,14 @@ import {
 import { TextDocument } from "vscode-languageserver-textdocument";
 import * as path from "path";
 import * as fs from "fs";
-import { YamlParser, Leaves } from "../support/parser";
+import {
+  YamlParser,
+  Leaves,
+  type PartialLocalPackage,
+  type PartialRunDefinition,
+  type PartialTaskDefinition,
+  type UserMessage,
+} from "../support/parser";
 import {
   keyDescriptions,
   getKeyDescription,
@@ -395,6 +402,39 @@ function stackTraceToRelatedInformation(
   }));
 }
 
+function isParsingError(
+  error: unknown,
+): error is Error & { asMessages(): UserMessage[] } {
+  return (
+    error instanceof Error &&
+    typeof (error as { asMessages?: unknown }).asMessages === "function"
+  );
+}
+
+// Mirrors YamlParser.safelyParseRun, but parses with the local package grammar.
+async function safelyParseLocalPackage(
+  fileName: string,
+  source: string,
+): Promise<{
+  partialLocalPackage: PartialLocalPackage;
+  errors: UserMessage[];
+}> {
+  try {
+    const parser = YamlParser.createParser(fileName, source, false);
+    const partialLocalPackage = await parser.parseLocalPackage();
+    const { errors } = parser.formatMessages();
+    return { partialLocalPackage, errors };
+  } catch (error) {
+    if (isParsingError(error)) {
+      return {
+        partialLocalPackage: { tasks: [], warningMessages: [] },
+        errors: error.asMessages(),
+      };
+    }
+    throw error;
+  }
+}
+
 async function validateTextDocumentForDiagnostics(
   textDocument: TextDocument,
 ): Promise<Diagnostic[]> {
@@ -418,12 +458,26 @@ async function validateTextDocumentForDiagnostics(
   const diagnostics: Diagnostic[] = [];
 
   try {
-    // Parse the document using the Mint parser
+    // Parse the document using the Mint parser. Files that set `package: true`
+    // are local packages and use a different grammar than run definitions.
     const fileName = textDocument.uri.replace("file://", "");
-    const result = await YamlParser.safelyParseRun(fileName, text);
+    let errors: UserMessage[];
+    let warningMessages: PartialRunDefinition["warningMessages"] | undefined;
+    let tasks: PartialTaskDefinition[] | undefined;
+    if (YamlParser.isLocalPackageDefinition(text)) {
+      const result = await safelyParseLocalPackage(fileName, text);
+      errors = result.errors;
+      warningMessages = result.partialLocalPackage.warningMessages;
+      tasks = result.partialLocalPackage.tasks;
+    } else {
+      const result = await YamlParser.safelyParseRun(fileName, text);
+      errors = result.errors;
+      warningMessages = result.partialRunDefinition?.warningMessages;
+      tasks = result.partialRunDefinition?.tasks;
+    }
 
     // Convert parser errors to diagnostics
-    for (const error of result.errors) {
+    for (const error of errors) {
       // Get the most specific stack trace entry (usually the last one)
       const stackEntry = error.stackTrace?.[0];
       const line = stackEntry?.line ?? error.line ?? 1;
@@ -463,8 +517,8 @@ async function validateTextDocumentForDiagnostics(
       diagnostics.push(diagnostic);
     }
 
-    if (result.partialRunDefinition?.warningMessages) {
-      for (const warning of result.partialRunDefinition.warningMessages) {
+    if (warningMessages) {
+      for (const warning of warningMessages) {
         const stackEntry = warning.stackTrace?.[0];
         const line = stackEntry?.line ?? warning.line ?? 1;
         const column = stackEntry?.column ?? warning.column ?? 1;
@@ -505,8 +559,8 @@ async function validateTextDocumentForDiagnostics(
       }
     }
 
-    if (result.partialRunDefinition?.tasks) {
-      for (const task of result.partialRunDefinition.tasks) {
+    if (tasks) {
+      for (const task of tasks) {
         if (task.warningMessages) {
           for (const warning of task.warningMessages) {
             const stackEntry = warning.stackTrace?.[0];
@@ -577,15 +631,15 @@ async function validateTextDocumentForDiagnostics(
   }
 }
 
-// Helper function to extract task keys from parsed result
-function extractTaskKeys(result: any): string[] {
-  if (!result?.partialRunDefinition?.tasks) {
+// Helper function to extract task keys from parsed tasks
+function extractTaskKeys(tasks: PartialTaskDefinition[] | undefined): string[] {
+  if (!tasks) {
     return [];
   }
 
-  return result.partialRunDefinition.tasks
-    .map((task: any) => task.key)
-    .filter((key: string) => key && typeof key === "string" && key !== "#fake");
+  return tasks
+    .map((task) => task.key)
+    .filter((key) => key && typeof key === "string" && key !== "#fake");
 }
 
 // Helper function to find task definition location in document
@@ -1213,9 +1267,13 @@ connection.onCompletion(
           }
         }
 
-        const result = await YamlParser.safelyParseRun(fileName, text);
+        const tasks = YamlParser.isLocalPackageDefinition(text)
+          ? (await safelyParseLocalPackage(fileName, text)).partialLocalPackage
+              .tasks
+          : (await YamlParser.safelyParseRun(fileName, text))
+              .partialRunDefinition?.tasks;
 
-        const taskKeys = extractTaskKeys(result);
+        const taskKeys = extractTaskKeys(tasks);
 
         // Return completion items for task keys
         return taskKeys.map((key, index) => ({
@@ -2573,6 +2631,19 @@ connection.onRequest("rwx/dumpDebugData", async (params: { uri: string }) => {
 
     const text = document.getText();
     const fileName = document.uri.replace("file://", "");
+
+    if (YamlParser.isLocalPackageDefinition(text)) {
+      const result = await safelyParseLocalPackage(fileName, text);
+      return {
+        fileName,
+        isMintFile: true,
+        parseResult: {
+          partialLocalPackage: result.partialLocalPackage,
+          errors: result.errors,
+        },
+      };
+    }
+
     const result = await YamlParser.safelyParseRun(fileName, text);
 
     return {

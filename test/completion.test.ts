@@ -98,6 +98,46 @@ tasks:
       `);
     });
 
+    it("provides task completions in use context inside a local package", async () => {
+      const yamlContent = `
+package: true
+
+tasks:
+  - key: build
+    run: npm run build
+  - key: test
+    run: npm test
+  - key: deploy
+    use: `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "packages/tasks.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(9, 9),
+        }
+      );
+
+      const labels = completions.map((completion) => completion.label);
+      expect(labels).toContain("build");
+      expect(labels).toContain("test");
+    });
+
     it("provides task completions in array use context", async () => {
       const yamlContent = `tasks:
   - key: build

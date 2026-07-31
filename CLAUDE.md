@@ -24,6 +24,7 @@ This directory contains the Language Server Protocol (LSP) implementation for RW
 
 - **File Detection**: Only processes files in `.mint/` or `.rwx/` directories with `.yml` or `.yaml` extensions
 - **Parser Integration**: Uses RWX-specific YAML parser for detailed error reporting and validation
+- **Local Packages**: Files that set `package: true` at the top level are parsed with the local package grammar instead of the run definition grammar
 - **Real-time Diagnostics**: Provides syntax errors, semantic validation, and package version warnings
 
 #### Intelligent Completion

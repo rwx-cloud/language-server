@@ -240,6 +240,8 @@ export interface YamlParser {
     partialRunDefinition: PartialRunDefinition;
     errors: UserMessage[];
   }>;
+  parseLocalPackage(): Promise<PartialLocalPackage>;
+  formatMessages(): { errors: UserMessage[] };
 }
 
 export namespace YamlParser {
@@ -250,6 +252,12 @@ export namespace YamlParser {
     partialRunDefinition: PartialRunDefinition;
     errors: UserMessage[];
   }>;
+  export function isLocalPackageDefinition(source: string): boolean;
+  export function createParser(
+    fileName: string,
+    source: string,
+    errorOnMissingBase?: boolean,
+  ): YamlParser;
 }
 
 export type BaseTrigger = {
@@ -599,6 +607,15 @@ export type PartialRunDefinition = {
       frame?: string;
     };
   }>;
+};
+
+export type PartialLocalPackage = {
+  parameters?: unknown;
+  concurrencyPools?: PartialConcurrencyPool[];
+  toolCache?: PartialRunToolCache;
+  defaults?: unknown;
+  tasks: PartialTaskDefinition[];
+  warningMessages: PartialRunDefinition["warningMessages"];
 };
 
 export const DEFAULT_AGENT_SPECIFICATION: {
