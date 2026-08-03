@@ -29,14 +29,14 @@ tasks:
       LATEST_VSCODE_TAG: ${{ tasks.get-latest-vscode.values.latest-tag }}
 
   - key: code
-    call: git/clone 2.0.7
+    call: git/clone 2.0.8
     with:
       repository: https://github.com/rwx-cloud/language-server.git
       ref: ${{ init.ref }}
 
   - key: tool-versions
     use: [code]
-    call: rwx/tool-versions 1.0.7
+    call: rwx/tool-versions 1.0.8
 
   - key: compare-version
     run: |
