@@ -116,11 +116,12 @@ function extractObjectKeys(objectLiteral: string): string[] {
   return keys;
 }
 
-// Identify regions belonging to parseLeafSpec* methods (package definition
-// parsing, not run definition parsing) so we can exclude their parseObject calls.
-function findLeafSpecRegions(source: string): Array<[number, number]> {
+// Identify regions belonging to package definition parsing, not run definition
+// parsing, so we can exclude their parseObject calls. The language server never
+// reaches these grammars, so their keys have no hover or completion surface.
+function findPackageDefinitionRegions(source: string): Array<[number, number]> {
   const regions: Array<[number, number]> = [];
-  const methodPattern = /parseLeafSpec\w*\s*=\s*async\s/g;
+  const methodPattern = /(?:parseLeafSpec|parsePublicPackageV2)\w*\s*=\s*async\s/g;
   let m;
   while ((m = methodPattern.exec(source)) !== null) {
     // Find the opening brace of the method body
@@ -134,10 +135,12 @@ function findLeafSpecRegions(source: string): Array<[number, number]> {
   return regions;
 }
 
-const leafSpecRegions = findLeafSpecRegions(parserSource);
+const packageDefinitionRegions = findPackageDefinitionRegions(parserSource);
 
-function isInLeafSpec(offset: number): boolean {
-  return leafSpecRegions.some(([start, end]) => offset >= start && offset <= end);
+function isInPackageDefinition(offset: number): boolean {
+  return packageDefinitionRegions.some(
+    ([start, end]) => offset >= start && offset <= end,
+  );
 }
 
 // Find all `this.parseObject(` calls and extract the second argument's keys
@@ -146,8 +149,8 @@ const parserKeySets: string[][] = [];
 let match;
 
 while ((match = parseObjectPattern.exec(parserSource)) !== null) {
-  // Skip parseObject calls inside parseLeafSpec* methods
-  if (isInLeafSpec(match.index)) continue;
+  // Skip parseObject calls inside package definition parsing methods
+  if (isInPackageDefinition(match.index)) continue;
   const callStart = match.index + match[0].length;
 
   // Find the second argument — skip the first arg by balancing parens/braces
