@@ -75,6 +75,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "The port that binds to the server process started by the task. It must be between 1024 and 49151, or a template expression that resolves to one. RWX also exposes this value to the process as the PORT environment variable.",
   "tasks[].app.timeout":
     "How long RWX waits for the web app to start before failing the task. Defaults to 1 minute and can be set with a duration such as '30s' or '2m'.",
+  "tasks[].app.idle-timeout":
+    "How long the web app can run without receiving traffic before RWX stops it. Can be set with a duration such as '30s' or '2m'.",
   "tasks[].docker":
     "The docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is useful for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing.",
   "tasks[].parallel":
