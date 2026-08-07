@@ -36,7 +36,7 @@ export function isKeyDocumented(path: string): boolean {
 export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // Top-level properties (including local package declarations)
   package:
-    "Declares this file as a local package. Set to 'true' to mark the file as a local package, enabling package-specific features like parameters and allowing tasks to be called from other run definitions via local package syntax.",
+    "Declares this file as a package. Set it to 'true' to mark the file as a local package, which enables package features such as parameters and lets other run definitions call its tasks with local package syntax. In a published package definition, set it to a block that declares the package metadata, such as 'visibility', 'name', and 'version'.",
   parameters:
     "Parameter definitions for this local package. Each parameter is a named key with an optional description, required flag, and default value. Parameters are passed by callers using 'with' and are accessible in tasks via ${{ params.parameter-name }}.",
   tasks:
@@ -51,6 +51,24 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Run-level defaults that apply to every task unless explicitly overridden on the task itself. Supports a default agent specification (memory, CPUs, disk, etc.) and a default log retention applied to every task's outputs.logs.retention.",
   aliases:
     "YAML aliases defined at the top level for reuse across the run definition. Aliases allow you to define common configurations once and reference them throughout the file using YAML anchors (&name) and aliases (*name).",
+
+  // Published package metadata (package.*), set in the `package` block of a published package definition
+  "package.visibility":
+    "The visibility of the published package. The only supported value is 'public'. A published package must set this key.",
+  "package.name":
+    "The name of the published package in 'namespace/name' format, for example 'git/clone'. Each segment accepts lowercase letters, numbers, and hyphens only.",
+  "package.version":
+    "The version of the published package in 'major.minor.patch' format, for example '1.0.2'. Each segment must be a number.",
+  "package.description":
+    "A description of the published package. RWX shows this text in the package documentation.",
+  "package.source_code_url":
+    "The URL of the source code repository for the published package. RWX links to this URL from the package documentation.",
+  "package.issue_tracker_url":
+    "The URL of the issue tracker for the published package. RWX links to this URL from the package documentation.",
+  "package.parameters":
+    "Parameter definitions for the published package. Each parameter is a named key that accepts 'description', 'required', and 'default'. Callers pass parameters with 'with', and tasks read them via ${{ params.parameter-name }}.",
+  "package.outputs":
+    "Output value definitions for the published package. Use 'values' to declare each named output with a 'description' and a 'value'. Use 'values-from' to list task keys; the package also exports every output value that those tasks write to $MINT_VALUES.",
 
   // Task properties (merged from CommandTask, PackageTask, EmbeddedRunTask)
   "tasks[].key":
@@ -75,6 +93,11 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "The port that binds to the server process started by the task. It must be between 1024 and 49151, or a template expression that resolves to one. RWX also exposes this value to the process as the PORT environment variable.",
   "tasks[].app.timeout":
     "How long RWX waits for the web app to start before failing the task. Defaults to 1 minute and can be set with a duration such as '30s' or '2m'.",
+  "tasks[].app.idle-timeout": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "tasks[].docker":
     "The docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is useful for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing.",
   "tasks[].parallel":
