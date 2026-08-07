@@ -106,41 +106,51 @@ tasks:
       git reset --hard "origin/$BRANCH"
       git checkout -B "$BRANCH"
 
+      # The task runs with `set -e`. Keep the exit code so that the summary and
+      # the pull request comment are still written when Claude fails.
+      CLAUDE_STATUS=0
       claude \
         -p "Run the /review-parser-update skill on the current branch. Apply changes directly to the branch. I will commit and push when you are done." \
         --permission-mode auto \
         --verbose \
         --output-format json \
-        > $RWX_ARTIFACTS/claude-output.json
+        > $RWX_ARTIFACTS/claude-output.json || CLAUDE_STATUS=$?
 
       # `--output-format json` with `--verbose` emits an array of messages.
       # The final `result` message carries the summary and the session id.
       RESULT_MSG='if type == "array" then (map(select(.type == "result")) | last) else . end'
       SUMMARY="$RWX_ARTIFACTS/review-summary.md"
-      SESSION_ID="$(jq -r "$RESULT_MSG | .session_id // \"unknown\"" "$RWX_ARTIFACTS/claude-output.json" 2>/dev/null || echo "unknown")"
+      SESSION_ID="$(jq -r "$RESULT_MSG | .session_id // empty" "$RWX_ARTIFACTS/claude-output.json" 2>/dev/null || true)"
+      [ -n "$SESSION_ID" ] || SESSION_ID="unknown"
       jq -r "$RESULT_MSG | .result // empty" "$RWX_ARTIFACTS/claude-output.json" > "$SUMMARY" 2>/dev/null || true
       if [ ! -s "$SUMMARY" ]; then
-        echo "Claude returned no summary. Read the claude-output.json artifact." > "$SUMMARY"
+        echo "Claude wrote no summary. Read the claude-output.json artifact." > "$SUMMARY"
       fi
 
       echo "===== Claude review summary (session $SESSION_ID) ====="
       cat "$SUMMARY"
       echo "===== end of Claude review summary ====="
 
-      git add support/parser.d.ts src/key-descriptions.ts src/server.ts scripts/compare-parser-keys.ts
-
-      SKIPPED="$(git diff --name-only -- . ':!support/parser.js')"
-      if [ -n "$SKIPPED" ]; then
-        echo "WARNING: Claude changed files that this task does not commit:"
-        echo "$SKIPPED"
-      fi
-
-      if [ -z "$(git diff --name-only --cached)" ]; then
-        VERDICT="Claude reviewed the parser update and changed no files."
+      if [ "$CLAUDE_STATUS" -ne 0 ]; then
+        VERDICT="Claude exited with status $CLAUDE_STATUS. It did not finish the review, so this task committed nothing."
       else
-        VERDICT="Claude reviewed the parser update and pushed a commit to this branch."
-        git commit -m "Review parser update" -m "Claude Code session: $SESSION_ID"
-        git push -u origin "$BRANCH"
+        # A missing path must not stop the pull request comment. The warning
+        # below reports anything that stays unstaged.
+        git add support/parser.d.ts src/key-descriptions.ts src/server.ts scripts/compare-parser-keys.ts || true
+
+        SKIPPED="$(git diff --name-only -- . ':!support/parser.js')"
+        if [ -n "$SKIPPED" ]; then
+          echo "WARNING: Claude changed files that this task does not commit:"
+          echo "$SKIPPED"
+        fi
+
+        if [ -z "$(git diff --name-only --cached)" ]; then
+          VERDICT="Claude reviewed the parser update and changed no files."
+        else
+          VERDICT="Claude reviewed the parser update and pushed a commit to this branch."
+          git commit -m "Review parser update" -m "Claude Code session: $SESSION_ID"
+          git push -u origin "$BRANCH"
+        fi
       fi
 
       {
@@ -157,6 +167,8 @@ tasks:
         --repo rwx-cloud/language-server \
         --body-file "$RWX_ARTIFACTS/pr-comment.md" \
         || echo "Could not post the pull request comment. The summary is in the log above."
+
+      exit "$CLAUDE_STATUS"
     env:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_BOT_TOKEN }}
       GITHUB_TOKEN: ${{ github-apps.rwx-cloud-bot.token }}
