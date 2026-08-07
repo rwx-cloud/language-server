@@ -99,7 +99,7 @@ tasks:
 
   - key: review-parser-update
     if: ${{ tasks.check-parser-changes.values.have-changes && tasks.parser-update-exists.values.parser-update-exists == "false" }}
-    use: [code, claude-cli]
+    use: [code, claude-cli, github-cli]
     run: |
       BRANCH=$RWX_GIT_REF_NAME
       git fetch origin "$BRANCH"
@@ -113,22 +113,55 @@ tasks:
         --output-format json \
         > $RWX_ARTIFACTS/claude-output.json
 
-      git add support/parser.d.ts src/key-descriptions.ts src/server.ts
-      
-      if [ -z "$(git diff --name-only --cached)" ]; then
-        git commit --allow-empty -m "Review parser update (no changes)"
-        exit 0
-      else
-        git commit -m "Review parser update"
+      # `--output-format json` with `--verbose` emits an array of messages.
+      # The final `result` message carries the summary and the session id.
+      RESULT_MSG='if type == "array" then (map(select(.type == "result")) | last) else . end'
+      SUMMARY="$RWX_ARTIFACTS/review-summary.md"
+      SESSION_ID="$(jq -r "$RESULT_MSG | .session_id // \"unknown\"" "$RWX_ARTIFACTS/claude-output.json" 2>/dev/null || echo "unknown")"
+      jq -r "$RESULT_MSG | .result // empty" "$RWX_ARTIFACTS/claude-output.json" > "$SUMMARY" 2>/dev/null || true
+      if [ ! -s "$SUMMARY" ]; then
+        echo "Claude returned no summary. Read the claude-output.json artifact." > "$SUMMARY"
       fi
 
-      git push -u origin "$BRANCH"
+      echo "===== Claude review summary (session $SESSION_ID) ====="
+      cat "$SUMMARY"
+      echo "===== end of Claude review summary ====="
+
+      git add support/parser.d.ts src/key-descriptions.ts src/server.ts scripts/compare-parser-keys.ts
+
+      SKIPPED="$(git diff --name-only -- . ':!support/parser.js')"
+      if [ -n "$SKIPPED" ]; then
+        echo "WARNING: Claude changed files that this task does not commit:"
+        echo "$SKIPPED"
+      fi
+
+      if [ -z "$(git diff --name-only --cached)" ]; then
+        VERDICT="Claude reviewed the parser update and changed no files."
+      else
+        VERDICT="Claude reviewed the parser update and pushed a commit to this branch."
+        git commit -m "Review parser update" -m "Claude Code session: $SESSION_ID"
+        git push -u origin "$BRANCH"
+      fi
+
+      {
+        echo "## Parser update review"
+        echo
+        echo "$VERDICT"
+        echo
+        cat "$SUMMARY"
+        echo
+        echo "<sub>Claude Code session \`$SESSION_ID\`. The full transcript is in the \`claude-output.json\` artifact of the \`review-parser-update\` task.</sub>"
+      } > "$RWX_ARTIFACTS/pr-comment.md"
+
+      gh pr comment "$BRANCH" \
+        --repo rwx-cloud/language-server \
+        --body-file "$RWX_ARTIFACTS/pr-comment.md" \
+        || echo "Could not post the pull request comment. The summary is in the log above."
     env:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_BOT_TOKEN }}
       GITHUB_TOKEN: ${{ github-apps.rwx-cloud-bot.token }}
 
   - key: check-key-descriptions
-    if: ${{ tasks.parser-update-exists.values.parser-update-exists }}
     use: npm-install
     run: npm run check-key-descriptions
     filter:
