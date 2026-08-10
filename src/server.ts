@@ -30,9 +30,11 @@ import {
 import { TextDocument } from "vscode-languageserver-textdocument";
 import * as path from "path";
 import * as fs from "fs";
+import * as YAML from "yaml";
 import {
   YamlParser,
   Leaves,
+  type LeafSpec,
   type PartialLocalPackage,
   type PartialRunDefinition,
   type PartialTaskDefinition,
@@ -435,6 +437,121 @@ async function safelyParseLocalPackage(
   }
 }
 
+// Mirrors YamlParser.safelyParseRun, but parses with the published package grammar.
+async function safelyParsePublishedPackage(
+  fileName: string,
+  source: string,
+): Promise<{
+  leafSpec: LeafSpec;
+  errors: UserMessage[];
+}> {
+  try {
+    const parser = YamlParser.createParser(fileName, source, false);
+    const leafSpec = await parser.parseLeafSpec();
+    const { errors } = parser.formatMessages();
+    return { leafSpec, errors };
+  } catch (error) {
+    if (isParsingError(error)) {
+      return {
+        leafSpec: { tasks: [], warningMessages: [], packageSchemaVersion: 2 },
+        errors: error.asMessages(),
+      };
+    }
+    throw error;
+  }
+}
+
+// A local package and a published package share the `package` marker key, so
+// only the value tells them apart: a scalar `true` against a metadata block.
+function isPublishedPackageDefinition(source: string): boolean {
+  try {
+    const doc = YAML.parseDocument(source, {
+      merge: true,
+      prettyErrors: false,
+      stringKeys: true,
+    });
+    if (!YAML.isMap(doc.contents)) {
+      return false;
+    }
+    const packageItem = doc.contents.items.find(
+      ({ key }) => YAML.isScalar(key) && key.value === "package",
+    );
+    return packageItem !== undefined && YAML.isMap(packageItem.value);
+  } catch {
+    return false;
+  }
+}
+
+type ParsedDefinition =
+  | {
+      kind: "run";
+      partialRunDefinition: PartialRunDefinition | undefined;
+      errors: UserMessage[];
+    }
+  | {
+      kind: "local-package";
+      partialLocalPackage: PartialLocalPackage;
+      errors: UserMessage[];
+    }
+  | {
+      kind: "published-package";
+      leafSpec: LeafSpec;
+      errors: UserMessage[];
+    };
+
+async function parseDefinition(
+  fileName: string,
+  source: string,
+): Promise<ParsedDefinition> {
+  if (YamlParser.isLocalPackageDefinition(source)) {
+    const { partialLocalPackage, errors } = await safelyParseLocalPackage(
+      fileName,
+      source,
+    );
+    return { kind: "local-package", partialLocalPackage, errors };
+  }
+
+  if (isPublishedPackageDefinition(source)) {
+    const { leafSpec, errors } = await safelyParsePublishedPackage(
+      fileName,
+      source,
+    );
+    return { kind: "published-package", leafSpec, errors };
+  }
+
+  const { partialRunDefinition, errors } = await YamlParser.safelyParseRun(
+    fileName,
+    source,
+  );
+  return { kind: "run", partialRunDefinition, errors };
+}
+
+function definitionTasks(
+  parsed: ParsedDefinition,
+): PartialTaskDefinition[] | undefined {
+  switch (parsed.kind) {
+    case "run":
+      return parsed.partialRunDefinition?.tasks;
+    case "local-package":
+      return parsed.partialLocalPackage.tasks;
+    case "published-package":
+      return parsed.leafSpec.tasks;
+  }
+}
+
+function definitionWarningMessages(
+  parsed: ParsedDefinition,
+): PartialRunDefinition["warningMessages"] | undefined {
+  switch (parsed.kind) {
+    case "run":
+      return parsed.partialRunDefinition?.warningMessages;
+    case "local-package":
+      return parsed.partialLocalPackage.warningMessages;
+    case "published-package":
+      return parsed.leafSpec.warningMessages;
+  }
+}
+
 async function validateTextDocumentForDiagnostics(
   textDocument: TextDocument,
 ): Promise<Diagnostic[]> {
@@ -458,23 +575,11 @@ async function validateTextDocumentForDiagnostics(
   const diagnostics: Diagnostic[] = [];
 
   try {
-    // Parse the document using the Mint parser. Files that set `package: true`
-    // are local packages and use a different grammar than run definitions.
     const fileName = textDocument.uri.replace("file://", "");
-    let errors: UserMessage[];
-    let warningMessages: PartialRunDefinition["warningMessages"] | undefined;
-    let tasks: PartialTaskDefinition[] | undefined;
-    if (YamlParser.isLocalPackageDefinition(text)) {
-      const result = await safelyParseLocalPackage(fileName, text);
-      errors = result.errors;
-      warningMessages = result.partialLocalPackage.warningMessages;
-      tasks = result.partialLocalPackage.tasks;
-    } else {
-      const result = await YamlParser.safelyParseRun(fileName, text);
-      errors = result.errors;
-      warningMessages = result.partialRunDefinition?.warningMessages;
-      tasks = result.partialRunDefinition?.tasks;
-    }
+    const parsed = await parseDefinition(fileName, text);
+    const { errors } = parsed;
+    const warningMessages = definitionWarningMessages(parsed);
+    const tasks = definitionTasks(parsed);
 
     // Convert parser errors to diagnostics
     for (const error of errors) {
@@ -1267,11 +1372,7 @@ connection.onCompletion(
           }
         }
 
-        const tasks = YamlParser.isLocalPackageDefinition(text)
-          ? (await safelyParseLocalPackage(fileName, text)).partialLocalPackage
-              .tasks
-          : (await YamlParser.safelyParseRun(fileName, text))
-              .partialRunDefinition?.tasks;
+        const tasks = definitionTasks(await parseDefinition(fileName, text));
 
         const taskKeys = extractTaskKeys(tasks);
 
@@ -2632,27 +2733,12 @@ connection.onRequest("rwx/dumpDebugData", async (params: { uri: string }) => {
     const text = document.getText();
     const fileName = document.uri.replace("file://", "");
 
-    if (YamlParser.isLocalPackageDefinition(text)) {
-      const result = await safelyParseLocalPackage(fileName, text);
-      return {
-        fileName,
-        isMintFile: true,
-        parseResult: {
-          partialLocalPackage: result.partialLocalPackage,
-          errors: result.errors,
-        },
-      };
-    }
-
-    const result = await YamlParser.safelyParseRun(fileName, text);
+    const parsed = await parseDefinition(fileName, text);
 
     return {
       fileName,
       isMintFile: true,
-      parseResult: {
-        partialRunDefinition: result.partialRunDefinition,
-        errors: result.errors,
-      },
+      parseResult: parsed,
     };
   } catch (error) {
     return {

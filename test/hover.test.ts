@@ -291,6 +291,42 @@ tasks:
       expect(contents.value).toContain("task definitions");
     });
 
+    it("provides hover for a published package metadata key", async () => {
+      const yamlContent = `package:
+  visibility: public
+  name: acme/thing
+
+tasks:
+  - key: build
+    run: echo hi`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "published-package.yml",
+        yamlContent
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const hover = await server.sendRequest<Hover>("textDocument/hover", {
+        textDocument: { uri: textDocument.uri },
+        position: Position.create(1, 4),
+      });
+
+      assert(hover);
+      const contents = hover.contents as MarkupContent;
+      expect(contents.kind).toBe(MarkupKind.Markdown);
+      expect(contents.value).toContain("**`visibility`**");
+      expect(contents.value).toContain("published package");
+    });
+
     it("provides hover for a task property key", async () => {
       const yamlContent = `tasks:
   - key: build

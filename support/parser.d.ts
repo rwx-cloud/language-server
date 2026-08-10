@@ -241,6 +241,7 @@ export interface YamlParser {
     errors: UserMessage[];
   }>;
   parseLocalPackage(): Promise<PartialLocalPackage>;
+  parseLeafSpec(): Promise<LeafSpec>;
   formatMessages(): { errors: UserMessage[] };
 }
 
@@ -616,6 +617,37 @@ export type PartialLocalPackage = {
   defaults?: unknown;
   tasks: PartialTaskDefinition[];
   warningMessages: PartialRunDefinition["warningMessages"];
+};
+
+export type LeafSpecParameter = {
+  description: string;
+  required?: boolean;
+  default?: string;
+};
+
+export type LeafSpecOutputValue = {
+  description?: string;
+  value: string;
+};
+
+export type LeafSpecOutputs = {
+  values?: Record<string, LeafSpecOutputValue>;
+  valuesFrom?: string[];
+};
+
+export type LeafSpec = {
+  name?: string;
+  version?: string;
+  description?: string;
+  sourceCodeUrl?: string;
+  issueTrackerUrl?: string;
+  visibility?: "public";
+  parameters?: Record<string, LeafSpecParameter>;
+  outputs?: LeafSpecOutputs;
+  tasks: PartialTaskDefinition[];
+  rawSource?: Source;
+  warningMessages: PartialRunDefinition["warningMessages"];
+  packageSchemaVersion: 1 | 2;
 };
 
 export const DEFAULT_AGENT_SPECIFICATION: {
