@@ -91,10 +91,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "The endpoint name used in the app's friendly preview URL. It forms part of the subdomain, must use only alphanumeric characters and hyphens, and cannot start or end with a hyphen. Template expressions are supported.",
   "tasks[].app.port":
     "The port that binds to the server process started by the task. It must be between 1024 and 49151, or a template expression that resolves to one. RWX also exposes this value to the process as the PORT environment variable.",
-  "tasks[].app.start-timeout":
-    "How long RWX waits for the web app to start before failing the task. Defaults to 1 minute and can be set with a duration such as '30s' or '2m'.",
   "tasks[].app.timeout":
-    "Deprecated alias for 'start-timeout'. How long RWX waits for the web app to start before failing the task. Use 'start-timeout' instead.",
+    "How long RWX waits for the web app to start before failing the task. Defaults to 1 minute and can be set with a duration such as '30s' or '2m'.",
   "tasks[].app.idle-timeout": {
     description: "",
     documented: false,
