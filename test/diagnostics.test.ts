@@ -782,4 +782,123 @@ tasks:
       );
     });
   });
+
+  describe("Published Package Files", () => {
+    const publishedPackageContent = `package:
+  visibility: public
+  name: acme/thing
+  version: 1.0.0
+  description: Does a thing
+
+tasks:
+  - key: hello
+    run: echo "Hello, World!"
+`;
+
+    it("parses files with a `package` block as published packages, not run definitions", async () => {
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "packages/thing.yml",
+        publishedPackageContent,
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: publishedPackageContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const result = await server.sendRequest<DocumentDiagnosticReport>(
+        "textDocument/diagnostic",
+        {
+          textDocument: { uri: textDocument.uri },
+        },
+      );
+
+      expect(result.kind).toBe("full");
+      assert("items" in result);
+      expect(result.items).toEqual([]);
+    });
+
+    it("reports published package grammar errors", async () => {
+      const invalidContent = publishedPackageContent.replace(
+        "visibility: public",
+        "visibility: private",
+      );
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "packages/thing.yml",
+        invalidContent,
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: invalidContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const result = await server.sendRequest<DocumentDiagnosticReport>(
+        "textDocument/diagnostic",
+        {
+          textDocument: { uri: textDocument.uri },
+        },
+      );
+
+      expect(result.kind).toBe("full");
+      assert("items" in result);
+      const diagnostic = result.items[0];
+      assert(diagnostic);
+      expect(diagnostic.severity).toBe(DiagnosticSeverity.Error);
+      expect(diagnostic.source).toBe("rwx-run-parser");
+      expect(diagnostic.message).toContain(
+        "Invalid package visibility `private`",
+      );
+    });
+
+    it("reports an error when a published package has no tasks", async () => {
+      const noTasksContent = `package:
+  visibility: public
+  name: acme/thing
+  version: 1.0.0
+`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "packages/thing.yml",
+        noTasksContent,
+      );
+
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: noTasksContent,
+      };
+
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const result = await server.sendRequest<DocumentDiagnosticReport>(
+        "textDocument/diagnostic",
+        {
+          textDocument: { uri: textDocument.uri },
+        },
+      );
+
+      expect(result.kind).toBe("full");
+      assert("items" in result);
+      const diagnostic = result.items[0];
+      assert(diagnostic);
+      expect(diagnostic.severity).toBe(DiagnosticSeverity.Error);
+      expect(diagnostic.message).toContain(
+        "A published package must contain a `tasks` key",
+      );
+    });
+  });
 });
