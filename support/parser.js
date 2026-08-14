@@ -85286,7 +85286,7 @@ var import_winston_transport = __toESM(require_winston_transport(), 1);
 
 // packages/utils/singleton.ts
 var Singleton = class {
-  constructor(instanceName, initially = void 0) {
+  constructor(instanceName, initially) {
     this.instanceName = instanceName;
     this.#instance = initially;
   }
