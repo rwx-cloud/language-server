@@ -17,10 +17,10 @@ base:
 
 tasks:
   - key: rwx-cli
-    call: rwx/install-cli 4.0.4
+    call: rwx/install-cli 4.0.5
 
   - key: github-cli
-    call: github/install-cli 1.0.10
+    call: github/install-cli 1.0.11
 
   - key: src-changes
     use: github-cli
