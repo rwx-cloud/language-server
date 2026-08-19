@@ -30839,17 +30839,17 @@ var require_damerau_levenshtein = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/types.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/types.js
 var require_types = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/types.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/types.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronField.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronField.js
 var require_CronField = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronField.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronField.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronField = void 0;
@@ -31057,188 +31057,6 @@ var require_CronField = __commonJS({
       }
     };
     exports2.CronField = CronField;
-  }
-});
-
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronDayOfMonth.js
-var require_CronDayOfMonth = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronDayOfMonth.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.CronDayOfMonth = void 0;
-    var CronField_1 = require_CronField();
-    var MIN_DAY = 1;
-    var MAX_DAY = 31;
-    var DAY_CHARS = Object.freeze(["L"]);
-    var CronDayOfMonth = class extends CronField_1.CronField {
-      static get min() {
-        return MIN_DAY;
-      }
-      static get max() {
-        return MAX_DAY;
-      }
-      static get chars() {
-        return DAY_CHARS;
-      }
-      static get validChars() {
-        return /^[?,*\dLH/-]+$|^.*H\(\d+-\d+\)\/\d+.*$|^.*H\(\d+-\d+\).*$|^.*H\/\d+.*$/;
-      }
-      /**
-       * CronDayOfMonth constructor. Initializes the "day of the month" field with the provided values.
-       * @param {DayOfMonthRange[]} values - Values for the "day of the month" field
-       * @param {CronFieldOptions} [options] - Options provided by the parser
-       * @throws {Error} if validation fails
-       */
-      constructor(values, options) {
-        super(values, options);
-        this.validate();
-      }
-      /**
-       * Returns an array of allowed values for the "day of the month" field.
-       * @returns {DayOfMonthRange[]}
-       */
-      get values() {
-        return super.values;
-      }
-    };
-    exports2.CronDayOfMonth = CronDayOfMonth;
-  }
-});
-
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronDayOfWeek.js
-var require_CronDayOfWeek = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronDayOfWeek.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.CronDayOfWeek = void 0;
-    var CronField_1 = require_CronField();
-    var MIN_DAY = 0;
-    var MAX_DAY = 7;
-    var DAY_CHARS = Object.freeze(["L"]);
-    var CronDayOfWeek = class extends CronField_1.CronField {
-      static get min() {
-        return MIN_DAY;
-      }
-      static get max() {
-        return MAX_DAY;
-      }
-      static get chars() {
-        return DAY_CHARS;
-      }
-      static get validChars() {
-        return /^[?,*\dLH#/-]+$|^.*H\(\d+-\d+\)\/\d+.*$|^.*H\(\d+-\d+\).*$|^.*H\/\d+.*$/;
-      }
-      /**
-       * CronDayOfTheWeek constructor. Initializes the "day of the week" field with the provided values.
-       * @param {DayOfWeekRange[]} values - Values for the "day of the week" field
-       * @param {CronFieldOptions} [options] - Options provided by the parser
-       */
-      constructor(values, options) {
-        super(values, options);
-        this.validate();
-        if (this.values.some((value) => value === "L")) {
-          throw new Error(`${this.constructor.name} Validation error, unexpected standalone L`);
-        }
-      }
-      /**
-       * Returns an array of allowed values for the "day of the week" field.
-       * @returns {DayOfWeekRange[]}
-       */
-      get values() {
-        return super.values;
-      }
-      /**
-       * Returns the nth day of the week if specified in the cron expression.
-       * This is used for the '#' character in the cron expression.
-       * @returns {number} The nth day of the week (1-5) or 0 if not specified.
-       */
-      get nthDay() {
-        return this.options.nthDayOfWeek ?? 0;
-      }
-    };
-    exports2.CronDayOfWeek = CronDayOfWeek;
-  }
-});
-
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronHour.js
-var require_CronHour = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronHour.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.CronHour = void 0;
-    var CronField_1 = require_CronField();
-    var MIN_HOUR = 0;
-    var MAX_HOUR = 23;
-    var HOUR_CHARS = Object.freeze([]);
-    var CronHour = class extends CronField_1.CronField {
-      static get min() {
-        return MIN_HOUR;
-      }
-      static get max() {
-        return MAX_HOUR;
-      }
-      static get chars() {
-        return HOUR_CHARS;
-      }
-      /**
-       * CronHour constructor. Initializes the "hour" field with the provided values.
-       * @param {HourRange[]} values - Values for the "hour" field
-       * @param {CronFieldOptions} [options] - Options provided by the parser
-       */
-      constructor(values, options) {
-        super(values, options);
-        this.validate();
-      }
-      /**
-       * Returns an array of allowed values for the "hour" field.
-       * @returns {HourRange[]}
-       */
-      get values() {
-        return super.values;
-      }
-    };
-    exports2.CronHour = CronHour;
-  }
-});
-
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronMinute.js
-var require_CronMinute = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronMinute.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.CronMinute = void 0;
-    var CronField_1 = require_CronField();
-    var MIN_MINUTE = 0;
-    var MAX_MINUTE = 59;
-    var MINUTE_CHARS = Object.freeze([]);
-    var CronMinute = class extends CronField_1.CronField {
-      static get min() {
-        return MIN_MINUTE;
-      }
-      static get max() {
-        return MAX_MINUTE;
-      }
-      static get chars() {
-        return MINUTE_CHARS;
-      }
-      /**
-       * CronSecond constructor. Initializes the "second" field with the provided values.
-       * @param {SixtyRange[]} values - Values for the "second" field
-       * @param {CronFieldOptions} [options] - Options provided by the parser
-       */
-      constructor(values, options) {
-        super(values, options);
-        this.validate();
-      }
-      /**
-       * Returns an array of allowed values for the "second" field.
-       * @returns {SixtyRange[]}
-       */
-      get values() {
-        return super.values;
-      }
-    };
-    exports2.CronMinute = CronMinute;
   }
 });
 
@@ -38003,9 +37821,9 @@ var require_luxon = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronDate.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronDate.js
 var require_CronDate = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronDate.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronDate.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronDate = exports2.DAYS_IN_MONTH = exports2.DateMathOp = exports2.TimeUnit = void 0;
@@ -38028,6 +37846,7 @@ var require_CronDate = __commonJS({
     var CronDate = class _CronDate {
       #date;
       #dstStart = null;
+      #dstStartLandingHour = null;
       #dstEnd = null;
       /**
        * Constructs a new CronDate instance.
@@ -38041,6 +37860,7 @@ var require_CronDate = __commonJS({
         } else if (timestamp instanceof _CronDate) {
           this.#date = timestamp.#date;
           this.#dstStart = timestamp.#dstStart;
+          this.#dstStartLandingHour = timestamp.#dstStartLandingHour;
           this.#dstEnd = timestamp.#dstEnd;
         } else if (timestamp instanceof Date) {
           this.#date = luxon_1.DateTime.fromJSDate(timestamp, dateOpts);
@@ -38076,11 +37896,19 @@ var require_CronDate = __commonJS({
         return this.#dstStart;
       }
       /**
-       * Sets daylight savings start time.
-       * @param {number | null} value
+       * Returns the first existing hour after the skipped window, or null.
+       * @returns {number | null}
        */
-      set dstStart(value) {
-        this.#dstStart = value;
+      get dstStartLandingHour() {
+        return this.#dstStartLandingHour;
+      }
+      /**
+       * Discards the recorded daylight savings start window. The two halves are
+       * only meaningful together, so neither is writable on its own.
+       */
+      clearDstStart() {
+        this.#dstStart = null;
+        this.#dstStartLandingHour = null;
       }
       /**
        * Returns daylight savings end time.
@@ -38486,14 +38314,16 @@ var require_CronDate = __commonJS({
           return;
         }
         const previousHour = this.getHours();
+        const previousOffset = this.getUTCOffset();
         this.invokeDateOperation(op, unit);
         const currentHour = this.getHours();
-        const diff = currentHour - previousHour;
-        if (diff === 2) {
+        const advance = (currentHour - previousHour + 24) % 24;
+        if (op === DateMathOp.Add && this.getUTCOffset() > previousOffset && advance >= 2) {
           if (hoursLength !== 24) {
-            this.dstStart = previousHour + 1;
+            this.#dstStart = (previousHour + 1) % 24;
+            this.#dstStartLandingHour = currentHour;
           }
-        } else if (diff === 0 && this.getMinutes() === 0 && this.getSeconds() === 0) {
+        } else if (advance === 0 && this.getMinutes() === 0 && this.getSeconds() === 0) {
           if (hoursLength !== 24) {
             this.dstEnd = currentHour;
           }
@@ -38513,9 +38343,9 @@ var require_CronDate = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronMonth.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronMonth.js
 var require_CronMonth = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronMonth.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronMonth.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronMonth = void 0;
@@ -38558,9 +38388,207 @@ var require_CronMonth = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronSecond.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronDayOfMonth.js
+var require_CronDayOfMonth = __commonJS({
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronDayOfMonth.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.CronDayOfMonth = void 0;
+    var CronField_1 = require_CronField();
+    var CronMonth_1 = require_CronMonth();
+    var MIN_DAY = 1;
+    var MAX_DAY = 31;
+    var DAY_CHARS = Object.freeze(["L"]);
+    var CronDayOfMonth = class _CronDayOfMonth extends CronField_1.CronField {
+      /**
+       * Creates a "day of the month" field limited to the days the given month has.
+       * @param {MonthRange[]} month - Values for the "month" field the days are used with
+       * @param {DayOfMonthRange[]} values - Values for the "day of the month" field
+       * @param {CronFieldOptions} [options] - Options provided by the parser
+       * @returns {CronDayOfMonth}
+       */
+      static fromMonth(month, values, options) {
+        if (month.length !== 1) {
+          return new _CronDayOfMonth(values, options);
+        }
+        const daysInMonth = CronMonth_1.CronMonth.daysInMonth[month[0] - 1];
+        const days = values.filter((value) => typeof value !== "number" || value <= daysInMonth);
+        return new _CronDayOfMonth(days.length > 0 ? days : values, options);
+      }
+      static get min() {
+        return MIN_DAY;
+      }
+      static get max() {
+        return MAX_DAY;
+      }
+      static get chars() {
+        return DAY_CHARS;
+      }
+      static get validChars() {
+        return /^[?,*\dLH/-]+$|^.*H\(\d+-\d+\)\/\d+.*$|^.*H\(\d+-\d+\).*$|^.*H\/\d+.*$/;
+      }
+      /**
+       * CronDayOfMonth constructor. Initializes the "day of the month" field with the provided values.
+       * @param {DayOfMonthRange[]} values - Values for the "day of the month" field
+       * @param {CronFieldOptions} [options] - Options provided by the parser
+       * @throws {Error} if validation fails
+       */
+      constructor(values, options) {
+        super(values, options);
+        this.validate();
+      }
+      /**
+       * Returns an array of allowed values for the "day of the month" field.
+       * @returns {DayOfMonthRange[]}
+       */
+      get values() {
+        return super.values;
+      }
+    };
+    exports2.CronDayOfMonth = CronDayOfMonth;
+  }
+});
+
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronDayOfWeek.js
+var require_CronDayOfWeek = __commonJS({
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronDayOfWeek.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.CronDayOfWeek = void 0;
+    var CronField_1 = require_CronField();
+    var MIN_DAY = 0;
+    var MAX_DAY = 7;
+    var DAY_CHARS = Object.freeze(["L"]);
+    var CronDayOfWeek = class extends CronField_1.CronField {
+      static get min() {
+        return MIN_DAY;
+      }
+      static get max() {
+        return MAX_DAY;
+      }
+      static get chars() {
+        return DAY_CHARS;
+      }
+      static get validChars() {
+        return /^[?,*\dLH#/-]+$|^.*H\(\d+-\d+\)\/\d+.*$|^.*H\(\d+-\d+\).*$|^.*H\/\d+.*$/;
+      }
+      /**
+       * CronDayOfTheWeek constructor. Initializes the "day of the week" field with the provided values.
+       * @param {DayOfWeekRange[]} values - Values for the "day of the week" field
+       * @param {CronFieldOptions} [options] - Options provided by the parser
+       */
+      constructor(values, options) {
+        super(values, options);
+        this.validate();
+        if (this.values.some((value) => value === "L")) {
+          throw new Error(`${this.constructor.name} Validation error, unexpected standalone L`);
+        }
+      }
+      /**
+       * Returns an array of allowed values for the "day of the week" field.
+       * @returns {DayOfWeekRange[]}
+       */
+      get values() {
+        return super.values;
+      }
+      /**
+       * Returns the nth day of the week if specified in the cron expression.
+       * This is used for the '#' character in the cron expression.
+       * @returns {number} The nth day of the week (1-5) or 0 if not specified.
+       */
+      get nthDay() {
+        return this.options.nthDayOfWeek ?? 0;
+      }
+    };
+    exports2.CronDayOfWeek = CronDayOfWeek;
+  }
+});
+
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronHour.js
+var require_CronHour = __commonJS({
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronHour.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.CronHour = void 0;
+    var CronField_1 = require_CronField();
+    var MIN_HOUR = 0;
+    var MAX_HOUR = 23;
+    var HOUR_CHARS = Object.freeze([]);
+    var CronHour = class extends CronField_1.CronField {
+      static get min() {
+        return MIN_HOUR;
+      }
+      static get max() {
+        return MAX_HOUR;
+      }
+      static get chars() {
+        return HOUR_CHARS;
+      }
+      /**
+       * CronHour constructor. Initializes the "hour" field with the provided values.
+       * @param {HourRange[]} values - Values for the "hour" field
+       * @param {CronFieldOptions} [options] - Options provided by the parser
+       */
+      constructor(values, options) {
+        super(values, options);
+        this.validate();
+      }
+      /**
+       * Returns an array of allowed values for the "hour" field.
+       * @returns {HourRange[]}
+       */
+      get values() {
+        return super.values;
+      }
+    };
+    exports2.CronHour = CronHour;
+  }
+});
+
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronMinute.js
+var require_CronMinute = __commonJS({
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronMinute.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.CronMinute = void 0;
+    var CronField_1 = require_CronField();
+    var MIN_MINUTE = 0;
+    var MAX_MINUTE = 59;
+    var MINUTE_CHARS = Object.freeze([]);
+    var CronMinute = class extends CronField_1.CronField {
+      static get min() {
+        return MIN_MINUTE;
+      }
+      static get max() {
+        return MAX_MINUTE;
+      }
+      static get chars() {
+        return MINUTE_CHARS;
+      }
+      /**
+       * CronSecond constructor. Initializes the "second" field with the provided values.
+       * @param {SixtyRange[]} values - Values for the "second" field
+       * @param {CronFieldOptions} [options] - Options provided by the parser
+       */
+      constructor(values, options) {
+        super(values, options);
+        this.validate();
+      }
+      /**
+       * Returns an array of allowed values for the "second" field.
+       * @returns {SixtyRange[]}
+       */
+      get values() {
+        return super.values;
+      }
+    };
+    exports2.CronMinute = CronMinute;
+  }
+});
+
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronSecond.js
 var require_CronSecond = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/CronSecond.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/CronSecond.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronSecond = void 0;
@@ -38599,9 +38627,9 @@ var require_CronSecond = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/index.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/index.js
 var require_fields = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/fields/index.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/fields/index.js"(exports2) {
     "use strict";
     var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
@@ -38631,9 +38659,9 @@ var require_fields = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronFieldCollection.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronFieldCollection.js
 var require_CronFieldCollection = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronFieldCollection.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronFieldCollection.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronFieldCollection = void 0;
@@ -38865,6 +38893,10 @@ var require_CronFieldCollection = __commonJS({
           return null;
         }
         if (step === 1 && range.start === field.min && range.end && range.end >= max) {
+          const isDayField = field instanceof fields_1.CronDayOfMonth || field instanceof fields_1.CronDayOfWeek;
+          if (isDayField && !field.isWildcard) {
+            return null;
+          }
           return field.hasQuestionMarkChar ? "?" : "*";
         }
         if (step !== 1 && range.start === field.min && range.end && range.end >= max - step + 1) {
@@ -38875,11 +38907,10 @@ var require_CronFieldCollection = __commonJS({
       /**
        * Handles multiple ranges.
        * @param {FieldRange} range {start: number, end: number, step: number, count: number} The range to handle.
-       * @param {number} max The maximum value for the field.
        * @returns {string} The stringified range.
        * @private
        */
-      static #handleMultipleRanges(range, max) {
+      static #handleMultipleRanges(range) {
         const step = range.step;
         if (step === 1) {
           return `${range.start}-${range.end}`;
@@ -38904,7 +38935,7 @@ var require_CronFieldCollection = __commonJS({
           const seed = { length: range.end - range.start + 1 };
           return Array.from(seed, mapFn).filter((value) => value !== null).join(",");
         }
-        return range.end === max - step + 1 ? `${range.start}/${step}` : `${range.start}-${range.end}/${step}`;
+        return `${range.start}-${range.end}/${step}`;
       }
       /**
        * Returns a string representation of the cron fields.
@@ -38931,7 +38962,7 @@ var require_CronFieldCollection = __commonJS({
           }
         }
         return ranges.map((range) => {
-          const value = range.count === 1 ? range.start.toString() : _CronFieldCollection.#handleMultipleRanges(range, max);
+          const value = range.count === 1 ? range.start.toString() : _CronFieldCollection.#handleMultipleRanges(range);
           if (field instanceof fields_1.CronDayOfWeek && field.nthDay > 0) {
             return `${value}#${field.nthDay}`;
           }
@@ -38980,9 +39011,9 @@ var require_CronFieldCollection = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronExpression.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronExpression.js
 var require_CronExpression = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronExpression.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronExpression.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronExpression = exports2.LOOPS_LIMIT_EXCEEDED_ERROR_MESSAGE = exports2.TIME_SPAN_OUT_OF_BOUNDS_ERROR_MESSAGE = void 0;
@@ -39329,9 +39360,11 @@ var require_CronExpression = __commonJS({
         const currentHour = currentDate.getHours();
         const isMatch = _CronExpression.#matchSchedule(currentHour, hourValues);
         const isDstEnd = currentDate.dstEnd === currentHour;
-        if (currentDate.dstStart !== null && currentDate.dstStart === currentHour - 1) {
-          if (_CronExpression.#matchSchedule(currentDate.dstStart, hourValues)) {
-            return true;
+        if (currentDate.dstStart !== null && currentDate.dstStartLandingHour === currentHour) {
+          for (let skipped = currentDate.dstStart; skipped !== currentHour; skipped = (skipped + 1) % 24) {
+            if (_CronExpression.#matchSchedule(skipped, hourValues)) {
+              return true;
+            }
           }
         }
         if (isDstEnd && !reverse) {
@@ -39342,7 +39375,7 @@ var require_CronExpression = __commonJS({
         if (isMatch) {
           return true;
         }
-        currentDate.dstStart = null;
+        currentDate.clearDstStart();
         const nextHour = this.#fields.hour.findNearestValue(currentHour, reverse);
         if (nextHour === null) {
           currentDate.applyDateOperation(dateMathVerb, CronDate_1.TimeUnit.Day, hours.length);
@@ -39395,6 +39428,12 @@ var require_CronExpression = __commonJS({
         const dateMathVerb = reverse ? CronDate_1.DateMathOp.Subtract : CronDate_1.DateMathOp.Add;
         const currentDate = new CronDate_1.CronDate(this.#currentDate);
         const startTimestamp = currentDate.getTime();
+        if (currentDate.getMilliseconds() > 0) {
+          currentDate.setMilliseconds(0);
+          if (!reverse) {
+            currentDate.applyDateOperation(CronDate_1.DateMathOp.Add, CronDate_1.TimeUnit.Second, this.#fields.hour.values.length);
+          }
+        }
         let stepCount = 0;
         while (++stepCount < LOOP_LIMIT) {
           this.#validateTimeSpan(currentDate);
@@ -39418,18 +39457,13 @@ var require_CronExpression = __commonJS({
             continue;
           }
           if (startTimestamp === currentDate.getTime()) {
-            if (dateMathVerb === "Add" || currentDate.getMilliseconds() === 0) {
-              currentDate.applyDateOperation(dateMathVerb, CronDate_1.TimeUnit.Second, this.#fields.hour.values.length);
-              continue;
-            }
+            currentDate.applyDateOperation(dateMathVerb, CronDate_1.TimeUnit.Second, this.#fields.hour.values.length);
+            continue;
           }
           break;
         }
         if (stepCount >= LOOP_LIMIT) {
           throw new Error(exports2.LOOPS_LIMIT_EXCEEDED_ERROR_MESSAGE);
-        }
-        if (currentDate.getMilliseconds() !== 0) {
-          currentDate.setMilliseconds(0);
         }
         this.#currentDate = currentDate;
         return currentDate;
@@ -39459,9 +39493,9 @@ var require_CronExpression = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/utils/random.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/utils/random.js
 var require_random2 = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/utils/random.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/utils/random.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.seededRandom = seededRandom;
@@ -39488,9 +39522,9 @@ var require_random2 = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronExpressionParser.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronExpressionParser.js
 var require_CronExpressionParser = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronExpressionParser.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronExpressionParser.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronExpressionParser = exports2.DayOfWeek = exports2.Months = exports2.CronUnit = exports2.PredefinedExpressions = void 0;
@@ -39550,7 +39584,7 @@ var require_CronExpressionParser = __commonJS({
        * Parses a cron expression and returns a CronExpression object.
        * @param {string} expression - The cron expression to parse.
        * @param {CronExpressionOptions} [options={}] - The options to use when parsing the expression.
-       * @param {boolean} [options.strict=false] - If true, will throw an error if the expression contains both dayOfMonth and dayOfWeek.
+       * @param {boolean} [options.strict=false] - If true, will throw an error if the expression contains both dayOfMonth and dayOfWeek, or a hashed range or step the field cannot satisfy.
        * @param {CronDate} [options.currentDate=new CronDate(undefined, 'UTC')] - The date to use when calculating the next/previous occurrence.
        *
        * @returns {CronExpression} A CronExpression object.
@@ -39563,18 +39597,18 @@ var require_CronExpressionParser = __commonJS({
         if (!(rawFields.dayOfMonth === "*" || rawFields.dayOfWeek === "*" || !strict)) {
           throw new Error("Cannot use both dayOfMonth and dayOfWeek together in strict mode!");
         }
-        const second = _CronExpressionParser.#parseField(CronUnit.Second, rawFields.second, fields_1.CronSecond.constraints, rand);
-        const minute = _CronExpressionParser.#parseField(CronUnit.Minute, rawFields.minute, fields_1.CronMinute.constraints, rand);
-        const hour = _CronExpressionParser.#parseField(CronUnit.Hour, rawFields.hour, fields_1.CronHour.constraints, rand);
-        const month = _CronExpressionParser.#parseField(CronUnit.Month, rawFields.month, fields_1.CronMonth.constraints, rand);
-        const dayOfMonth = _CronExpressionParser.#parseField(CronUnit.DayOfMonth, rawFields.dayOfMonth, fields_1.CronDayOfMonth.constraints, rand);
+        const second = _CronExpressionParser.#parseField(CronUnit.Second, rawFields.second, fields_1.CronSecond.constraints, rand, strict);
+        const minute = _CronExpressionParser.#parseField(CronUnit.Minute, rawFields.minute, fields_1.CronMinute.constraints, rand, strict);
+        const hour = _CronExpressionParser.#parseField(CronUnit.Hour, rawFields.hour, fields_1.CronHour.constraints, rand, strict);
+        const month = _CronExpressionParser.#parseField(CronUnit.Month, rawFields.month, fields_1.CronMonth.constraints, rand, strict);
+        const dayOfMonth = _CronExpressionParser.#parseField(CronUnit.DayOfMonth, rawFields.dayOfMonth, fields_1.CronDayOfMonth.constraints, rand, strict);
         const { dayOfWeek: _dayOfWeek, nthDayOfWeek } = _CronExpressionParser.#parseNthDay(rawFields.dayOfWeek);
-        const dayOfWeek = _CronExpressionParser.#parseField(CronUnit.DayOfWeek, _dayOfWeek, fields_1.CronDayOfWeek.constraints, rand);
+        const dayOfWeek = _CronExpressionParser.#parseField(CronUnit.DayOfWeek, _dayOfWeek, fields_1.CronDayOfWeek.constraints, rand, strict);
         const fields = new CronFieldCollection_1.CronFieldCollection({
           second: new fields_1.CronSecond(second, { rawValue: rawFields.second }),
           minute: new fields_1.CronMinute(minute, { rawValue: rawFields.minute }),
           hour: new fields_1.CronHour(hour, { rawValue: rawFields.hour }),
-          dayOfMonth: new fields_1.CronDayOfMonth(dayOfMonth, { rawValue: rawFields.dayOfMonth }),
+          dayOfMonth: fields_1.CronDayOfMonth.fromMonth(month, dayOfMonth, { rawValue: rawFields.dayOfMonth }),
           month: new fields_1.CronMonth(month, { rawValue: rawFields.month }),
           dayOfWeek: new fields_1.CronDayOfWeek(dayOfWeek, { rawValue: rawFields.dayOfWeek, nthDayOfWeek })
         });
@@ -39599,9 +39633,9 @@ var require_CronExpressionParser = __commonJS({
         if (atoms.length > 6) {
           throw new Error("Invalid cron expression, too many fields");
         }
-        const defaults = ["*", "*", "*", "*", "*", "0"];
+        const defaults = ["0", "*", "*", "*", "*", "*"];
         if (atoms.length < defaults.length) {
-          atoms.unshift(...defaults.slice(atoms.length));
+          atoms.unshift(...defaults.slice(0, defaults.length - atoms.length));
         }
         const [second, minute, hour, dayOfMonth, month, dayOfWeek] = atoms;
         return { second, minute, hour, dayOfMonth, month, dayOfWeek };
@@ -39611,10 +39645,12 @@ var require_CronExpressionParser = __commonJS({
        * @param {CronUnit} field - The field to parse.
        * @param {string} value - The value of the field.
        * @param {CronConstraints} constraints - The constraints for the field.
+       * @param {PRNG} rand - The random number generator to use.
+       * @param {boolean} strict - If true, will throw an error on an unusable hashed range or step.
        * @private
        * @returns {(number | string)[]} The parsed field.
        */
-      static #parseField(field, value, constraints, rand) {
+      static #parseField(field, value, constraints, rand, strict) {
         if (field === CronUnit.Month || field === CronUnit.DayOfWeek) {
           value = value.replace(/[a-z]{3}/gi, (match) => {
             match = match.toLowerCase();
@@ -39629,7 +39665,7 @@ var require_CronExpressionParser = __commonJS({
           throw new Error(`Invalid characters, got value: ${value}`);
         }
         value = this.#parseWildcard(value, constraints);
-        value = this.#parseHashed(value, constraints, rand);
+        value = this.#parseHashed(value, constraints, rand, field, strict);
         return this.#parseSequence(field, value, constraints);
       }
       /**
@@ -39646,54 +39682,110 @@ var require_CronExpressionParser = __commonJS({
        * @param {string} value - The value to parse.
        * @param {CronConstraints} constraints - The constraints for the field.
        * @param {PRNG} rand - The random number generator to use.
+       * @param {CronUnit} field - The field being parsed, used when reporting an unusable range or step.
+       * @param {boolean} strict - If true, will throw an error on an unusable hashed range or step.
        * @private
        */
-      static #parseHashed(value, constraints, rand) {
+      static #parseHashed(value, constraints, rand, field, strict) {
         const randomValue = rand();
         return value.replace(/H(?:\((\d+)-(\d+)\))?(?:\/(\d+))?/g, (_, min, max, step) => {
           if (min && max && step) {
             const minNum = parseInt(min, 10);
             const maxNum = parseInt(max, 10);
             const stepNum = parseInt(step, 10);
-            if (minNum > maxNum) {
-              throw new Error(`Invalid range: ${minNum}-${maxNum}, min > max`);
-            }
             if (stepNum <= 0) {
               throw new Error(`Invalid step: ${stepNum}, must be positive`);
             }
-            const minStart = Math.max(minNum, constraints.min);
-            const offset = Math.floor(randomValue * stepNum);
-            const values = [];
-            for (let i = Math.floor(minStart / stepNum) * stepNum + offset; i <= maxNum; i += stepNum) {
-              if (i >= minStart) {
-                values.push(i);
-              }
-            }
-            return values.join(",");
+            const range = _CronExpressionParser.#hashedRange(minNum, maxNum, constraints, field, strict);
+            return _CronExpressionParser.#hashedStep(randomValue, range.min, range.max, stepNum, field, strict);
           } else if (min && max) {
             const minNum = parseInt(min, 10);
             const maxNum = parseInt(max, 10);
-            if (minNum > maxNum) {
-              throw new Error(`Invalid range: ${minNum}-${maxNum}, min > max`);
-            }
-            return String(Math.floor(randomValue * (maxNum - minNum + 1)) + minNum);
+            const range = _CronExpressionParser.#hashedRange(minNum, maxNum, constraints, field, strict);
+            return String(_CronExpressionParser.#hashedValue(randomValue, range.min, range.max));
           } else if (step) {
             const stepNum = parseInt(step, 10);
             if (stepNum <= 0) {
               throw new Error(`Invalid step: ${stepNum}, must be positive`);
             }
-            const offset = Math.floor(randomValue * stepNum);
-            const values = [];
-            for (let i = Math.floor(constraints.min / stepNum) * stepNum + offset; i <= constraints.max; i += stepNum) {
-              if (i >= constraints.min) {
-                values.push(i);
-              }
-            }
-            return values.join(",");
+            return _CronExpressionParser.#hashedStep(randomValue, constraints.min, constraints.max, stepNum, field, strict);
           } else {
-            return String(Math.floor(randomValue * (constraints.max - constraints.min + 1) + constraints.min));
+            return String(_CronExpressionParser.#hashedValue(randomValue, constraints.min, constraints.max));
           }
         });
+      }
+      /**
+       * Pick a single hashed value within an inclusive range.
+       * @param {number} randomValue - The seeded random value in [0, 1).
+       * @param {number} min - Lowest value that may be picked.
+       * @param {number} max - Highest value that may be picked.
+       * @private
+       */
+      static #hashedValue(randomValue, min, max) {
+        return Math.floor(randomValue * (max - min + 1)) + min;
+      }
+      /**
+       * Name a field the way the expression object does, rather than the Pascal case of CronUnit.
+       * @param {CronUnit} field - The field to name.
+       * @private
+       */
+      static #fieldName(field) {
+        return field.charAt(0).toLowerCase() + field.slice(1);
+      }
+      /**
+       * Narrow an explicit hashed range to the values the field can hold, so that values are only
+       * ever drawn from the range a step is measured against. In strict mode a bound outside the
+       * field constraints is rejected instead of clamped, which keeps the range reported in the
+       * error the one that was written.
+       * @param {number} min - Lowest value the expression asks for.
+       * @param {number} max - Highest value the expression asks for.
+       * @param {CronConstraints} constraints - The constraints for the field.
+       * @param {CronUnit} field - The field being parsed, used when reporting an unusable range.
+       * @param {boolean} strict - If true, will throw an error on a range outside the constraints.
+       * @private
+       */
+      static #hashedRange(min, max, constraints, field, strict) {
+        if (min > max) {
+          throw new Error(`Invalid range: ${min}-${max}, min > max`);
+        }
+        if (strict && (min < constraints.min || max > constraints.max)) {
+          throw new Error(`Invalid range: ${min}-${max}, outside the ${constraints.min}-${constraints.max} range of the ${_CronExpressionParser.#fieldName(field)} field`);
+        }
+        const rangeMin = Math.max(min, constraints.min);
+        const rangeMax = Math.min(max, constraints.max);
+        if (rangeMin > rangeMax) {
+          throw new Error(`Invalid range: ${min}-${max}, no usable value in the ${_CronExpressionParser.#fieldName(field)} field`);
+        }
+        return { min: rangeMin, max: rangeMax };
+      }
+      /**
+       * Build the hashed values of a stepped range, offset from the start of the step by the seeded
+       * jitter. A step wider than the range leaves no step-aligned value inside it, so a single
+       * hashed occurrence within the range is used instead of an empty field, or in strict mode the
+       * expression is rejected as unsatisfiable.
+       * @param {number} randomValue - The seeded random value in [0, 1).
+       * @param {number} min - Lowest value the range allows.
+       * @param {number} max - Highest value the range allows.
+       * @param {number} step - The step between values, already validated as positive.
+       * @param {CronUnit} field - The field being parsed, used when reporting an unusable step.
+       * @param {boolean} strict - If true, will throw an error on a step wider than its range.
+       * @private
+       */
+      static #hashedStep(randomValue, min, max, step, field, strict) {
+        if (strict && step > max - min + 1) {
+          throw new Error(`Invalid step: ${step}, wider than the ${min}-${max} range of the ${_CronExpressionParser.#fieldName(field)} field`);
+        }
+        const offset = Math.floor(randomValue * step);
+        const values = [];
+        for (let i = Math.floor(min / step) * step + offset; i <= max; i += step) {
+          if (i >= min) {
+            values.push(i);
+          }
+        }
+        if (values.length === 0) {
+          return String(_CronExpressionParser.#hashedValue(randomValue, min, max));
+        }
+        return values.join(",");
       }
       /**
        * Parse a sequence from a cron expression.
@@ -39791,7 +39883,7 @@ var require_CronExpressionParser = __commonJS({
        */
       static #createRange(field, min, max, repeatInterval) {
         const stack = [];
-        if (field === CronUnit.DayOfWeek && max % 7 === 0) {
+        if (field === CronUnit.DayOfWeek && max % 7 === 0 && (max - min) % repeatInterval === 0) {
           stack.push(0);
         }
         for (let index = min; index <= max; index += repeatInterval) {
@@ -39856,9 +39948,9 @@ var require_CronExpressionParser = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronFileParser.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronFileParser.js
 var require_CronFileParser = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/CronFileParser.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/CronFileParser.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.CronFileParser = void 0;
@@ -39933,9 +40025,9 @@ var require_CronFileParser = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/index.js
+// node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/index.js
 var require_dist2 = __commonJS({
-  "node_modules/.pnpm/cron-parser@5.7.0/node_modules/cron-parser/dist/index.js"(exports2) {
+  "node_modules/.pnpm/cron-parser@5.10.0/node_modules/cron-parser/dist/index.js"(exports2) {
     "use strict";
     var __createBinding = exports2 && exports2.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
