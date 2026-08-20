@@ -311,6 +311,20 @@ export type GitlabTriggers = {
   mergeRequest: GitlabMergeRequestTrigger[];
 };
 
+export type OriginPushTrigger = BaseTrigger & {
+  statusChecks: StatusChecks;
+};
+
+export type OriginPullRequestTrigger = BaseTrigger & {
+  actions?: string[];
+  statusChecks: StatusChecks;
+};
+
+export type OriginTriggers = {
+  push: OriginPushTrigger[];
+  pullRequest: OriginPullRequestTrigger[];
+};
+
 export type CronTrigger = BaseTrigger & {
   key: string;
   schedule: string;
@@ -349,6 +363,7 @@ export type WebhookTrigger = BaseTrigger & {
 export type Triggers = {
   github: GitHubTriggers;
   gitlab: GitlabTriggers;
+  origin?: OriginTriggers;
   cron: CronTrigger[];
   cli: CliTrigger;
   dispatch: DispatchTrigger[];
