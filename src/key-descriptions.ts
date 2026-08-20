@@ -332,6 +332,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "on.cli": "Configuration for manual CLI-triggered runs.",
   "on.forgejo":
     "Forgejo event triggers for automated run execution. Supports push events (on branch updates) and pull-request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
+  "on.origin":
+    "Cursor Origin event triggers for automated run execution. Supports push events (on branch updates) and pull-request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
   "on.dispatch":
     "API dispatch triggers for programmatic run execution. Allows on-demand execution via CLI (`rwx dispatch`), API calls, or Cloud UI. Each trigger requires a unique key within your organization and can define parameters for user input. Parameters are accessible via event.dispatch.params context and must be explicitly mapped to initialization parameters. Provides flexible workflow orchestration for deployment pipelines, manual testing, or external integrations.",
   "on.cache-rebuild":
@@ -395,8 +397,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "on.forgejo.pull-request.init":
     "Initialization parameters passed to the run or embedded run.",
   "on.forgejo.pull-request.if": "Condition for trigger activation.",
-  "on.forgejo.pull-request.target":
-    "Specific tasks to execute when triggered.",
+  "on.forgejo.pull-request.target": "Specific tasks to execute when triggered.",
   "on.forgejo.pull-request.title": "Custom title for the run.",
   "on.forgejo.pull-request.start":
     "Whether the run starts automatically when triggered or must be started manually.",
@@ -406,6 +407,40 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "PR actions that trigger the run. Available actions: 'opened' (PR is opened), 'reopened' (previously closed PR is reopened), 'synchronize' (PR branch is updated), 'closed' (PR is closed). Default: [opened, reopened, synchronize] if not specified.",
   "on.forgejo.pull-request.status-checks":
     "Forgejo status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
+
+  // Cursor Origin trigger properties
+  "on.origin.push":
+    "Triggers for Cursor Origin push events (branch updates, tag pushes). Can be a single trigger object or an array of trigger objects for different configurations.",
+  "on.origin.pull-request":
+    "Triggers for Cursor Origin pull request events (opened, reopened, synchronize, closed). Can be a single trigger object or an array of trigger objects.",
+
+  // Cursor Origin push trigger properties
+  "on.origin.push.init":
+    "Initialization parameters passed to the run or embedded run.",
+  "on.origin.push.if": "Condition for trigger activation.",
+  "on.origin.push.target": "Specific tasks to execute when triggered.",
+  "on.origin.push.title": "Custom title for the run.",
+  "on.origin.push.start":
+    "Whether the run starts automatically when triggered or must be started manually.",
+  "on.origin.push.region":
+    "The region in which to execute the run when this trigger fires.",
+  "on.origin.push.status-checks":
+    "Status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
+
+  // Cursor Origin pull-request trigger properties
+  "on.origin.pull-request.init":
+    "Initialization parameters passed to the run or embedded run.",
+  "on.origin.pull-request.if": "Condition for trigger activation.",
+  "on.origin.pull-request.target": "Specific tasks to execute when triggered.",
+  "on.origin.pull-request.title": "Custom title for the run.",
+  "on.origin.pull-request.start":
+    "Whether the run starts automatically when triggered or must be started manually.",
+  "on.origin.pull-request.region":
+    "The region in which to execute the run when this trigger fires.",
+  "on.origin.pull-request.actions":
+    "PR actions that trigger the run. Available actions: 'opened' (PR is opened), 'reopened' (previously closed PR is reopened), 'synchronize' (PR branch is updated), 'closed' (PR is closed). Default: [opened, reopened, synchronize] if not specified.",
+  "on.origin.pull-request.status-checks":
+    "Status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
   // GitLab trigger properties
   "on.gitlab.push": "Triggers for GitLab push events (branch updates).",
@@ -505,7 +540,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Human-readable display name shown in UI and CLI prompts. Should be clear and descriptive for users.",
   "on.dispatch[].params[].description": "Parameter description.",
   "on.dispatch[].params[].default": "Default value.",
-  "on.dispatch[].params[].values": "Allowed values for the parameter. When specified, only these values are accepted. If a default is also set, it must be one of these values.",
+  "on.dispatch[].params[].values":
+    "Allowed values for the parameter. When specified, only these values are accepted. If a default is also set, it must be one of these values.",
   "on.dispatch[].params[].required": "Whether parameter is required.",
 
   // Cache rebuild trigger properties
