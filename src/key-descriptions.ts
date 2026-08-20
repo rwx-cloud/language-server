@@ -333,7 +333,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "on.forgejo":
     "Forgejo event triggers for automated run execution. Supports push events (on branch updates) and pull-request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
   "on.origin":
-    "Origin event triggers for automated run execution based on the repository's git origin. Supports push events (on branch updates) and pull-request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
+    "Cursor Origin event triggers for automated run execution. Supports push events (on branch updates) and pull-request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
   "on.dispatch":
     "API dispatch triggers for programmatic run execution. Allows on-demand execution via CLI (`rwx dispatch`), API calls, or Cloud UI. Each trigger requires a unique key within your organization and can define parameters for user input. Parameters are accessible via event.dispatch.params context and must be explicitly mapped to initialization parameters. Provides flexible workflow orchestration for deployment pipelines, manual testing, or external integrations.",
   "on.cache-rebuild":
@@ -397,8 +397,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "on.forgejo.pull-request.init":
     "Initialization parameters passed to the run or embedded run.",
   "on.forgejo.pull-request.if": "Condition for trigger activation.",
-  "on.forgejo.pull-request.target":
-    "Specific tasks to execute when triggered.",
+  "on.forgejo.pull-request.target": "Specific tasks to execute when triggered.",
   "on.forgejo.pull-request.title": "Custom title for the run.",
   "on.forgejo.pull-request.start":
     "Whether the run starts automatically when triggered or must be started manually.",
@@ -409,13 +408,13 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "on.forgejo.pull-request.status-checks":
     "Forgejo status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
-  // Origin trigger properties
+  // Cursor Origin trigger properties
   "on.origin.push":
-    "Triggers for git origin push events (branch updates, tag pushes). Can be a single trigger object or an array of trigger objects for different configurations.",
+    "Triggers for Cursor Origin push events (branch updates, tag pushes). Can be a single trigger object or an array of trigger objects for different configurations.",
   "on.origin.pull-request":
-    "Triggers for git origin pull request events (opened, reopened, synchronize, closed). Can be a single trigger object or an array of trigger objects.",
+    "Triggers for Cursor Origin pull request events (opened, reopened, synchronize, closed). Can be a single trigger object or an array of trigger objects.",
 
-  // Origin push trigger properties
+  // Cursor Origin push trigger properties
   "on.origin.push.init":
     "Initialization parameters passed to the run or embedded run.",
   "on.origin.push.if": "Condition for trigger activation.",
@@ -428,12 +427,11 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "on.origin.push.status-checks":
     "Status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
-  // Origin pull-request trigger properties
+  // Cursor Origin pull-request trigger properties
   "on.origin.pull-request.init":
     "Initialization parameters passed to the run or embedded run.",
   "on.origin.pull-request.if": "Condition for trigger activation.",
-  "on.origin.pull-request.target":
-    "Specific tasks to execute when triggered.",
+  "on.origin.pull-request.target": "Specific tasks to execute when triggered.",
   "on.origin.pull-request.title": "Custom title for the run.",
   "on.origin.pull-request.start":
     "Whether the run starts automatically when triggered or must be started manually.",
@@ -542,7 +540,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Human-readable display name shown in UI and CLI prompts. Should be clear and descriptive for users.",
   "on.dispatch[].params[].description": "Parameter description.",
   "on.dispatch[].params[].default": "Default value.",
-  "on.dispatch[].params[].values": "Allowed values for the parameter. When specified, only these values are accepted. If a default is also set, it must be one of these values.",
+  "on.dispatch[].params[].values":
+    "Allowed values for the parameter. When specified, only these values are accepted. If a default is also set, it must be one of these values.",
   "on.dispatch[].params[].required": "Whether parameter is required.",
 
   // Cache rebuild trigger properties
