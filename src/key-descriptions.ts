@@ -36,9 +36,11 @@ export function isKeyDocumented(path: string): boolean {
 export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // Top-level properties (including local package declarations)
   package:
-    "Declares this file as a package. Set it to 'true' to mark the file as a local package, which enables package features such as parameters and lets other run definitions call its tasks with local package syntax. In a published package definition, set it to a block that declares the package metadata, such as 'visibility', 'name', and 'version'.",
-  parameters:
-    "Parameter definitions for this local package. Each parameter is a named key with an optional description, required flag, and default value. Parameters are passed by callers using 'with' and are accessible in tasks via ${{ params.parameter-name }}.",
+    "Declares this file as a package. Set it to 'true' to mark the file as a local package, which enables package features such as parameters and lets other run definitions call its tasks with local package syntax. A local package can also declare 'parameters' inside this block. In a published package definition, set it to a block that declares the package metadata, such as 'visibility: public', 'name', and 'version'.",
+  parameters: {
+    description: "",
+    documented: false,
+  },
   tasks:
     "An array of task definitions that form the core execution units of your workflow. Each task represents a discrete unit of work that executes in an isolated containerized environment. Tasks can execute shell commands, call reusable packages, or embed other run definitions. Tasks support sophisticated dependency management through 'use' (inherits outputs and filesystem) and 'after' (ordering only), enabling complex workflows with parallel execution, content-based caching, and flexible artifact management.",
   on: "Trigger configuration that defines when and how this run should execute. RWX supports five trigger types: GitHub events (push, pull_request, merge_group), GitLab events (push, tag-push, merge-request), scheduled cron runs, manual CLI execution, and API dispatch triggers. Each trigger provides rich event context accessible via template expressions (e.g., ${{ event.git.branch }}, ${{ event.github.push.head_commit.message }}). Triggers can specify conditions (if), initialization parameters (init), target tasks (target), and custom run titles (title). Event data flows into tasks through initialization parameters, enabling dynamic workflow behavior based on trigger context.",
@@ -52,9 +54,10 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   aliases:
     "YAML aliases defined at the top level for reuse across the run definition. Aliases allow you to define common configurations once and reference them throughout the file using YAML anchors (&name) and aliases (*name).",
 
-  // Published package metadata (package.*), set in the `package` block of a published package definition
+  // Published package metadata (package.*), set in the `package` block of a published package definition.
+  // A local package's `package` block also supports `visibility` and `parameters` (see below).
   "package.visibility":
-    "The visibility of the published package. The only supported value is 'public'. A published package must set this key.",
+    "The visibility of the package. A published package must set this to 'public'. A local package can set this to 'local', or omit it, since a 'package' block without 'visibility' defaults to local.",
   "package.name":
     "The name of the published package in 'namespace/name' format, for example 'git/clone'. Each segment accepts lowercase letters, numbers, and hyphens only.",
   "package.version":
@@ -66,7 +69,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "package.issue_tracker_url":
     "The URL of the issue tracker for the published package. RWX links to this URL from the package documentation.",
   "package.parameters":
-    "Parameter definitions for the published package. Each parameter is a named key that accepts 'description', 'required', and 'default'. Callers pass parameters with 'with', and tasks read them via ${{ params.parameter-name }}.",
+    "Parameter definitions for the package. Each parameter is a named key that accepts 'description', 'required', and 'default'. Callers pass parameters with 'with', and tasks read them via ${{ params.parameter-name }}.",
   "package.outputs":
     "Output value definitions for the published package. Use 'values' to declare each named output with a 'description' and a 'value'. Use 'values-from' to list task keys; the package also exports every output value that those tasks write to $MINT_VALUES.",
 
