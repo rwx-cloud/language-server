@@ -89810,36 +89810,59 @@ var YamlParser = class _YamlParser {
     return localPackageSpec;
   }
   /**
-   * Determines whether a YAML document declares itself to be a local package by setting
-   * `package: true` at the top level. Returns false for anything else, including files
-   * that fail to parse as YAML; callers should surface errors by parsing the file with
-   * the grammar the classification selects.
+   * Determines whether a YAML document declares itself to be a local package, either by
+   * setting `package: true` at the top level or by including a top-level `package:` block
+   * whose `visibility` is `local` or unset (a package block without a `visibility` is
+   * local by default). Returns false for anything else, including files that fail to
+   * parse as YAML; callers should surface errors by parsing the file with the grammar
+   * the classification selects.
    */
   static isLocalPackageDefinition(source) {
     try {
       const doc = YAML.parseDocument(source, { merge: true, prettyErrors: false, stringKeys: true });
-      return YAML.isNode(doc.contents) && _YamlParser.hasLocalPackageMarker(doc.contents);
+      return YAML.isNode(doc.contents) && _YamlParser.localPackageMarkerForm(doc.contents, doc) !== void 0;
     } catch {
       return false;
     }
   }
-  static hasLocalPackageMarker(node) {
+  static localPackageMarkerForm(node, doc) {
     if (!YAML.isMap(node)) {
-      return false;
+      return void 0;
     }
     const packageItem = node.items.find(({ key }) => YAML.isScalar(key) && key.value === "package");
-    return packageItem !== void 0 && YAML.isScalar(packageItem.value) && packageItem.value.value === true;
+    if (packageItem === void 0) {
+      return void 0;
+    }
+    const packageValue = _YamlParser.resolveMarkerAlias(packageItem.value, doc);
+    if (YAML.isScalar(packageValue) && packageValue.value === true) {
+      return "package-true";
+    }
+    if (YAML.isMap(packageValue)) {
+      const visibilityItem = packageValue.items.find(({ key }) => YAML.isScalar(key) && key.value === "visibility");
+      if (visibilityItem === void 0) {
+        return "default-visibility";
+      }
+      const visibilityValue = _YamlParser.resolveMarkerAlias(visibilityItem.value, doc);
+      if (YAML.isScalar(visibilityValue) && visibilityValue.value === "local") {
+        return "visibility-local";
+      }
+    }
+    return void 0;
   }
   /**
    * A public (v2) published package nests its spec under a top-level `package:` block.
    * Anything else parses as the original top-level leaf spec format.
    */
-  static hasPublicPackageV2Marker(node) {
+  static hasPublicPackageV2Marker(node, doc) {
     if (!YAML.isMap(node)) {
       return false;
     }
     const packageItem = node.items.find(({ key }) => YAML.isScalar(key) && key.value === "package");
-    return packageItem !== void 0 && YAML.isMap(packageItem.value);
+    return packageItem !== void 0 && YAML.isMap(_YamlParser.resolveMarkerAlias(packageItem.value, doc));
+  }
+  /** The marker checks sniff the document before structural parsing, so they must resolve aliases by hand. */
+  static resolveMarkerAlias(node, doc) {
+    return YAML.isAlias(node) ? node.resolve(doc) : node;
   }
   static createParser(fileName, source, errorOnMissingBase = true) {
     const schemaOptions = { merge: true, prettyErrors: false, stringKeys: true };
@@ -89896,10 +89919,16 @@ var YamlParser = class _YamlParser {
         baseConfig: defaultBaseLayerSpecificationWithTemplateStrings()
       };
     }
-    if (_YamlParser.hasLocalPackageMarker(this.rootNode)) {
+    const localPackageMarkerForm = _YamlParser.localPackageMarkerForm(this.rootNode, this.doc);
+    if (localPackageMarkerForm !== void 0) {
+      const localPackageMarkerDescriptions = {
+        "package-true": `it sets ${codeQuote("package: true")}`,
+        "visibility-local": `it sets ${codeQuote("visibility: local")} inside ${codeQuote("package")}`,
+        "default-visibility": `it has a ${codeQuote("package")} block without a ${codeQuote("visibility")}, which defaults to ${codeQuote("local")}`
+      };
       this.error(
         [
-          `This file is a local package because it sets ${codeQuote("package: true")}, so it cannot be used as a run definition.`,
+          `This file is a local package because ${localPackageMarkerDescriptions[localPackageMarkerForm]}, so it cannot be used as a run definition.`,
           `Call it from a task in a run definition instead, for example:`,
           `    tasks:`,
           `      - key: ${this.currentFileName.replace(/\.[yY][aA]?[mM][lL]$/, "").replace(/[^A-Za-z0-9_-]/g, "-") || "my-package"}`,
@@ -89925,7 +89954,8 @@ var YamlParser = class _YamlParser {
         base: this.parseBaseConfig,
         aliases: () => {
         },
-        // `package: true` is handled above; `package: false` is equivalent to omitting it.
+        // The local package markers (`package: true` and a `package` block with `visibility: local`)
+        // are handled above; `package: false` is equivalent to omitting it.
         package: this.parseBoolean
       },
       warningCollector,
@@ -89999,7 +90029,7 @@ var YamlParser = class _YamlParser {
       this.error([`A package spec must include at least a ${codeQuote("tasks")} key`], this.doc);
       return { tasks: [], warningMessages: [], packageSchemaVersion: 2 };
     }
-    if (_YamlParser.hasPublicPackageV2Marker(this.rootNode)) {
+    if (_YamlParser.hasPublicPackageV2Marker(this.rootNode, this.doc)) {
       return this.parsePublicPackageV2(warningCollector);
     }
     const { fields } = await this.parseObject(
@@ -90106,7 +90136,15 @@ var YamlParser = class _YamlParser {
   };
   parsePackageVisibility = (node) => {
     const parsed = this.parseString(node);
-    if (parsed !== "public") {
+    if (parsed === "local") {
+      this.error(
+        [
+          `A package with ${codeQuote("visibility: local")} is a local package, so it cannot be published.`,
+          `The only supported visibility for a published package is ${codeQuote("public")}.`
+        ],
+        node
+      );
+    } else if (parsed !== "public") {
       this.error([`Invalid package visibility ${codeQuote(parsed)}; the only supported visibility is ${codeQuote("public")}`], node);
     }
     return parsed;
@@ -90145,10 +90183,10 @@ var YamlParser = class _YamlParser {
         return void 0;
       };
     };
-    const { fields } = await this.parseObject(
+    const { fields, keyNodes } = await this.parseObject(
       this.rootNode,
       {
-        package: this.parseBoolean,
+        package: this.parseLocalPackageMarker,
         parameters: this.parsePackageParameters,
         "concurrency-pools": this.parseConcurrencyPools,
         "tool-cache": this.parseToolCache,
@@ -90166,8 +90204,23 @@ var YamlParser = class _YamlParser {
       warningCollector,
       /* @__PURE__ */ new Set(["base", "on", "outputs"])
     );
-    if (fields.package !== true) {
-      this.error([`A local package must set ${codeQuote("package: true")} at the top level`], this.rootNode);
+    const packageBlock = typeof fields.package === "object" ? fields.package : void 0;
+    if (fields.package !== true && packageBlock === void 0) {
+      this.error([`A local package must set ${codeQuote("package: true")} or a ${codeQuote("package")} block at the top level`], this.rootNode);
+    }
+    if (keyNodes.parameters !== void 0) {
+      logger_default.warn("Deprecated top-level parameters encountered in a local package", {
+        fileName: this.currentFileName
+      });
+      if (packageBlock?.parameters !== void 0) {
+        this.error(
+          [
+            `A local package cannot set ${codeQuote("parameters")} both at the top level and inside ${codeQuote("package")}.`,
+            `Move the top-level ${codeQuote("parameters")} inside the ${codeQuote("package")} block.`
+          ],
+          keyNodes.parameters
+        );
+      }
     }
     if (fields.tasks === void 0) {
       this.error([`A local package must contain a ${codeQuote("tasks")} key`], this.doc);
@@ -90178,13 +90231,38 @@ var YamlParser = class _YamlParser {
     }
     this.validatePackageTasks(fields.tasks, this.rootNode);
     return {
-      parameters: fields.parameters,
+      parameters: packageBlock?.parameters ?? fields.parameters,
       concurrencyPools: fields["concurrency-pools"],
       toolCache: fields["tool-cache"],
       defaults: fields.defaults,
       tasks: fields.tasks,
       warningMessages: warningCollector
     };
+  };
+  /**
+   * The top-level `package` key of a local package: `true`, or a block whose `visibility`
+   * is `local` or unset (a package block without a `visibility` is local by default).
+   */
+  parseLocalPackageMarker = async (node, warningCollector) => {
+    if (!YAML.isMap(node)) {
+      return this.parseBoolean(node);
+    }
+    const { fields } = await this.parseObject(
+      node,
+      {
+        visibility: this.parseLocalPackageVisibility,
+        parameters: this.parsePackageParameters
+      },
+      warningCollector
+    );
+    return { parameters: fields.parameters };
+  };
+  parseLocalPackageVisibility = (node) => {
+    const parsed = this.parseString(node);
+    if (parsed !== "local") {
+      this.error([`Invalid package visibility ${codeQuote(parsed)}; the only supported visibility for a local package is ${codeQuote("local")}`], node);
+    }
+    return "local";
   };
   /** Finds the YAML node of the task with the given key in the `tasks` list of the given map node, if any. */
   findTaskNodeByKey(taskKey, containerNode) {
