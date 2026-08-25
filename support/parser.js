@@ -90209,9 +90209,6 @@ var YamlParser = class _YamlParser {
       this.error([`A local package must set ${codeQuote("package: true")} or a ${codeQuote("package")} block at the top level`], this.rootNode);
     }
     if (keyNodes.parameters !== void 0) {
-      logger_default.warn("Deprecated top-level parameters encountered in a local package", {
-        fileName: this.currentFileName
-      });
       if (packageBlock?.parameters !== void 0) {
         this.error(
           [
@@ -90220,6 +90217,17 @@ var YamlParser = class _YamlParser {
           ],
           keyNodes.parameters
         );
+      } else {
+        logger_default.info("Deprecated top-level parameters encountered in a local package", {
+          fileName: this.currentFileName
+        });
+        this.warning({
+          warningCollector,
+          message: `Specifying ${codeQuote("parameters")} at the top level of a local package is deprecated.`,
+          advice: `Nest ${codeQuote("parameters")} inside of ${codeQuote("package")} instead.`,
+          docs: `See ${"https://www.rwx.com/docs/local-packages" /* LocalPackages */} to learn about local packages.`,
+          node: keyNodes.parameters
+        });
       }
     }
     if (fields.tasks === void 0) {
