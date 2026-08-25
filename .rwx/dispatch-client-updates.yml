@@ -13,18 +13,18 @@ on:
 
 base:
   image: ubuntu:24.04
-  config: rwx/base 1.1.1
+  config: rwx/base 1.2.0
 
 tasks:
   - key: rwx-cli
-    call: rwx/install-cli 4.0.4
+    call: rwx/install-cli 4.1.0
 
   - key: github-cli
-    call: github/install-cli 1.0.10
+    call: github/install-cli 1.1.0
 
   - key: src-changes
     use: github-cli
-    call: github/compare 1.0.8
+    call: github/compare 1.1.0
     with:
       repository: rwx-cloud/language-server
       base-ref: ${{ init.base-ref }}
