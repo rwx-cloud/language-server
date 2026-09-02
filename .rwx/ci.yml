@@ -184,7 +184,7 @@ tasks:
 
       exit "$CLAUDE_STATUS"
     env:
-      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_BOT_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ vaults.language-server-default.secrets.claude-api-key }}
       GITHUB_TOKEN: ${{ github-apps.rwx-cloud-bot.token }}
 
   - key: check-key-descriptions
