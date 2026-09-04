@@ -90446,183 +90446,6 @@ var data_default = [
     estimatedDiskUsageBytes: 25447172,
     rwxRunId: "bbc68392b852425494787a99cda4d8fb",
     rwxGitCommitSha: "7d0c3114cce37af66c93d3fc080096a55dc2ac23"
-  },
-  {
-    os: "ubuntu 24.04",
-    tag: "1.2",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "x86_64",
-    env: {
-      LANG: "C.UTF-8"
-    },
-    layerId: "4c9939bcc4dd6221da328d43ef2dfb6516962e47d2aa098d6cb99833b2cfb706",
-    layerFile: "4c9939bcc4dd6221da328d43ef2dfb6516962e47d2aa098d6cb99833b2cfb706.tar",
-    layerSizeBytes: 997582336,
-    estimatedDiskUsageBytes: 1083244544,
-    mintRunId: "4a87ba7803f14e60bf9a68b3ee84add9",
-    mintGitCommitSha: "4546be99a6e96839f7faf49e9fe22a778478a8ef"
-  },
-  {
-    os: "ubuntu 24.04",
-    tag: "1.2",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "arm64",
-    env: {
-      LANG: "C.UTF-8"
-    },
-    layerId: "7a872802a6366093a56d37df7bcdb6d12b9f849a417c578bfc58763e353141b7",
-    layerFile: "7a872802a6366093a56d37df7bcdb6d12b9f849a417c578bfc58763e353141b7.tar",
-    layerSizeBytes: 990777856,
-    estimatedDiskUsageBytes: 1076965376,
-    mintRunId: "4a87ba7803f14e60bf9a68b3ee84add9",
-    mintGitCommitSha: "4546be99a6e96839f7faf49e9fe22a778478a8ef"
-  },
-  {
-    os: "ubuntu 24.04",
-    tag: "1.1",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "x86_64",
-    env: {},
-    layerId: "558dd0267c1281b9df666ee7a6e0d5e15a042d90f7bf667fe3069d1feccf6783",
-    layerFile: "558dd0267c1281b9df666ee7a6e0d5e15a042d90f7bf667fe3069d1feccf6783.tar",
-    layerSizeBytes: 997495808,
-    estimatedDiskUsageBytes: 1083154432,
-    mintRunId: "4ca7dce46e954afc835efb5d65574a15",
-    mintGitCommitSha: "070d1ea6d3a85fcfaff3123b3da7a4de5a73745a"
-  },
-  {
-    os: "ubuntu 24.04",
-    tag: "1.1",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "arm64",
-    env: {},
-    layerId: "66433cffa6e2322bd7805627fc6904295e2e0c826b373d4870d2037babe9dbc2",
-    layerFile: "66433cffa6e2322bd7805627fc6904295e2e0c826b373d4870d2037babe9dbc2.tar",
-    layerSizeBytes: 990699520,
-    estimatedDiskUsageBytes: 1076883456,
-    mintRunId: "26b3f6ab2c0b4feaad62ab9f3281e8cb",
-    mintGitCommitSha: "48f3c8983b54a7c035cf6f7bfa16d680df588644"
-  },
-  {
-    os: "ubuntu 24.04",
-    tag: "1.0",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "x86_64",
-    env: {},
-    layerId: "3736a44d7912a995a2c57758e3b1e43b2b8bc0350805535fcd9b8b90a0efe608",
-    layerFile: "3736a44d7912a995a2c57758e3b1e43b2b8bc0350805535fcd9b8b90a0efe608.tar",
-    layerSizeBytes: 997433856,
-    estimatedDiskUsageBytes: 1083101184,
-    mintRunId: "0c6d49a3d1654e08bbc3799e61ecdac4",
-    mintGitCommitSha: "16e756a470e8ca77c5830289a77a89693c56fbab"
-  },
-  {
-    os: "ubuntu 22.04",
-    tag: "1.2",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "x86_64",
-    env: {
-      LANG: "C.UTF-8"
-    },
-    layerId: "66474a37e2dfcb32ecfb47517558bcba8a2159b1af70e1ac82082ab81599c665",
-    layerFile: "66474a37e2dfcb32ecfb47517558bcba8a2159b1af70e1ac82082ab81599c665.tar",
-    layerSizeBytes: 921620480,
-    estimatedDiskUsageBytes: 1000542208,
-    rwxRunId: "27ac16f99f6549e884cf64bb9f213cc0",
-    rwxGitCommitSha: "deed165a6cf74ee61c627be4731577f2f2dec6b0"
-  },
-  {
-    os: "ubuntu 22.04",
-    tag: "1.2",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "arm64",
-    env: {
-      LANG: "C.UTF-8"
-    },
-    layerId: "7a95e30746f564f66c1208bccebac337b9dee7dd6dc687f6f6e2d46689616d8d",
-    layerFile: "7a95e30746f564f66c1208bccebac337b9dee7dd6dc687f6f6e2d46689616d8d.tar",
-    layerSizeBytes: 835253760,
-    estimatedDiskUsageBytes: 914325504,
-    rwxRunId: "b0e888455577403ca84ac06923ed37c2",
-    rwxGitCommitSha: "b9d8fe5427e1c47237238d556b457df7a457000e"
-  },
-  {
-    os: "ubuntu 22.04",
-    tag: "1.1",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "x86_64",
-    env: {
-      LANG: "C.UTF-8"
-    },
-    layerId: "897a138a2c8b98b6915dd055af27a7ce9f20ef7295e97615cdd0ab1223ce80e0",
-    layerFile: "897a138a2c8b98b6915dd055af27a7ce9f20ef7295e97615cdd0ab1223ce80e0.tar",
-    layerSizeBytes: 921601536,
-    estimatedDiskUsageBytes: 1000525824,
-    mintRunId: "d18a934e015e497d8ee0204b68bd2063",
-    mintGitCommitSha: "0e3954be1ea8b9268f83a3bd567c686e6106c1f7"
-  },
-  {
-    os: "ubuntu 22.04",
-    tag: "1.1",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "arm64",
-    env: {
-      LANG: "C.UTF-8"
-    },
-    layerId: "0948ab0f6ad4c13fc8f2f8520cf0bb96c26fa09dc97c494f430e3fce456918f2",
-    layerFile: "0948ab0f6ad4c13fc8f2f8520cf0bb96c26fa09dc97c494f430e3fce456918f2.tar",
-    layerSizeBytes: 835238912,
-    estimatedDiskUsageBytes: 914313216,
-    mintRunId: "d18a934e015e497d8ee0204b68bd2063",
-    mintGitCommitSha: "0e3954be1ea8b9268f83a3bd567c686e6106c1f7"
-  },
-  {
-    os: "ubuntu 22.04",
-    tag: "1.0",
-    arch: "x86_64",
-    layerId: "ee9b1c14b0f12fb29997cee03cd70544678097b6389d3182e8243688ca7fa315",
-    layerFile: "ee9b1c14b0f12fb29997cee03cd70544678097b6389d3182e8243688ca7fa315.tar",
-    layerSizeBytes: 921597952,
-    estimatedDiskUsageBytes: 1000525824,
-    user: {
-      name: "ubuntu"
-    },
-    env: {},
-    mintRunId: "",
-    mintGitCommitSha: ""
-  },
-  {
-    os: "ubuntu 22.04",
-    tag: "1.0",
-    user: {
-      name: "ubuntu"
-    },
-    arch: "arm64",
-    env: {},
-    layerId: "a3042e39807ec1ad2dc9fd1a830baf29c51c74313d9f6d23ed14c2217ad25690",
-    layerFile: "a3042e39807ec1ad2dc9fd1a830baf29c51c74313d9f6d23ed14c2217ad25690.tar",
-    layerSizeBytes: 835237888,
-    estimatedDiskUsageBytes: 914305024,
-    mintRunId: "2d2f19708b9d43be8d26d0f953dd8039",
-    mintGitCommitSha: "ef275c839c606b8bc3702b3cdcb8b4c016300011"
   }
 ];
 
@@ -90633,7 +90456,7 @@ var BaseLayers = new Singleton(
   "BaseLayers",
   data_default.map((base) => {
     (0, import_node_assert5.default)(architectures.includes(base.arch), `Invalid architecture: ${base.arch}`);
-    const { mintRunId: _mintRunId, mintGitCommitSha: _mintGitCommitSha, env, ...rest } = base;
+    const { rwxRunId: _rwxRunId, rwxGitCommitSha: _rwxGitCommitSha, env, ...rest } = base;
     (0, import_node_assert5.default)(typeof env === "object", "env must be an object");
     const untypedEnv = env;
     return {
@@ -90644,6 +90467,7 @@ var BaseLayers = new Singleton(
   })
 );
 var bootstrapOs = "bootstrap";
+var bootstrapTag = "1.0";
 var BaseLayerSpecifications = new Singleton(
   "BaseLayerSpecifications",
   BaseLayers.get().filter(({ os }) => os !== bootstrapOs).map(({ os, tag, arch }) => ({ os, tag, arch }))
@@ -90666,14 +90490,14 @@ function mustFindBaseLayer(spec) {
 function findBaseLayerForArch(arch) {
   switch (arch) {
     case "x86_64":
-      return findBaseLayer({ os: "ubuntu 22.04", tag: "1.1", arch: "x86_64" });
+      return findBaseLayer({ os: bootstrapOs, tag: bootstrapTag, arch: "x86_64" });
     case "arm64":
-      return findBaseLayer({ os: "ubuntu 24.04", tag: "1.1", arch: "arm64" });
+      return findBaseLayer({ os: bootstrapOs, tag: bootstrapTag, arch: "arm64" });
     default:
       assertExhaustive(arch);
   }
 }
-var defaultBaseLayerSpecification = { os: "ubuntu 24.04", tag: "1.2", arch: defaultArchitecture };
+var defaultBaseLayerSpecification = { os: bootstrapOs, tag: bootstrapTag, arch: defaultArchitecture };
 var defaultBaseLayer = (() => mustFindBaseLayer(defaultBaseLayerSpecification))();
 var defaultBaseConfigForTesting = (() => {
   const layer = mustFindBaseLayer(defaultBaseLayerSpecification);
@@ -90685,12 +90509,8 @@ var defaultBaseConfigForTesting = (() => {
 
 // packages/server/models/run-definition/index.ts
 function defaultBaseImageConfigWithTemplateStrings() {
-  const version = defaultBaseLayer.os.match(/^ubuntu (.+)$/)?.[1];
-  if (!version) {
-    throw new Error(`Cannot map default base layer ${JSON.stringify(defaultBaseLayer)} to a base image/config`);
-  }
   return {
-    image: `ubuntu:${version}`,
+    image: "ubuntu:24.04",
     config: "rwx/base 1.0.2",
     arch: defaultBaseLayer.arch
   };
