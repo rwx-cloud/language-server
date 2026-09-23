@@ -28,15 +28,15 @@ export class TestLanguageServer {
   private notificationHandlers = new Map<string, Function>();
   private buffer = "";
 
-  async start(): Promise<void> {
+  async start(environment: NodeJS.ProcessEnv = process.env): Promise<void> {
     const serverPath = path.join(__dirname, "../../out/server.js");
 
     this.serverProcess = spawn("node", [serverPath, "--stdio"], {
       stdio: ["pipe", "pipe", "pipe"],
       env: {
-        ...process.env,
+        ...environment,
         // Pass through NODE_V8_COVERAGE for coverage collection
-        NODE_V8_COVERAGE: process.env.NODE_V8_COVERAGE,
+        NODE_V8_COVERAGE: environment.NODE_V8_COVERAGE,
       },
     });
 

@@ -45,9 +45,10 @@ import {
   getKeyDescription,
   isKeyAutocomplete,
 } from "./key-descriptions";
+import { getAccessToken } from "./access-token";
 
 // Credentials are fixed for this LSP session; restart to change accounts.
-let accessToken = process.env.RWX_ACCESS_TOKEN || "";
+let accessToken = "";
 
 function authorizationHeaders(): Record<string, string> {
   return accessToken ? { Authorization: `Bearer ${accessToken}` } : {};
@@ -256,9 +257,7 @@ connection.onInitialize((params: InitializeParams) => {
   const options = params.initializationOptions as
     | { accessToken?: unknown }
     | undefined;
-  if (typeof options?.accessToken === "string") {
-    accessToken = options.accessToken;
-  }
+  accessToken = getAccessToken(options);
   const capabilities = params.capabilities;
 
   // Does the client support the `workspace/configuration` request?
