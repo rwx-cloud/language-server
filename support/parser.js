@@ -93804,7 +93804,7 @@ var YamlParser = class _YamlParser {
       this.error(
         [
           `A published package must set ${codeQuote("visibility")} inside ${codeQuote("package")}.`,
-          `The only supported visibility is ${codeQuote("public")}.`
+          `Supported visibilities are ${codeQuote("public")} and ${codeQuote("private")}.`
         ],
         node
       );
@@ -93826,12 +93826,12 @@ var YamlParser = class _YamlParser {
       this.error(
         [
           `A package with ${codeQuote("visibility: local")} is a local package, so it cannot be published.`,
-          `The only supported visibility for a published package is ${codeQuote("public")}.`
+          `Supported visibilities for a published package are ${codeQuote("public")} and ${codeQuote("private")}.`
         ],
         node
       );
-    } else if (parsed !== "public") {
-      this.error([`Invalid package visibility ${codeQuote(parsed)}; the only supported visibility is ${codeQuote("public")}`], node);
+    } else if (parsed !== "public" && parsed !== "private") {
+      this.error([`Invalid package visibility ${codeQuote(parsed)}; supported visibilities are ${codeQuote("public")} and ${codeQuote("private")}`], node);
     }
     return parsed;
   };

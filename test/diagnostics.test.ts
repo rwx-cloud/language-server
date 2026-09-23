@@ -823,8 +823,8 @@ tasks:
       expect(result.items).toEqual([]);
     });
 
-    it("reports published package grammar errors", async () => {
-      const invalidContent = publishedPackageContent.replace(
+    it("accepts private published packages", async () => {
+      const privateContent = publishedPackageContent.replace(
         "visibility: public",
         "visibility: private",
       );
@@ -832,14 +832,14 @@ tasks:
       const filePath = await createTestFile(
         testEnv.mintDir,
         "packages/thing.yml",
-        invalidContent,
+        privateContent,
       );
 
       const textDocument = {
         uri: `file://${filePath}`,
         languageId: "yaml",
         version: 1,
-        text: invalidContent,
+        text: privateContent,
       };
 
       server.sendNotification("textDocument/didOpen", { textDocument });
@@ -853,13 +853,7 @@ tasks:
 
       expect(result.kind).toBe("full");
       assert("items" in result);
-      const diagnostic = result.items[0];
-      assert(diagnostic);
-      expect(diagnostic.severity).toBe(DiagnosticSeverity.Error);
-      expect(diagnostic.source).toBe("rwx-run-parser");
-      expect(diagnostic.message).toContain(
-        "Invalid package visibility `private`",
-      );
+      expect(result.items).toEqual([]);
     });
 
     it("reports an error when a published package has no tasks", async () => {

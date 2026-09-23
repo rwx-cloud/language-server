@@ -57,7 +57,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   // Published package metadata (package.*), set in the `package` block of a published package definition.
   // A local package's `package` block also supports `visibility` and `parameters` (see below).
   "package.visibility":
-    "The visibility of the package. A published package must set this to 'public'. A local package can set this to 'local', or omit it, since a 'package' block without 'visibility' defaults to local.",
+    "The visibility of the package. A published package must set this to 'public' or 'private'. Private packages can only be read and called by their owning organization. A local package can set this to 'local', or omit it, since a 'package' block without 'visibility' defaults to local.",
   "package.name":
     "The name of the published package in 'namespace/name' format, for example 'git/clone'. Each segment accepts lowercase letters, numbers, and hyphens only.",
   "package.version":

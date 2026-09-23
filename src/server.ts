@@ -46,7 +46,14 @@ import {
   isKeyAutocomplete,
 } from "./key-descriptions";
 
-// Set up the Leaves API so the parser can validate packages against the public resolve endpoint
+// Credentials are fixed for this LSP session; restart to change accounts.
+let accessToken = process.env.RWX_ACCESS_TOKEN || "";
+
+function authorizationHeaders(): Record<string, string> {
+  return accessToken ? { Authorization: `Bearer ${accessToken}` } : {};
+}
+
+// Set up the Leaves API so the parser can validate accessible packages.
 const LEAVES_RESOLVE_URL = "https://cloud.rwx.com/mint/api/leaves/resolve";
 
 Leaves.set({
@@ -66,6 +73,7 @@ Leaves.set({
           "Content-Type": "application/json",
           Accept: "application/json",
           "User-Agent": "rwx-language-server/1",
+          ...authorizationHeaders(),
         },
         body: JSON.stringify(body),
       });
@@ -140,8 +148,12 @@ const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
 async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
   const now = Date.now();
 
-  // Return cached data if it's still valid
-  if (packageCache.data && now - packageCache.timestamp < CACHE_DURATION) {
+  // Authenticated requests must recheck access, including token revocation.
+  if (
+    !accessToken &&
+    packageCache.data &&
+    now - packageCache.timestamp < CACHE_DURATION
+  ) {
     return packageCache.data;
   }
 
@@ -152,6 +164,7 @@ async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
         headers: {
           Accept: "application/json,*/*",
           "User-Agent": USER_AGENT,
+          ...authorizationHeaders(),
         },
       },
     );
@@ -162,19 +175,21 @@ async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
         response.status,
         response.statusText,
       );
-      return packageCache.data; // Return cached data if available
+      return accessToken ? null : packageCache.data;
     }
 
     const data = (await response.json()) as RWXPackagesResponse;
 
-    // Update cache
-    packageCache.data = data;
-    packageCache.timestamp = now;
+    // Never retain authenticated results in the public cache.
+    if (!accessToken) {
+      packageCache.data = data;
+      packageCache.timestamp = now;
+    }
 
     return data;
   } catch (error) {
     console.error("Error fetching RWX packages:", error);
-    return packageCache.data; // Return cached data if available
+    return accessToken ? null : packageCache.data;
   }
 }
 
@@ -186,7 +201,7 @@ async function fetchPackageDetails(
   const cacheKey = `${packageName}@${version}`;
 
   // Return cached data if available
-  if (packageDetailsCache.has(cacheKey)) {
+  if (!accessToken && packageDetailsCache.has(cacheKey)) {
     return packageDetailsCache.get(cacheKey)!;
   }
 
@@ -200,6 +215,7 @@ async function fetchPackageDetails(
       headers: {
         Accept: "application/json,*/*",
         "User-Agent": USER_AGENT,
+        ...authorizationHeaders(),
       },
     });
 
@@ -216,8 +232,9 @@ async function fetchPackageDetails(
 
     const data = (await response.json()) as RWXPackageDetails;
 
-    // Cache the result indefinitely
-    packageDetailsCache.set(cacheKey, data);
+    if (!accessToken) {
+      packageDetailsCache.set(cacheKey, data);
+    }
 
     return data;
   } catch (error) {
@@ -236,6 +253,12 @@ let hasConfigurationCapability = false;
 let hasWorkspaceFolderCapability = false;
 
 connection.onInitialize((params: InitializeParams) => {
+  const options = params.initializationOptions as
+    | { accessToken?: unknown }
+    | undefined;
+  if (typeof options?.accessToken === "string") {
+    accessToken = options.accessToken;
+  }
   const capabilities = params.capabilities;
 
   // Does the client support the `workspace/configuration` request?
