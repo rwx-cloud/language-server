@@ -149,12 +149,8 @@ const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
 async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
   const now = Date.now();
 
-  // Authenticated requests must recheck access, including token revocation.
-  if (
-    !accessToken &&
-    packageCache.data &&
-    now - packageCache.timestamp < CACHE_DURATION
-  ) {
+  // Return cached data if it's still valid
+  if (packageCache.data && now - packageCache.timestamp < CACHE_DURATION) {
     return packageCache.data;
   }
 
@@ -176,21 +172,19 @@ async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
         response.status,
         response.statusText,
       );
-      return accessToken ? null : packageCache.data;
+      return packageCache.data; // Return cached data if available
     }
 
     const data = (await response.json()) as RWXPackagesResponse;
 
-    // Never retain authenticated results in the public cache.
-    if (!accessToken) {
-      packageCache.data = data;
-      packageCache.timestamp = now;
-    }
+    // Update cache
+    packageCache.data = data;
+    packageCache.timestamp = now;
 
     return data;
   } catch (error) {
     console.error("Error fetching RWX packages:", error);
-    return accessToken ? null : packageCache.data;
+    return packageCache.data; // Return cached data if available
   }
 }
 
@@ -202,7 +196,7 @@ async function fetchPackageDetails(
   const cacheKey = `${packageName}@${version}`;
 
   // Return cached data if available
-  if (!accessToken && packageDetailsCache.has(cacheKey)) {
+  if (packageDetailsCache.has(cacheKey)) {
     return packageDetailsCache.get(cacheKey)!;
   }
 
@@ -233,9 +227,8 @@ async function fetchPackageDetails(
 
     const data = (await response.json()) as RWXPackageDetails;
 
-    if (!accessToken) {
-      packageDetailsCache.set(cacheKey, data);
-    }
+    // Cache the result indefinitely
+    packageDetailsCache.set(cacheKey, data);
 
     return data;
   } catch (error) {
