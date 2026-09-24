@@ -58,7 +58,9 @@ The server integrates with RWX cloud services for package management:
 
 - **Package List**: `GET https://cloud.rwx.com/mint/api/leaves/documented`
 - **Package Details**: `GET https://cloud.rwx.com/mint/api/leaves/{org}/{package}/{version}/documentation`
-- **Caching**: Implements intelligent caching (1 hour for package lists, indefinite for package details)
+- **Authentication**: `src/access-token.ts` resolves `initializationOptions.accessToken` (including explicit empty for anonymous), then nonempty `RWX_ACCESS_TOKEN`, then the CLI's `~/.config/rwx/accesstoken`, then legacy `~/.mint/accesstoken` only if the primary file is missing. File contents are trimmed; non-missing read errors fail initialization. Legacy reads do not migrate the token. Credentials are fixed for the LSP session; restart the server to change accounts.
+- **Caching**: Package lists are cached for 1 hour, with cached data returned on request errors. Package details are cached indefinitely. Credentials do not affect cache keys, reads, writes, or fallback behavior.
+- **Private packages**: Published packages accept `visibility: private`; registry access is restricted by the Cloud API to the owning organization.
 - **Error Handling**: Gracefully handles API failures and network timeouts
 
 ## Testing Philosophy

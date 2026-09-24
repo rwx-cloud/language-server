@@ -656,7 +656,7 @@ export type LeafSpec = {
   description?: string;
   sourceCodeUrl?: string;
   issueTrackerUrl?: string;
-  visibility?: "public";
+  visibility?: "public" | "private";
   parameters?: Record<string, LeafSpecParameter>;
   outputs?: LeafSpecOutputs;
   tasks: PartialTaskDefinition[];

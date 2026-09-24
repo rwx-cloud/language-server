@@ -45,8 +45,16 @@ import {
   getKeyDescription,
   isKeyAutocomplete,
 } from "./key-descriptions";
+import { getAccessToken } from "./access-token";
 
-// Set up the Leaves API so the parser can validate packages against the public resolve endpoint
+// Credentials are fixed for this LSP session; restart to change accounts.
+let accessToken = "";
+
+function authorizationHeaders(): Record<string, string> {
+  return accessToken ? { Authorization: `Bearer ${accessToken}` } : {};
+}
+
+// Set up the Leaves API so the parser can validate accessible packages.
 const LEAVES_RESOLVE_URL = "https://cloud.rwx.com/mint/api/leaves/resolve";
 
 Leaves.set({
@@ -66,6 +74,7 @@ Leaves.set({
           "Content-Type": "application/json",
           Accept: "application/json",
           "User-Agent": "rwx-language-server/1",
+          ...authorizationHeaders(),
         },
         body: JSON.stringify(body),
       });
@@ -152,6 +161,7 @@ async function fetchRWXPackages(): Promise<RWXPackagesResponse | null> {
         headers: {
           Accept: "application/json,*/*",
           "User-Agent": USER_AGENT,
+          ...authorizationHeaders(),
         },
       },
     );
@@ -200,6 +210,7 @@ async function fetchPackageDetails(
       headers: {
         Accept: "application/json,*/*",
         "User-Agent": USER_AGENT,
+        ...authorizationHeaders(),
       },
     });
 
@@ -236,6 +247,10 @@ let hasConfigurationCapability = false;
 let hasWorkspaceFolderCapability = false;
 
 connection.onInitialize((params: InitializeParams) => {
+  const options = params.initializationOptions as
+    | { accessToken?: unknown }
+    | undefined;
+  accessToken = getAccessToken(options);
   const capabilities = params.capabilities;
 
   // Does the client support the `workspace/configuration` request?
