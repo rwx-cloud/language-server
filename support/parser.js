@@ -45369,11 +45369,11 @@ var TTimestamps = Object2({
 });
 var TTaskOrGroupId = TBrandedString();
 var TDateString = TBrandedString();
-var Severity = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity || {});
 var TProblemMatcherPattern = Object2({
   regexp: String2(),
@@ -45456,17 +45456,17 @@ var TExportedImage = Object2({
   // Ordered bottom to top
   layers: Array2(TExportedImageLayer)
 });
-var BackgroundProcessResultStatus = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus || {});
-var BackgroundProcessResultFinishedSubStatus = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus || {});
 var TBackgroundProcessResult = Object2({
   key: String2(),
@@ -45514,10 +45514,10 @@ var TTestResults = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey || {});
 var TEnvironmentVariables = Record(
   String2(),
@@ -47304,11 +47304,11 @@ var TTimestamps2 = Object2({
 });
 var TTaskOrGroupId2 = TBrandedString();
 var TDateString2 = TBrandedString();
-var Severity2 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity2 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity2 || {});
 var TProblemMatcherPattern2 = Object2({
   regexp: String2(),
@@ -47356,17 +47356,17 @@ var TLayerWithManifest2 = Object2({
   associatedWithTaskId: TTaskOrGroupId2,
   associatedWithTaskKey: String2()
 });
-var BackgroundProcessResultStatus2 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus2 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus2 || {});
-var BackgroundProcessResultFinishedSubStatus2 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus2 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus2 || {});
 var TBackgroundProcessResult2 = Object2({
   key: String2(),
@@ -47416,10 +47416,10 @@ var TTestResults2 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask2 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey2 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey2 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey2 || {});
 var TEnvironmentVariables2 = Record(
   String2(),
@@ -47572,11 +47572,11 @@ var TTimestamps3 = Object2({
 });
 var TTaskOrGroupId3 = TBrandedString();
 var TDateString3 = TBrandedString();
-var Severity3 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity3 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity3 || {});
 var TProblemMatcherPattern3 = Object2({
   regexp: String2(),
@@ -47624,17 +47624,17 @@ var TLayerWithManifest3 = Object2({
   associatedWithTaskId: TTaskOrGroupId3,
   associatedWithTaskKey: String2()
 });
-var BackgroundProcessResultStatus3 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus3 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus3 || {});
-var BackgroundProcessResultFinishedSubStatus3 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus3 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus3 || {});
 var TBackgroundProcessResult3 = Object2({
   key: String2(),
@@ -47684,10 +47684,10 @@ var TTestResults3 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask3 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey3 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey3 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey3 || {});
 var TEnvironmentVariables3 = Record(
   String2(),
@@ -47840,11 +47840,11 @@ var TTimestamps4 = Object2({
 });
 var TTaskOrGroupId4 = TBrandedString();
 var TDateString4 = TBrandedString();
-var Severity4 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity4 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity4 || {});
 var TProblemMatcherPattern4 = Object2({
   regexp: String2(),
@@ -47892,17 +47892,17 @@ var TLayerWithManifest4 = Object2({
   associatedWithTaskId: TTaskOrGroupId4,
   associatedWithTaskKey: String2()
 });
-var BackgroundProcessResultStatus4 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus4 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus4 || {});
-var BackgroundProcessResultFinishedSubStatus4 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus4 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus4 || {});
 var TBackgroundProcessResult4 = Object2({
   key: String2(),
@@ -47952,10 +47952,10 @@ var TTestResults4 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask4 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey4 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey4 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey4 || {});
 var TEnvironmentVariables4 = Record(
   String2(),
@@ -48109,11 +48109,11 @@ var TTimestamps5 = Object2({
 });
 var TTaskOrGroupId5 = TBrandedString();
 var TDateString5 = TBrandedString();
-var Severity5 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity5 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity5 || {});
 var TProblemMatcherPattern5 = Object2({
   regexp: String2(),
@@ -48161,17 +48161,17 @@ var TLayerWithManifest5 = Object2({
   associatedWithTaskId: TTaskOrGroupId5,
   associatedWithTaskKey: String2()
 });
-var BackgroundProcessResultStatus5 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus5 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus5 || {});
-var BackgroundProcessResultFinishedSubStatus5 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus5 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus5 || {});
 var TBackgroundProcessResult5 = Object2({
   key: String2(),
@@ -48221,10 +48221,10 @@ var TTestResults5 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask5 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey5 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey5 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey5 || {});
 var TEnvironmentVariables5 = Record(
   String2(),
@@ -48390,11 +48390,11 @@ var TTimestamps6 = Object2({
 });
 var TTaskOrGroupId6 = TBrandedString();
 var TDateString6 = TBrandedString();
-var Severity6 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity6 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity6 || {});
 var TProblemMatcherPattern6 = Object2({
   regexp: String2(),
@@ -48442,17 +48442,17 @@ var TLayerWithManifest6 = Object2({
   associatedWithTaskId: TTaskOrGroupId6,
   associatedWithTaskKey: String2()
 });
-var BackgroundProcessResultStatus6 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus6 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus6 || {});
-var BackgroundProcessResultFinishedSubStatus6 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus6 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus6 || {});
 var TBackgroundProcessResult6 = Object2({
   key: String2(),
@@ -48502,10 +48502,10 @@ var TTestResults6 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask6 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey6 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey6 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey6 || {});
 var TEnvironmentVariables6 = Record(
   String2(),
@@ -48671,11 +48671,11 @@ var TTimestamps7 = Object2({
 });
 var TTaskOrGroupId7 = TBrandedString();
 var TDateString7 = TBrandedString();
-var Severity7 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity7 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity7 || {});
 var TProblemMatcherPattern7 = Object2({
   regexp: String2(),
@@ -48723,17 +48723,17 @@ var TLayerWithManifest7 = Object2({
   associatedWithTaskId: TTaskOrGroupId7,
   associatedWithTaskKey: String2()
 });
-var BackgroundProcessResultStatus7 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus7 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus7 || {});
-var BackgroundProcessResultFinishedSubStatus7 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus7 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus7 || {});
 var TBackgroundProcessResult7 = Object2({
   key: String2(),
@@ -48783,10 +48783,10 @@ var TTestResults7 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask7 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey7 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey7 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey7 || {});
 var TEnvironmentVariables7 = Record(
   String2(),
@@ -48952,11 +48952,11 @@ var TTimestamps8 = Object2({
 });
 var TTaskOrGroupId8 = TBrandedString();
 var TDateString8 = TBrandedString();
-var Severity8 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity8 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity8 || {});
 var TProblemMatcherPattern8 = Object2({
   regexp: String2(),
@@ -49004,17 +49004,17 @@ var TLayerWithManifest8 = Object2({
   associatedWithTaskId: TTaskOrGroupId8,
   associatedWithTaskKey: String2()
 });
-var BackgroundProcessResultStatus8 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus8 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus8 || {});
-var BackgroundProcessResultFinishedSubStatus8 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus8 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus8 || {});
 var TBackgroundProcessResult8 = Object2({
   key: String2(),
@@ -49062,10 +49062,10 @@ var TTestResults8 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask8 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey8 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey8 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey8 || {});
 var TEnvironmentVariables8 = Record(
   String2(),
@@ -49232,11 +49232,11 @@ var TTimestamps9 = Object2({
 });
 var TTaskOrGroupId9 = TBrandedString();
 var TDateString9 = TBrandedString();
-var Severity9 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity9 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity9 || {});
 var TProblemMatcherPattern9 = Object2({
   regexp: String2(),
@@ -49285,17 +49285,17 @@ var TLayerWithManifest9 = Object2({
   associatedWithTaskId: TTaskOrGroupId9,
   associatedWithTaskKey: String2()
 });
-var BackgroundProcessResultStatus9 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus9 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus9 || {});
-var BackgroundProcessResultFinishedSubStatus9 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus9 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus9 || {});
 var TBackgroundProcessResult9 = Object2({
   key: String2(),
@@ -49343,10 +49343,10 @@ var TTestResults9 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask9 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey9 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey9 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey9 || {});
 var TEnvironmentVariables9 = Record(
   String2(),
@@ -49513,11 +49513,11 @@ var TTimestamps10 = Object2({
 });
 var TTaskOrGroupId10 = TBrandedString();
 var TDateString10 = TBrandedString();
-var Severity10 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity10 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity10 || {});
 var TProblemMatcherPattern10 = Object2({
   regexp: String2(),
@@ -49600,17 +49600,17 @@ var TExportedImage2 = Object2({
   // Ordered bottom to top
   layers: Array2(TExportedImageLayer2)
 });
-var BackgroundProcessResultStatus10 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus10 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus10 || {});
-var BackgroundProcessResultFinishedSubStatus10 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus10 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus10 || {});
 var TBackgroundProcessResult10 = Object2({
   key: String2(),
@@ -49658,10 +49658,10 @@ var TTestResults10 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask10 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey10 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey10 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey10 || {});
 var TEnvironmentVariables10 = Record(
   String2(),
@@ -49828,11 +49828,11 @@ var TTimestamps11 = Object2({
 });
 var TTaskOrGroupId11 = TBrandedString();
 var TDateString11 = TBrandedString();
-var Severity11 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity11 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity11 || {});
 var TProblemMatcherPattern11 = Object2({
   regexp: String2(),
@@ -49915,17 +49915,17 @@ var TExportedImage3 = Object2({
   // Ordered bottom to top
   layers: Array2(TExportedImageLayer3)
 });
-var BackgroundProcessResultStatus11 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus11 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus11 || {});
-var BackgroundProcessResultFinishedSubStatus11 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus11 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus11 || {});
 var TBackgroundProcessResult11 = Object2({
   key: String2(),
@@ -49973,10 +49973,10 @@ var TTestResults11 = Object2({
   errorMessage: Optional(String2())
 });
 var TTaskGeneratedDynamicTask11 = Object2({ sourceFilePath: String2(), source: String2() });
-var EnvironmentVariableCacheKey11 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey11 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey11 || {});
 var TEnvironmentVariables11 = Record(
   String2(),
@@ -50089,7 +50089,7 @@ var TScopedTaskKey = TBrandedString();
 var TInitializationParameters = Type.Record(Type.String(), TEvaluatedString);
 
 // packages/schema/persisted/versioned/latest.ts
-var ThisSchemaVersion = "v144" /* V144 */;
+var ThisSchemaVersion = "v145" /* V145 */;
 var TTaskOrGroupId13 = TBrandedString();
 var TGraphNodeId2 = TBrandedString();
 var TDebugSessionId = TBrandedString({ pattern: "^[0-9a-f]{32}$" });
@@ -50098,102 +50098,102 @@ var TEvaluatedString2 = TBrandedString();
 var TDateString13 = TBrandedString();
 var TEpochSeconds2 = TBrandedNumber();
 var TScopedTaskKey2 = TBrandedString();
-var TaskType = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType || {});
-var TaskResultStatus = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus || {});
-var TaskResultFailedSubStatus = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus || {});
-var TaskExecutionStatus = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus || {});
-var TaskExecutionWaitingSubStatus = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus || {});
-var TaskExecutionAbortedSubStatus = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus || {});
-var TaskExecutionFinishedSubStatus = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus || {});
-var TaskAttemptReason = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason || {});
-var DebugSessionOrigin = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin || {});
-var DebugSessionEndReason = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason || {});
 var TDebugSession = Object2({
   id: TDebugSessionId,
@@ -50207,62 +50207,62 @@ var TDebugSession = Object2({
   maxDurationMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus12 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus12 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus12 || {});
-var BackgroundProcessResultFinishedSubStatus12 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus12 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus12 || {});
-var RunResultStatus = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus || {});
-var RunExecutionStatus = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus || {});
-var RunExecutionWaitingSubStatus = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus || {});
-var RunExecutionAbortedSubStatus = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus || {});
-var RunExecutionFinishedSubStatus = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus || {});
-var GitClonePatchStatus = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus || {});
 var TSource = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey12 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey12 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey12 || {});
 var TExpandedEnvDescriptor = Object2({ value: Optional(TTemplateString2), cacheKey: Enum(EnvironmentVariableCacheKey12) });
 var TEnvMergeStrategy = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -50278,11 +50278,11 @@ var TProblemMatcherPattern12 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity12 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity12 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity12 || {});
 var TProblemMatcher12 = Object2({ owner: String2(), severity: Optional(Enum(Severity12)), pattern: Array2(TProblemMatcherPattern12) });
 var TProblemPath12 = Object2({
@@ -50299,11 +50299,11 @@ var TBackgroundProcess = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType || {});
 var TParallelismValue = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification = Object2({
@@ -50324,6 +50324,8 @@ var TResolvedAgentSpecification = Object2({
   diskSizeGigabytes: Number2(),
   gpu: Union([Literal(false), String2()]),
   subnetDefaultRoutes: Optional(Record(String2(), String2())),
+  // Preserve explicit opt-outs through run/package defaults and persistence.
+  staticIpsDisabled: Optional(Literal(true)),
   tmpfs: Optional(Boolean2()),
   placement: TLiteralUnion(["spot", "standard"]),
   architecture: String2(),
@@ -50596,18 +50598,18 @@ var TCustomStatusCheck = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow || {});
 var TConcurrencyPool = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow) });
-var LeaseState = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState || {});
 var TTiming12 = Object2({
   startTimestamp: Optional(Number2()),
@@ -50825,11 +50827,11 @@ var TArchiveStorageEntitlement = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit || {});
 var TTTL = Object2({
   value: Number2(),
@@ -51066,12 +51068,12 @@ var TConcurrencyPoolState = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState)
 });
-var ApprovalRequestState = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState || {});
 var TApprovalRequest = Object2({
   id: String2(),
@@ -51182,123 +51184,123 @@ var TEvaluatedString3 = TBrandedString();
 var TDateString14 = TBrandedString();
 var TEpochSeconds3 = TBrandedNumber();
 var TScopedTaskKey3 = TBrandedString();
-var TaskType2 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType2 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType2 || {});
-var TaskResultStatus2 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus2 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus2 || {});
-var TaskExecutionStatus2 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus2 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus2 || {});
-var TaskExecutionWaitingSubStatus2 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus2 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus2 || {});
-var TaskExecutionAbortedSubStatus2 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus2 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus2 || {});
-var TaskExecutionFinishedSubStatus2 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus2 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus2 || {});
-var TaskAttemptReason2 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason2 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason2 || {});
-var BackgroundProcessResultStatus13 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus13 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus13 || {});
-var BackgroundProcessResultFinishedSubStatus13 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus13 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus13 || {});
-var RunResultStatus2 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus2 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus2 || {});
-var RunExecutionStatus2 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus2 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus2 || {});
-var RunExecutionWaitingSubStatus2 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus2 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus2 || {});
-var RunExecutionAbortedSubStatus2 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus2 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus2 || {});
-var RunExecutionFinishedSubStatus2 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus2 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus2 || {});
-var GitClonePatchStatus2 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus2 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus2 || {});
 var TSource2 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey13 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey13 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey13 || {});
 var TExpandedEnvDescriptor2 = Object2({ value: Optional(TTemplateString3), cacheKey: Enum(EnvironmentVariableCacheKey13) });
 var TEnvMergeStrategy2 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -51314,11 +51316,11 @@ var TProblemMatcherPattern13 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity13 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity13 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity13 || {});
 var TProblemMatcher13 = Object2({ owner: String2(), severity: Optional(Enum(Severity13)), pattern: Array2(TProblemMatcherPattern13) });
 var TProblemPath13 = Object2({
@@ -51335,11 +51337,11 @@ var TBackgroundProcess2 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType2 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType2 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType2 || {});
 var TParallelismValue2 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification2 = Object2({
@@ -51601,18 +51603,18 @@ var TCustomStatusCheck2 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration2 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow2 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow2 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow2 || {});
 var TConcurrencyPool2 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow2) });
-var LeaseState2 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState2 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState2 || {});
 var TTiming13 = Object2({
   startTimestamp: Optional(Number2()),
@@ -51723,11 +51725,11 @@ var TResolvedBaseConfig2 = Object2({
   prebuiltLayer: TBaseLayer2,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit2 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit2 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit2 || {});
 var TTTL2 = Object2({
   value: Number2(),
@@ -51925,12 +51927,12 @@ var TConcurrencyPoolState2 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState2)
 });
-var ApprovalRequestState2 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState2 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState2 || {});
 var TApprovalRequest2 = Object2({
   id: String2(),
@@ -52019,123 +52021,123 @@ var TEvaluatedString4 = TBrandedString();
 var TDateString15 = TBrandedString();
 var TEpochSeconds4 = TBrandedNumber();
 var TScopedTaskKey4 = TBrandedString();
-var TaskType3 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType3 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType3 || {});
-var TaskResultStatus3 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus3 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus3 || {});
-var TaskExecutionStatus3 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus3 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus3 || {});
-var TaskExecutionWaitingSubStatus3 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus3 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus3 || {});
-var TaskExecutionAbortedSubStatus3 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus3 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus3 || {});
-var TaskExecutionFinishedSubStatus3 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus3 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus3 || {});
-var TaskAttemptReason3 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason3 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason3 || {});
-var BackgroundProcessResultStatus14 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus14 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus14 || {});
-var BackgroundProcessResultFinishedSubStatus14 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus14 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus14 || {});
-var RunResultStatus3 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus3 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus3 || {});
-var RunExecutionStatus3 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus3 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus3 || {});
-var RunExecutionWaitingSubStatus3 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus3 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus3 || {});
-var RunExecutionAbortedSubStatus3 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus3 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus3 || {});
-var RunExecutionFinishedSubStatus3 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus3 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus3 || {});
-var GitClonePatchStatus3 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus3 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus3 || {});
 var TSource3 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey14 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey14 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey14 || {});
 var TExpandedEnvDescriptor3 = Object2({ value: Optional(TTemplateString4), cacheKey: Enum(EnvironmentVariableCacheKey14) });
 var TEnvMergeStrategy3 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -52151,11 +52153,11 @@ var TProblemMatcherPattern14 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity14 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity14 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity14 || {});
 var TProblemMatcher14 = Object2({ owner: String2(), severity: Optional(Enum(Severity14)), pattern: Array2(TProblemMatcherPattern14) });
 var TProblemPath14 = Object2({
@@ -52172,11 +52174,11 @@ var TBackgroundProcess3 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType3 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType3 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType3 || {});
 var TParallelismValue3 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification3 = Object2({
@@ -52438,18 +52440,18 @@ var TCustomStatusCheck3 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration3 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow3 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow3 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow3 || {});
 var TConcurrencyPool3 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow3) });
-var LeaseState3 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState3 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState3 || {});
 var TTiming14 = Object2({
   startTimestamp: Optional(Number2()),
@@ -52560,11 +52562,11 @@ var TResolvedBaseConfig3 = Object2({
   prebuiltLayer: TBaseLayer3,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit3 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit3 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit3 || {});
 var TTTL3 = Object2({
   value: Number2(),
@@ -52762,12 +52764,12 @@ var TConcurrencyPoolState3 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState3)
 });
-var ApprovalRequestState3 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState3 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState3 || {});
 var TApprovalRequest3 = Object2({
   id: String2(),
@@ -52859,124 +52861,124 @@ var TEvaluatedString5 = TBrandedString();
 var TDateString16 = TBrandedString();
 var TEpochSeconds5 = TBrandedNumber();
 var TScopedTaskKey5 = TBrandedString();
-var TaskType4 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType4 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType4 || {});
-var TaskResultStatus4 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus4 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus4 || {});
-var TaskExecutionStatus4 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus4 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus4 || {});
-var TaskExecutionWaitingSubStatus4 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus4 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus4 || {});
-var TaskExecutionAbortedSubStatus4 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus4 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus4 || {});
-var TaskExecutionFinishedSubStatus4 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus4 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus4 || {});
-var TaskAttemptReason4 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason4 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason4 || {});
-var BackgroundProcessResultStatus15 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus15 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus15 || {});
-var BackgroundProcessResultFinishedSubStatus15 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus15 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus15 || {});
-var RunResultStatus4 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus4 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus4 || {});
-var RunExecutionStatus4 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus4 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus4 || {});
-var RunExecutionWaitingSubStatus4 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus4 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus4 || {});
-var RunExecutionAbortedSubStatus4 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus4 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus4 || {});
-var RunExecutionFinishedSubStatus4 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus4 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus4 || {});
-var GitClonePatchStatus4 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus4 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus4 || {});
 var TSource4 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey15 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey15 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey15 || {});
 var TExpandedEnvDescriptor4 = Object2({ value: Optional(TTemplateString5), cacheKey: Enum(EnvironmentVariableCacheKey15) });
 var TEnvMergeStrategy4 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -52992,11 +52994,11 @@ var TProblemMatcherPattern15 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity15 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity15 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity15 || {});
 var TProblemMatcher15 = Object2({ owner: String2(), severity: Optional(Enum(Severity15)), pattern: Array2(TProblemMatcherPattern15) });
 var TProblemPath15 = Object2({
@@ -53013,11 +53015,11 @@ var TBackgroundProcess4 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType4 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType4 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType4 || {});
 var TParallelismValue4 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification4 = Object2({
@@ -53279,18 +53281,18 @@ var TCustomStatusCheck4 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration4 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow4 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow4 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow4 || {});
 var TConcurrencyPool4 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow4) });
-var LeaseState4 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState4 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState4 || {});
 var TTiming15 = Object2({
   startTimestamp: Optional(Number2()),
@@ -53401,11 +53403,11 @@ var TResolvedBaseConfig4 = Object2({
   prebuiltLayer: TBaseLayer4,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit4 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit4 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit4 || {});
 var TTTL4 = Object2({
   value: Number2(),
@@ -53603,12 +53605,12 @@ var TConcurrencyPoolState4 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState4)
 });
-var ApprovalRequestState4 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState4 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState4 || {});
 var TApprovalRequest4 = Object2({
   id: String2(),
@@ -53700,124 +53702,124 @@ var TEvaluatedString6 = TBrandedString();
 var TDateString17 = TBrandedString();
 var TEpochSeconds6 = TBrandedNumber();
 var TScopedTaskKey6 = TBrandedString();
-var TaskType5 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType5 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType5 || {});
-var TaskResultStatus5 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus5 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus5 || {});
-var TaskExecutionStatus5 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus5 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus5 || {});
-var TaskExecutionWaitingSubStatus5 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus5 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus5 || {});
-var TaskExecutionAbortedSubStatus5 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus5 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus5 || {});
-var TaskExecutionFinishedSubStatus5 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus5 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus5 || {});
-var TaskAttemptReason5 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason5 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason5 || {});
-var BackgroundProcessResultStatus16 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus16 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus16 || {});
-var BackgroundProcessResultFinishedSubStatus16 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus16 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus16 || {});
-var RunResultStatus5 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus5 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus5 || {});
-var RunExecutionStatus5 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus5 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus5 || {});
-var RunExecutionWaitingSubStatus5 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus5 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus5 || {});
-var RunExecutionAbortedSubStatus5 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus5 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus5 || {});
-var RunExecutionFinishedSubStatus5 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus5 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus5 || {});
-var GitClonePatchStatus5 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus5 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus5 || {});
 var TSource5 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey16 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey16 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey16 || {});
 var TExpandedEnvDescriptor5 = Object2({ value: Optional(TTemplateString6), cacheKey: Enum(EnvironmentVariableCacheKey16) });
 var TEnvMergeStrategy5 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -53833,11 +53835,11 @@ var TProblemMatcherPattern16 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity16 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity16 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity16 || {});
 var TProblemMatcher16 = Object2({ owner: String2(), severity: Optional(Enum(Severity16)), pattern: Array2(TProblemMatcherPattern16) });
 var TProblemPath16 = Object2({
@@ -53854,11 +53856,11 @@ var TBackgroundProcess5 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType5 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType5 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType5 || {});
 var TParallelismValue5 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification5 = Object2({
@@ -54120,18 +54122,18 @@ var TCustomStatusCheck5 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration5 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow5 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow5 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow5 || {});
 var TConcurrencyPool5 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow5) });
-var LeaseState5 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState5 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState5 || {});
 var TTiming16 = Object2({
   startTimestamp: Optional(Number2()),
@@ -54242,11 +54244,11 @@ var TResolvedBaseConfig5 = Object2({
   prebuiltLayer: TBaseLayer5,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit5 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit5 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit5 || {});
 var TTTL5 = Object2({
   value: Number2(),
@@ -54444,12 +54446,12 @@ var TConcurrencyPoolState5 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState5)
 });
-var ApprovalRequestState5 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState5 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState5 || {});
 var TApprovalRequest5 = Object2({
   id: String2(),
@@ -54542,124 +54544,124 @@ var TEvaluatedString7 = TBrandedString();
 var TDateString18 = TBrandedString();
 var TEpochSeconds7 = TBrandedNumber();
 var TScopedTaskKey7 = TBrandedString();
-var TaskType6 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType6 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType6 || {});
-var TaskResultStatus6 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus6 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus6 || {});
-var TaskExecutionStatus6 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus6 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus6 || {});
-var TaskExecutionWaitingSubStatus6 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus6 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus6 || {});
-var TaskExecutionAbortedSubStatus6 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus6 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus6 || {});
-var TaskExecutionFinishedSubStatus6 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus6 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus6 || {});
-var TaskAttemptReason6 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason6 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason6 || {});
-var BackgroundProcessResultStatus17 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus17 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus17 || {});
-var BackgroundProcessResultFinishedSubStatus17 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus17 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus17 || {});
-var RunResultStatus6 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus6 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus6 || {});
-var RunExecutionStatus6 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus6 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus6 || {});
-var RunExecutionWaitingSubStatus6 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus6 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus6 || {});
-var RunExecutionAbortedSubStatus6 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus6 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus6 || {});
-var RunExecutionFinishedSubStatus6 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus6 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus6 || {});
-var GitClonePatchStatus6 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus6 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus6 || {});
 var TSource6 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey17 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey17 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey17 || {});
 var TExpandedEnvDescriptor6 = Object2({ value: Optional(TTemplateString7), cacheKey: Enum(EnvironmentVariableCacheKey17) });
 var TEnvMergeStrategy6 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -54675,11 +54677,11 @@ var TProblemMatcherPattern17 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity17 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity17 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity17 || {});
 var TProblemMatcher17 = Object2({ owner: String2(), severity: Optional(Enum(Severity17)), pattern: Array2(TProblemMatcherPattern17) });
 var TProblemPath17 = Object2({
@@ -54696,11 +54698,11 @@ var TBackgroundProcess6 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType6 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType6 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType6 || {});
 var TParallelismValue6 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification6 = Object2({
@@ -54963,18 +54965,18 @@ var TCustomStatusCheck6 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration6 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow6 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow6 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow6 || {});
 var TConcurrencyPool6 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow6) });
-var LeaseState6 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState6 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState6 || {});
 var TTiming17 = Object2({
   startTimestamp: Optional(Number2()),
@@ -55085,11 +55087,11 @@ var TResolvedBaseConfig6 = Object2({
   prebuiltLayer: TBaseLayer6,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit6 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit6 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit6 || {});
 var TTTL6 = Object2({
   value: Number2(),
@@ -55287,12 +55289,12 @@ var TConcurrencyPoolState6 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState6)
 });
-var ApprovalRequestState6 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState6 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState6 || {});
 var TApprovalRequest6 = Object2({
   id: String2(),
@@ -55385,124 +55387,124 @@ var TEvaluatedString8 = TBrandedString();
 var TDateString19 = TBrandedString();
 var TEpochSeconds8 = TBrandedNumber();
 var TScopedTaskKey8 = TBrandedString();
-var TaskType7 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType7 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType7 || {});
-var TaskResultStatus7 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus7 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus7 || {});
-var TaskExecutionStatus7 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus7 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus7 || {});
-var TaskExecutionWaitingSubStatus7 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus7 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus7 || {});
-var TaskExecutionAbortedSubStatus7 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus7 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus7 || {});
-var TaskExecutionFinishedSubStatus7 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus7 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus7 || {});
-var TaskAttemptReason7 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason7 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason7 || {});
-var BackgroundProcessResultStatus18 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus18 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus18 || {});
-var BackgroundProcessResultFinishedSubStatus18 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus18 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus18 || {});
-var RunResultStatus7 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus7 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus7 || {});
-var RunExecutionStatus7 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus7 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus7 || {});
-var RunExecutionWaitingSubStatus7 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus7 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus7 || {});
-var RunExecutionAbortedSubStatus7 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus7 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus7 || {});
-var RunExecutionFinishedSubStatus7 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus7 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus7 || {});
-var GitClonePatchStatus7 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus7 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus7 || {});
 var TSource7 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey18 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey18 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey18 || {});
 var TExpandedEnvDescriptor7 = Object2({ value: Optional(TTemplateString8), cacheKey: Enum(EnvironmentVariableCacheKey18) });
 var TEnvMergeStrategy7 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -55518,11 +55520,11 @@ var TProblemMatcherPattern18 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity18 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity18 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity18 || {});
 var TProblemMatcher18 = Object2({ owner: String2(), severity: Optional(Enum(Severity18)), pattern: Array2(TProblemMatcherPattern18) });
 var TProblemPath18 = Object2({
@@ -55539,11 +55541,11 @@ var TBackgroundProcess7 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType7 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType7 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType7 || {});
 var TParallelismValue7 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification7 = Object2({
@@ -55804,18 +55806,18 @@ var TCustomStatusCheck7 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration7 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow7 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow7 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow7 || {});
 var TConcurrencyPool7 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow7) });
-var LeaseState7 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState7 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState7 || {});
 var TTiming18 = Object2({
   startTimestamp: Optional(Number2()),
@@ -55926,11 +55928,11 @@ var TResolvedBaseConfig7 = Object2({
   prebuiltLayer: TBaseLayer7,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit7 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit7 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit7 || {});
 var TTTL7 = Object2({
   value: Number2(),
@@ -56144,12 +56146,12 @@ var TConcurrencyPoolState7 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState7)
 });
-var ApprovalRequestState7 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState7 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState7 || {});
 var TApprovalRequest7 = Object2({
   id: String2(),
@@ -56242,124 +56244,124 @@ var TEvaluatedString9 = TBrandedString();
 var TDateString20 = TBrandedString();
 var TEpochSeconds9 = TBrandedNumber();
 var TScopedTaskKey9 = TBrandedString();
-var TaskType8 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType8 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType8 || {});
-var TaskResultStatus8 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus8 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus8 || {});
-var TaskExecutionStatus8 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus8 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus8 || {});
-var TaskExecutionWaitingSubStatus8 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus8 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus8 || {});
-var TaskExecutionAbortedSubStatus8 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus8 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus8 || {});
-var TaskExecutionFinishedSubStatus8 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus8 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus8 || {});
-var TaskAttemptReason8 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason8 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason8 || {});
-var BackgroundProcessResultStatus19 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus19 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus19 || {});
-var BackgroundProcessResultFinishedSubStatus19 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus19 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus19 || {});
-var RunResultStatus8 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus8 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus8 || {});
-var RunExecutionStatus8 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus8 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus8 || {});
-var RunExecutionWaitingSubStatus8 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus8 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus8 || {});
-var RunExecutionAbortedSubStatus8 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus8 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus8 || {});
-var RunExecutionFinishedSubStatus8 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus8 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus8 || {});
-var GitClonePatchStatus8 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus8 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus8 || {});
 var TSource8 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey19 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey19 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey19 || {});
 var TExpandedEnvDescriptor8 = Object2({ value: Optional(TTemplateString9), cacheKey: Enum(EnvironmentVariableCacheKey19) });
 var TEnvMergeStrategy8 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -56375,11 +56377,11 @@ var TProblemMatcherPattern19 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity19 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity19 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity19 || {});
 var TProblemMatcher19 = Object2({ owner: String2(), severity: Optional(Enum(Severity19)), pattern: Array2(TProblemMatcherPattern19) });
 var TProblemPath19 = Object2({
@@ -56396,11 +56398,11 @@ var TBackgroundProcess8 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType8 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType8 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType8 || {});
 var TParallelismValue8 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification8 = Object2({
@@ -56662,18 +56664,18 @@ var TCustomStatusCheck8 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration8 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow8 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow8 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow8 || {});
 var TConcurrencyPool8 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow8) });
-var LeaseState8 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState8 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState8 || {});
 var TTiming19 = Object2({
   startTimestamp: Optional(Number2()),
@@ -56784,11 +56786,11 @@ var TResolvedBaseConfig8 = Object2({
   prebuiltLayer: TBaseLayer8,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit8 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit8 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit8 || {});
 var TTTL8 = Object2({
   value: Number2(),
@@ -57002,12 +57004,12 @@ var TConcurrencyPoolState8 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState8)
 });
-var ApprovalRequestState8 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState8 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState8 || {});
 var TApprovalRequest8 = Object2({
   id: String2(),
@@ -57100,126 +57102,126 @@ var TEvaluatedString10 = TBrandedString();
 var TDateString21 = TBrandedString();
 var TEpochSeconds10 = TBrandedNumber();
 var TScopedTaskKey10 = TBrandedString();
-var TaskType9 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType9 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType9 || {});
-var TaskResultStatus9 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus9 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus9 || {});
-var TaskExecutionStatus9 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus9 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus9 || {});
-var TaskExecutionWaitingSubStatus9 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus9 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus9 || {});
-var TaskExecutionAbortedSubStatus9 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus9 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus9 || {});
-var TaskExecutionFinishedSubStatus9 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus9 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus9 || {});
-var TaskAttemptReason9 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason9 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason9 || {});
-var BackgroundProcessResultStatus20 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus20 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus20 || {});
-var BackgroundProcessResultFinishedSubStatus20 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus20 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus20 || {});
-var RunResultStatus9 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus9 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus9 || {});
-var RunExecutionStatus9 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus9 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus9 || {});
-var RunExecutionWaitingSubStatus9 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus9 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus9 || {});
-var RunExecutionAbortedSubStatus9 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus9 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus9 || {});
-var RunExecutionFinishedSubStatus9 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus9 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus9 || {});
-var GitClonePatchStatus9 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus9 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus9 || {});
 var TSource9 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey20 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey20 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey20 || {});
 var TExpandedEnvDescriptor9 = Object2({ value: Optional(TTemplateString10), cacheKey: Enum(EnvironmentVariableCacheKey20) });
 var TEnvMergeStrategy9 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -57235,11 +57237,11 @@ var TProblemMatcherPattern20 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity20 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity20 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity20 || {});
 var TProblemMatcher20 = Object2({ owner: String2(), severity: Optional(Enum(Severity20)), pattern: Array2(TProblemMatcherPattern20) });
 var TProblemPath20 = Object2({
@@ -57256,11 +57258,11 @@ var TBackgroundProcess9 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType9 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType9 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType9 || {});
 var TParallelismValue9 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification9 = Object2({
@@ -57522,18 +57524,18 @@ var TCustomStatusCheck9 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration9 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow9 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow9 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow9 || {});
 var TConcurrencyPool9 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow9) });
-var LeaseState9 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState9 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState9 || {});
 var TTiming20 = Object2({
   startTimestamp: Optional(Number2()),
@@ -57649,11 +57651,11 @@ var TResolvedBaseConfig9 = Object2({
   prebuiltLayer: TBaseLayer9,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit9 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit9 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit9 || {});
 var TTTL9 = Object2({
   value: Number2(),
@@ -57868,12 +57870,12 @@ var TConcurrencyPoolState9 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState9)
 });
-var ApprovalRequestState9 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState9 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState9 || {});
 var TApprovalRequest9 = Object2({
   id: String2(),
@@ -57966,126 +57968,126 @@ var TEvaluatedString11 = TBrandedString();
 var TDateString22 = TBrandedString();
 var TEpochSeconds11 = TBrandedNumber();
 var TScopedTaskKey11 = TBrandedString();
-var TaskType10 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType10 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType10 || {});
-var TaskResultStatus10 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus10 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus10 || {});
-var TaskExecutionStatus10 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus10 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus10 || {});
-var TaskExecutionWaitingSubStatus10 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus10 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus10 || {});
-var TaskExecutionAbortedSubStatus10 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus10 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus10 || {});
-var TaskExecutionFinishedSubStatus10 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus10 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus10 || {});
-var TaskAttemptReason10 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason10 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason10 || {});
-var BackgroundProcessResultStatus21 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus21 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus21 || {});
-var BackgroundProcessResultFinishedSubStatus21 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus21 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus21 || {});
-var RunResultStatus10 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus10 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus10 || {});
-var RunExecutionStatus10 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus10 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus10 || {});
-var RunExecutionWaitingSubStatus10 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus10 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus10 || {});
-var RunExecutionAbortedSubStatus10 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus10 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus10 || {});
-var RunExecutionFinishedSubStatus10 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus10 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus10 || {});
-var GitClonePatchStatus10 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus10 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus10 || {});
 var TSource10 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey21 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey21 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey21 || {});
 var TExpandedEnvDescriptor10 = Object2({ value: Optional(TTemplateString11), cacheKey: Enum(EnvironmentVariableCacheKey21) });
 var TEnvMergeStrategy10 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -58101,11 +58103,11 @@ var TProblemMatcherPattern21 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity21 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity21 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity21 || {});
 var TProblemMatcher21 = Object2({ owner: String2(), severity: Optional(Enum(Severity21)), pattern: Array2(TProblemMatcherPattern21) });
 var TProblemPath21 = Object2({
@@ -58122,11 +58124,11 @@ var TBackgroundProcess10 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType10 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType10 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType10 || {});
 var TParallelismValue10 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification10 = Object2({
@@ -58388,18 +58390,18 @@ var TCustomStatusCheck10 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration10 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow10 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow10 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow10 || {});
 var TConcurrencyPool10 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow10) });
-var LeaseState10 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState10 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState10 || {});
 var TTiming21 = Object2({
   startTimestamp: Optional(Number2()),
@@ -58515,11 +58517,11 @@ var TResolvedBaseConfig10 = Object2({
   prebuiltLayer: TBaseLayer10,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit10 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit10 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit10 || {});
 var TTTL10 = Object2({
   value: Number2(),
@@ -58735,12 +58737,12 @@ var TConcurrencyPoolState10 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState10)
 });
-var ApprovalRequestState10 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState10 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState10 || {});
 var TApprovalRequest10 = Object2({
   id: String2(),
@@ -58833,126 +58835,126 @@ var TEvaluatedString12 = TBrandedString();
 var TDateString23 = TBrandedString();
 var TEpochSeconds12 = TBrandedNumber();
 var TScopedTaskKey12 = TBrandedString();
-var TaskType11 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  return TaskType44;
+var TaskType11 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  return TaskType45;
 })(TaskType11 || {});
-var TaskResultStatus11 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus11 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus11 || {});
-var TaskExecutionStatus11 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus11 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus11 || {});
-var TaskExecutionWaitingSubStatus11 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus11 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus11 || {});
-var TaskExecutionAbortedSubStatus11 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus11 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus11 || {});
-var TaskExecutionFinishedSubStatus11 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus11 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus11 || {});
-var TaskAttemptReason11 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason11 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason11 || {});
-var BackgroundProcessResultStatus22 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus22 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus22 || {});
-var BackgroundProcessResultFinishedSubStatus22 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus22 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus22 || {});
-var RunResultStatus11 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus11 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus11 || {});
-var RunExecutionStatus11 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus11 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus11 || {});
-var RunExecutionWaitingSubStatus11 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus11 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus11 || {});
-var RunExecutionAbortedSubStatus11 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus11 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus11 || {});
-var RunExecutionFinishedSubStatus11 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus11 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus11 || {});
-var GitClonePatchStatus11 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus11 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus11 || {});
 var TSource11 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey22 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey22 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey22 || {});
 var TExpandedEnvDescriptor11 = Object2({ value: Optional(TTemplateString12), cacheKey: Enum(EnvironmentVariableCacheKey22) });
 var TEnvMergeStrategy11 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -58968,11 +58970,11 @@ var TProblemMatcherPattern22 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity22 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity22 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity22 || {});
 var TProblemMatcher22 = Object2({ owner: String2(), severity: Optional(Enum(Severity22)), pattern: Array2(TProblemMatcherPattern22) });
 var TProblemPath22 = Object2({
@@ -58989,11 +58991,11 @@ var TBackgroundProcess11 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType11 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType11 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType11 || {});
 var TParallelismValue11 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification11 = Object2({
@@ -59255,18 +59257,18 @@ var TCustomStatusCheck11 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration11 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow11 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow11 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow11 || {});
 var TConcurrencyPool11 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow11) });
-var LeaseState11 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState11 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState11 || {});
 var TTiming22 = Object2({
   startTimestamp: Optional(Number2()),
@@ -59382,11 +59384,11 @@ var TResolvedBaseConfig11 = Object2({
   prebuiltLayer: TBaseLayer11,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit11 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit11 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit11 || {});
 var TTTL11 = Object2({
   value: Number2(),
@@ -59601,12 +59603,12 @@ var TConcurrencyPoolState11 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState11)
 });
-var ApprovalRequestState11 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState11 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState11 || {});
 var TApprovalRequest11 = Object2({
   id: String2(),
@@ -59699,127 +59701,127 @@ var TEvaluatedString13 = TBrandedString();
 var TDateString24 = TBrandedString();
 var TEpochSeconds13 = TBrandedNumber();
 var TScopedTaskKey13 = TBrandedString();
-var TaskType12 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType12 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType12 || {});
-var TaskResultStatus12 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus12 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus12 || {});
-var TaskExecutionStatus12 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus12 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus12 || {});
-var TaskExecutionWaitingSubStatus12 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus12 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus12 || {});
-var TaskExecutionAbortedSubStatus12 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus12 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus12 || {});
-var TaskExecutionFinishedSubStatus12 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus12 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus12 || {});
-var TaskAttemptReason12 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason12 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason12 || {});
-var BackgroundProcessResultStatus23 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus23 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus23 || {});
-var BackgroundProcessResultFinishedSubStatus23 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus23 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus23 || {});
-var RunResultStatus12 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus12 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus12 || {});
-var RunExecutionStatus12 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus12 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus12 || {});
-var RunExecutionWaitingSubStatus12 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus12 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus12 || {});
-var RunExecutionAbortedSubStatus12 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus12 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus12 || {});
-var RunExecutionFinishedSubStatus12 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus12 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus12 || {});
-var GitClonePatchStatus12 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus12 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus12 || {});
 var TSource12 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey23 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey23 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey23 || {});
 var TExpandedEnvDescriptor12 = Object2({ value: Optional(TTemplateString13), cacheKey: Enum(EnvironmentVariableCacheKey23) });
 var TEnvMergeStrategy12 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -59835,11 +59837,11 @@ var TProblemMatcherPattern23 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity23 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity23 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity23 || {});
 var TProblemMatcher23 = Object2({ owner: String2(), severity: Optional(Enum(Severity23)), pattern: Array2(TProblemMatcherPattern23) });
 var TProblemPath23 = Object2({
@@ -59856,11 +59858,11 @@ var TBackgroundProcess12 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType12 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType12 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType12 || {});
 var TParallelismValue12 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification12 = Object2({
@@ -60128,18 +60130,18 @@ var TCustomStatusCheck12 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration12 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow12 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow12 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow12 || {});
 var TConcurrencyPool12 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow12) });
-var LeaseState12 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState12 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState12 || {});
 var TTiming23 = Object2({
   startTimestamp: Optional(Number2()),
@@ -60255,11 +60257,11 @@ var TResolvedBaseConfig12 = Object2({
   prebuiltLayer: TBaseLayer12,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit12 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit12 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit12 || {});
 var TTTL12 = Object2({
   value: Number2(),
@@ -60474,12 +60476,12 @@ var TConcurrencyPoolState12 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState12)
 });
-var ApprovalRequestState12 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState12 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState12 || {});
 var TApprovalRequest12 = Object2({
   id: String2(),
@@ -60572,127 +60574,127 @@ var TEvaluatedString14 = TBrandedString();
 var TDateString25 = TBrandedString();
 var TEpochSeconds14 = TBrandedNumber();
 var TScopedTaskKey14 = TBrandedString();
-var TaskType13 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType13 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType13 || {});
-var TaskResultStatus13 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus13 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus13 || {});
-var TaskExecutionStatus13 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus13 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus13 || {});
-var TaskExecutionWaitingSubStatus13 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus13 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus13 || {});
-var TaskExecutionAbortedSubStatus13 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus13 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus13 || {});
-var TaskExecutionFinishedSubStatus13 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus13 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus13 || {});
-var TaskAttemptReason13 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason13 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason13 || {});
-var BackgroundProcessResultStatus24 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus24 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus24 || {});
-var BackgroundProcessResultFinishedSubStatus24 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus24 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus24 || {});
-var RunResultStatus13 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus13 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus13 || {});
-var RunExecutionStatus13 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus13 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus13 || {});
-var RunExecutionWaitingSubStatus13 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus13 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus13 || {});
-var RunExecutionAbortedSubStatus13 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus13 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus13 || {});
-var RunExecutionFinishedSubStatus13 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus13 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus13 || {});
-var GitClonePatchStatus13 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus13 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus13 || {});
 var TSource13 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey24 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey24 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey24 || {});
 var TExpandedEnvDescriptor13 = Object2({ value: Optional(TTemplateString14), cacheKey: Enum(EnvironmentVariableCacheKey24) });
 var TEnvMergeStrategy13 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -60708,11 +60710,11 @@ var TProblemMatcherPattern24 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity24 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity24 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity24 || {});
 var TProblemMatcher24 = Object2({ owner: String2(), severity: Optional(Enum(Severity24)), pattern: Array2(TProblemMatcherPattern24) });
 var TProblemPath24 = Object2({
@@ -60729,11 +60731,11 @@ var TBackgroundProcess13 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType13 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType13 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType13 || {});
 var TParallelismValue13 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification13 = Object2({
@@ -61001,18 +61003,18 @@ var TCustomStatusCheck13 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration13 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow13 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow13 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow13 || {});
 var TConcurrencyPool13 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow13) });
-var LeaseState13 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState13 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState13 || {});
 var TTiming24 = Object2({
   startTimestamp: Optional(Number2()),
@@ -61128,11 +61130,11 @@ var TResolvedBaseConfig13 = Object2({
   prebuiltLayer: TBaseLayer13,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit13 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit13 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit13 || {});
 var TTTL13 = Object2({
   value: Number2(),
@@ -61347,12 +61349,12 @@ var TConcurrencyPoolState13 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState13)
 });
-var ApprovalRequestState13 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState13 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState13 || {});
 var TApprovalRequest13 = Object2({
   id: String2(),
@@ -61445,128 +61447,128 @@ var TEvaluatedString15 = TBrandedString();
 var TDateString26 = TBrandedString();
 var TEpochSeconds15 = TBrandedNumber();
 var TScopedTaskKey15 = TBrandedString();
-var TaskType14 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType14 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType14 || {});
-var TaskResultStatus14 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus14 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus14 || {});
-var TaskExecutionStatus14 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus14 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus14 || {});
-var TaskExecutionWaitingSubStatus14 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus14 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus14 || {});
-var TaskExecutionAbortedSubStatus14 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus14 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus14 || {});
-var TaskExecutionFinishedSubStatus14 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus14 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus14 || {});
-var TaskAttemptReason14 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason14 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason14 || {});
-var BackgroundProcessResultStatus25 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus25 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus25 || {});
-var BackgroundProcessResultFinishedSubStatus25 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus25 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus25 || {});
-var RunResultStatus14 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus14 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus14 || {});
-var RunExecutionStatus14 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus14 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus14 || {});
-var RunExecutionWaitingSubStatus14 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus14 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus14 || {});
-var RunExecutionAbortedSubStatus14 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus14 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus14 || {});
-var RunExecutionFinishedSubStatus14 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus14 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus14 || {});
-var GitClonePatchStatus14 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus14 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus14 || {});
 var TSource14 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey25 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey25 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey25 || {});
 var TExpandedEnvDescriptor14 = Object2({ value: Optional(TTemplateString15), cacheKey: Enum(EnvironmentVariableCacheKey25) });
 var TEnvMergeStrategy14 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -61582,11 +61584,11 @@ var TProblemMatcherPattern25 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity25 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity25 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity25 || {});
 var TProblemMatcher25 = Object2({ owner: String2(), severity: Optional(Enum(Severity25)), pattern: Array2(TProblemMatcherPattern25) });
 var TProblemPath25 = Object2({
@@ -61603,11 +61605,11 @@ var TBackgroundProcess14 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType14 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType14 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType14 || {});
 var TParallelismValue14 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification14 = Object2({
@@ -61875,18 +61877,18 @@ var TCustomStatusCheck14 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration14 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow14 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow14 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow14 || {});
 var TConcurrencyPool14 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow14) });
-var LeaseState14 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState14 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState14 || {});
 var TTiming25 = Object2({
   startTimestamp: Optional(Number2()),
@@ -62002,11 +62004,11 @@ var TResolvedBaseConfig14 = Object2({
   prebuiltLayer: TBaseLayer14,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit14 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit14 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit14 || {});
 var TTTL14 = Object2({
   value: Number2(),
@@ -62221,12 +62223,12 @@ var TConcurrencyPoolState14 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState14)
 });
-var ApprovalRequestState14 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState14 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState14 || {});
 var TApprovalRequest14 = Object2({
   id: String2(),
@@ -62319,128 +62321,128 @@ var TEvaluatedString16 = TBrandedString();
 var TDateString27 = TBrandedString();
 var TEpochSeconds16 = TBrandedNumber();
 var TScopedTaskKey16 = TBrandedString();
-var TaskType15 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType15 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType15 || {});
-var TaskResultStatus15 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus15 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus15 || {});
-var TaskExecutionStatus15 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus15 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus15 || {});
-var TaskExecutionWaitingSubStatus15 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus15 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus15 || {});
-var TaskExecutionAbortedSubStatus15 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus15 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus15 || {});
-var TaskExecutionFinishedSubStatus15 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus15 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus15 || {});
-var TaskAttemptReason15 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason15 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason15 || {});
-var BackgroundProcessResultStatus26 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus26 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus26 || {});
-var BackgroundProcessResultFinishedSubStatus26 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus26 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus26 || {});
-var RunResultStatus15 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus15 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus15 || {});
-var RunExecutionStatus15 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus15 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus15 || {});
-var RunExecutionWaitingSubStatus15 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus15 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus15 || {});
-var RunExecutionAbortedSubStatus15 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus15 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus15 || {});
-var RunExecutionFinishedSubStatus15 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus15 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus15 || {});
-var GitClonePatchStatus15 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus15 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus15 || {});
 var TSource15 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey26 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey26 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey26 || {});
 var TExpandedEnvDescriptor15 = Object2({ value: Optional(TTemplateString16), cacheKey: Enum(EnvironmentVariableCacheKey26) });
 var TEnvMergeStrategy15 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -62456,11 +62458,11 @@ var TProblemMatcherPattern26 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity26 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity26 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity26 || {});
 var TProblemMatcher26 = Object2({ owner: String2(), severity: Optional(Enum(Severity26)), pattern: Array2(TProblemMatcherPattern26) });
 var TProblemPath26 = Object2({
@@ -62477,11 +62479,11 @@ var TBackgroundProcess15 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType15 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType15 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType15 || {});
 var TParallelismValue15 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification15 = Object2({
@@ -62750,18 +62752,18 @@ var TCustomStatusCheck15 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration15 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow15 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow15 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow15 || {});
 var TConcurrencyPool15 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow15) });
-var LeaseState15 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState15 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState15 || {});
 var TTiming26 = Object2({
   startTimestamp: Optional(Number2()),
@@ -62877,11 +62879,11 @@ var TResolvedBaseConfig15 = Object2({
   prebuiltLayer: TBaseLayer15,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit15 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit15 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit15 || {});
 var TTTL15 = Object2({
   value: Number2(),
@@ -63097,12 +63099,12 @@ var TConcurrencyPoolState15 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState15)
 });
-var ApprovalRequestState15 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState15 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState15 || {});
 var TApprovalRequest15 = Object2({
   id: String2(),
@@ -63195,128 +63197,128 @@ var TEvaluatedString17 = TBrandedString();
 var TDateString28 = TBrandedString();
 var TEpochSeconds17 = TBrandedNumber();
 var TScopedTaskKey17 = TBrandedString();
-var TaskType16 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType16 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType16 || {});
-var TaskResultStatus16 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus16 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus16 || {});
-var TaskExecutionStatus16 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus16 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus16 || {});
-var TaskExecutionWaitingSubStatus16 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus16 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus16 || {});
-var TaskExecutionAbortedSubStatus16 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus16 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus16 || {});
-var TaskExecutionFinishedSubStatus16 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus16 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus16 || {});
-var TaskAttemptReason16 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason16 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason16 || {});
-var BackgroundProcessResultStatus27 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus27 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus27 || {});
-var BackgroundProcessResultFinishedSubStatus27 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus27 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus27 || {});
-var RunResultStatus16 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus16 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus16 || {});
-var RunExecutionStatus16 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus16 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus16 || {});
-var RunExecutionWaitingSubStatus16 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus16 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus16 || {});
-var RunExecutionAbortedSubStatus16 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus16 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus16 || {});
-var RunExecutionFinishedSubStatus16 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus16 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus16 || {});
-var GitClonePatchStatus16 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus16 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus16 || {});
 var TSource16 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey27 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey27 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey27 || {});
 var TExpandedEnvDescriptor16 = Object2({ value: Optional(TTemplateString17), cacheKey: Enum(EnvironmentVariableCacheKey27) });
 var TEnvMergeStrategy16 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -63332,11 +63334,11 @@ var TProblemMatcherPattern27 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity27 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity27 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity27 || {});
 var TProblemMatcher27 = Object2({ owner: String2(), severity: Optional(Enum(Severity27)), pattern: Array2(TProblemMatcherPattern27) });
 var TProblemPath27 = Object2({
@@ -63353,11 +63355,11 @@ var TBackgroundProcess16 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType16 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType16 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType16 || {});
 var TParallelismValue16 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification16 = Object2({
@@ -63626,18 +63628,18 @@ var TCustomStatusCheck16 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration16 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow16 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow16 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow16 || {});
 var TConcurrencyPool16 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow16) });
-var LeaseState16 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState16 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState16 || {});
 var TTiming27 = Object2({
   startTimestamp: Optional(Number2()),
@@ -63753,11 +63755,11 @@ var TResolvedBaseConfig16 = Object2({
   prebuiltLayer: TBaseLayer16,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit16 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit16 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit16 || {});
 var TTTL16 = Object2({
   value: Number2(),
@@ -63974,12 +63976,12 @@ var TConcurrencyPoolState16 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState16)
 });
-var ApprovalRequestState16 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState16 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState16 || {});
 var TApprovalRequest16 = Object2({
   id: String2(),
@@ -64072,128 +64074,128 @@ var TEvaluatedString18 = TBrandedString();
 var TDateString29 = TBrandedString();
 var TEpochSeconds18 = TBrandedNumber();
 var TScopedTaskKey18 = TBrandedString();
-var TaskType17 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType17 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType17 || {});
-var TaskResultStatus17 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus17 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus17 || {});
-var TaskExecutionStatus17 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus17 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus17 || {});
-var TaskExecutionWaitingSubStatus17 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus17 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus17 || {});
-var TaskExecutionAbortedSubStatus17 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus17 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus17 || {});
-var TaskExecutionFinishedSubStatus17 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus17 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus17 || {});
-var TaskAttemptReason17 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason17 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason17 || {});
-var BackgroundProcessResultStatus28 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus28 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus28 || {});
-var BackgroundProcessResultFinishedSubStatus28 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus28 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus28 || {});
-var RunResultStatus17 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus17 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus17 || {});
-var RunExecutionStatus17 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus17 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus17 || {});
-var RunExecutionWaitingSubStatus17 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus17 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus17 || {});
-var RunExecutionAbortedSubStatus17 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus17 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus17 || {});
-var RunExecutionFinishedSubStatus17 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus17 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus17 || {});
-var GitClonePatchStatus17 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus17 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus17 || {});
 var TSource17 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey28 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey28 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey28 || {});
 var TExpandedEnvDescriptor17 = Object2({ value: Optional(TTemplateString18), cacheKey: Enum(EnvironmentVariableCacheKey28) });
 var TEnvMergeStrategy17 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -64209,11 +64211,11 @@ var TProblemMatcherPattern28 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity28 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity28 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity28 || {});
 var TProblemMatcher28 = Object2({ owner: String2(), severity: Optional(Enum(Severity28)), pattern: Array2(TProblemMatcherPattern28) });
 var TProblemPath28 = Object2({
@@ -64230,11 +64232,11 @@ var TBackgroundProcess17 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType17 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType17 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType17 || {});
 var TParallelismValue17 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification17 = Object2({
@@ -64503,18 +64505,18 @@ var TCustomStatusCheck17 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration17 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow17 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow17 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow17 || {});
 var TConcurrencyPool17 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow17) });
-var LeaseState17 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState17 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState17 || {});
 var TTiming28 = Object2({
   startTimestamp: Optional(Number2()),
@@ -64630,11 +64632,11 @@ var TResolvedBaseConfig17 = Object2({
   prebuiltLayer: TBaseLayer17,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit17 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit17 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit17 || {});
 var TTTL17 = Object2({
   value: Number2(),
@@ -64851,12 +64853,12 @@ var TConcurrencyPoolState17 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState17)
 });
-var ApprovalRequestState17 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState17 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState17 || {});
 var TApprovalRequest17 = Object2({
   id: String2(),
@@ -64949,128 +64951,128 @@ var TEvaluatedString19 = TBrandedString();
 var TDateString30 = TBrandedString();
 var TEpochSeconds19 = TBrandedNumber();
 var TScopedTaskKey19 = TBrandedString();
-var TaskType18 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType18 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType18 || {});
-var TaskResultStatus18 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus18 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus18 || {});
-var TaskExecutionStatus18 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus18 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus18 || {});
-var TaskExecutionWaitingSubStatus18 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus18 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus18 || {});
-var TaskExecutionAbortedSubStatus18 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus18 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus18 || {});
-var TaskExecutionFinishedSubStatus18 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus18 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus18 || {});
-var TaskAttemptReason18 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason18 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason18 || {});
-var BackgroundProcessResultStatus29 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus29 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus29 || {});
-var BackgroundProcessResultFinishedSubStatus29 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus29 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus29 || {});
-var RunResultStatus18 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus18 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus18 || {});
-var RunExecutionStatus18 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus18 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus18 || {});
-var RunExecutionWaitingSubStatus18 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus18 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus18 || {});
-var RunExecutionAbortedSubStatus18 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus18 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus18 || {});
-var RunExecutionFinishedSubStatus18 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus18 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus18 || {});
-var GitClonePatchStatus18 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus18 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus18 || {});
 var TSource18 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey29 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey29 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey29 || {});
 var TExpandedEnvDescriptor18 = Object2({ value: Optional(TTemplateString19), cacheKey: Enum(EnvironmentVariableCacheKey29) });
 var TEnvMergeStrategy18 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -65086,11 +65088,11 @@ var TProblemMatcherPattern29 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity29 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity29 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity29 || {});
 var TProblemMatcher29 = Object2({ owner: String2(), severity: Optional(Enum(Severity29)), pattern: Array2(TProblemMatcherPattern29) });
 var TProblemPath29 = Object2({
@@ -65107,11 +65109,11 @@ var TBackgroundProcess18 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType18 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType18 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType18 || {});
 var TParallelismValue18 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification18 = Object2({
@@ -65381,18 +65383,18 @@ var TCustomStatusCheck18 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration18 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow18 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow18 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow18 || {});
 var TConcurrencyPool18 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow18) });
-var LeaseState18 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState18 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState18 || {});
 var TTiming29 = Object2({
   startTimestamp: Optional(Number2()),
@@ -65508,11 +65510,11 @@ var TResolvedBaseConfig18 = Object2({
   prebuiltLayer: TBaseLayer18,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit18 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit18 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit18 || {});
 var TTTL18 = Object2({
   value: Number2(),
@@ -65730,12 +65732,12 @@ var TConcurrencyPoolState18 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState18)
 });
-var ApprovalRequestState18 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState18 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState18 || {});
 var TApprovalRequest18 = Object2({
   id: String2(),
@@ -65828,128 +65830,128 @@ var TEvaluatedString20 = TBrandedString();
 var TDateString31 = TBrandedString();
 var TEpochSeconds20 = TBrandedNumber();
 var TScopedTaskKey20 = TBrandedString();
-var TaskType19 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType19 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType19 || {});
-var TaskResultStatus19 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus19 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus19 || {});
-var TaskExecutionStatus19 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus19 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus19 || {});
-var TaskExecutionWaitingSubStatus19 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus19 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus19 || {});
-var TaskExecutionAbortedSubStatus19 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus19 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus19 || {});
-var TaskExecutionFinishedSubStatus19 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus19 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus19 || {});
-var TaskAttemptReason19 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason19 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason19 || {});
-var BackgroundProcessResultStatus30 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus30 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus30 || {});
-var BackgroundProcessResultFinishedSubStatus30 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus30 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus30 || {});
-var RunResultStatus19 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus19 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus19 || {});
-var RunExecutionStatus19 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus19 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus19 || {});
-var RunExecutionWaitingSubStatus19 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus19 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus19 || {});
-var RunExecutionAbortedSubStatus19 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus19 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus19 || {});
-var RunExecutionFinishedSubStatus19 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus19 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus19 || {});
-var GitClonePatchStatus19 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus19 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus19 || {});
 var TSource19 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey30 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey30 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey30 || {});
 var TExpandedEnvDescriptor19 = Object2({ value: Optional(TTemplateString20), cacheKey: Enum(EnvironmentVariableCacheKey30) });
 var TEnvMergeStrategy19 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -65965,11 +65967,11 @@ var TProblemMatcherPattern30 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity30 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity30 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity30 || {});
 var TProblemMatcher30 = Object2({ owner: String2(), severity: Optional(Enum(Severity30)), pattern: Array2(TProblemMatcherPattern30) });
 var TProblemPath30 = Object2({
@@ -65986,11 +65988,11 @@ var TBackgroundProcess19 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType19 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType19 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType19 || {});
 var TParallelismValue19 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification19 = Object2({
@@ -66260,18 +66262,18 @@ var TCustomStatusCheck19 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration19 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow19 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow19 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow19 || {});
 var TConcurrencyPool19 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow19) });
-var LeaseState19 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState19 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState19 || {});
 var TTiming30 = Object2({
   startTimestamp: Optional(Number2()),
@@ -66387,11 +66389,11 @@ var TResolvedBaseConfig19 = Object2({
   prebuiltLayer: TBaseLayer19,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit19 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit19 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit19 || {});
 var TTTL19 = Object2({
   value: Number2(),
@@ -66610,12 +66612,12 @@ var TConcurrencyPoolState19 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState19)
 });
-var ApprovalRequestState19 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState19 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState19 || {});
 var TApprovalRequest19 = Object2({
   id: String2(),
@@ -66708,128 +66710,128 @@ var TEvaluatedString21 = TBrandedString();
 var TDateString32 = TBrandedString();
 var TEpochSeconds21 = TBrandedNumber();
 var TScopedTaskKey21 = TBrandedString();
-var TaskType20 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType20 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType20 || {});
-var TaskResultStatus20 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus20 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus20 || {});
-var TaskExecutionStatus20 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus20 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus20 || {});
-var TaskExecutionWaitingSubStatus20 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus20 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus20 || {});
-var TaskExecutionAbortedSubStatus20 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus20 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus20 || {});
-var TaskExecutionFinishedSubStatus20 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus20 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus20 || {});
-var TaskAttemptReason20 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason20 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason20 || {});
-var BackgroundProcessResultStatus31 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus31 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus31 || {});
-var BackgroundProcessResultFinishedSubStatus31 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus31 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus31 || {});
-var RunResultStatus20 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus20 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus20 || {});
-var RunExecutionStatus20 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus20 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus20 || {});
-var RunExecutionWaitingSubStatus20 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus20 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus20 || {});
-var RunExecutionAbortedSubStatus20 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus20 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus20 || {});
-var RunExecutionFinishedSubStatus20 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus20 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus20 || {});
-var GitClonePatchStatus20 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus20 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus20 || {});
 var TSource20 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey31 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey31 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey31 || {});
 var TExpandedEnvDescriptor20 = Object2({ value: Optional(TTemplateString21), cacheKey: Enum(EnvironmentVariableCacheKey31) });
 var TEnvMergeStrategy20 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -66845,11 +66847,11 @@ var TProblemMatcherPattern31 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity31 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity31 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity31 || {});
 var TProblemMatcher31 = Object2({ owner: String2(), severity: Optional(Enum(Severity31)), pattern: Array2(TProblemMatcherPattern31) });
 var TProblemPath31 = Object2({
@@ -66866,11 +66868,11 @@ var TBackgroundProcess20 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType20 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType20 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType20 || {});
 var TParallelismValue20 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification20 = Object2({
@@ -67142,18 +67144,18 @@ var TCustomStatusCheck20 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration20 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow20 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow20 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow20 || {});
 var TConcurrencyPool20 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow20) });
-var LeaseState20 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState20 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState20 || {});
 var TTiming31 = Object2({
   startTimestamp: Optional(Number2()),
@@ -67269,11 +67271,11 @@ var TResolvedBaseConfig20 = Object2({
   prebuiltLayer: TBaseLayer20,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit20 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit20 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit20 || {});
 var TTTL20 = Object2({
   value: Number2(),
@@ -67492,12 +67494,12 @@ var TConcurrencyPoolState20 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState20)
 });
-var ApprovalRequestState20 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState20 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState20 || {});
 var TApprovalRequest20 = Object2({
   id: String2(),
@@ -67590,128 +67592,128 @@ var TEvaluatedString22 = TBrandedString();
 var TDateString33 = TBrandedString();
 var TEpochSeconds22 = TBrandedNumber();
 var TScopedTaskKey22 = TBrandedString();
-var TaskType21 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType21 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType21 || {});
-var TaskResultStatus21 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus21 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus21 || {});
-var TaskExecutionStatus21 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus21 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus21 || {});
-var TaskExecutionWaitingSubStatus21 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus21 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus21 || {});
-var TaskExecutionAbortedSubStatus21 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus21 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus21 || {});
-var TaskExecutionFinishedSubStatus21 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus21 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus21 || {});
-var TaskAttemptReason21 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason21 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason21 || {});
-var BackgroundProcessResultStatus32 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus32 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus32 || {});
-var BackgroundProcessResultFinishedSubStatus32 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus32 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus32 || {});
-var RunResultStatus21 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus21 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus21 || {});
-var RunExecutionStatus21 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus21 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus21 || {});
-var RunExecutionWaitingSubStatus21 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus21 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus21 || {});
-var RunExecutionAbortedSubStatus21 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus21 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus21 || {});
-var RunExecutionFinishedSubStatus21 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus21 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus21 || {});
-var GitClonePatchStatus21 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus21 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus21 || {});
 var TSource21 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey32 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey32 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey32 || {});
 var TExpandedEnvDescriptor21 = Object2({ value: Optional(TTemplateString22), cacheKey: Enum(EnvironmentVariableCacheKey32) });
 var TEnvMergeStrategy21 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -67727,11 +67729,11 @@ var TProblemMatcherPattern32 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity32 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity32 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity32 || {});
 var TProblemMatcher32 = Object2({ owner: String2(), severity: Optional(Enum(Severity32)), pattern: Array2(TProblemMatcherPattern32) });
 var TProblemPath32 = Object2({
@@ -67748,11 +67750,11 @@ var TBackgroundProcess21 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType21 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType21 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType21 || {});
 var TParallelismValue21 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification21 = Object2({
@@ -68024,18 +68026,18 @@ var TCustomStatusCheck21 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration21 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow21 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow21 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow21 || {});
 var TConcurrencyPool21 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow21) });
-var LeaseState21 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState21 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState21 || {});
 var TTiming32 = Object2({
   startTimestamp: Optional(Number2()),
@@ -68151,11 +68153,11 @@ var TResolvedBaseConfig21 = Object2({
   prebuiltLayer: TBaseLayer21,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit21 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit21 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit21 || {});
 var TTTL21 = Object2({
   value: Number2(),
@@ -68374,12 +68376,12 @@ var TConcurrencyPoolState21 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState21)
 });
-var ApprovalRequestState21 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState21 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState21 || {});
 var TApprovalRequest21 = Object2({
   id: String2(),
@@ -68481,128 +68483,128 @@ var TEvaluatedString23 = TBrandedString();
 var TDateString34 = TBrandedString();
 var TEpochSeconds23 = TBrandedNumber();
 var TScopedTaskKey23 = TBrandedString();
-var TaskType22 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType22 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType22 || {});
-var TaskResultStatus22 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus22 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus22 || {});
-var TaskExecutionStatus22 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus22 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus22 || {});
-var TaskExecutionWaitingSubStatus22 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus22 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus22 || {});
-var TaskExecutionAbortedSubStatus22 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus22 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus22 || {});
-var TaskExecutionFinishedSubStatus22 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus22 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus22 || {});
-var TaskAttemptReason22 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason22 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason22 || {});
-var BackgroundProcessResultStatus33 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus33 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus33 || {});
-var BackgroundProcessResultFinishedSubStatus33 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus33 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus33 || {});
-var RunResultStatus22 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus22 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus22 || {});
-var RunExecutionStatus22 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus22 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus22 || {});
-var RunExecutionWaitingSubStatus22 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus22 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus22 || {});
-var RunExecutionAbortedSubStatus22 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus22 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus22 || {});
-var RunExecutionFinishedSubStatus22 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus22 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus22 || {});
-var GitClonePatchStatus22 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus22 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus22 || {});
 var TSource22 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey33 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey33 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey33 || {});
 var TExpandedEnvDescriptor22 = Object2({ value: Optional(TTemplateString23), cacheKey: Enum(EnvironmentVariableCacheKey33) });
 var TEnvMergeStrategy22 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -68618,11 +68620,11 @@ var TProblemMatcherPattern33 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity33 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity33 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity33 || {});
 var TProblemMatcher33 = Object2({ owner: String2(), severity: Optional(Enum(Severity33)), pattern: Array2(TProblemMatcherPattern33) });
 var TProblemPath33 = Object2({
@@ -68639,11 +68641,11 @@ var TBackgroundProcess22 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType22 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType22 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType22 || {});
 var TParallelismValue22 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification22 = Object2({
@@ -68913,18 +68915,18 @@ var TCustomStatusCheck22 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration22 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow22 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow22 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow22 || {});
 var TConcurrencyPool22 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow22) });
-var LeaseState22 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState22 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState22 || {});
 var TTiming33 = Object2({
   startTimestamp: Optional(Number2()),
@@ -69040,11 +69042,11 @@ var TResolvedBaseConfig22 = Object2({
   prebuiltLayer: TBaseLayer22,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit22 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit22 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit22 || {});
 var TTTL22 = Object2({
   value: Number2(),
@@ -69263,12 +69265,12 @@ var TConcurrencyPoolState22 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState22)
 });
-var ApprovalRequestState22 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState22 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState22 || {});
 var TApprovalRequest22 = Object2({
   id: String2(),
@@ -69370,128 +69372,128 @@ var TEvaluatedString24 = TBrandedString();
 var TDateString35 = TBrandedString();
 var TEpochSeconds24 = TBrandedNumber();
 var TScopedTaskKey24 = TBrandedString();
-var TaskType23 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType23 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType23 || {});
-var TaskResultStatus23 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus23 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus23 || {});
-var TaskExecutionStatus23 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus23 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus23 || {});
-var TaskExecutionWaitingSubStatus23 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus23 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus23 || {});
-var TaskExecutionAbortedSubStatus23 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus23 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus23 || {});
-var TaskExecutionFinishedSubStatus23 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus23 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus23 || {});
-var TaskAttemptReason23 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason23 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason23 || {});
-var BackgroundProcessResultStatus34 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus34 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus34 || {});
-var BackgroundProcessResultFinishedSubStatus34 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus34 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus34 || {});
-var RunResultStatus23 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus23 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus23 || {});
-var RunExecutionStatus23 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus23 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus23 || {});
-var RunExecutionWaitingSubStatus23 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus23 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus23 || {});
-var RunExecutionAbortedSubStatus23 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus23 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus23 || {});
-var RunExecutionFinishedSubStatus23 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus23 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus23 || {});
-var GitClonePatchStatus23 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus23 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus23 || {});
 var TSource23 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey34 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey34 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey34 || {});
 var TExpandedEnvDescriptor23 = Object2({ value: Optional(TTemplateString24), cacheKey: Enum(EnvironmentVariableCacheKey34) });
 var TEnvMergeStrategy23 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -69507,11 +69509,11 @@ var TProblemMatcherPattern34 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity34 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity34 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity34 || {});
 var TProblemMatcher34 = Object2({ owner: String2(), severity: Optional(Enum(Severity34)), pattern: Array2(TProblemMatcherPattern34) });
 var TProblemPath34 = Object2({
@@ -69528,11 +69530,11 @@ var TBackgroundProcess23 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType23 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType23 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType23 || {});
 var TParallelismValue23 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification23 = Object2({
@@ -69804,18 +69806,18 @@ var TCustomStatusCheck23 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration23 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow23 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow23 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow23 || {});
 var TConcurrencyPool23 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow23) });
-var LeaseState23 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState23 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState23 || {});
 var TTiming34 = Object2({
   startTimestamp: Optional(Number2()),
@@ -69931,11 +69933,11 @@ var TResolvedBaseConfig23 = Object2({
   prebuiltLayer: TBaseLayer23,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit23 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit23 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit23 || {});
 var TTTL23 = Object2({
   value: Number2(),
@@ -70154,12 +70156,12 @@ var TConcurrencyPoolState23 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState23)
 });
-var ApprovalRequestState23 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState23 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState23 || {});
 var TApprovalRequest23 = Object2({
   id: String2(),
@@ -70261,128 +70263,128 @@ var TEvaluatedString25 = TBrandedString();
 var TDateString36 = TBrandedString();
 var TEpochSeconds25 = TBrandedNumber();
 var TScopedTaskKey25 = TBrandedString();
-var TaskType24 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType24 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType24 || {});
-var TaskResultStatus24 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus24 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus24 || {});
-var TaskExecutionStatus24 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus24 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus24 || {});
-var TaskExecutionWaitingSubStatus24 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus24 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus24 || {});
-var TaskExecutionAbortedSubStatus24 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus24 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus24 || {});
-var TaskExecutionFinishedSubStatus24 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus24 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus24 || {});
-var TaskAttemptReason24 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason24 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason24 || {});
-var BackgroundProcessResultStatus35 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus35 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus35 || {});
-var BackgroundProcessResultFinishedSubStatus35 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus35 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus35 || {});
-var RunResultStatus24 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus24 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus24 || {});
-var RunExecutionStatus24 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus24 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus24 || {});
-var RunExecutionWaitingSubStatus24 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus24 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus24 || {});
-var RunExecutionAbortedSubStatus24 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus24 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus24 || {});
-var RunExecutionFinishedSubStatus24 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus24 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus24 || {});
-var GitClonePatchStatus24 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus24 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus24 || {});
 var TSource24 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey35 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey35 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey35 || {});
 var TExpandedEnvDescriptor24 = Object2({ value: Optional(TTemplateString25), cacheKey: Enum(EnvironmentVariableCacheKey35) });
 var TEnvMergeStrategy24 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -70398,11 +70400,11 @@ var TProblemMatcherPattern35 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity35 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity35 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity35 || {});
 var TProblemMatcher35 = Object2({ owner: String2(), severity: Optional(Enum(Severity35)), pattern: Array2(TProblemMatcherPattern35) });
 var TProblemPath35 = Object2({
@@ -70419,11 +70421,11 @@ var TBackgroundProcess24 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType24 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType24 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType24 || {});
 var TParallelismValue24 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification24 = Object2({
@@ -70695,18 +70697,18 @@ var TCustomStatusCheck24 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration24 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow24 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow24 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow24 || {});
 var TConcurrencyPool24 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow24) });
-var LeaseState24 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState24 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState24 || {});
 var TTiming35 = Object2({
   startTimestamp: Optional(Number2()),
@@ -70822,11 +70824,11 @@ var TResolvedBaseConfig24 = Object2({
   prebuiltLayer: TBaseLayer24,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit24 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit24 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit24 || {});
 var TTTL24 = Object2({
   value: Number2(),
@@ -71046,12 +71048,12 @@ var TConcurrencyPoolState24 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState24)
 });
-var ApprovalRequestState24 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState24 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState24 || {});
 var TApprovalRequest24 = Object2({
   id: String2(),
@@ -71153,143 +71155,143 @@ var TEvaluatedString26 = TBrandedString();
 var TDateString37 = TBrandedString();
 var TEpochSeconds26 = TBrandedNumber();
 var TScopedTaskKey26 = TBrandedString();
-var TaskType25 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType25 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType25 || {});
-var TaskResultStatus25 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus25 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus25 || {});
-var TaskResultFailedSubStatus2 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus2 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus2 || {});
-var TaskExecutionStatus25 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus25 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus25 || {});
-var TaskExecutionWaitingSubStatus25 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus25 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus25 || {});
-var TaskExecutionAbortedSubStatus25 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus25 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus25 || {});
-var TaskExecutionFinishedSubStatus25 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus25 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus25 || {});
-var TaskAttemptReason25 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason25 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason25 || {});
-var BackgroundProcessResultStatus36 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus36 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus36 || {});
-var BackgroundProcessResultFinishedSubStatus36 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus36 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus36 || {});
-var RunResultStatus25 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus25 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus25 || {});
-var RunExecutionStatus25 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus25 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus25 || {});
-var RunExecutionWaitingSubStatus25 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus25 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus25 || {});
-var RunExecutionAbortedSubStatus25 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus25 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus25 || {});
-var RunExecutionFinishedSubStatus25 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus25 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus25 || {});
-var GitClonePatchStatus25 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus25 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus25 || {});
 var TSource25 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey36 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey36 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey36 || {});
 var TExpandedEnvDescriptor25 = Object2({ value: Optional(TTemplateString26), cacheKey: Enum(EnvironmentVariableCacheKey36) });
 var TEnvMergeStrategy25 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -71305,11 +71307,11 @@ var TProblemMatcherPattern36 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity36 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity36 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity36 || {});
 var TProblemMatcher36 = Object2({ owner: String2(), severity: Optional(Enum(Severity36)), pattern: Array2(TProblemMatcherPattern36) });
 var TProblemPath36 = Object2({
@@ -71326,11 +71328,11 @@ var TBackgroundProcess25 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType25 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType25 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType25 || {});
 var TParallelismValue25 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification25 = Object2({
@@ -71602,18 +71604,18 @@ var TCustomStatusCheck25 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration25 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow25 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow25 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow25 || {});
 var TConcurrencyPool25 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow25) });
-var LeaseState25 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState25 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState25 || {});
 var TTiming36 = Object2({
   startTimestamp: Optional(Number2()),
@@ -71729,11 +71731,11 @@ var TResolvedBaseConfig25 = Object2({
   prebuiltLayer: TBaseLayer25,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit25 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit25 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit25 || {});
 var TTTL25 = Object2({
   value: Number2(),
@@ -71954,12 +71956,12 @@ var TConcurrencyPoolState25 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState25)
 });
-var ApprovalRequestState25 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState25 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState25 || {});
 var TApprovalRequest25 = Object2({
   id: String2(),
@@ -72061,143 +72063,143 @@ var TEvaluatedString27 = TBrandedString();
 var TDateString38 = TBrandedString();
 var TEpochSeconds27 = TBrandedNumber();
 var TScopedTaskKey27 = TBrandedString();
-var TaskType26 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType26 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType26 || {});
-var TaskResultStatus26 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus26 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus26 || {});
-var TaskResultFailedSubStatus3 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus3 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus3 || {});
-var TaskExecutionStatus26 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus26 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus26 || {});
-var TaskExecutionWaitingSubStatus26 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus26 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus26 || {});
-var TaskExecutionAbortedSubStatus26 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus26 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus26 || {});
-var TaskExecutionFinishedSubStatus26 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus26 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus26 || {});
-var TaskAttemptReason26 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason26 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason26 || {});
-var BackgroundProcessResultStatus37 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus37 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus37 || {});
-var BackgroundProcessResultFinishedSubStatus37 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus37 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus37 || {});
-var RunResultStatus26 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus26 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus26 || {});
-var RunExecutionStatus26 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus26 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus26 || {});
-var RunExecutionWaitingSubStatus26 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus26 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus26 || {});
-var RunExecutionAbortedSubStatus26 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus26 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus26 || {});
-var RunExecutionFinishedSubStatus26 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus26 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus26 || {});
-var GitClonePatchStatus26 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus26 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus26 || {});
 var TSource26 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey37 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey37 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey37 || {});
 var TExpandedEnvDescriptor26 = Object2({ value: Optional(TTemplateString27), cacheKey: Enum(EnvironmentVariableCacheKey37) });
 var TEnvMergeStrategy26 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -72213,11 +72215,11 @@ var TProblemMatcherPattern37 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity37 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity37 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity37 || {});
 var TProblemMatcher37 = Object2({ owner: String2(), severity: Optional(Enum(Severity37)), pattern: Array2(TProblemMatcherPattern37) });
 var TProblemPath37 = Object2({
@@ -72234,11 +72236,11 @@ var TBackgroundProcess26 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType26 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType26 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType26 || {});
 var TParallelismValue26 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification26 = Object2({
@@ -72510,18 +72512,18 @@ var TCustomStatusCheck26 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration26 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow26 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow26 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow26 || {});
 var TConcurrencyPool26 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow26) });
-var LeaseState26 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState26 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState26 || {});
 var TTiming37 = Object2({
   startTimestamp: Optional(Number2()),
@@ -72645,11 +72647,11 @@ var TResolvedBaseConfig26 = Object2({
   prebuiltLayer: TBaseLayer26,
   bootstrappingKeys: Optional(Array2(String2()))
 });
-var TTLUnit26 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit26 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit26 || {});
 var TTTL26 = Object2({
   value: Number2(),
@@ -72871,12 +72873,12 @@ var TConcurrencyPoolState26 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState26)
 });
-var ApprovalRequestState26 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState26 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState26 || {});
 var TApprovalRequest26 = Object2({
   id: String2(),
@@ -72978,143 +72980,143 @@ var TEvaluatedString28 = TBrandedString();
 var TDateString39 = TBrandedString();
 var TEpochSeconds28 = TBrandedNumber();
 var TScopedTaskKey28 = TBrandedString();
-var TaskType27 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType27 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType27 || {});
-var TaskResultStatus27 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus27 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus27 || {});
-var TaskResultFailedSubStatus4 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus4 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus4 || {});
-var TaskExecutionStatus27 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus27 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus27 || {});
-var TaskExecutionWaitingSubStatus27 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus27 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus27 || {});
-var TaskExecutionAbortedSubStatus27 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus27 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus27 || {});
-var TaskExecutionFinishedSubStatus27 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus27 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus27 || {});
-var TaskAttemptReason27 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason27 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason27 || {});
-var BackgroundProcessResultStatus38 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus38 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus38 || {});
-var BackgroundProcessResultFinishedSubStatus38 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus38 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus38 || {});
-var RunResultStatus27 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus27 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus27 || {});
-var RunExecutionStatus27 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus27 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus27 || {});
-var RunExecutionWaitingSubStatus27 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus27 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus27 || {});
-var RunExecutionAbortedSubStatus27 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus27 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus27 || {});
-var RunExecutionFinishedSubStatus27 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus27 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus27 || {});
-var GitClonePatchStatus27 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus27 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus27 || {});
 var TSource27 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey38 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey38 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey38 || {});
 var TExpandedEnvDescriptor27 = Object2({ value: Optional(TTemplateString28), cacheKey: Enum(EnvironmentVariableCacheKey38) });
 var TEnvMergeStrategy27 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -73130,11 +73132,11 @@ var TProblemMatcherPattern38 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity38 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity38 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity38 || {});
 var TProblemMatcher38 = Object2({ owner: String2(), severity: Optional(Enum(Severity38)), pattern: Array2(TProblemMatcherPattern38) });
 var TProblemPath38 = Object2({
@@ -73151,11 +73153,11 @@ var TBackgroundProcess27 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType27 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType27 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType27 || {});
 var TParallelismValue27 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification27 = Object2({
@@ -73427,18 +73429,18 @@ var TCustomStatusCheck27 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration27 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow27 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow27 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow27 || {});
 var TConcurrencyPool27 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow27) });
-var LeaseState27 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState27 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState27 || {});
 var TTiming38 = Object2({
   startTimestamp: Optional(Number2()),
@@ -73569,11 +73571,11 @@ var TArchiveStorageEntitlement2 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit27 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit27 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit27 || {});
 var TTTL27 = Object2({
   value: Number2(),
@@ -73796,12 +73798,12 @@ var TConcurrencyPoolState27 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState27)
 });
-var ApprovalRequestState27 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState27 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState27 || {});
 var TApprovalRequest27 = Object2({
   id: String2(),
@@ -73904,101 +73906,101 @@ var TEvaluatedString29 = TBrandedString();
 var TDateString40 = TBrandedString();
 var TEpochSeconds29 = TBrandedNumber();
 var TScopedTaskKey29 = TBrandedString();
-var TaskType28 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType28 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType28 || {});
-var TaskResultStatus28 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus28 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus28 || {});
-var TaskResultFailedSubStatus5 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus5 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus5 || {});
-var TaskExecutionStatus28 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus28 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus28 || {});
-var TaskExecutionWaitingSubStatus28 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus28 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus28 || {});
-var TaskExecutionAbortedSubStatus28 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus28 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus28 || {});
-var TaskExecutionFinishedSubStatus28 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus28 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus28 || {});
-var TaskAttemptReason28 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason28 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason28 || {});
-var DebugSessionOrigin2 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin2 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin2 || {});
-var DebugSessionEndReason2 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason2 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason2 || {});
 var TDebugSession2 = Object2({
   id: TDebugSessionId2,
@@ -74013,62 +74015,62 @@ var TDebugSession2 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus39 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus39 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus39 || {});
-var BackgroundProcessResultFinishedSubStatus39 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus39 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus39 || {});
-var RunResultStatus28 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus28 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus28 || {});
-var RunExecutionStatus28 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus28 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus28 || {});
-var RunExecutionWaitingSubStatus28 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus28 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus28 || {});
-var RunExecutionAbortedSubStatus28 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus28 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus28 || {});
-var RunExecutionFinishedSubStatus28 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus28 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus28 || {});
-var GitClonePatchStatus28 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus28 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus28 || {});
 var TSource28 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey39 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey39 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey39 || {});
 var TExpandedEnvDescriptor28 = Object2({ value: Optional(TTemplateString29), cacheKey: Enum(EnvironmentVariableCacheKey39) });
 var TEnvMergeStrategy28 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -74084,11 +74086,11 @@ var TProblemMatcherPattern39 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity39 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity39 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity39 || {});
 var TProblemMatcher39 = Object2({ owner: String2(), severity: Optional(Enum(Severity39)), pattern: Array2(TProblemMatcherPattern39) });
 var TProblemPath39 = Object2({
@@ -74105,11 +74107,11 @@ var TBackgroundProcess28 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType28 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType28 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType28 || {});
 var TParallelismValue28 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification28 = Object2({
@@ -74381,18 +74383,18 @@ var TCustomStatusCheck28 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration28 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow28 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow28 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow28 || {});
 var TConcurrencyPool28 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow28) });
-var LeaseState28 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState28 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState28 || {});
 var TTiming39 = Object2({
   startTimestamp: Optional(Number2()),
@@ -74523,11 +74525,11 @@ var TArchiveStorageEntitlement3 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit28 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit28 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit28 || {});
 var TTTL28 = Object2({
   value: Number2(),
@@ -74752,12 +74754,12 @@ var TConcurrencyPoolState28 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState28)
 });
-var ApprovalRequestState28 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState28 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState28 || {});
 var TApprovalRequest28 = Object2({
   id: String2(),
@@ -74860,101 +74862,101 @@ var TEvaluatedString30 = TBrandedString();
 var TDateString41 = TBrandedString();
 var TEpochSeconds30 = TBrandedNumber();
 var TScopedTaskKey30 = TBrandedString();
-var TaskType29 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType29 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType29 || {});
-var TaskResultStatus29 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus29 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus29 || {});
-var TaskResultFailedSubStatus6 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus6 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus6 || {});
-var TaskExecutionStatus29 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus29 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus29 || {});
-var TaskExecutionWaitingSubStatus29 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus29 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus29 || {});
-var TaskExecutionAbortedSubStatus29 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus29 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus29 || {});
-var TaskExecutionFinishedSubStatus29 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus29 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus29 || {});
-var TaskAttemptReason29 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason29 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason29 || {});
-var DebugSessionOrigin3 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin3 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin3 || {});
-var DebugSessionEndReason3 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason3 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason3 || {});
 var TDebugSession3 = Object2({
   id: TDebugSessionId3,
@@ -74969,62 +74971,62 @@ var TDebugSession3 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus40 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus40 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus40 || {});
-var BackgroundProcessResultFinishedSubStatus40 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus40 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus40 || {});
-var RunResultStatus29 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus29 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus29 || {});
-var RunExecutionStatus29 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus29 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus29 || {});
-var RunExecutionWaitingSubStatus29 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus29 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus29 || {});
-var RunExecutionAbortedSubStatus29 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus29 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus29 || {});
-var RunExecutionFinishedSubStatus29 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus29 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus29 || {});
-var GitClonePatchStatus29 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus29 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus29 || {});
 var TSource29 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey40 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey40 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey40 || {});
 var TExpandedEnvDescriptor29 = Object2({ value: Optional(TTemplateString30), cacheKey: Enum(EnvironmentVariableCacheKey40) });
 var TEnvMergeStrategy29 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -75040,11 +75042,11 @@ var TProblemMatcherPattern40 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity40 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity40 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity40 || {});
 var TProblemMatcher40 = Object2({ owner: String2(), severity: Optional(Enum(Severity40)), pattern: Array2(TProblemMatcherPattern40) });
 var TProblemPath40 = Object2({
@@ -75061,11 +75063,11 @@ var TBackgroundProcess29 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType29 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType29 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType29 || {});
 var TParallelismValue29 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification29 = Object2({
@@ -75340,18 +75342,18 @@ var TCustomStatusCheck29 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration29 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow29 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow29 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow29 || {});
 var TConcurrencyPool29 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow29) });
-var LeaseState29 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState29 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState29 || {});
 var TTiming40 = Object2({
   startTimestamp: Optional(Number2()),
@@ -75482,11 +75484,11 @@ var TArchiveStorageEntitlement4 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit29 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit29 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit29 || {});
 var TTTL29 = Object2({
   value: Number2(),
@@ -75711,12 +75713,12 @@ var TConcurrencyPoolState29 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState29)
 });
-var ApprovalRequestState29 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState29 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState29 || {});
 var TApprovalRequest29 = Object2({
   id: String2(),
@@ -75819,102 +75821,102 @@ var TEvaluatedString31 = TBrandedString();
 var TDateString42 = TBrandedString();
 var TEpochSeconds31 = TBrandedNumber();
 var TScopedTaskKey31 = TBrandedString();
-var TaskType30 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType30 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType30 || {});
-var TaskResultStatus30 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus30 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus30 || {});
-var TaskResultFailedSubStatus7 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus7 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus7 || {});
-var TaskExecutionStatus30 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus30 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus30 || {});
-var TaskExecutionWaitingSubStatus30 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus30 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus30 || {});
-var TaskExecutionAbortedSubStatus30 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus30 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus30 || {});
-var TaskExecutionFinishedSubStatus30 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus30 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus30 || {});
-var TaskAttemptReason30 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason30 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason30 || {});
-var DebugSessionOrigin4 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin4 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin4 || {});
-var DebugSessionEndReason4 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason4 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason4 || {});
 var TDebugSession4 = Object2({
   id: TDebugSessionId4,
@@ -75929,62 +75931,62 @@ var TDebugSession4 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus41 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus41 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus41 || {});
-var BackgroundProcessResultFinishedSubStatus41 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus41 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus41 || {});
-var RunResultStatus30 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus30 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus30 || {});
-var RunExecutionStatus30 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus30 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus30 || {});
-var RunExecutionWaitingSubStatus30 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus30 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus30 || {});
-var RunExecutionAbortedSubStatus30 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus30 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus30 || {});
-var RunExecutionFinishedSubStatus30 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus30 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus30 || {});
-var GitClonePatchStatus30 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus30 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus30 || {});
 var TSource30 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey41 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey41 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey41 || {});
 var TExpandedEnvDescriptor30 = Object2({ value: Optional(TTemplateString31), cacheKey: Enum(EnvironmentVariableCacheKey41) });
 var TEnvMergeStrategy30 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -76000,11 +76002,11 @@ var TProblemMatcherPattern41 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity41 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity41 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity41 || {});
 var TProblemMatcher41 = Object2({ owner: String2(), severity: Optional(Enum(Severity41)), pattern: Array2(TProblemMatcherPattern41) });
 var TProblemPath41 = Object2({
@@ -76021,11 +76023,11 @@ var TBackgroundProcess30 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType30 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType30 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType30 || {});
 var TParallelismValue30 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification30 = Object2({
@@ -76302,18 +76304,18 @@ var TCustomStatusCheck30 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration30 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow30 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow30 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow30 || {});
 var TConcurrencyPool30 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow30) });
-var LeaseState30 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState30 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState30 || {});
 var TTiming41 = Object2({
   startTimestamp: Optional(Number2()),
@@ -76444,11 +76446,11 @@ var TArchiveStorageEntitlement5 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit30 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit30 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit30 || {});
 var TTTL30 = Object2({
   value: Number2(),
@@ -76680,12 +76682,12 @@ var TConcurrencyPoolState30 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState30)
 });
-var ApprovalRequestState30 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState30 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState30 || {});
 var TApprovalRequest30 = Object2({
   id: String2(),
@@ -76788,102 +76790,102 @@ var TEvaluatedString32 = TBrandedString();
 var TDateString43 = TBrandedString();
 var TEpochSeconds32 = TBrandedNumber();
 var TScopedTaskKey32 = TBrandedString();
-var TaskType31 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType31 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType31 || {});
-var TaskResultStatus31 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus31 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus31 || {});
-var TaskResultFailedSubStatus8 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus8 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus8 || {});
-var TaskExecutionStatus31 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus31 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus31 || {});
-var TaskExecutionWaitingSubStatus31 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus31 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus31 || {});
-var TaskExecutionAbortedSubStatus31 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus31 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus31 || {});
-var TaskExecutionFinishedSubStatus31 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus31 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus31 || {});
-var TaskAttemptReason31 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason31 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason31 || {});
-var DebugSessionOrigin5 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin5 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin5 || {});
-var DebugSessionEndReason5 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason5 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason5 || {});
 var TDebugSession5 = Object2({
   id: TDebugSessionId5,
@@ -76898,62 +76900,62 @@ var TDebugSession5 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus42 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus42 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus42 || {});
-var BackgroundProcessResultFinishedSubStatus42 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus42 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus42 || {});
-var RunResultStatus31 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus31 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus31 || {});
-var RunExecutionStatus31 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus31 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus31 || {});
-var RunExecutionWaitingSubStatus31 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus31 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus31 || {});
-var RunExecutionAbortedSubStatus31 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus31 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus31 || {});
-var RunExecutionFinishedSubStatus31 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus31 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus31 || {});
-var GitClonePatchStatus31 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus31 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus31 || {});
 var TSource31 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey42 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey42 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey42 || {});
 var TExpandedEnvDescriptor31 = Object2({ value: Optional(TTemplateString32), cacheKey: Enum(EnvironmentVariableCacheKey42) });
 var TEnvMergeStrategy31 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -76969,11 +76971,11 @@ var TProblemMatcherPattern42 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity42 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity42 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity42 || {});
 var TProblemMatcher42 = Object2({ owner: String2(), severity: Optional(Enum(Severity42)), pattern: Array2(TProblemMatcherPattern42) });
 var TProblemPath42 = Object2({
@@ -76990,11 +76992,11 @@ var TBackgroundProcess31 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType31 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType31 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType31 || {});
 var TParallelismValue31 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification31 = Object2({
@@ -77271,18 +77273,18 @@ var TCustomStatusCheck31 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration31 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow31 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow31 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow31 || {});
 var TConcurrencyPool31 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow31) });
-var LeaseState31 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState31 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState31 || {});
 var TTiming42 = Object2({
   startTimestamp: Optional(Number2()),
@@ -77413,11 +77415,11 @@ var TArchiveStorageEntitlement6 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit31 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit31 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit31 || {});
 var TTTL31 = Object2({
   value: Number2(),
@@ -77651,12 +77653,12 @@ var TConcurrencyPoolState31 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState31)
 });
-var ApprovalRequestState31 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState31 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState31 || {});
 var TApprovalRequest31 = Object2({
   id: String2(),
@@ -77759,102 +77761,102 @@ var TEvaluatedString33 = TBrandedString();
 var TDateString44 = TBrandedString();
 var TEpochSeconds33 = TBrandedNumber();
 var TScopedTaskKey33 = TBrandedString();
-var TaskType32 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType32 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType32 || {});
-var TaskResultStatus32 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus32 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus32 || {});
-var TaskResultFailedSubStatus9 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus9 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus9 || {});
-var TaskExecutionStatus32 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus32 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus32 || {});
-var TaskExecutionWaitingSubStatus32 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus32 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus32 || {});
-var TaskExecutionAbortedSubStatus32 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus32 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus32 || {});
-var TaskExecutionFinishedSubStatus32 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus32 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus32 || {});
-var TaskAttemptReason32 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason32 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason32 || {});
-var DebugSessionOrigin6 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin6 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin6 || {});
-var DebugSessionEndReason6 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason6 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason6 || {});
 var TDebugSession6 = Object2({
   id: TDebugSessionId6,
@@ -77869,62 +77871,62 @@ var TDebugSession6 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus43 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus43 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus43 || {});
-var BackgroundProcessResultFinishedSubStatus43 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus43 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus43 || {});
-var RunResultStatus32 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus32 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus32 || {});
-var RunExecutionStatus32 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus32 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus32 || {});
-var RunExecutionWaitingSubStatus32 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus32 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus32 || {});
-var RunExecutionAbortedSubStatus32 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus32 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus32 || {});
-var RunExecutionFinishedSubStatus32 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus32 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus32 || {});
-var GitClonePatchStatus32 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus32 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus32 || {});
 var TSource32 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey43 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey43 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey43 || {});
 var TExpandedEnvDescriptor32 = Object2({ value: Optional(TTemplateString33), cacheKey: Enum(EnvironmentVariableCacheKey43) });
 var TEnvMergeStrategy32 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -77940,11 +77942,11 @@ var TProblemMatcherPattern43 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity43 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity43 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity43 || {});
 var TProblemMatcher43 = Object2({ owner: String2(), severity: Optional(Enum(Severity43)), pattern: Array2(TProblemMatcherPattern43) });
 var TProblemPath43 = Object2({
@@ -77961,11 +77963,11 @@ var TBackgroundProcess32 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType32 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType32 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType32 || {});
 var TParallelismValue32 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification32 = Object2({
@@ -78244,18 +78246,18 @@ var TCustomStatusCheck32 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration32 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow32 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow32 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow32 || {});
 var TConcurrencyPool32 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow32) });
-var LeaseState32 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState32 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState32 || {});
 var TTiming43 = Object2({
   startTimestamp: Optional(Number2()),
@@ -78386,11 +78388,11 @@ var TArchiveStorageEntitlement7 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit32 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit32 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit32 || {});
 var TTTL32 = Object2({
   value: Number2(),
@@ -78624,12 +78626,12 @@ var TConcurrencyPoolState32 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState32)
 });
-var ApprovalRequestState32 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState32 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState32 || {});
 var TApprovalRequest32 = Object2({
   id: String2(),
@@ -78732,102 +78734,102 @@ var TEvaluatedString34 = TBrandedString();
 var TDateString45 = TBrandedString();
 var TEpochSeconds34 = TBrandedNumber();
 var TScopedTaskKey34 = TBrandedString();
-var TaskType33 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType33 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType33 || {});
-var TaskResultStatus33 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus33 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus33 || {});
-var TaskResultFailedSubStatus10 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus10 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus10 || {});
-var TaskExecutionStatus33 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus33 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus33 || {});
-var TaskExecutionWaitingSubStatus33 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus33 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus33 || {});
-var TaskExecutionAbortedSubStatus33 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus33 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus33 || {});
-var TaskExecutionFinishedSubStatus33 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus33 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus33 || {});
-var TaskAttemptReason33 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason33 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason33 || {});
-var DebugSessionOrigin7 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin7 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin7 || {});
-var DebugSessionEndReason7 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason7 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason7 || {});
 var TDebugSession7 = Object2({
   id: TDebugSessionId7,
@@ -78842,62 +78844,62 @@ var TDebugSession7 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus44 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus44 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus44 || {});
-var BackgroundProcessResultFinishedSubStatus44 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus44 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus44 || {});
-var RunResultStatus33 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus33 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus33 || {});
-var RunExecutionStatus33 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus33 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus33 || {});
-var RunExecutionWaitingSubStatus33 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus33 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus33 || {});
-var RunExecutionAbortedSubStatus33 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus33 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus33 || {});
-var RunExecutionFinishedSubStatus33 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus33 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus33 || {});
-var GitClonePatchStatus33 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus33 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus33 || {});
 var TSource33 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey44 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey44 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey44 || {});
 var TExpandedEnvDescriptor33 = Object2({ value: Optional(TTemplateString34), cacheKey: Enum(EnvironmentVariableCacheKey44) });
 var TEnvMergeStrategy33 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -78913,11 +78915,11 @@ var TProblemMatcherPattern44 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity44 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity44 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity44 || {});
 var TProblemMatcher44 = Object2({ owner: String2(), severity: Optional(Enum(Severity44)), pattern: Array2(TProblemMatcherPattern44) });
 var TProblemPath44 = Object2({
@@ -78934,11 +78936,11 @@ var TBackgroundProcess33 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType33 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType33 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType33 || {});
 var TParallelismValue33 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification33 = Object2({
@@ -79217,18 +79219,18 @@ var TCustomStatusCheck33 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration33 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow33 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow33 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow33 || {});
 var TConcurrencyPool33 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow33) });
-var LeaseState33 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState33 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState33 || {});
 var TTiming44 = Object2({
   startTimestamp: Optional(Number2()),
@@ -79360,11 +79362,11 @@ var TArchiveStorageEntitlement8 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit33 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit33 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit33 || {});
 var TTTL33 = Object2({
   value: Number2(),
@@ -79598,12 +79600,12 @@ var TConcurrencyPoolState33 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState33)
 });
-var ApprovalRequestState33 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState33 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState33 || {});
 var TApprovalRequest33 = Object2({
   id: String2(),
@@ -79706,102 +79708,102 @@ var TEvaluatedString35 = TBrandedString();
 var TDateString46 = TBrandedString();
 var TEpochSeconds35 = TBrandedNumber();
 var TScopedTaskKey35 = TBrandedString();
-var TaskType34 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType34 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType34 || {});
-var TaskResultStatus34 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus34 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus34 || {});
-var TaskResultFailedSubStatus11 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus11 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus11 || {});
-var TaskExecutionStatus34 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus34 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus34 || {});
-var TaskExecutionWaitingSubStatus34 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus34 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus34 || {});
-var TaskExecutionAbortedSubStatus34 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus34 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus34 || {});
-var TaskExecutionFinishedSubStatus34 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus34 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus34 || {});
-var TaskAttemptReason34 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason34 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason34 || {});
-var DebugSessionOrigin8 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin8 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin8 || {});
-var DebugSessionEndReason8 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason8 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason8 || {});
 var TDebugSession8 = Object2({
   id: TDebugSessionId8,
@@ -79816,62 +79818,62 @@ var TDebugSession8 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus45 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus45 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus45 || {});
-var BackgroundProcessResultFinishedSubStatus45 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus45 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus45 || {});
-var RunResultStatus34 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus34 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus34 || {});
-var RunExecutionStatus34 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus34 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus34 || {});
-var RunExecutionWaitingSubStatus34 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus34 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus34 || {});
-var RunExecutionAbortedSubStatus34 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus34 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus34 || {});
-var RunExecutionFinishedSubStatus34 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus34 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus34 || {});
-var GitClonePatchStatus34 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus34 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus34 || {});
 var TSource34 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey45 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey45 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey45 || {});
 var TExpandedEnvDescriptor34 = Object2({ value: Optional(TTemplateString35), cacheKey: Enum(EnvironmentVariableCacheKey45) });
 var TEnvMergeStrategy34 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -79887,11 +79889,11 @@ var TProblemMatcherPattern45 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity45 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity45 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity45 || {});
 var TProblemMatcher45 = Object2({ owner: String2(), severity: Optional(Enum(Severity45)), pattern: Array2(TProblemMatcherPattern45) });
 var TProblemPath45 = Object2({
@@ -79908,11 +79910,11 @@ var TBackgroundProcess34 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType34 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType34 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType34 || {});
 var TParallelismValue34 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification34 = Object2({
@@ -80191,18 +80193,18 @@ var TCustomStatusCheck34 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration34 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow34 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow34 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow34 || {});
 var TConcurrencyPool34 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow34) });
-var LeaseState34 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState34 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState34 || {});
 var TTiming45 = Object2({
   startTimestamp: Optional(Number2()),
@@ -80334,11 +80336,11 @@ var TArchiveStorageEntitlement9 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit34 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit34 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit34 || {});
 var TTTL34 = Object2({
   value: Number2(),
@@ -80572,12 +80574,12 @@ var TConcurrencyPoolState34 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState34)
 });
-var ApprovalRequestState34 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState34 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState34 || {});
 var TApprovalRequest34 = Object2({
   id: String2(),
@@ -80680,102 +80682,102 @@ var TEvaluatedString36 = TBrandedString();
 var TDateString47 = TBrandedString();
 var TEpochSeconds36 = TBrandedNumber();
 var TScopedTaskKey36 = TBrandedString();
-var TaskType35 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType35 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType35 || {});
-var TaskResultStatus35 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus35 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus35 || {});
-var TaskResultFailedSubStatus12 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus12 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus12 || {});
-var TaskExecutionStatus35 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus35 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus35 || {});
-var TaskExecutionWaitingSubStatus35 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus35 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus35 || {});
-var TaskExecutionAbortedSubStatus35 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus35 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus35 || {});
-var TaskExecutionFinishedSubStatus35 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus35 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus35 || {});
-var TaskAttemptReason35 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason35 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason35 || {});
-var DebugSessionOrigin9 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin9 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin9 || {});
-var DebugSessionEndReason9 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason9 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason9 || {});
 var TDebugSession9 = Object2({
   id: TDebugSessionId9,
@@ -80790,62 +80792,62 @@ var TDebugSession9 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus46 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus46 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus46 || {});
-var BackgroundProcessResultFinishedSubStatus46 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus46 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus46 || {});
-var RunResultStatus35 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus35 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus35 || {});
-var RunExecutionStatus35 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus35 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus35 || {});
-var RunExecutionWaitingSubStatus35 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus35 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus35 || {});
-var RunExecutionAbortedSubStatus35 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus35 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus35 || {});
-var RunExecutionFinishedSubStatus35 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus35 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus35 || {});
-var GitClonePatchStatus35 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus35 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus35 || {});
 var TSource35 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey46 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey46 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey46 || {});
 var TExpandedEnvDescriptor35 = Object2({ value: Optional(TTemplateString36), cacheKey: Enum(EnvironmentVariableCacheKey46) });
 var TEnvMergeStrategy35 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -80861,11 +80863,11 @@ var TProblemMatcherPattern46 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity46 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity46 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity46 || {});
 var TProblemMatcher46 = Object2({ owner: String2(), severity: Optional(Enum(Severity46)), pattern: Array2(TProblemMatcherPattern46) });
 var TProblemPath46 = Object2({
@@ -80882,11 +80884,11 @@ var TBackgroundProcess35 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType35 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType35 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType35 || {});
 var TParallelismValue35 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification35 = Object2({
@@ -81172,18 +81174,18 @@ var TCustomStatusCheck35 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration35 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow35 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow35 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow35 || {});
 var TConcurrencyPool35 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow35) });
-var LeaseState35 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState35 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState35 || {});
 var TTiming46 = Object2({
   startTimestamp: Optional(Number2()),
@@ -81315,11 +81317,11 @@ var TArchiveStorageEntitlement10 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit35 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit35 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit35 || {});
 var TTTL35 = Object2({
   value: Number2(),
@@ -81553,12 +81555,12 @@ var TConcurrencyPoolState35 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState35)
 });
-var ApprovalRequestState35 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState35 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState35 || {});
 var TApprovalRequest35 = Object2({
   id: String2(),
@@ -81661,102 +81663,102 @@ var TEvaluatedString37 = TBrandedString();
 var TDateString48 = TBrandedString();
 var TEpochSeconds37 = TBrandedNumber();
 var TScopedTaskKey37 = TBrandedString();
-var TaskType36 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType36 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType36 || {});
-var TaskResultStatus36 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus36 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus36 || {});
-var TaskResultFailedSubStatus13 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus13 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus13 || {});
-var TaskExecutionStatus36 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus36 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus36 || {});
-var TaskExecutionWaitingSubStatus36 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus36 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus36 || {});
-var TaskExecutionAbortedSubStatus36 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus36 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus36 || {});
-var TaskExecutionFinishedSubStatus36 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus36 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus36 || {});
-var TaskAttemptReason36 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason36 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason36 || {});
-var DebugSessionOrigin10 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin10 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin10 || {});
-var DebugSessionEndReason10 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason10 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason10 || {});
 var TDebugSession10 = Object2({
   id: TDebugSessionId10,
@@ -81771,62 +81773,62 @@ var TDebugSession10 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus47 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus47 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus47 || {});
-var BackgroundProcessResultFinishedSubStatus47 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus47 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus47 || {});
-var RunResultStatus36 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus36 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus36 || {});
-var RunExecutionStatus36 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus36 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus36 || {});
-var RunExecutionWaitingSubStatus36 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus36 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus36 || {});
-var RunExecutionAbortedSubStatus36 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus36 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus36 || {});
-var RunExecutionFinishedSubStatus36 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus36 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus36 || {});
-var GitClonePatchStatus36 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus36 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus36 || {});
 var TSource36 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey47 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey47 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey47 || {});
 var TExpandedEnvDescriptor36 = Object2({ value: Optional(TTemplateString37), cacheKey: Enum(EnvironmentVariableCacheKey47) });
 var TEnvMergeStrategy36 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -81842,11 +81844,11 @@ var TProblemMatcherPattern47 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity47 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity47 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity47 || {});
 var TProblemMatcher47 = Object2({ owner: String2(), severity: Optional(Enum(Severity47)), pattern: Array2(TProblemMatcherPattern47) });
 var TProblemPath47 = Object2({
@@ -81863,11 +81865,11 @@ var TBackgroundProcess36 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType36 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType36 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType36 || {});
 var TParallelismValue36 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification36 = Object2({
@@ -82153,18 +82155,18 @@ var TCustomStatusCheck36 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration36 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow36 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow36 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow36 || {});
 var TConcurrencyPool36 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow36) });
-var LeaseState36 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState36 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState36 || {});
 var TTiming47 = Object2({
   startTimestamp: Optional(Number2()),
@@ -82328,11 +82330,11 @@ var TArchiveStorageEntitlement11 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit36 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit36 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit36 || {});
 var TTTL36 = Object2({
   value: Number2(),
@@ -82567,12 +82569,12 @@ var TConcurrencyPoolState36 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState36)
 });
-var ApprovalRequestState36 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState36 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState36 || {});
 var TApprovalRequest36 = Object2({
   id: String2(),
@@ -82675,102 +82677,102 @@ var TEvaluatedString38 = TBrandedString();
 var TDateString49 = TBrandedString();
 var TEpochSeconds38 = TBrandedNumber();
 var TScopedTaskKey38 = TBrandedString();
-var TaskType37 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType37 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType37 || {});
-var TaskResultStatus37 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus37 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus37 || {});
-var TaskResultFailedSubStatus14 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus14 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus14 || {});
-var TaskExecutionStatus37 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus37 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus37 || {});
-var TaskExecutionWaitingSubStatus37 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus37 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus37 || {});
-var TaskExecutionAbortedSubStatus37 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus37 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus37 || {});
-var TaskExecutionFinishedSubStatus37 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus37 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus37 || {});
-var TaskAttemptReason37 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason37 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason37 || {});
-var DebugSessionOrigin11 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin11 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin11 || {});
-var DebugSessionEndReason11 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason11 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason11 || {});
 var TDebugSession11 = Object2({
   id: TDebugSessionId11,
@@ -82785,62 +82787,62 @@ var TDebugSession11 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus48 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus48 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus48 || {});
-var BackgroundProcessResultFinishedSubStatus48 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus48 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus48 || {});
-var RunResultStatus37 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus37 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus37 || {});
-var RunExecutionStatus37 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus37 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus37 || {});
-var RunExecutionWaitingSubStatus37 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus37 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus37 || {});
-var RunExecutionAbortedSubStatus37 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus37 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus37 || {});
-var RunExecutionFinishedSubStatus37 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus37 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus37 || {});
-var GitClonePatchStatus37 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus37 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus37 || {});
 var TSource37 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey48 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey48 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey48 || {});
 var TExpandedEnvDescriptor37 = Object2({ value: Optional(TTemplateString38), cacheKey: Enum(EnvironmentVariableCacheKey48) });
 var TEnvMergeStrategy37 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -82856,11 +82858,11 @@ var TProblemMatcherPattern48 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity48 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity48 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity48 || {});
 var TProblemMatcher48 = Object2({ owner: String2(), severity: Optional(Enum(Severity48)), pattern: Array2(TProblemMatcherPattern48) });
 var TProblemPath48 = Object2({
@@ -82877,11 +82879,11 @@ var TBackgroundProcess37 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType37 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType37 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType37 || {});
 var TParallelismValue37 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification37 = Object2({
@@ -83168,18 +83170,18 @@ var TCustomStatusCheck37 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration37 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow37 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow37 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow37 || {});
 var TConcurrencyPool37 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow37) });
-var LeaseState37 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState37 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState37 || {});
 var TTiming48 = Object2({
   startTimestamp: Optional(Number2()),
@@ -83344,11 +83346,11 @@ var TArchiveStorageEntitlement12 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit37 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit37 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit37 || {});
 var TTTL37 = Object2({
   value: Number2(),
@@ -83583,12 +83585,12 @@ var TConcurrencyPoolState37 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState37)
 });
-var ApprovalRequestState37 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState37 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState37 || {});
 var TApprovalRequest37 = Object2({
   id: String2(),
@@ -83691,102 +83693,102 @@ var TEvaluatedString39 = TBrandedString();
 var TDateString50 = TBrandedString();
 var TEpochSeconds39 = TBrandedNumber();
 var TScopedTaskKey39 = TBrandedString();
-var TaskType38 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType38 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType38 || {});
-var TaskResultStatus38 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus38 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus38 || {});
-var TaskResultFailedSubStatus15 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus15 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus15 || {});
-var TaskExecutionStatus38 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus38 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus38 || {});
-var TaskExecutionWaitingSubStatus38 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus38 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus38 || {});
-var TaskExecutionAbortedSubStatus38 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus38 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus38 || {});
-var TaskExecutionFinishedSubStatus38 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus38 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus38 || {});
-var TaskAttemptReason38 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason38 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason38 || {});
-var DebugSessionOrigin12 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin12 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin12 || {});
-var DebugSessionEndReason12 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason12 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason12 || {});
 var TDebugSession12 = Object2({
   id: TDebugSessionId12,
@@ -83801,62 +83803,62 @@ var TDebugSession12 = Object2({
   sessionTimeoutMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus49 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus49 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus49 || {});
-var BackgroundProcessResultFinishedSubStatus49 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus49 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus49 || {});
-var RunResultStatus38 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus38 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus38 || {});
-var RunExecutionStatus38 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus38 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus38 || {});
-var RunExecutionWaitingSubStatus38 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus38 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus38 || {});
-var RunExecutionAbortedSubStatus38 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus38 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus38 || {});
-var RunExecutionFinishedSubStatus38 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus38 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus38 || {});
-var GitClonePatchStatus38 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus38 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus38 || {});
 var TSource38 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey49 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey49 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey49 || {});
 var TExpandedEnvDescriptor38 = Object2({ value: Optional(TTemplateString39), cacheKey: Enum(EnvironmentVariableCacheKey49) });
 var TEnvMergeStrategy38 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -83872,11 +83874,11 @@ var TProblemMatcherPattern49 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity49 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity49 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity49 || {});
 var TProblemMatcher49 = Object2({ owner: String2(), severity: Optional(Enum(Severity49)), pattern: Array2(TProblemMatcherPattern49) });
 var TProblemPath49 = Object2({
@@ -83893,11 +83895,11 @@ var TBackgroundProcess38 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType38 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType38 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType38 || {});
 var TParallelismValue38 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification38 = Object2({
@@ -84184,18 +84186,18 @@ var TCustomStatusCheck38 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration38 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow38 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow38 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow38 || {});
 var TConcurrencyPool38 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow38) });
-var LeaseState38 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState38 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState38 || {});
 var TTiming49 = Object2({
   startTimestamp: Optional(Number2()),
@@ -84360,11 +84362,11 @@ var TArchiveStorageEntitlement13 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit38 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit38 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit38 || {});
 var TTTL38 = Object2({
   value: Number2(),
@@ -84599,12 +84601,12 @@ var TConcurrencyPoolState38 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState38)
 });
-var ApprovalRequestState38 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState38 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState38 || {});
 var TApprovalRequest38 = Object2({
   id: String2(),
@@ -84707,102 +84709,102 @@ var TEvaluatedString40 = TBrandedString();
 var TDateString51 = TBrandedString();
 var TEpochSeconds40 = TBrandedNumber();
 var TScopedTaskKey40 = TBrandedString();
-var TaskType39 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType39 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType39 || {});
-var TaskResultStatus39 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus39 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus39 || {});
-var TaskResultFailedSubStatus16 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus16 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus16 || {});
-var TaskExecutionStatus39 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus39 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus39 || {});
-var TaskExecutionWaitingSubStatus39 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus39 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus39 || {});
-var TaskExecutionAbortedSubStatus39 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus39 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus39 || {});
-var TaskExecutionFinishedSubStatus39 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus39 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus39 || {});
-var TaskAttemptReason39 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason39 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason39 || {});
-var DebugSessionOrigin13 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin13 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin13 || {});
-var DebugSessionEndReason13 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason13 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason13 || {});
 var TDebugSession13 = Object2({
   id: TDebugSessionId13,
@@ -84816,62 +84818,62 @@ var TDebugSession13 = Object2({
   maxDurationMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus50 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus50 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus50 || {});
-var BackgroundProcessResultFinishedSubStatus50 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus50 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus50 || {});
-var RunResultStatus39 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus39 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus39 || {});
-var RunExecutionStatus39 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus39 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus39 || {});
-var RunExecutionWaitingSubStatus39 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus39 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus39 || {});
-var RunExecutionAbortedSubStatus39 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus39 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus39 || {});
-var RunExecutionFinishedSubStatus39 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus39 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus39 || {});
-var GitClonePatchStatus39 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus39 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus39 || {});
 var TSource39 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey50 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey50 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey50 || {});
 var TExpandedEnvDescriptor39 = Object2({ value: Optional(TTemplateString40), cacheKey: Enum(EnvironmentVariableCacheKey50) });
 var TEnvMergeStrategy39 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -84887,11 +84889,11 @@ var TProblemMatcherPattern50 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity50 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity50 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity50 || {});
 var TProblemMatcher50 = Object2({ owner: String2(), severity: Optional(Enum(Severity50)), pattern: Array2(TProblemMatcherPattern50) });
 var TProblemPath50 = Object2({
@@ -84908,11 +84910,11 @@ var TBackgroundProcess39 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType39 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType39 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType39 || {});
 var TParallelismValue39 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification39 = Object2({
@@ -85199,18 +85201,18 @@ var TCustomStatusCheck39 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration39 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow39 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow39 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow39 || {});
 var TConcurrencyPool39 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow39) });
-var LeaseState39 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState39 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState39 || {});
 var TTiming50 = Object2({
   startTimestamp: Optional(Number2()),
@@ -85375,11 +85377,11 @@ var TArchiveStorageEntitlement14 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit39 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit39 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit39 || {});
 var TTTL39 = Object2({
   value: Number2(),
@@ -85614,12 +85616,12 @@ var TConcurrencyPoolState39 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState39)
 });
-var ApprovalRequestState39 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState39 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState39 || {});
 var TApprovalRequest39 = Object2({
   id: String2(),
@@ -85722,102 +85724,102 @@ var TEvaluatedString41 = TBrandedString();
 var TDateString52 = TBrandedString();
 var TEpochSeconds41 = TBrandedNumber();
 var TScopedTaskKey41 = TBrandedString();
-var TaskType40 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType40 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType40 || {});
-var TaskResultStatus40 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus40 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus40 || {});
-var TaskResultFailedSubStatus17 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus17 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus17 || {});
-var TaskExecutionStatus40 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus40 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus40 || {});
-var TaskExecutionWaitingSubStatus40 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus40 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus40 || {});
-var TaskExecutionAbortedSubStatus40 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus40 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus40 || {});
-var TaskExecutionFinishedSubStatus40 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus40 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus40 || {});
-var TaskAttemptReason40 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason40 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason40 || {});
-var DebugSessionOrigin14 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin14 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin14 || {});
-var DebugSessionEndReason14 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason14 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason14 || {});
 var TDebugSession14 = Object2({
   id: TDebugSessionId14,
@@ -85831,62 +85833,62 @@ var TDebugSession14 = Object2({
   maxDurationMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus51 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus51 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus51 || {});
-var BackgroundProcessResultFinishedSubStatus51 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus51 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus51 || {});
-var RunResultStatus40 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus40 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus40 || {});
-var RunExecutionStatus40 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus40 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus40 || {});
-var RunExecutionWaitingSubStatus40 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus40 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus40 || {});
-var RunExecutionAbortedSubStatus40 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus40 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus40 || {});
-var RunExecutionFinishedSubStatus40 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus40 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus40 || {});
-var GitClonePatchStatus40 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus40 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus40 || {});
 var TSource40 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey51 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey51 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey51 || {});
 var TExpandedEnvDescriptor40 = Object2({ value: Optional(TTemplateString41), cacheKey: Enum(EnvironmentVariableCacheKey51) });
 var TEnvMergeStrategy40 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -85902,11 +85904,11 @@ var TProblemMatcherPattern51 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity51 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity51 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity51 || {});
 var TProblemMatcher51 = Object2({ owner: String2(), severity: Optional(Enum(Severity51)), pattern: Array2(TProblemMatcherPattern51) });
 var TProblemPath51 = Object2({
@@ -85923,11 +85925,11 @@ var TBackgroundProcess40 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType40 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType40 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType40 || {});
 var TParallelismValue40 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification40 = Object2({
@@ -86222,18 +86224,18 @@ var TCustomStatusCheck40 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration40 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow40 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow40 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow40 || {});
 var TConcurrencyPool40 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow40) });
-var LeaseState40 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState40 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState40 || {});
 var TTiming51 = Object2({
   startTimestamp: Optional(Number2()),
@@ -86430,11 +86432,11 @@ var TArchiveStorageEntitlement15 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit40 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit40 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit40 || {});
 var TTTL40 = Object2({
   value: Number2(),
@@ -86671,12 +86673,12 @@ var TConcurrencyPoolState40 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState40)
 });
-var ApprovalRequestState40 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState40 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState40 || {});
 var TApprovalRequest40 = Object2({
   id: String2(),
@@ -86779,102 +86781,102 @@ var TEvaluatedString42 = TBrandedString();
 var TDateString53 = TBrandedString();
 var TEpochSeconds42 = TBrandedNumber();
 var TScopedTaskKey42 = TBrandedString();
-var TaskType41 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType41 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType41 || {});
-var TaskResultStatus41 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus41 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus41 || {});
-var TaskResultFailedSubStatus18 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus18 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus18 || {});
-var TaskExecutionStatus41 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus41 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus41 || {});
-var TaskExecutionWaitingSubStatus41 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus41 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus41 || {});
-var TaskExecutionAbortedSubStatus41 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus41 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus41 || {});
-var TaskExecutionFinishedSubStatus41 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus41 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus41 || {});
-var TaskAttemptReason41 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason41 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason41 || {});
-var DebugSessionOrigin15 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin15 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin15 || {});
-var DebugSessionEndReason15 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason15 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason15 || {});
 var TDebugSession15 = Object2({
   id: TDebugSessionId15,
@@ -86888,62 +86890,62 @@ var TDebugSession15 = Object2({
   maxDurationMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus52 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus52 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus52 || {});
-var BackgroundProcessResultFinishedSubStatus52 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus52 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus52 || {});
-var RunResultStatus41 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus41 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus41 || {});
-var RunExecutionStatus41 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus41 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus41 || {});
-var RunExecutionWaitingSubStatus41 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus41 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus41 || {});
-var RunExecutionAbortedSubStatus41 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus41 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus41 || {});
-var RunExecutionFinishedSubStatus41 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus41 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus41 || {});
-var GitClonePatchStatus41 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus41 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus41 || {});
 var TSource41 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey52 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey52 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey52 || {});
 var TExpandedEnvDescriptor41 = Object2({ value: Optional(TTemplateString42), cacheKey: Enum(EnvironmentVariableCacheKey52) });
 var TEnvMergeStrategy41 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -86959,11 +86961,11 @@ var TProblemMatcherPattern52 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity52 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity52 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity52 || {});
 var TProblemMatcher52 = Object2({ owner: String2(), severity: Optional(Enum(Severity52)), pattern: Array2(TProblemMatcherPattern52) });
 var TProblemPath52 = Object2({
@@ -86980,11 +86982,11 @@ var TBackgroundProcess41 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType41 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType41 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType41 || {});
 var TParallelismValue41 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification41 = Object2({
@@ -87279,18 +87281,18 @@ var TCustomStatusCheck41 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration41 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow41 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow41 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow41 || {});
 var TConcurrencyPool41 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow41) });
-var LeaseState41 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState41 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState41 || {});
 var TTiming52 = Object2({
   startTimestamp: Optional(Number2()),
@@ -87487,11 +87489,11 @@ var TArchiveStorageEntitlement16 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit41 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit41 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit41 || {});
 var TTTL41 = Object2({
   value: Number2(),
@@ -87728,12 +87730,12 @@ var TConcurrencyPoolState41 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState41)
 });
-var ApprovalRequestState41 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState41 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState41 || {});
 var TApprovalRequest41 = Object2({
   id: String2(),
@@ -87845,102 +87847,102 @@ var TEvaluatedString43 = TBrandedString();
 var TDateString54 = TBrandedString();
 var TEpochSeconds43 = TBrandedNumber();
 var TScopedTaskKey43 = TBrandedString();
-var TaskType42 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType42 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType42 || {});
-var TaskResultStatus42 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus42 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus42 || {});
-var TaskResultFailedSubStatus19 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus19 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus19 || {});
-var TaskExecutionStatus42 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus42 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus42 || {});
-var TaskExecutionWaitingSubStatus42 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus42 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus42 || {});
-var TaskExecutionAbortedSubStatus42 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus42 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus42 || {});
-var TaskExecutionFinishedSubStatus42 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus42 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus42 || {});
-var TaskAttemptReason42 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason42 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason42 || {});
-var DebugSessionOrigin16 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin16 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin16 || {});
-var DebugSessionEndReason16 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason16 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason16 || {});
 var TDebugSession16 = Object2({
   id: TDebugSessionId16,
@@ -87954,62 +87956,62 @@ var TDebugSession16 = Object2({
   maxDurationMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus53 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus53 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus53 || {});
-var BackgroundProcessResultFinishedSubStatus53 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus53 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus53 || {});
-var RunResultStatus42 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus42 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus42 || {});
-var RunExecutionStatus42 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus42 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus42 || {});
-var RunExecutionWaitingSubStatus42 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus42 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus42 || {});
-var RunExecutionAbortedSubStatus42 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus42 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus42 || {});
-var RunExecutionFinishedSubStatus42 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus42 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus42 || {});
-var GitClonePatchStatus42 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus42 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus42 || {});
 var TSource42 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey53 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey53 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey53 || {});
 var TExpandedEnvDescriptor42 = Object2({ value: Optional(TTemplateString43), cacheKey: Enum(EnvironmentVariableCacheKey53) });
 var TEnvMergeStrategy42 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -88025,11 +88027,11 @@ var TProblemMatcherPattern53 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity53 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity53 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity53 || {});
 var TProblemMatcher53 = Object2({ owner: String2(), severity: Optional(Enum(Severity53)), pattern: Array2(TProblemMatcherPattern53) });
 var TProblemPath53 = Object2({
@@ -88046,11 +88048,11 @@ var TBackgroundProcess42 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType42 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType42 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType42 || {});
 var TParallelismValue42 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification42 = Object2({
@@ -88342,18 +88344,18 @@ var TCustomStatusCheck42 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration42 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow42 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow42 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow42 || {});
 var TConcurrencyPool42 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow42) });
-var LeaseState42 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState42 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState42 || {});
 var TTiming53 = Object2({
   startTimestamp: Optional(Number2()),
@@ -88550,11 +88552,11 @@ var TArchiveStorageEntitlement17 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit42 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit42 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit42 || {});
 var TTTL42 = Object2({
   value: Number2(),
@@ -88791,12 +88793,12 @@ var TConcurrencyPoolState42 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState42)
 });
-var ApprovalRequestState42 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState42 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState42 || {});
 var TApprovalRequest42 = Object2({
   id: String2(),
@@ -88908,102 +88910,102 @@ var TEvaluatedString44 = TBrandedString();
 var TDateString55 = TBrandedString();
 var TEpochSeconds44 = TBrandedNumber();
 var TScopedTaskKey44 = TBrandedString();
-var TaskType43 = /* @__PURE__ */ ((TaskType44) => {
-  TaskType44["Command"] = "command";
-  TaskType44["Leaf"] = "leaf";
-  TaskType44["EmbeddedRun"] = "embedded-run";
-  TaskType44["LocalPackage"] = "local-package";
-  TaskType44["Parallel"] = "parallel";
-  TaskType44["AmbiguousCall"] = "ambiguous-call";
-  TaskType44["AppConfig"] = "app-config";
-  return TaskType44;
+var TaskType43 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
 })(TaskType43 || {});
-var TaskResultStatus43 = /* @__PURE__ */ ((TaskResultStatus44) => {
-  TaskResultStatus44["Succeeded"] = "succeeded";
-  TaskResultStatus44["Failed"] = "failed";
-  TaskResultStatus44["NoResult"] = "no_result";
-  return TaskResultStatus44;
+var TaskResultStatus43 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
 })(TaskResultStatus43 || {});
-var TaskResultFailedSubStatus20 = /* @__PURE__ */ ((TaskResultFailedSubStatus21) => {
-  TaskResultFailedSubStatus21["ExecutionFailed"] = "execution_failed";
-  TaskResultFailedSubStatus21["Cancelled"] = "cancelled";
-  TaskResultFailedSubStatus21["TimedOut"] = "timed_out";
-  TaskResultFailedSubStatus21["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskResultFailedSubStatus21["BackgroundProcessFailed"] = "background_process_failed";
-  TaskResultFailedSubStatus21["BeforeHookFailed"] = "before_hook_failed";
-  TaskResultFailedSubStatus21["AfterHookFailed"] = "after_hook_failed";
-  TaskResultFailedSubStatus21["SpotInterrupted"] = "spot_interrupted";
-  TaskResultFailedSubStatus21["AppFailed"] = "app_failed";
-  TaskResultFailedSubStatus21["InternalBug"] = "internal_bug";
-  TaskResultFailedSubStatus21["UserErrorOccurred"] = "user_error_occurred";
-  TaskResultFailedSubStatus21["NotApplicable"] = "not_applicable";
-  return TaskResultFailedSubStatus21;
+var TaskResultFailedSubStatus20 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
 })(TaskResultFailedSubStatus20 || {});
-var TaskExecutionStatus43 = /* @__PURE__ */ ((TaskExecutionStatus44) => {
-  TaskExecutionStatus44["NotGenerated"] = "not_generated";
-  TaskExecutionStatus44["Waiting"] = "waiting";
-  TaskExecutionStatus44["Ready"] = "ready";
-  TaskExecutionStatus44["Running"] = "running";
-  TaskExecutionStatus44["Finished"] = "finished";
-  TaskExecutionStatus44["Aborted"] = "aborted";
-  TaskExecutionStatus44["Skipped"] = "skipped";
-  TaskExecutionStatus44["UserError"] = "user_error";
-  return TaskExecutionStatus44;
+var TaskExecutionStatus43 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
 })(TaskExecutionStatus43 || {});
-var TaskExecutionWaitingSubStatus43 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus44) => {
-  TaskExecutionWaitingSubStatus44["NotReady"] = "not_ready";
-  TaskExecutionWaitingSubStatus44["WaitingForApproval"] = "waiting_for_approval";
-  TaskExecutionWaitingSubStatus44["WaitingForApp"] = "waiting_for_app";
-  TaskExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  TaskExecutionWaitingSubStatus44["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
-  TaskExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionWaitingSubStatus44;
+var TaskExecutionWaitingSubStatus43 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
 })(TaskExecutionWaitingSubStatus43 || {});
-var TaskExecutionAbortedSubStatus43 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus44) => {
-  TaskExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  TaskExecutionAbortedSubStatus44["SubtasksRetried"] = "subtasks_retried";
-  TaskExecutionAbortedSubStatus44["Terminated"] = "terminated";
-  TaskExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  TaskExecutionAbortedSubStatus44["ApprovalRequestDenied"] = "approval_request_denied";
-  TaskExecutionAbortedSubStatus44["BackgroundProcessFailure"] = "background_process_failure";
-  TaskExecutionAbortedSubStatus44["BeforeHookFailure"] = "before_hook_failure";
-  TaskExecutionAbortedSubStatus44["AfterHookFailure"] = "after_hook_failure";
-  TaskExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  TaskExecutionAbortedSubStatus44["SpotInterrupted"] = "spot_interrupted";
-  TaskExecutionAbortedSubStatus44["AppFailure"] = "app_failure";
-  TaskExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionAbortedSubStatus44;
+var TaskExecutionAbortedSubStatus43 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
 })(TaskExecutionAbortedSubStatus43 || {});
-var TaskExecutionFinishedSubStatus43 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus44) => {
-  TaskExecutionFinishedSubStatus44["CacheHit"] = "cache_hit";
-  TaskExecutionFinishedSubStatus44["Executed"] = "executed";
-  TaskExecutionFinishedSubStatus44["SandboxClosed"] = "sandbox_closed";
-  TaskExecutionFinishedSubStatus44["AppStopped"] = "app_stopped";
-  TaskExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return TaskExecutionFinishedSubStatus44;
+var TaskExecutionFinishedSubStatus43 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
 })(TaskExecutionFinishedSubStatus43 || {});
-var TaskAttemptReason43 = /* @__PURE__ */ ((TaskAttemptReason44) => {
-  TaskAttemptReason44["Unknown"] = "unknown";
-  TaskAttemptReason44["Initial"] = "initial";
-  TaskAttemptReason44["Retried"] = "retried";
-  TaskAttemptReason44["SubtaskRetried"] = "subtask_retried";
-  TaskAttemptReason44["DependencyRetried"] = "dependency_retried";
-  return TaskAttemptReason44;
+var TaskAttemptReason43 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
 })(TaskAttemptReason43 || {});
-var DebugSessionOrigin17 = /* @__PURE__ */ ((DebugSessionOrigin18) => {
-  DebugSessionOrigin18["RetryStart"] = "retry-start";
-  DebugSessionOrigin18["RetryEnd"] = "retry-end";
-  DebugSessionOrigin18["RwxBreakpoint"] = "rwx-breakpoint";
-  DebugSessionOrigin18["Attached"] = "attached";
-  DebugSessionOrigin18["Legacy"] = "legacy";
-  return DebugSessionOrigin18;
+var DebugSessionOrigin17 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
 })(DebugSessionOrigin17 || {});
-var DebugSessionEndReason17 = /* @__PURE__ */ ((DebugSessionEndReason18) => {
-  DebugSessionEndReason18["Ended"] = "ended";
-  DebugSessionEndReason18["TaskCompleted"] = "task-completed";
-  DebugSessionEndReason18["TaskCancelled"] = "task-cancelled";
-  DebugSessionEndReason18["TaskTimedOut"] = "task-timed-out";
-  return DebugSessionEndReason18;
+var DebugSessionEndReason17 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
 })(DebugSessionEndReason17 || {});
 var TDebugSession17 = Object2({
   id: TDebugSessionId17,
@@ -89017,62 +89019,62 @@ var TDebugSession17 = Object2({
   maxDurationMinutes: Optional(Number2()),
   requestedByName: Optional(String2())
 });
-var BackgroundProcessResultStatus54 = /* @__PURE__ */ ((BackgroundProcessResultStatus55) => {
-  BackgroundProcessResultStatus55["Skipped"] = "skipped";
-  BackgroundProcessResultStatus55["Finished"] = "finished";
-  BackgroundProcessResultStatus55["ReadyCheckTimedOut"] = "ready_check_timed_out";
-  return BackgroundProcessResultStatus55;
+var BackgroundProcessResultStatus54 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
 })(BackgroundProcessResultStatus54 || {});
-var BackgroundProcessResultFinishedSubStatus54 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus55) => {
-  BackgroundProcessResultFinishedSubStatus55["Stopped"] = "stopped";
-  BackgroundProcessResultFinishedSubStatus55["Signaled"] = "signaled";
-  BackgroundProcessResultFinishedSubStatus55["NotApplicable"] = "not_applicable";
-  return BackgroundProcessResultFinishedSubStatus55;
+var BackgroundProcessResultFinishedSubStatus54 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
 })(BackgroundProcessResultFinishedSubStatus54 || {});
-var RunResultStatus43 = /* @__PURE__ */ ((RunResultStatus44) => {
-  RunResultStatus44["Succeeded"] = "succeeded";
-  RunResultStatus44["Failed"] = "failed";
-  RunResultStatus44["Debugged"] = "debugged";
-  RunResultStatus44["Sandboxed"] = "sandboxed";
-  RunResultStatus44["NoResult"] = "no_result";
-  return RunResultStatus44;
+var RunResultStatus43 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
 })(RunResultStatus43 || {});
-var RunExecutionStatus43 = /* @__PURE__ */ ((RunExecutionStatus44) => {
-  RunExecutionStatus44["Waiting"] = "waiting";
-  RunExecutionStatus44["InProgress"] = "in_progress";
-  RunExecutionStatus44["Finished"] = "finished";
-  RunExecutionStatus44["Aborted"] = "aborted";
-  return RunExecutionStatus44;
+var RunExecutionStatus43 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
 })(RunExecutionStatus43 || {});
-var RunExecutionWaitingSubStatus43 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus44) => {
-  RunExecutionWaitingSubStatus44["WaitingForManualStart"] = "waiting_for_manual_start";
-  RunExecutionWaitingSubStatus44["WaitingForLease"] = "waiting_for_lease";
-  RunExecutionWaitingSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionWaitingSubStatus44;
+var RunExecutionWaitingSubStatus43 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
 })(RunExecutionWaitingSubStatus43 || {});
-var RunExecutionAbortedSubStatus43 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus44) => {
-  RunExecutionAbortedSubStatus44["Cancelled"] = "cancelled";
-  RunExecutionAbortedSubStatus44["TimedOut"] = "timed_out";
-  RunExecutionAbortedSubStatus44["InternalFailure"] = "internal_failure";
-  RunExecutionAbortedSubStatus44["InitializationError"] = "initialization_error";
-  RunExecutionAbortedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionAbortedSubStatus44;
+var RunExecutionAbortedSubStatus43 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
 })(RunExecutionAbortedSubStatus43 || {});
-var RunExecutionFinishedSubStatus43 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus44) => {
-  RunExecutionFinishedSubStatus44["NotApplicable"] = "not_applicable";
-  return RunExecutionFinishedSubStatus44;
+var RunExecutionFinishedSubStatus43 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
 })(RunExecutionFinishedSubStatus43 || {});
-var GitClonePatchStatus43 = /* @__PURE__ */ ((GitClonePatchStatus44) => {
-  GitClonePatchStatus44["Pending"] = "pending";
-  GitClonePatchStatus44["Succeeded"] = "succeeded";
-  GitClonePatchStatus44["Failed"] = "failed";
-  return GitClonePatchStatus44;
+var GitClonePatchStatus43 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
 })(GitClonePatchStatus43 || {});
 var TSource43 = Object2({ definition: String2(), start: Number2(), end: Number2() });
-var EnvironmentVariableCacheKey54 = /* @__PURE__ */ ((EnvironmentVariableCacheKey55) => {
-  EnvironmentVariableCacheKey55["Included"] = "included";
-  EnvironmentVariableCacheKey55["Excluded"] = "excluded";
-  return EnvironmentVariableCacheKey55;
+var EnvironmentVariableCacheKey54 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
 })(EnvironmentVariableCacheKey54 || {});
 var TExpandedEnvDescriptor43 = Object2({ value: Optional(TTemplateString44), cacheKey: Enum(EnvironmentVariableCacheKey54) });
 var TEnvMergeStrategy43 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
@@ -89088,11 +89090,11 @@ var TProblemMatcherPattern54 = Object2({
   message: Optional(Integer()),
   loop: Optional(Boolean2())
 });
-var Severity54 = /* @__PURE__ */ ((Severity55) => {
-  Severity55["Error"] = "error";
-  Severity55["Warning"] = "warning";
-  Severity55["Info"] = "info";
-  return Severity55;
+var Severity54 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
 })(Severity54 || {});
 var TProblemMatcher54 = Object2({ owner: String2(), severity: Optional(Enum(Severity54)), pattern: Array2(TProblemMatcherPattern54) });
 var TProblemPath54 = Object2({
@@ -89109,11 +89111,11 @@ var TBackgroundProcess43 = Object2({
   after: Optional(Array2(String2())),
   terminateGracePeriodSeconds: Number2()
 });
-var ParallelismType43 = /* @__PURE__ */ ((ParallelismType44) => {
-  ParallelismType44["Matrix"] = "matrix";
-  ParallelismType44["Total"] = "total";
-  ParallelismType44["Values"] = "values";
-  return ParallelismType44;
+var ParallelismType43 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
 })(ParallelismType43 || {});
 var TParallelismValue43 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
 var TAgentSpecification43 = Object2({
@@ -89405,18 +89407,18 @@ var TCustomStatusCheck43 = Object2({
   computedDescription: Optional(String2())
 });
 var TRunToolCacheConfiguration43 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
-var OnOverflow43 = /* @__PURE__ */ ((OnOverflow44) => {
-  OnOverflow44["CancelWaiting"] = "cancel-waiting";
-  OnOverflow44["CancelRunning"] = "cancel-running";
-  OnOverflow44["Queue"] = "queue";
-  return OnOverflow44;
+var OnOverflow43 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
 })(OnOverflow43 || {});
 var TConcurrencyPool43 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow43) });
-var LeaseState43 = /* @__PURE__ */ ((LeaseState44) => {
-  LeaseState44["Requested"] = "requested";
-  LeaseState44["Acquired"] = "acquired";
-  LeaseState44["Revoked"] = "revoked";
-  return LeaseState44;
+var LeaseState43 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
 })(LeaseState43 || {});
 var TTiming54 = Object2({
   startTimestamp: Optional(Number2()),
@@ -89633,11 +89635,11 @@ var TArchiveStorageEntitlement18 = Object2({
   guaranteedScratchBytes: Number2(),
   minimumScratchBytes: Number2()
 });
-var TTLUnit43 = /* @__PURE__ */ ((TTLUnit44) => {
-  TTLUnit44["Minutes"] = "minutes";
-  TTLUnit44["Hours"] = "hours";
-  TTLUnit44["Days"] = "days";
-  return TTLUnit44;
+var TTLUnit43 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
 })(TTLUnit43 || {});
 var TTTL43 = Object2({
   value: Number2(),
@@ -89874,12 +89876,12 @@ var TConcurrencyPoolState43 = Object2({
   leaseId: Optional(String2()),
   leaseState: Enum(LeaseState43)
 });
-var ApprovalRequestState43 = /* @__PURE__ */ ((ApprovalRequestState44) => {
-  ApprovalRequestState44["Pending"] = "pending";
-  ApprovalRequestState44["Rescinded"] = "rescinded";
-  ApprovalRequestState44["Approved"] = "approved";
-  ApprovalRequestState44["Denied"] = "denied";
-  return ApprovalRequestState44;
+var ApprovalRequestState43 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
 })(ApprovalRequestState43 || {});
 var TApprovalRequest43 = Object2({
   id: String2(),
@@ -89981,9 +89983,1095 @@ var TRun43 = Object2({
   warningMessages: Array2(TUserMessage)
 });
 
+// packages/schema/persisted/versioned/v144.ts
+var ThisSchemaVersion44 = "v144" /* V144 */;
+var TTaskOrGroupId56 = TBrandedString();
+var TGraphNodeId45 = TBrandedString();
+var TDebugSessionId18 = TBrandedString({ pattern: "^[0-9a-f]{32}$" });
+var TTemplateString45 = TBrandedString();
+var TEvaluatedString45 = TBrandedString();
+var TDateString56 = TBrandedString();
+var TEpochSeconds45 = TBrandedNumber();
+var TScopedTaskKey45 = TBrandedString();
+var TaskType44 = /* @__PURE__ */ ((TaskType45) => {
+  TaskType45["Command"] = "command";
+  TaskType45["Leaf"] = "leaf";
+  TaskType45["EmbeddedRun"] = "embedded-run";
+  TaskType45["LocalPackage"] = "local-package";
+  TaskType45["Parallel"] = "parallel";
+  TaskType45["AmbiguousCall"] = "ambiguous-call";
+  TaskType45["AppConfig"] = "app-config";
+  return TaskType45;
+})(TaskType44 || {});
+var TaskResultStatus44 = /* @__PURE__ */ ((TaskResultStatus45) => {
+  TaskResultStatus45["Succeeded"] = "succeeded";
+  TaskResultStatus45["Failed"] = "failed";
+  TaskResultStatus45["NoResult"] = "no_result";
+  return TaskResultStatus45;
+})(TaskResultStatus44 || {});
+var TaskResultFailedSubStatus21 = /* @__PURE__ */ ((TaskResultFailedSubStatus22) => {
+  TaskResultFailedSubStatus22["ExecutionFailed"] = "execution_failed";
+  TaskResultFailedSubStatus22["Cancelled"] = "cancelled";
+  TaskResultFailedSubStatus22["TimedOut"] = "timed_out";
+  TaskResultFailedSubStatus22["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskResultFailedSubStatus22["BackgroundProcessFailed"] = "background_process_failed";
+  TaskResultFailedSubStatus22["BeforeHookFailed"] = "before_hook_failed";
+  TaskResultFailedSubStatus22["AfterHookFailed"] = "after_hook_failed";
+  TaskResultFailedSubStatus22["SpotInterrupted"] = "spot_interrupted";
+  TaskResultFailedSubStatus22["AppFailed"] = "app_failed";
+  TaskResultFailedSubStatus22["InternalBug"] = "internal_bug";
+  TaskResultFailedSubStatus22["UserErrorOccurred"] = "user_error_occurred";
+  TaskResultFailedSubStatus22["NotApplicable"] = "not_applicable";
+  return TaskResultFailedSubStatus22;
+})(TaskResultFailedSubStatus21 || {});
+var TaskExecutionStatus44 = /* @__PURE__ */ ((TaskExecutionStatus45) => {
+  TaskExecutionStatus45["NotGenerated"] = "not_generated";
+  TaskExecutionStatus45["Waiting"] = "waiting";
+  TaskExecutionStatus45["Ready"] = "ready";
+  TaskExecutionStatus45["Running"] = "running";
+  TaskExecutionStatus45["Finished"] = "finished";
+  TaskExecutionStatus45["Aborted"] = "aborted";
+  TaskExecutionStatus45["Skipped"] = "skipped";
+  TaskExecutionStatus45["UserError"] = "user_error";
+  return TaskExecutionStatus45;
+})(TaskExecutionStatus44 || {});
+var TaskExecutionWaitingSubStatus44 = /* @__PURE__ */ ((TaskExecutionWaitingSubStatus45) => {
+  TaskExecutionWaitingSubStatus45["NotReady"] = "not_ready";
+  TaskExecutionWaitingSubStatus45["WaitingForApproval"] = "waiting_for_approval";
+  TaskExecutionWaitingSubStatus45["WaitingForApp"] = "waiting_for_app";
+  TaskExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  TaskExecutionWaitingSubStatus45["WaitingForDuplicateTask"] = "waiting_for_duplicate_task";
+  TaskExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionWaitingSubStatus45;
+})(TaskExecutionWaitingSubStatus44 || {});
+var TaskExecutionAbortedSubStatus44 = /* @__PURE__ */ ((TaskExecutionAbortedSubStatus45) => {
+  TaskExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  TaskExecutionAbortedSubStatus45["SubtasksRetried"] = "subtasks_retried";
+  TaskExecutionAbortedSubStatus45["Terminated"] = "terminated";
+  TaskExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  TaskExecutionAbortedSubStatus45["ApprovalRequestDenied"] = "approval_request_denied";
+  TaskExecutionAbortedSubStatus45["BackgroundProcessFailure"] = "background_process_failure";
+  TaskExecutionAbortedSubStatus45["BeforeHookFailure"] = "before_hook_failure";
+  TaskExecutionAbortedSubStatus45["AfterHookFailure"] = "after_hook_failure";
+  TaskExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  TaskExecutionAbortedSubStatus45["SpotInterrupted"] = "spot_interrupted";
+  TaskExecutionAbortedSubStatus45["AppFailure"] = "app_failure";
+  TaskExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionAbortedSubStatus45;
+})(TaskExecutionAbortedSubStatus44 || {});
+var TaskExecutionFinishedSubStatus44 = /* @__PURE__ */ ((TaskExecutionFinishedSubStatus45) => {
+  TaskExecutionFinishedSubStatus45["CacheHit"] = "cache_hit";
+  TaskExecutionFinishedSubStatus45["Executed"] = "executed";
+  TaskExecutionFinishedSubStatus45["SandboxClosed"] = "sandbox_closed";
+  TaskExecutionFinishedSubStatus45["AppStopped"] = "app_stopped";
+  TaskExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return TaskExecutionFinishedSubStatus45;
+})(TaskExecutionFinishedSubStatus44 || {});
+var TaskAttemptReason44 = /* @__PURE__ */ ((TaskAttemptReason45) => {
+  TaskAttemptReason45["Unknown"] = "unknown";
+  TaskAttemptReason45["Initial"] = "initial";
+  TaskAttemptReason45["Retried"] = "retried";
+  TaskAttemptReason45["SubtaskRetried"] = "subtask_retried";
+  TaskAttemptReason45["DependencyRetried"] = "dependency_retried";
+  return TaskAttemptReason45;
+})(TaskAttemptReason44 || {});
+var DebugSessionOrigin18 = /* @__PURE__ */ ((DebugSessionOrigin19) => {
+  DebugSessionOrigin19["RetryStart"] = "retry-start";
+  DebugSessionOrigin19["RetryEnd"] = "retry-end";
+  DebugSessionOrigin19["RwxBreakpoint"] = "rwx-breakpoint";
+  DebugSessionOrigin19["Attached"] = "attached";
+  DebugSessionOrigin19["Legacy"] = "legacy";
+  return DebugSessionOrigin19;
+})(DebugSessionOrigin18 || {});
+var DebugSessionEndReason18 = /* @__PURE__ */ ((DebugSessionEndReason19) => {
+  DebugSessionEndReason19["Ended"] = "ended";
+  DebugSessionEndReason19["TaskCompleted"] = "task-completed";
+  DebugSessionEndReason19["TaskCancelled"] = "task-cancelled";
+  DebugSessionEndReason19["TaskTimedOut"] = "task-timed-out";
+  return DebugSessionEndReason19;
+})(DebugSessionEndReason18 || {});
+var TDebugSession18 = Object2({
+  id: TDebugSessionId18,
+  name: Optional(String2()),
+  origin: Enum(DebugSessionOrigin18),
+  requestedAt: TDateString56,
+  readyAt: Optional(TDateString56),
+  startedAt: Optional(TDateString56),
+  endedAt: Optional(TDateString56),
+  endReason: Optional(Enum(DebugSessionEndReason18)),
+  maxDurationMinutes: Optional(Number2()),
+  requestedByName: Optional(String2())
+});
+var BackgroundProcessResultStatus55 = /* @__PURE__ */ ((BackgroundProcessResultStatus56) => {
+  BackgroundProcessResultStatus56["Skipped"] = "skipped";
+  BackgroundProcessResultStatus56["Finished"] = "finished";
+  BackgroundProcessResultStatus56["ReadyCheckTimedOut"] = "ready_check_timed_out";
+  return BackgroundProcessResultStatus56;
+})(BackgroundProcessResultStatus55 || {});
+var BackgroundProcessResultFinishedSubStatus55 = /* @__PURE__ */ ((BackgroundProcessResultFinishedSubStatus56) => {
+  BackgroundProcessResultFinishedSubStatus56["Stopped"] = "stopped";
+  BackgroundProcessResultFinishedSubStatus56["Signaled"] = "signaled";
+  BackgroundProcessResultFinishedSubStatus56["NotApplicable"] = "not_applicable";
+  return BackgroundProcessResultFinishedSubStatus56;
+})(BackgroundProcessResultFinishedSubStatus55 || {});
+var RunResultStatus44 = /* @__PURE__ */ ((RunResultStatus45) => {
+  RunResultStatus45["Succeeded"] = "succeeded";
+  RunResultStatus45["Failed"] = "failed";
+  RunResultStatus45["Debugged"] = "debugged";
+  RunResultStatus45["Sandboxed"] = "sandboxed";
+  RunResultStatus45["NoResult"] = "no_result";
+  return RunResultStatus45;
+})(RunResultStatus44 || {});
+var RunExecutionStatus44 = /* @__PURE__ */ ((RunExecutionStatus45) => {
+  RunExecutionStatus45["Waiting"] = "waiting";
+  RunExecutionStatus45["InProgress"] = "in_progress";
+  RunExecutionStatus45["Finished"] = "finished";
+  RunExecutionStatus45["Aborted"] = "aborted";
+  return RunExecutionStatus45;
+})(RunExecutionStatus44 || {});
+var RunExecutionWaitingSubStatus44 = /* @__PURE__ */ ((RunExecutionWaitingSubStatus45) => {
+  RunExecutionWaitingSubStatus45["WaitingForManualStart"] = "waiting_for_manual_start";
+  RunExecutionWaitingSubStatus45["WaitingForLease"] = "waiting_for_lease";
+  RunExecutionWaitingSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionWaitingSubStatus45;
+})(RunExecutionWaitingSubStatus44 || {});
+var RunExecutionAbortedSubStatus44 = /* @__PURE__ */ ((RunExecutionAbortedSubStatus45) => {
+  RunExecutionAbortedSubStatus45["Cancelled"] = "cancelled";
+  RunExecutionAbortedSubStatus45["TimedOut"] = "timed_out";
+  RunExecutionAbortedSubStatus45["InternalFailure"] = "internal_failure";
+  RunExecutionAbortedSubStatus45["InitializationError"] = "initialization_error";
+  RunExecutionAbortedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionAbortedSubStatus45;
+})(RunExecutionAbortedSubStatus44 || {});
+var RunExecutionFinishedSubStatus44 = /* @__PURE__ */ ((RunExecutionFinishedSubStatus45) => {
+  RunExecutionFinishedSubStatus45["NotApplicable"] = "not_applicable";
+  return RunExecutionFinishedSubStatus45;
+})(RunExecutionFinishedSubStatus44 || {});
+var GitClonePatchStatus44 = /* @__PURE__ */ ((GitClonePatchStatus45) => {
+  GitClonePatchStatus45["Pending"] = "pending";
+  GitClonePatchStatus45["Succeeded"] = "succeeded";
+  GitClonePatchStatus45["Failed"] = "failed";
+  return GitClonePatchStatus45;
+})(GitClonePatchStatus44 || {});
+var TSource44 = Object2({ definition: String2(), start: Number2(), end: Number2() });
+var EnvironmentVariableCacheKey55 = /* @__PURE__ */ ((EnvironmentVariableCacheKey56) => {
+  EnvironmentVariableCacheKey56["Included"] = "included";
+  EnvironmentVariableCacheKey56["Excluded"] = "excluded";
+  return EnvironmentVariableCacheKey56;
+})(EnvironmentVariableCacheKey55 || {});
+var TExpandedEnvDescriptor44 = Object2({ value: Optional(TTemplateString45), cacheKey: Enum(EnvironmentVariableCacheKey55) });
+var TEnvMergeStrategy44 = Object2({ name: String2(), override: Optional(Literal(true)), joinBy: Optional(String2()) });
+var TTestResultsPath55 = Object2({ path: String2(), options: Optional(Object2({ framework: String2(), language: String2() })) });
+var TProblemMatcherPattern55 = Object2({
+  regexp: String2(),
+  file: Optional(Integer()),
+  fromPath: Optional(Integer()),
+  line: Optional(Integer()),
+  column: Optional(Integer()),
+  severity: Optional(Integer()),
+  code: Optional(Integer()),
+  message: Optional(Integer()),
+  loop: Optional(Boolean2())
+});
+var Severity55 = /* @__PURE__ */ ((Severity56) => {
+  Severity56["Error"] = "error";
+  Severity56["Warning"] = "warning";
+  Severity56["Info"] = "info";
+  return Severity56;
+})(Severity55 || {});
+var TProblemMatcher55 = Object2({ owner: String2(), severity: Optional(Enum(Severity55)), pattern: Array2(TProblemMatcherPattern55) });
+var TProblemPath55 = Object2({
+  format: TLiteralUnion(["auto", "problem-json", "github-annotation-json", "github-annotations-action-json"]),
+  path: String2()
+});
+var TArtifactPath44 = Object2({ key: String2(), path: TTemplateString45 });
+var TResolvedArtifactPath44 = Object2({ key: String2(), path: String2() });
+var TExpandedReadyCheck44 = Object2({ run: TTemplateString45, timeoutSeconds: Number2(), timeoutUserConfigured: Boolean2() });
+var TBackgroundProcess44 = Object2({
+  key: String2(),
+  command: TTemplateString45,
+  readyCheck: Optional(TExpandedReadyCheck44),
+  after: Optional(Array2(String2())),
+  terminateGracePeriodSeconds: Number2()
+});
+var ParallelismType44 = /* @__PURE__ */ ((ParallelismType45) => {
+  ParallelismType45["Matrix"] = "matrix";
+  ParallelismType45["Total"] = "total";
+  ParallelismType45["Values"] = "values";
+  return ParallelismType45;
+})(ParallelismType44 || {});
+var TParallelismValue44 = Record(String2(), Union([String2(), Number2(), Boolean2()]));
+var TAgentSpecification44 = Object2({
+  cpus: Optional(TTemplateString45),
+  memory: Optional(TTemplateString45),
+  disk: Object2({ size: Optional(TTemplateString45) }),
+  gpu: Optional(TTemplateString45),
+  staticIps: Optional(TTemplateString45),
+  tmpfs: Optional(Boolean2()),
+  placement: Optional(TLiteralUnion(["spot", "standard"])),
+  ipv6: Optional(TTemplateString45),
+  nestedVirtualization: Optional(TTemplateString45),
+  selfHosted: Optional(TTemplateString45)
+});
+var TResolvedAgentSpecification44 = Object2({
+  cpus: Number2(),
+  memoryBytes: Number2(),
+  diskSizeGigabytes: Number2(),
+  gpu: Union([Literal(false), String2()]),
+  subnetDefaultRoutes: Optional(Record(String2(), String2())),
+  tmpfs: Optional(Boolean2()),
+  placement: TLiteralUnion(["spot", "standard"]),
+  architecture: String2(),
+  ipv6: Optional(Boolean2()),
+  nestedVirtualization: Boolean2(),
+  // Self-hosted runner label; absent means rwx hosted.
+  selfHosted: Optional(String2())
+});
+var TPackageOutputs39 = Object2({
+  values: Optional(Record(String2(), TTemplateString45)),
+  valuesFrom: Optional(Array2(String2()))
+});
+var TFilterDescriptor44 = Object2({ path: TTemplateString45, cacheKey: Union([Literal("included"), Literal("excluded")]) });
+var TResolvedFilterDescriptor44 = Object2({ path: String2(), cacheKey: Union([Literal("included"), Literal("excluded")]) });
+var TFilterSet44 = Union([TTemplateString45, Array2(Union([TTemplateString45, TFilterDescriptor44]))]);
+var TInputFilesystemFilter44 = Object2({
+  workspace: Optional(TFilterSet44),
+  artifacts: Optional(Record(TTemplateString45, TFilterSet44))
+});
+var TOutputFilesystemFilter44 = Object2({
+  workspace: Optional(Array2(String2())),
+  system: Optional(Array2(String2()))
+});
+var TCacheConfiguration44 = Object2({
+  enabled: TTemplateString45,
+  ttl: Optional(TTemplateString45)
+});
+var TAppConfig34 = Object2({
+  endpoint: TTemplateString45,
+  port: TTemplateString45,
+  startTimeout: TTemplateString45,
+  idleTimeout: TTemplateString45,
+  public: Boolean2()
+});
+var TTaskDefinitionWithoutParallel44 = Object2({
+  key: String2(),
+  scope: Array2(String2()),
+  agentSpecification: Optional(TAgentSpecification44),
+  type: Optional(Enum(TaskType44)),
+  after: Optional(TTemplateString45),
+  if: Optional(TTemplateString45),
+  source: Optional(TSource44),
+  cacheConfiguration: TCacheConfiguration44,
+  docker: Optional(TTemplateString45),
+  dependencyStandardKeys: Optional(Array2(String2())),
+  command: Optional(TTemplateString45),
+  appConfig: Optional(TAppConfig34),
+  filter: Optional(TInputFilesystemFilter44),
+  backgroundProcesses: Optional(Array2(TBackgroundProcess44)),
+  toolCache: Optional(TTemplateString45),
+  envInheritFromTasks: Optional(Array2(String2())),
+  envVars: Optional(Record(String2(), TExpandedEnvDescriptor44)),
+  envMerge: Optional(Array2(TEnvMergeStrategy44)),
+  timeout: Optional(TTemplateString45),
+  healthTimeout: Optional(TTemplateString45),
+  logRetention: Optional(TTemplateString45),
+  terminateGracePeriodSeconds: Optional(Number2()),
+  successExitCodes: Optional(Array2(Number2())),
+  testResultsPaths: Optional(Array2(TTestResultsPath55)),
+  artifactPaths: Optional(Array2(TArtifactPath44)),
+  problemMatchers: Optional(Array2(TProblemMatcher55)),
+  problemPaths: Optional(Array2(TProblemPath55)),
+  parallelismType: Optional(Enum(ParallelismType44)),
+  parallelismValue: Optional(TParallelismValue44),
+  package: Optional(TTemplateString45),
+  parameters: Optional(Record(String2(), TTemplateString45)),
+  ambiguousCallTemplate: Optional(TTemplateString45),
+  embeddedRunDefinitionTemplate: Optional(TTemplateString45),
+  embeddedRunDefinitionMintDirPath: Optional(String2()),
+  embeddedRunDefinitionFromRun: Optional(Boolean2()),
+  embeddedRunDefinitionTargets: Optional(Array2(String2())),
+  embeddedRunDefinitionInheritInit: Optional(Boolean2()),
+  localPackageDefinitionTemplate: Optional(TTemplateString45),
+  localPackageDefinitionMintDirPath: Optional(String2()),
+  // Set on leaf tasks when the called package spec resolves: true only when the package
+  // uses `packageSchemaVersion` 1, whose tasks inherit every dependency of the call and
+  // cannot use `package.use`. Any other version gets the local-package `package.use`
+  // semantics. The package's tasks carry nothing themselves; they look this up on their
+  // parent leaf call. The v135 migration marks every persisted leaf call as v1 because
+  // everything persisted before v135 predates v2 packages.
+  isV1PublicPackage: Optional(Boolean2()),
+  warningMessages: Array2(TUserMessage),
+  deduplicateOutputFilesystem: Optional(TTemplateString45),
+  outputFilesystemFilter: Optional(TOutputFilesystemFilter44),
+  bootstrapping: Optional(Boolean2()),
+  baseTask: Optional(Boolean2()),
+  automaticRetries: Optional(
+    Object2({
+      count: TTemplateString45,
+      if: Optional(TTemplateString45),
+      action: Optional(TTemplateString45)
+    })
+  ),
+  autoCancel: TTemplateString45
+});
+var TCrossRunSource44 = Union([String2(), Object2({ crossRunIdentifier: String2(), artifactKey: String2() })]);
+var TCrossRunIdentityComponents44 = Object2({
+  ownerScope: String2(),
+  crossRunSource: TCrossRunSource44,
+  relativeScopedKey: String2()
+});
+var TOtelSpanStringArrayValue52 = Array2(Union([String2(), Null()]));
+var TOtelSpanNumberArrayValue52 = Array2(Union([Number2(), Null()]));
+var TOtelSpanBooleanArrayValue52 = Array2(Union([Boolean2(), Null()]));
+var TOtelSpanAttributeValue52 = Union([
+  String2(),
+  Number2(),
+  Boolean2(),
+  TOtelSpanStringArrayValue52,
+  TOtelSpanNumberArrayValue52,
+  TOtelSpanBooleanArrayValue52
+]);
+var TOtelSpanAttributeValues52 = Record(String2(), TOtelSpanAttributeValue52);
+var TTaskDefinition44 = Composite([
+  TTaskDefinitionWithoutParallel44,
+  Object2({
+    parallelTemplateDefinition: Optional(TTaskDefinitionWithoutParallel44),
+    parallelKey: Optional(TTemplateString45),
+    parallelTasksLimit: Optional(Union([Number2(), Null()])),
+    parallelismMatrix: Optional(Record(String2(), Union([Array2(TTemplateString45), TTemplateString45]))),
+    parallelismValues: Optional(Union([Array2(Record(String2(), TTemplateString45)), TTemplateString45])),
+    parallelismTotal: Optional(TTemplateString45)
+  })
+]);
+var TStandaloneCommandDefinition31 = Composite([TTaskDefinitionWithoutParallel44, Object2({ type: Literal("command" /* Command */) })]);
+var TLayerWithManifest55 = Object2({
+  layerId: String2(),
+  layerSizeBytes: Number2(),
+  estimatedDiskUsageBytes: Optional(Number2()),
+  layerSha256: String2(),
+  layerKind: Union([
+    Literal("output"),
+    Literal("whiteout"),
+    Literal("tool-cache"),
+    Literal("base"),
+    Literal("base-image"),
+    Literal("docker"),
+    Literal("docker-tool-cache")
+  ]),
+  groupingKey: String2(),
+  manifestId: String2(),
+  manifestCliVersion: String2(),
+  manifestFileName: String2(),
+  manifestSizeBytes: Number2(),
+  associatedWithTaskId: TTaskOrGroupId56,
+  associatedWithTaskKey: String2()
+});
+var TSanitizedResolutionContext44 = Union([String2(), Record(String2(), Any())]);
+var TUsedSecret44 = Object2({
+  vaultId: String2(),
+  secretName: String2()
+});
+var TResolvedBackgroundProcess44 = Object2({
+  id: String2(),
+  logsId: String2(),
+  key: String2(),
+  command: TEvaluatedString45,
+  readyCheck: Optional(
+    Object2({
+      run: TEvaluatedString45,
+      timeoutSeconds: Number2(),
+      timeoutUserConfigured: Boolean2(),
+      logsId: Optional(String2())
+    })
+  ),
+  after: Array2(String2()),
+  terminateGracePeriodSeconds: Number2()
+});
+var TBackgroundProcessResult55 = Object2({
+  key: String2(),
+  id: String2(),
+  logsId: String2(),
+  resultStatus: Enum(BackgroundProcessResultStatus55),
+  resultFinishedSubStatus: Enum(BackgroundProcessResultFinishedSubStatus55),
+  startedAt: Optional(TDateString56),
+  completedAt: Optional(TDateString56),
+  exitCode: Optional(Number2()),
+  signal: Optional(String2()),
+  readyCheckLogsId: Optional(String2())
+});
+var TProblem55 = Object2({
+  owner: String2(),
+  message: String2(),
+  severity: Enum(Severity55),
+  code: Optional(String2()),
+  file: Optional(String2()),
+  fromPath: Optional(String2()),
+  line: Optional(Integer()),
+  column: Optional(Integer()),
+  end_line: Optional(Integer()),
+  end_column: Optional(Integer())
+});
+var TTestResultsSummary55 = Object2({
+  status: Union([
+    Object2({ kind: Literal("canceled") }),
+    Object2({ kind: Literal("failed") }),
+    Object2({ kind: Literal("successful") }),
+    Object2({ kind: Literal("timedOut") })
+  ]),
+  tests: Number2(),
+  otherErrors: Number2(),
+  retries: Number2(),
+  canceled: Number2(),
+  failed: Number2(),
+  pended: Number2(),
+  quarantined: Number2(),
+  skipped: Number2(),
+  successful: Number2(),
+  timedOut: Number2(),
+  todo: Number2(),
+  flaky: Optional(Number2())
+});
+var TTestResults55 = Object2({
+  type: TLiteralUnion(["rwx_v1_json", "opaque_blob", "error"]),
+  originalPath: String2(),
+  outputBlobId: Optional(String2()),
+  summary: Optional(TTestResultsSummary55),
+  artifactOutputBlobIds: Optional(Array2(String2())),
+  errorMessage: Optional(String2())
+});
+var TOutputBlob55 = Object2({
+  kind: TLiteralUnion(["file", "directory", "does-not-exist"]),
+  key: String2(),
+  originalPath: String2(),
+  outputBlobId: Union([String2(), Null()]),
+  sizeInBytes: Number2({ minimum: 0 })
+});
+var TArtifactManifest55 = Object2({
+  id: String2(),
+  cliVersion: String2(),
+  fileName: String2(),
+  sizeInBytes: Number2()
+});
+var TArtifact55 = Composite([
+  TOutputBlob55,
+  Object2({
+    estimatedDiskUsageBytes: Optional(Number2()),
+    manifest: Union([TArtifactManifest55, Null()])
+  })
+]);
+var TReferencedArtifact44 = Object2({
+  kind: TLiteralUnion(["parallel", "file", "directory", "does-not-exist"]),
+  outputBlobId: Union([String2(), Null()]),
+  path: String2(),
+  scopedTaskKey: String2(),
+  key: String2(),
+  filter: Optional(Array2(TResolvedFilterDescriptor44)),
+  subtaskArtifacts: Optional(
+    Array2(
+      Object2({
+        kind: TLiteralUnion(["file", "directory", "does-not-exist"]),
+        outputBlobId: Union([String2(), Null()]),
+        path: String2(),
+        scopedTaskKey: String2(),
+        key: String2(),
+        filter: Optional(Array2(TResolvedFilterDescriptor44))
+      })
+    )
+  )
+});
+var TDefaultStatusCheck44 = Object2({
+  enabled: Boolean2(),
+  name: Optional(String2()),
+  startManuallyBehavior: Union([Literal("succeeded"), Literal("waiting")])
+});
+var TCustomStatusCheck44 = Object2({
+  tasks: Array2(String2()),
+  name: Optional(String2()),
+  status: Union([Literal("success"), Literal("failure"), Literal("pending")]),
+  computedDescription: Optional(String2())
+});
+var TRunToolCacheConfiguration44 = Object2({ vaultId: String2(), shouldReset: Optional(Boolean2()) });
+var OnOverflow44 = /* @__PURE__ */ ((OnOverflow45) => {
+  OnOverflow45["CancelWaiting"] = "cancel-waiting";
+  OnOverflow45["CancelRunning"] = "cancel-running";
+  OnOverflow45["Queue"] = "queue";
+  return OnOverflow45;
+})(OnOverflow44 || {});
+var TConcurrencyPool44 = Object2({ id: String2(), if: Boolean2(), capacity: Number2(), onOverflow: Enum(OnOverflow44) });
+var LeaseState44 = /* @__PURE__ */ ((LeaseState45) => {
+  LeaseState45["Requested"] = "requested";
+  LeaseState45["Acquired"] = "acquired";
+  LeaseState45["Revoked"] = "revoked";
+  return LeaseState45;
+})(LeaseState44 || {});
+var TTiming55 = Object2({
+  startTimestamp: Optional(Number2()),
+  finishTimestamp: Optional(Number2())
+});
+var TTimestamps55 = Object2({
+  // backgroundProcesses contains 1 entry for each background process in the task. If the background process does not have a ready check then `healthyTimestamp` will be undefined. If the background process exits early then `shutdown` will be undefined.
+  backgroundProcesses: Optional(
+    Array2(
+      Object2({
+        backgroundProcessId: String2(),
+        initializationTimestamp: Optional(Number2()),
+        healthyTimestamp: Optional(Number2()),
+        shutdown: Optional(TTiming55)
+      })
+    )
+  ),
+  // taskSetup encompasses all of the time on an agent before a task begins executing background processes and commands in its container.
+  taskSetup: Optional(TTiming55),
+  // containerSetup encompasses just the time it takes to build and start the container.
+  containerSetup: Optional(TTiming55),
+  // layersSetup encompasses all the time it takes to ensure all the layers needed for the task (including the base layer) are on the agent.
+  layersSetup: Optional(
+    Object2({
+      ...TTiming55.properties,
+      pulledSizeBytes: Optional(Number2())
+    })
+  ),
+  // taskExecution encompasses all the time running background processes and the command in the container.
+  taskExecution: Optional(TTiming55),
+  // backgroundProcessesInitialization encompasses just the time to start and verify the readiness of all background processes.
+  backgroundProcessesInitialization: Optional(TTiming55),
+  // commandExecution encompasses just the time to run the task's command in the container.
+  commandExecution: Optional(TTiming55),
+  // taskTeardown encompasses all of the time on an agent after a task finishes execution.
+  taskTeardown: Optional(TTiming55),
+  // backgroundProcessesTeardown encompasses just the time to stop all background processes.
+  backgroundProcessesTeardown: Optional(TTiming55),
+  // containerTeardown encompasses just the time to clean up the container and stop it.
+  containerTeardown: Optional(TTiming55),
+  // outputs encompasses the time to upload the layer and manifest produced by the task.
+  outputs: Optional(
+    Object2({
+      layerSizeBytes: Optional(Number2()),
+      layerUpload: Optional(TTiming55),
+      manifestSizeBytes: Optional(Number2()),
+      manifestUpload: Optional(TTiming55)
+    })
+  ),
+  // dockerLayerUpload encompasses the time it takes to persist the docker layer to S3.
+  dockerLayerUpload: Optional(
+    Object2({
+      ...TTiming55.properties,
+      pushedSizeBytes: Optional(Number2())
+    })
+  )
+});
+var TNetworkTraffic44 = Object2({
+  local: Object2({ ingress: Number2(), egress: Number2() }),
+  regional: Object2({ ingress: Number2(), egress: Number2() }),
+  aws: Object2({ ingress: Number2(), egress: Number2() }),
+  public: Object2({ ingress: Number2(), egress: Number2() })
+});
+var TTaskMetricsSample10 = Object2({
+  timestamp: TDateString56,
+  cpu: Object2({
+    usagePercent: Number2(),
+    userPercent: Number2(),
+    systemPercent: Number2()
+  }),
+  memory: Object2({
+    usedBytes: Number2(),
+    freeBytes: Number2(),
+    cacheBytes: Number2(),
+    anonBytes: Number2(),
+    kernelBytes: Number2(),
+    swapBytes: Number2(),
+    limitBytes: Number2()
+  }),
+  disk: Object2({
+    readBytes: Number2(),
+    writeBytes: Number2(),
+    readOps: Number2(),
+    writeOps: Number2()
+  }),
+  network: Object2({
+    ingressBytes: Number2(),
+    egressBytes: Number2(),
+    ingressPackets: Number2(),
+    egressPackets: Number2()
+  })
+});
+var TTaskMetrics10 = Object2({
+  samples: Array2(TTaskMetricsSample10),
+  summary: Optional(
+    Object2({
+      observationCount: Integer({ minimum: 1 }),
+      coverageMilliseconds: Integer({ minimum: 0 }),
+      cpuUsagePercent: Object2({
+        mean: Number2({ minimum: 0, maximum: 100 }),
+        max: Number2({ minimum: 0, maximum: 100 }),
+        p50: Number2({ minimum: 0, maximum: 100 }),
+        p95: Number2({ minimum: 0, maximum: 100 }),
+        p99: Number2({ minimum: 0, maximum: 100 })
+      }),
+      memoryUsedBytes: Object2({
+        mean: Integer({ minimum: 0 }),
+        max: Integer({ minimum: 0 }),
+        p50: Integer({ minimum: 0 }),
+        p95: Integer({ minimum: 0 }),
+        p99: Integer({ minimum: 0 })
+      })
+    })
+  )
+});
+var TOutputImageConfig44 = Object2({
+  user: Optional(String2()),
+  shell: Optional(String2()),
+  command: Optional(Union([String2(), Array2(String2()), Null()])),
+  entrypoint: Optional(Union([String2(), Array2(String2()), Null()])),
+  labels: Optional(Array2(Object2({ key: String2(), value: String2() }))),
+  os: Optional(String2()),
+  workspace: Optional(String2())
+});
+var TResolvedImageConfig44 = Object2({
+  user: Optional(String2()),
+  shell: Optional(String2()),
+  command: Optional(Union([String2(), Array2(String2()), Null()])),
+  entrypoint: Optional(Union([String2(), Array2(String2()), Null()])),
+  labels: Optional(Array2(Object2({ key: String2(), value: String2() }))),
+  os: Optional(String2()),
+  workspace: String2()
+});
+var TResolvedAppConfig37 = Object2({
+  endpoint: TEvaluatedString45,
+  port: Number2(),
+  startTimeoutSeconds: Number2(),
+  idleTimeoutSeconds: Number2(),
+  public: Boolean2()
+});
+var TResolvedOidcTokenGrant20 = Object2({
+  id: String2(),
+  vaultId: String2(),
+  vaultName: String2(),
+  tokenName: String2(),
+  audience: String2(),
+  path: String2()
+});
+var TRetryAction55 = Object2({
+  key: String2(),
+  label: String2(),
+  description: Optional(String2()),
+  env: Array2(
+    Object2({
+      key: String2(),
+      value: String2()
+    })
+  ),
+  data: Optional(TArtifact55)
+});
+var TBaseLayer44 = Object2({
+  os: String2(),
+  tag: String2(),
+  arch: TLiteralUnion(["x86_64", "arm64"]),
+  layerId: String2(),
+  layerFile: String2(),
+  layerSizeBytes: Number2(),
+  estimatedDiskUsageBytes: Optional(Number2()),
+  user: Object2({
+    name: String2()
+  })
+});
+var TResolvedBaseRunConfig6 = Object2({
+  definitionPath: String2(),
+  target: String2(),
+  inheritInit: Boolean2(),
+  parameters: Optional(Record(String2(), String2()))
+});
+var TResolvedBaseConfig44 = Object2({
+  image: Optional(String2()),
+  config: Optional(String2()),
+  baseRun: Optional(TResolvedBaseRunConfig6),
+  prebuiltLayer: TBaseLayer44,
+  bootstrappingKeys: Optional(Array2(String2()))
+});
+var TExportedImageConfig9 = Object2({
+  user: Optional(String2()),
+  env: Optional(Array2(String2())),
+  entrypoint: Optional(Array2(String2())),
+  cmd: Optional(Array2(String2())),
+  workingDir: Optional(String2()),
+  shell: Optional(Array2(String2())),
+  labels: Optional(Record(String2(), String2()))
+});
+var TExportedImageLayer9 = Object2({
+  layer: TLayerWithManifest55,
+  sourceDiffId: String2(),
+  cacheKey: String2(),
+  reused: Boolean2()
+});
+var TExportedImage9 = Object2({
+  identity: String2(),
+  sourceKind: TLiteralUnion(["local-docker", "registry"]),
+  requestedReference: String2(),
+  resolvedReference: String2(),
+  os: String2(),
+  architecture: String2(),
+  config: TExportedImageConfig9,
+  layers: Array2(TExportedImageLayer9)
+});
+var TArchiveStorageEntitlement19 = Object2({
+  sizingVersion: Union([Literal("archive-sum-v1"), Literal("estimated-disk-usage-v2")]),
+  executionDiskBytes: Number2(),
+  inputEntitlementBytes: Number2(),
+  guaranteedScratchBytes: Number2(),
+  minimumScratchBytes: Number2()
+});
+var TTLUnit44 = /* @__PURE__ */ ((TTLUnit45) => {
+  TTLUnit45["Minutes"] = "minutes";
+  TTLUnit45["Hours"] = "hours";
+  TTLUnit45["Days"] = "days";
+  return TTLUnit45;
+})(TTLUnit44 || {});
+var TTTL44 = Object2({
+  value: Number2(),
+  unit: Enum(TTLUnit44)
+});
+var TResolvedWriteCacheConfiguration44 = Union([
+  Object2({
+    enabled: Literal(true),
+    ttl: Union([TTTL44, Null()])
+  }),
+  Object2({
+    enabled: Literal(false),
+    ttl: Null()
+  })
+]);
+var TResolvedReadCacheConfiguration44 = Object2({
+  enabled: Boolean2()
+});
+var TPackageIdentifierType39 = Union([Literal("nameAndVersion"), Literal("digest")]);
+var TDigestPackageIdentifier39 = Object2({
+  type: Literal("digest"),
+  name: Optional(String2()),
+  version: Optional(String2()),
+  digest: String2()
+});
+var TNameAndVersionPackageIdentifier39 = Object2({
+  type: Literal("nameAndVersion"),
+  name: String2(),
+  version: String2(),
+  digest: String2()
+});
+var TPackageIdentifier39 = Union([TDigestPackageIdentifier39, TNameAndVersionPackageIdentifier39]);
+var TTip55 = Object2({
+  key: String2(),
+  details: TUserMessage
+});
+var TRetryCategory44 = TLiteralUnion(["user-initiated", "automatic", "spot-interruption", "setup-failure"]);
+var TResolvedEmbeddedRunData29 = Object2({
+  toolCacheConfiguration: Optional(TRunToolCacheConfiguration44),
+  baseConfig: TResolvedBaseConfig44,
+  crossRunSource: Optional(TCrossRunSource44),
+  defaultAgentSpecification: TResolvedAgentSpecification44,
+  defaultLogRetentionDays: Optional(Number2())
+});
+var TResolvedLocalPackageData16 = Object2({
+  toolCacheConfiguration: Optional(TRunToolCacheConfiguration44),
+  crossRunSource: Optional(TCrossRunSource44),
+  defaultAgentSpecification: Optional(TResolvedAgentSpecification44),
+  defaultLogRetentionDays: Optional(Number2())
+});
+var TTask44 = Object2({
+  schemaVersion: Literal(ThisSchemaVersion44),
+  taskId: TTaskOrGroupId56,
+  runId: String2(),
+  graphNodeId: Optional(TGraphNodeId45),
+  generatorTaskId: Optional(TTaskOrGroupId56),
+  definition: TTaskDefinition44,
+  eventNumber: Number2(),
+  executionStatus: Enum(TaskExecutionStatus44),
+  executionAbortedSubStatus: Enum(TaskExecutionAbortedSubStatus44),
+  executionFinishedSubStatus: Enum(TaskExecutionFinishedSubStatus44),
+  executionWaitingSubStatus: Enum(TaskExecutionWaitingSubStatus44),
+  resultStatus: Enum(TaskResultStatus44),
+  resultFailedSubStatus: Enum(TaskResultFailedSubStatus21),
+  sortOrderInRun: Number2(),
+  attemptNumber: Number2(),
+  attemptReason: Optional(Enum(TaskAttemptReason44)),
+  attemptCounts: Record(TRetryCategory44, Number2()),
+  resolvedAt: Optional(TDateString56),
+  agentId: Optional(String2()),
+  startedAt: Optional(TDateString56),
+  debugReadyAt: Optional(TDateString56),
+  debugStartedAt: Optional(TDateString56),
+  debugEndedAt: Optional(TDateString56),
+  debugSessions: Optional(Array2(TDebugSession18)),
+  debugAttachmentClosedAt: Optional(TDateString56),
+  sandboxReadyAt: Optional(TDateString56),
+  sandboxStartedAt: Optional(TDateString56),
+  sandboxEndedAt: Optional(TDateString56),
+  cancellationRequestedAt: Optional(TDateString56),
+  cancellationReasonMessages: Optional(Array2(TUserMessage)),
+  appStopRequestedAt: Optional(TDateString56),
+  completedAt: Optional(TDateString56),
+  cancelledAt: Optional(TDateString56),
+  concurrencyPool: Optional(TConcurrencyPool44),
+  waitingForApprovalOnVaultIds: Optional(Array2(String2())),
+  // Data after resolving
+  cacheKey: Optional(String2()),
+  serializedCacheKeyComponents: Optional(String2()),
+  parallelGroupCacheKey: Optional(String2()),
+  logsId: Optional(String2()),
+  resolutionContext: Optional(TSanitizedResolutionContext44),
+  usedSecrets: Optional(Array2(TUsedSecret44)),
+  resolvedToolCache: Optional(String2()),
+  resolvedWriteCacheConfiguration: Optional(TResolvedWriteCacheConfiguration44),
+  resolvedReadCacheConfiguration: Optional(TResolvedReadCacheConfiguration44),
+  resolvedPreserveDockerData: Optional(Boolean2()),
+  resolvedUseDocker: Optional(Boolean2()),
+  resolvedEnv: Optional(Record(String2(), Object2({ value: TEvaluatedString45, cacheKey: Enum(EnvironmentVariableCacheKey55) }))),
+  resolvedCommand: Optional(TEvaluatedString45),
+  resolvedBackgroundProcesses: Optional(Array2(TResolvedBackgroundProcess44)),
+  resolvedWithinLeaf: Optional(Object2({ digest: String2(), downloadUrl: String2() })),
+  resolvedReferencedArtifacts: Optional(Array2(TReferencedArtifact44)),
+  toolCacheLayers: Optional(Array2(TLayerWithManifest55)),
+  previousDockerLayers: Optional(Array2(TLayerWithManifest55)),
+  resolvedImageConfig: Optional(TResolvedImageConfig44),
+  filesystemLayers: Optional(Array2(TLayerWithManifest55)),
+  resolvedParameters: Optional(Record(String2(), TEvaluatedString45)),
+  resolvedRun: Optional(TResolvedEmbeddedRunData29),
+  resolvedLocalPackage: Optional(TResolvedLocalPackageData16),
+  resolvedAutomaticRetries: Optional(Number2()),
+  resolvedAutomaticRetryAction: Optional(String2()),
+  resolvedAgentSpecification: Optional(TResolvedAgentSpecification44),
+  resolvedArchiveStorageEntitlement: Optional(TArchiveStorageEntitlement19),
+  accessedVaultIds: Optional(Array2(String2())),
+  resolvedArtifactPaths: Optional(Array2(TResolvedArtifactPath44)),
+  resolvedDeduplicateOutputFilesystem: Optional(Boolean2()),
+  resolvedCollectExportedImage: Optional(Boolean2()),
+  resolvedWorkspaceFilter: Optional(Array2(TResolvedFilterDescriptor44)),
+  resolvedOidcTokenGrants: Optional(Array2(TResolvedOidcTokenGrant20)),
+  cacheHit: Optional(Boolean2()),
+  terminated: Optional(Boolean2()),
+  timedOut: Optional(Boolean2()),
+  timedOutMessages: Optional(Array2(TUserMessage)),
+  skipReasonMessages: Optional(Array2(TUserMessage)),
+  userErrorMessages: Optional(Array2(TUserMessage)),
+  approximateLogBytes: Optional(Number2()),
+  timings: Optional(Record(String2(), Number2())),
+  wroteToCache: Optional(Boolean2()),
+  exitCode: Optional(Number2()),
+  exitCodeSuccess: Optional(Boolean2()),
+  signal: Optional(String2()),
+  cacheHitFromTaskId: Optional(String2()),
+  backgroundProcessResults: Optional(Array2(TBackgroundProcessResult55)),
+  whiteoutLayer: Optional(TLayerWithManifest55),
+  outputLayers: Optional(Array2(TLayerWithManifest55)),
+  outputImageConfig: Optional(TOutputImageConfig44),
+  environmentVariables: Optional(Array2(Object2({ name: String2(), value: String2(), cacheKey: Enum(EnvironmentVariableCacheKey55) }))),
+  values: Optional(Array2(Object2({ name: String2(), value: String2() }))),
+  otelSpanAttributes: Optional(Array2(Object2({ name: String2(), value: TOtelSpanAttributeValue52 }))),
+  links: Optional(Array2(Object2({ name: String2(), value: String2() }))),
+  problems: Optional(Array2(TProblem55)),
+  testResults: Optional(Array2(TTestResults55)),
+  artifacts: Optional(Array2(TArtifact55)),
+  outputBlobs: Optional(Array2(TOutputBlob55)),
+  crossRunIdentifier: Optional(String2()),
+  crossRunIdentityComponents: Optional(TCrossRunIdentityComponents44),
+  tips: Array2(TTip55),
+  producedErrorMessages: Optional(Array2(TUserMessage)),
+  invalidDynamicTasksMessages: Optional(Array2(TUserMessage)),
+  warningMessages: Array2(TUserMessage),
+  infoMessages: Array2(TUserMessage),
+  timestamps: TTimestamps55,
+  networkTraffic: TNetworkTraffic44,
+  taskMetrics: Optional(TTaskMetrics10),
+  outputRetryActions: Array2(TRetryAction55),
+  retryAction: Optional(TRetryAction55),
+  retryDebug: Optional(Union([Literal("end"), Literal("start"), Literal(false)])),
+  retryCacheStrategy: Optional(TLiteralUnion(["default", "no-cache"])),
+  retryToolCacheStrategy: TLiteralUnion(["default", "no-cache"]),
+  retryRequestedByName: Optional(String2()),
+  dockerLayer: Optional(TLayerWithManifest55),
+  exportedImage: Optional(TExportedImage9),
+  resolvedTimeoutMinutes: Optional(Union([Number2(), Null()])),
+  resolvedTimeoutUserConfigured: Optional(Boolean2()),
+  packageOutputs: Optional(TPackageOutputs39),
+  resolvedPackageIdentifier: Optional(TPackageIdentifier39),
+  completedRuntimeSeconds: Number2(),
+  oldestRunningTaskStartedAt: Optional(TDateString56),
+  deepRunningExecutableTaskCount: Number2(),
+  resolvedHealthTimeoutMinutes: Optional(Number2()),
+  resolvedAutoCancel: Optional(Boolean2()),
+  resolvedLogRetentionDays: Optional(Number2()),
+  resolvedAppConfig: Optional(TResolvedAppConfig37),
+  resolvedStandaloneDefinition: Optional(TStandaloneCommandDefinition31),
+  appInstanceId: Optional(String2()),
+  terminationAutomaticallyRetried: Optional(Boolean2())
+});
+var TRetryManifestEntry44 = Object2({
+  type: String2(),
+  originalTaskId: Optional(String2()),
+  taskKey: String2(),
+  taskScope: Array2(String2())
+});
+var TRetry44 = Object2({
+  id: String2(),
+  // state fields
+  state: TLiteralUnion(["waiting", "in-progress", "failed", "succeeded"]),
+  requestedAt: TDateString56,
+  requestedByName: Optional(String2()),
+  startedAt: Optional(TDateString56),
+  mostRecentlyAttemptedAt: Optional(TDateString56),
+  finishedAt: Optional(TDateString56),
+  warningMessages: Array2(TUserMessage),
+  failureMessages: Array2(TUserMessage),
+  eventNumber: Number2(),
+  // request data
+  target: TLiteralUnion(["run", "group", "executable-task"]),
+  targetedTaskId: Optional(String2()),
+  kind: TLiteralUnion(["standard", "failures", "clean", "no-tool-cache", "custom"]),
+  debug: Union([Literal("end"), Literal("start"), Literal(false)]),
+  // must be false unless target == executable-task
+  action: Optional(String2()),
+  // must be undefined when kind != custom, must be defined when kind == custom
+  toolCacheNames: Optional(Array2(String2())),
+  category: TRetryCategory44
+});
+var TGraphRoots44 = Object2({ resolution: Array2(TGraphNodeId45), runtime: Array2(TGraphNodeId45) });
+var TResolutionDependencyReference44 = Object2({
+  dependentNode: TGraphNodeId45,
+  dependencyScope: Array2(String2()),
+  referencedPath: TScopedTaskKey45,
+  resolvedSegments: Number2(),
+  anchorNode: TGraphNodeId45
+});
+var TRunGraph44 = Object2({
+  roots: TGraphRoots44,
+  directDependencies: Object2({
+    resolution: Record(TGraphNodeId45, Array2(TGraphNodeId45)),
+    runtime: Record(TGraphNodeId45, Array2(TGraphNodeId45))
+  }),
+  directDependents: Object2({
+    resolution: Record(TGraphNodeId45, Array2(TGraphNodeId45)),
+    runtime: Record(TGraphNodeId45, Array2(TGraphNodeId45))
+  }),
+  subgraphs: Record(TGraphNodeId45, Object2({ roots: TGraphRoots44 })),
+  parents: Record(TGraphNodeId45, TGraphNodeId45),
+  definitionOrders: Record(TGraphNodeId45, Number2()),
+  resolutionDependencyReferences: Optional(Record(String2(), TResolutionDependencyReference44))
+});
+var TActor44 = Object2({ name: String2(), id: Optional(String2()) });
+var TConcurrencyPoolState44 = Object2({
+  concurrencyPoolId: String2(),
+  leaseId: Optional(String2()),
+  leaseState: Enum(LeaseState44)
+});
+var ApprovalRequestState44 = /* @__PURE__ */ ((ApprovalRequestState45) => {
+  ApprovalRequestState45["Pending"] = "pending";
+  ApprovalRequestState45["Rescinded"] = "rescinded";
+  ApprovalRequestState45["Approved"] = "approved";
+  ApprovalRequestState45["Denied"] = "denied";
+  return ApprovalRequestState45;
+})(ApprovalRequestState44 || {});
+var TApprovalRequest44 = Object2({
+  id: String2(),
+  vaultId: String2(),
+  state: Enum(ApprovalRequestState44)
+});
+var TRun44 = Object2({
+  schemaVersion: Literal(ThisSchemaVersion44),
+  persistenceExpiresAtSeconds: TEpochSeconds45,
+  runId: String2(),
+  createdAt: TDateString56,
+  useCache: Boolean2(),
+  initializationParameters: TInitializationParameters,
+  actor: Optional(TActor44),
+  mintDirectoryArtifact: Optional(TArtifact55),
+  accessedVaultIds: Optional(Array2(String2())),
+  hasTopLevelEmbeddedRun: Optional(Boolean2()),
+  vcsOpenSource: Optional(Boolean2()),
+  vcsCredentialsExposed: Optional(Boolean2()),
+  vcsFork: Optional(Boolean2()),
+  gitRef: Optional(String2()),
+  gitSha: Optional(String2()),
+  gitBranch: Optional(String2()),
+  gitTag: Optional(String2()),
+  gitCommitMessage: Optional(String2()),
+  gitCommitAuthorName: Optional(String2()),
+  githubActor: Optional(String2()),
+  githubActorId: Optional(String2()),
+  githubRunAttempt: Optional(Number2()),
+  githubRepositoryHtmlUrl: Optional(String2()),
+  githubRepositoryOwner: Optional(String2()),
+  githubRepositoryName: Optional(String2()),
+  githubRepositorySlug: Optional(String2()),
+  githubPullRequestUrl: Optional(String2()),
+  githubPullRequestNumber: Optional(Number2()),
+  githubPullRequestTitle: Optional(String2()),
+  gitlabActor: Optional(String2()),
+  gitlabActorId: Optional(Number2()),
+  gitlabProjectWebUrl: Optional(String2()),
+  gitlabProjectPath: Optional(String2()),
+  gitlabProjectPathWithNamespace: Optional(String2()),
+  gitlabMergeRequestUrl: Optional(String2()),
+  gitlabMergeRequestNumber: Optional(Number2()),
+  gitlabMergeRequestTitle: Optional(String2()),
+  forgejoActor: Optional(String2()),
+  forgejoActorId: Optional(Union([Number2(), String2()])),
+  forgejoRepositoryHtmlUrl: Optional(String2()),
+  forgejoRepositoryOwner: Optional(String2()),
+  forgejoRepositoryName: Optional(String2()),
+  forgejoRepositoryFullName: Optional(String2()),
+  forgejoPullRequestUrl: Optional(String2()),
+  forgejoPullRequestNumber: Optional(Number2()),
+  forgejoPullRequestTitle: Optional(String2()),
+  originActor: Optional(String2()),
+  originActorId: Optional(String2()),
+  originRepositoryHtmlUrl: Optional(String2()),
+  originRepositoryOwner: Optional(String2()),
+  originRepositoryName: Optional(String2()),
+  originRepositoryFullName: Optional(String2()),
+  originPullRequestUrl: Optional(String2()),
+  originPullRequestNumber: Optional(Union([Number2(), String2()])),
+  originPullRequestTitle: Optional(String2()),
+  defaultStatusCheck: TDefaultStatusCheck44,
+  customStatusChecks: Array2(TCustomStatusCheck44),
+  trigger: String2(),
+  concurrencyPool: Optional(TConcurrencyPool44),
+  definition: Object2({
+    path: String2(),
+    contents: String2()
+  }),
+  targetedTaskKeys: Optional(Array2(String2())),
+  title: Optional(String2()),
+  toolCacheConfiguration: Optional(TRunToolCacheConfiguration44),
+  eventNumber: Number2(),
+  retries: Array2(TRetry44),
+  approvalRequests: Array2(TApprovalRequest44),
+  sensitiveValues: Array2(String2()),
+  graph: TRunGraph44,
+  taskIds: Array2(String2()),
+  retryManifest: Optional(Array2(TRetryManifestEntry44)),
+  concurrencyPoolStateByScope: Record(TScopedTaskKey45, TConcurrencyPoolState44),
+  baseConfig: Optional(TResolvedBaseConfig44),
+  crossRunSource: TCrossRunSource44,
+  triggerContextId: String2(),
+  resetToolCache: Optional(Boolean2()),
+  executionStatus: Enum(RunExecutionStatus44),
+  executionWaitingSubStatus: Enum(RunExecutionWaitingSubStatus44),
+  executionAbortedSubStatus: Enum(RunExecutionAbortedSubStatus44),
+  executionFinishedSubStatus: Enum(RunExecutionFinishedSubStatus44),
+  resultStatus: Enum(RunResultStatus44),
+  gitCloneContext: Optional(Object2({ patchApplied: Enum(GitClonePatchStatus44), patchTaskId: Optional(String2()) })),
+  waitingForLeaseAt: Optional(TDateString56),
+  waitingForManualStartAt: Optional(TDateString56),
+  waitingForManualStartMessages: Array2(TUserMessage),
+  startedAt: Optional(TDateString56),
+  cancellationRequestedAt: Optional(TDateString56),
+  cancellationReasonMessages: Optional(Array2(TUserMessage)),
+  completedAt: Optional(TDateString56),
+  warningMessages: Array2(TUserMessage)
+});
+
 // packages/schema/persisted/index.ts
 var TVersionedRun = Type.Union([
   TRun,
+  TRun44,
   TRun43,
   TRun42,
   TRun41,
@@ -90030,6 +91118,7 @@ var TVersionedRun = Type.Union([
 var TVersionedRunChecker = TypeCompiler.Compile(TVersionedRun);
 var TVersionedTask = Type.Union([
   TTask,
+  TTask44,
   TTask43,
   TTask42,
   TTask41,
@@ -90079,7 +91168,7 @@ var TVersionedTaskChecker = TypeCompiler.Compile(TVersionedTask);
 var AppConfigTaskType = "app-config" /* AppConfig */;
 
 // packages/schema/task-definition/task.ts
-var TSource44 = Type.Object({
+var TSource45 = Type.Object({
   definition: Type.String(),
   start: Type.Number(),
   end: Type.Number()
@@ -90093,7 +91182,7 @@ var TEnvJoinMergeStrategy = Type.Object({
 var TEnvOverrideMergeStrategy = Type.Object({
   strategy: Type.Literal("override")
 });
-var TEnvMergeStrategy44 = Type.Union([TEnvJoinMergeStrategy, TEnvOverrideMergeStrategy]);
+var TEnvMergeStrategy45 = Type.Union([TEnvJoinMergeStrategy, TEnvOverrideMergeStrategy]);
 var TEnvInherit = Type.Union([Type.Literal("all-used-tasks"), Type.Array(Type.String())]);
 var TEnvDescriptor = Type.Object({
   value: Type.Optional(TTemplateString2),
@@ -90102,14 +91191,14 @@ var TEnvDescriptor = Type.Object({
 var TTaskDefinitionEnv = Type.Object({
   inherit: Type.Optional(TEnvInherit),
   envVars: Type.Optional(Type.Record(Type.String(), TEnvDescriptor)),
-  merge: Type.Optional(Type.Record(Type.String(), TEnvMergeStrategy44))
+  merge: Type.Optional(Type.Record(Type.String(), TEnvMergeStrategy45))
 });
-var TParallelismValue44 = Type.Record(Type.String(), Type.Union([Type.String(), Type.Number(), Type.Boolean()]));
+var TParallelismValue45 = Type.Record(Type.String(), Type.Union([Type.String(), Type.Number(), Type.Boolean()]));
 var TAfterTask = Type.Object({ type: Type.Literal(0 /* Task */), task: Type.String() });
 var TAfterTaskList = Type.Object({ type: Type.Literal(1 /* TaskList */), tasks: Type.Array(Type.String()) });
 var TAfterTemplate = Type.Object({ type: Type.Literal(2 /* Template */), template: TTemplateString2 });
 var TAfter = Type.Union([TAfterTask, TAfterTaskList, TAfterTemplate]);
-var TCacheConfiguration44 = Type.Object({
+var TCacheConfiguration45 = Type.Object({
   enabled: Type.Union([Type.Boolean(), TTemplateString2]),
   ttl: Type.Optional(TTemplateString2)
 });
@@ -90119,8 +91208,8 @@ var TSharedTaskDefinition = Type.Object({
   dependencies: TDependencies,
   after: Type.Optional(TAfter),
   if: Type.Optional(TTemplateString2),
-  rawSource: Type.Optional(TSource44),
-  cacheConfiguration: Type.Optional(TCacheConfiguration44),
+  rawSource: Type.Optional(TSource45),
+  cacheConfiguration: Type.Optional(TCacheConfiguration45),
   baseTask: Type.Optional(Type.Boolean()),
   warningMessages: Type.Array(TUserMessage)
 });
@@ -90146,14 +91235,14 @@ var TPartialParallelConfiguration = Type.Object({
   autoCancel: TTemplateString2
 });
 var TBackgroundProcessReadyCheck = Type.Object({ run: TTemplateString2, timeoutSeconds: Type.Optional(Type.Number()) });
-var TBackgroundProcess44 = Type.Object({
+var TBackgroundProcess45 = Type.Object({
   key: Type.String(),
   run: TTemplateString2,
   readyCheck: Type.Optional(TBackgroundProcessReadyCheck),
   terminateGracePeriodSeconds: Type.Optional(Type.Number()),
   after: Type.Optional(Type.Array(Type.String()))
 });
-var TAppConfig34 = Type.Object({
+var TAppConfig35 = Type.Object({
   endpoint: TTemplateString2,
   port: TTemplateString2,
   startTimeout: Type.Optional(TTemplateString2),
@@ -90167,7 +91256,7 @@ var TCommandTaskDefinition = Type.Intersect([
     agent: TAgentSpecification,
     type: Type.Literal("command" /* Command */),
     command: TTemplateString2,
-    backgroundProcesses: Type.Array(TBackgroundProcess44),
+    backgroundProcesses: Type.Array(TBackgroundProcess45),
     successExitCodes: Type.Array(Type.Number()),
     testResultsPaths: Type.Array(TTestResultsPath),
     artifactPaths: Type.Array(TArtifactPath),
@@ -90221,9 +91310,9 @@ var TAppConfigTaskDefinition = Type.Intersect([
   Type.Object({
     type: Type.Literal("app-config" /* AppConfig */),
     agent: Type.Optional(TAgentSpecification),
-    appConfig: TAppConfig34,
+    appConfig: TAppConfig35,
     command: TTemplateString2,
-    backgroundProcesses: Type.Optional(Type.Array(TBackgroundProcess44)),
+    backgroundProcesses: Type.Optional(Type.Array(TBackgroundProcess45)),
     env: Type.Optional(TTaskDefinitionEnv),
     docker: Type.Optional(Type.Union([Type.Boolean(), Type.Literal("preserve-data"), TTemplateString2]))
   })
@@ -90411,7 +91500,7 @@ var TDefaultAgentSpecification = Type.Object({
   memory: TTemplateString2,
   disk: Type.Object({ size: TTemplateString2 }),
   gpu: TTemplateString2,
-  staticIps: TTemplateString2,
+  staticIps: Type.Optional(TTemplateString2),
   tmpfs: Type.Boolean(),
   placement: TLiteralUnion(["spot", "standard"]),
   ipv6: Type.Optional(TTemplateString2),
@@ -93337,7 +94426,7 @@ var DEFAULT_AGENT_SPECIFICATION = {
   cpus: "2",
   disk: { size: "50gb" },
   gpu: "false",
-  staticIps: "false",
+  staticIps: void 0,
   tmpfs: false,
   placement: "standard",
   nestedVirtualization: "false",
@@ -95007,9 +96096,11 @@ var YamlParser = class _YamlParser {
               port: this.parseStringableTemplate,
               "start-timeout": this.parseStringTemplate,
               timeout: this.parseStringTemplate,
-              "idle-timeout": this.parseStringTemplate
+              "idle-timeout": this.parseStringTemplate,
+              public: this.parseBoolean
             },
-            appWarningCollector
+            appWarningCollector,
+            /* @__PURE__ */ new Set(["public"])
           );
           if (appFields["start-timeout"] !== void 0 && appFields.timeout !== void 0) {
             this.error(
@@ -95049,7 +96140,8 @@ var YamlParser = class _YamlParser {
             endpoint: appFields.endpoint,
             port: appFields.port,
             startTimeout,
-            idleTimeout: appFields["idle-timeout"]
+            idleTimeout: appFields["idle-timeout"],
+            public: appFields.public
           };
         },
         agent: this.parseAgent,
@@ -95075,7 +96167,7 @@ var YamlParser = class _YamlParser {
     }
     if (fields.app === void 0) {
       this.error([`An app task must have an ${codeQuote("app")} configuration`], node);
-      fields.app = { endpoint: "", port: "", startTimeout: void 0, idleTimeout: void 0 };
+      fields.app = { endpoint: "", port: "", startTimeout: void 0, idleTimeout: void 0, public: void 0 };
     }
     let env = void 0;
     if (fields.env || fields["env-config"]) {
@@ -95326,7 +96418,7 @@ var YamlParser = class _YamlParser {
         cpus: this.parseStringableTemplate,
         // this one is stringable, not string, because we support a number
         gpu: this.parseStringableTemplate,
-        "static-ips": this.parseStringTemplate,
+        "static-ips": this.parseStringableTemplate,
         tmpfs: this.parseBoolean,
         spot: this.parseBoolean,
         ipv6: this.parseStringableTemplate,
@@ -95363,7 +96455,7 @@ var YamlParser = class _YamlParser {
         memory: this.parseStringTemplate,
         cpus: this.parseStringableTemplate,
         gpu: this.parseStringableTemplate,
-        "static-ips": this.parseStringTemplate,
+        "static-ips": this.parseStringableTemplate,
         tmpfs: this.parseBoolean,
         spot: this.parseBoolean,
         ipv6: this.parseStringableTemplate,
@@ -96321,12 +97413,12 @@ var YamlParser = class _YamlParser {
           if (YAML.isScalar(key) && key.value === "<<") {
             if (YAML.isSeq(value2)) {
               for (const item of value2.items) {
-                const anchorKeyResults = await this.dealias(item, (item2) => this.parseObject(item2, parsers, warningCollector));
+                const anchorKeyResults = await this.dealias(item, (item2) => this.parseObject(item2, parsers, warningCollector, hiddenKeys));
                 fields = { ...fields, ...anchorKeyResults.fields };
                 keyNodes = { ...keyNodes, ...anchorKeyResults.keyNodes };
               }
             } else {
-              const anchoredObjectResults = await this.parseObject(value2, parsers, warningCollector);
+              const anchoredObjectResults = await this.parseObject(value2, parsers, warningCollector, hiddenKeys);
               fields = { ...fields, ...anchoredObjectResults.fields };
               keyNodes = { ...keyNodes, ...anchoredObjectResults.keyNodes };
             }
