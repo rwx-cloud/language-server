@@ -578,7 +578,7 @@ export type PartialRunDefinition = {
     cpus: string;
     disk: { size: string };
     gpu: string;
-    staticIps: string;
+    staticIps?: string;
     tmpfs: boolean;
     placement: "spot" | "standard";
     ipv6?: string;
@@ -670,7 +670,7 @@ export const DEFAULT_AGENT_SPECIFICATION: {
   cpus: string;
   disk: { size: string };
   gpu: string;
-  staticIps: string;
+  staticIps?: string;
   tmpfs: boolean;
   placement: string;
   nestedVirtualization: string;

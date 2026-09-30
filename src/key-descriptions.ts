@@ -103,6 +103,11 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     documented: false,
     autocomplete: false,
   },
+  "tasks[].app.public": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "tasks[].docker":
     "The docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is useful for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing.",
   "tasks[].parallel":
