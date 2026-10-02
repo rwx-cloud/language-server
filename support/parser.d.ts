@@ -338,6 +338,17 @@ export type CliTrigger = {
   init: Record<string, string>;
 };
 
+// `on.claude` is only accepted for specific organizations; the parser omits the
+// `claude` key entirely for everyone else.
+export type ClaudeSessionTrigger = BaseTrigger & {
+  workspace: string;
+  environment: string;
+};
+
+export type ClaudeTriggers = {
+  session: ClaudeSessionTrigger[];
+};
+
 export type DispatchTrigger = BaseTrigger & {
   key: string;
   params: Array<{
@@ -366,6 +377,7 @@ export type Triggers = {
   origin?: OriginTriggers;
   cron: CronTrigger[];
   cli: CliTrigger;
+  claude?: ClaudeTriggers;
   dispatch: DispatchTrigger[];
   cacheRebuild: CacheRebuildTrigger[];
   webhook: WebhookTrigger[];

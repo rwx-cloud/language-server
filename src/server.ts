@@ -2001,6 +2001,7 @@ const arrayKeys = new Set([
   "problems",
   "cron",
   "dispatch",
+  "session",
   "cache-rebuild",
   "webhook",
   "values",

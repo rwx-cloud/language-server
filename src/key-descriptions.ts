@@ -338,6 +338,11 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "on.cron":
     "Scheduled cron triggers for automated run execution using cron expressions with optional timezone specification. Each trigger requires a unique key and schedule. Provides rich event context including time fields in both schedule timezone and UTC. Useful for recurring workflows like nightly builds, cache warming, or scheduled deployments.",
   "on.cli": "Configuration for manual CLI-triggered runs.",
+  "on.claude": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "on.forgejo":
     "Forgejo event triggers for automated run execution. Supports push events (on branch updates) and pull-request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
   "on.origin":
@@ -523,6 +528,51 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Whether the run starts automatically when triggered or must be started manually.",
   "on.cli.region":
     "The region in which to execute the run when this trigger fires.",
+
+  // Claude trigger properties. The parser restricts `on.claude` to specific
+  // organizations and hides it from its expected-key errors, so these entries
+  // exist only to keep the parser key check in sync — they are intentionally
+  // left out of completions and hover.
+  "on.claude.session": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "on.claude.session[].workspace": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "on.claude.session[].environment": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "on.claude.session[].init": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "on.claude.session[].if": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "on.claude.session[].target": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "on.claude.session[].title": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "on.claude.session[].region": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
 
   // Dispatch trigger properties
   "on.dispatch[].key":
