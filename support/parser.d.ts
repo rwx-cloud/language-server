@@ -254,6 +254,9 @@ export namespace YamlParser {
     errors: UserMessage[];
   }>;
   export function isLocalPackageDefinition(source: string): boolean;
+  // True for any package declaration — a local package or a published
+  // (v2) package nesting its spec under a top-level `package:` block.
+  export function isPackageDefinition(source: string): boolean;
   export function createParser(
     fileName: string,
     source: string,
