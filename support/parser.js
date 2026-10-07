@@ -95240,7 +95240,11 @@ function debugAssert(value, message) {
   if (process.env.NODE_ENV === "production") {
     return;
   }
-  (0, import_node_assert2.default)(value(), message);
+  if (message === void 0) {
+    (0, import_node_assert2.default)(value());
+  } else {
+    (0, import_node_assert2.default)(value(), message);
+  }
 }
 
 // node_modules/.pnpm/chevrotain@10.5.0/node_modules/chevrotain/lib_esm/api_esm.mjs
