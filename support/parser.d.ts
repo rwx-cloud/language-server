@@ -430,6 +430,7 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
     spot?: boolean;
     placement: "spot" | "standard";
     gpu?: string;
+    ipv4?: string;
     ipv6?: string;
     nestedVirtualization?: string;
     selfHosted?: string;
@@ -593,6 +594,7 @@ export type PartialRunDefinition = {
     staticIps?: string;
     tmpfs: boolean;
     placement: "spot" | "standard";
+    ipv4?: string;
     ipv6?: string;
     nestedVirtualization: string;
     selfHosted: string;
