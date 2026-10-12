@@ -175,6 +175,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   },
   "tasks[].agent.gpu":
     "The GPU to allocate for the task execution environment, specified as a GPU model string (e.g. 'a10g'). When set, the task runs on a GPU-enabled agent. Use 'false' or omit to disable GPU allocation.",
+  "tasks[].agent.ipv4":
+    "Whether to enable IPv4 networking for the task agent. Supports template expressions.",
   "tasks[].agent.ipv6":
     "Whether to enable IPv6 networking for the task agent. Supports template expressions.",
   "tasks[].agent.nested-virtualization":
@@ -207,6 +209,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   },
   "defaults.agent.gpu":
     "Default GPU allocation for tasks, specified as a GPU model string (e.g. 'a10g'). Tasks can override this with their own `agent.gpu`. Use 'false' or omit to disable GPU allocation.",
+  "defaults.agent.ipv4":
+    "Default for whether to enable IPv4 networking for task agents. Tasks can override this with their own `agent.ipv4`. Supports template expressions.",
   "defaults.agent.ipv6":
     "Default for whether to enable IPv6 networking for task agents. Tasks can override this with their own `agent.ipv6`. Supports template expressions.",
   "defaults.agent.nested-virtualization":
