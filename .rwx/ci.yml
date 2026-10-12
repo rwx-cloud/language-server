@@ -67,7 +67,7 @@ tasks:
 
   - key: check-parser-changes
     use: github-cli
-    call: github/compare 1.1.0
+    call: github/compare 1.1.1
     with:
       repository: rwx-cloud/language-server
       base-ref: main
