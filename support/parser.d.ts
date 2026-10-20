@@ -484,6 +484,7 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
     system?: string[];
   };
   autoCancel: string;
+  start?: string;
 };
 
 export type LeafTaskDefinition = SharedTaskDefinition & {
@@ -493,6 +494,7 @@ export type LeafTaskDefinition = SharedTaskDefinition & {
   env: TaskDefinitionEnv;
   parallel?: PartialParallelConfiguration;
   autoCancel: string;
+  start?: string;
 };
 
 export enum EmbeddedRunDefinitionSourceType {
@@ -543,6 +545,7 @@ export type EmbeddedRunTaskDefinition = {
   parallel?: PartialParallelConfiguration;
   targets?: string[];
   autoCancel: string;
+  start?: string;
 };
 
 export type AmbiguousCallTaskDefinition = {
@@ -572,6 +575,7 @@ export type AmbiguousCallTaskDefinition = {
   ambiguousCallTemplate: string;
   parallel?: PartialParallelConfiguration;
   autoCancel: string;
+  start?: string;
 };
 
 export type PartialTaskDefinition =

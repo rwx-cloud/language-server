@@ -103,11 +103,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     documented: false,
     autocomplete: false,
   },
-  "tasks[].app.public": {
-    description: "",
-    documented: false,
-    autocomplete: false,
-  },
+  "tasks[].app.public":
+    "Whether the app's preview URL is publicly accessible.",
   "tasks[].docker":
     "The docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is useful for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing.",
   "tasks[].parallel":
@@ -138,6 +135,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Maximum time for the agent to report its healthiness (e.g., '15m' or '1h'). If an agent has not reported that it is healthy within this time frame, the task will fail. The default value is 1 minute per 1 hour of configured timeout. This helps detect and handle unresponsive or stuck agents during task execution.",
   "tasks[].auto-cancel":
     "Whether to automatically cancel this task when superseded by a newer run. Supports template expressions.",
+  "tasks[].start":
+    "Whether the task starts automatically or must be started manually. Must be 'manually', 'automatically', or an expression that evaluates to one of them. A task that starts manually waits for someone to start it once it is otherwise ready.",
   "tasks[].bootstrapping": {
     description: "",
     documented: false,
