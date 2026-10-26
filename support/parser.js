@@ -104470,7 +104470,7 @@ var YamlParser = class _YamlParser {
         cpus: this.parseStringableTemplate,
         // this one is stringable, not string, because we support a number
         gpu: this.parseStringableTemplate,
-        "static-ips": this.parseStringableTemplate,
+        "static-ips": this.parseStaticIps,
         tmpfs: this.parseBoolean,
         spot: this.parseBoolean,
         ipv4: this.parseStringableTemplate,
@@ -104509,7 +104509,7 @@ var YamlParser = class _YamlParser {
         memory: this.parseStringTemplate,
         cpus: this.parseStringableTemplate,
         gpu: this.parseStringableTemplate,
-        "static-ips": this.parseStringableTemplate,
+        "static-ips": this.parseStaticIps,
         tmpfs: this.parseBoolean,
         spot: this.parseBoolean,
         ipv4: this.parseStringableTemplate,
@@ -104532,6 +104532,12 @@ var YamlParser = class _YamlParser {
       nestedVirtualization: fields["nested-virtualization"] ?? DEFAULT_AGENT_SPECIFICATION.nestedVirtualization,
       selfHosted: fields["self-hosted"] ?? DEFAULT_AGENT_SPECIFICATION.selfHosted
     };
+  };
+  parseStaticIps = async (node) => {
+    if (YAML.isScalar(node) && node.value === true) {
+      return this.checkTemplate(node, "${{ vaults.default.static-ips }}");
+    }
+    return this.parseStringableTemplate(node);
   };
   parseAgentDisk = async (node, warningCollector) => {
     if (YAML.isScalar(node)) {
