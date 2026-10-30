@@ -103,8 +103,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     documented: false,
     autocomplete: false,
   },
-  "tasks[].app.public":
-    "Whether the app's preview URL is publicly accessible.",
+  "tasks[].app.public": "Whether the app's preview URL is publicly accessible.",
   "tasks[].docker":
     "The docker daemon configuration for container operations within the task. Options: 'true' (basic Docker with cleanup), 'preserve-data' (Docker with persistence for images, volumes, build cache), or 'false' (disabled). The preserve-data option is useful for pre-pulling and caching large container images, sharing Docker volumes between dependent tasks, enabling incremental Docker builds with build cache, and setting up persistent database containers for testing.",
   "tasks[].parallel":
@@ -350,6 +349,8 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Forgejo event triggers for automated run execution. Supports push events (on branch updates) and pull-request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
   "on.origin":
     "Cursor Origin event triggers for automated run execution. Supports push events (on branch updates) and pull-request events (on PR lifecycle). Each trigger provides rich event context accessible via template expressions.",
+  "on.entire":
+    "Entire event triggers for automated run execution. Supports push events (on branch updates) and trail events. Each trigger provides rich event context accessible via template expressions.",
   "on.dispatch":
     "API dispatch triggers for programmatic run execution. Allows on-demand execution via CLI (`rwx dispatch`), API calls, or Cloud UI. Each trigger requires a unique key within your organization and can define parameters for user input. Parameters are accessible via event.dispatch.params context and must be explicitly mapped to initialization parameters. Provides flexible workflow orchestration for deployment pipelines, manual testing, or external integrations.",
   "on.cache-rebuild":
@@ -456,6 +457,39 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
   "on.origin.pull-request.actions":
     "PR actions that trigger the run. Available actions: 'opened' (PR is opened), 'reopened' (previously closed PR is reopened), 'synchronize' (PR branch is updated), 'closed' (PR is closed). Default: [opened, reopened, synchronize] if not specified.",
   "on.origin.pull-request.status-checks":
+    "Status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
+
+  // Entire trigger properties
+  "on.entire.push":
+    "Triggers for Entire push events (branch updates). Can be a single trigger object or an array of trigger objects for different configurations.",
+  "on.entire.trail":
+    "Triggers for Entire trail events. Can be a single trigger object or an array of trigger objects.",
+
+  // Entire push trigger properties
+  "on.entire.push.init":
+    "Initialization parameters passed to the run or embedded run.",
+  "on.entire.push.if": "Condition for trigger activation.",
+  "on.entire.push.target": "Specific tasks to execute when triggered.",
+  "on.entire.push.title": "Custom title for the run.",
+  "on.entire.push.start":
+    "Whether the run starts automatically when triggered or must be started manually.",
+  "on.entire.push.region":
+    "The region in which to execute the run when this trigger fires.",
+  "on.entire.push.status-checks":
+    "Status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
+
+  // Entire trail trigger properties
+  "on.entire.trail.init":
+    "Initialization parameters passed to the run or embedded run.",
+  "on.entire.trail.if": "Condition for trigger activation.",
+  "on.entire.trail.target": "Specific tasks to execute when triggered.",
+  "on.entire.trail.title": "Custom title for the run.",
+  "on.entire.trail.start":
+    "Whether the run starts automatically when triggered or must be started manually.",
+  "on.entire.trail.region":
+    "The region in which to execute the run when this trigger fires.",
+  "on.entire.trail.actions": "Trail actions that trigger the run.",
+  "on.entire.trail.status-checks":
     "Status check configuration. Can be a boolean to enable/disable all checks, a string expression, an array of custom checks, or an object with default and custom check configurations. Status checks report task execution status back to the version control system.",
 
   // GitLab trigger properties
