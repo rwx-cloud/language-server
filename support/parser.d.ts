@@ -325,6 +325,20 @@ export type OriginTriggers = {
   pullRequest: OriginPullRequestTrigger[];
 };
 
+export type EntirePushTrigger = BaseTrigger & {
+  statusChecks: StatusChecks;
+};
+
+export type EntireTrailTrigger = BaseTrigger & {
+  actions?: string[];
+  statusChecks: StatusChecks;
+};
+
+export type EntireTriggers = {
+  push: EntirePushTrigger[];
+  trail: EntireTrailTrigger[];
+};
+
 export type CronTrigger = BaseTrigger & {
   key: string;
   schedule: string;
@@ -375,6 +389,7 @@ export type Triggers = {
   github: GitHubTriggers;
   gitlab: GitlabTriggers;
   origin?: OriginTriggers;
+  entire?: EntireTriggers;
   cron: CronTrigger[];
   cli: CliTrigger;
   claude?: ClaudeTriggers;
