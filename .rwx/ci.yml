@@ -15,7 +15,7 @@ base:
 
 tasks:
   - key: code
-    call: git/clone 2.3.1
+    call: git/clone 2.4.0
     with:
       repository: https://github.com/rwx-cloud/language-server.git
       ref: ${{ init.ref }}
@@ -67,7 +67,7 @@ tasks:
 
   - key: check-parser-changes
     use: github-cli
-    call: github/compare 1.1.1
+    call: github/compare 1.2.0
     with:
       repository: rwx-cloud/language-server
       base-ref: main
