@@ -491,6 +491,11 @@ export type CommandTaskDefinition = SharedTaskDefinition & {
   env?: TaskDefinitionEnv;
   timeoutMinutes?: number;
   terminateGracePeriodSeconds?: number;
+  macos?: {
+    version: string;
+    cpus: string;
+    memory: string;
+  };
   toolCache?: ToolCacheName;
   parallel?: PartialParallelConfiguration;
   docker?: boolean | "preserve-data" | (string & {});
