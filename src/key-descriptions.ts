@@ -129,6 +129,14 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Maximum execution time for the task in minutes (default: 10 minutes). If the task runs longer than this timeout, it will be terminated with a SIGKILL signal (or SIGTERM if terminate-grace-period-seconds is set). The timeout applies to the entire task execution, including any background processes and their ready checks. Helps prevent runaway tasks from consuming resources indefinitely.",
   "tasks[].terminate-grace-period-seconds":
     "Grace period in seconds to allow for clean shutdown when the task is terminated due to timeout or cancellation (default: 0 for immediate SIGKILL). During this period, the task process receives a SIGTERM signal and can perform cleanup operations (releasing locks, closing connections, saving state) before being forcefully terminated with SIGKILL. Essential for tasks that manage external resources like Terraform locks.",
+  "tasks[].macos":
+    "Run the task on a macOS virtual machine instead of a Linux agent. Requires a `version` (major macOS version, e.g. `26`) and optionally accepts `cpu` and `memory` (defaults: 4 CPUs and 7GB). Cannot be combined with `agent`, `runner`, `tool-cache`, `docker`, or `background-processes`.",
+  "tasks[].macos.version":
+    "The major macOS version to run the task on, specified as a positive integer (e.g. `26`). Required.",
+  "tasks[].macos.cpu":
+    "The number of CPU cores to allocate for the macOS virtual machine (default: 4). Must be a positive integer or a template expression.",
+  "tasks[].macos.memory":
+    "The memory allocation for the macOS virtual machine, specified as a number followed by 'GB' (default: 7GB). Supports template expressions.",
   "tasks[].retry":
     "Retry configuration that specifies how many times to retry the task if it fails and what action to take on retry. Retries help handle transient failures like network issues, resource contention, or flaky tests. Each retry attempt gets a fresh execution environment. Advanced retry actions can be configured to customize retry behavior, set debug flags, or provide retry-specific data via $MINT_RETRY_ACTIONS directory.",
   "tasks[].health-timeout":
@@ -162,7 +170,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "The disk space allocation for the task execution environment, which can be specified as a simple string or as an object with a size property. Available in 50GB increments starting from 50GB (default). Larger disk allocations support tasks that generate large artifacts or work with large datasets.",
   "tasks[].agent.disk.size": "Disk space allocation followed by 'gb'.",
   "tasks[].agent.static-ips":
-    "A vault expression resolving to the static IPs to use for the task, or `true` as shorthand for `${{ vaults.default.static-ips }}`. Useful for tasks that need to be whitelisted by external services or require consistent network identity.",
+    "A vault expression resolving to the static IPs to use for the task. Useful for tasks that need to be whitelisted by external services or require consistent network identity.",
   "tasks[].agent.tmpfs":
     "Whether to use tmpfs (in-memory filesystem) for improved I/O performance. Tmpfs is useful for tasks with heavy disk I/O that can benefit from memory-backed storage (e.g. task that install node modules), but requires sufficient memory allocation. Any tasks with significant filesystem I/O that fits in ~70% of available memory will benefit from tmpfs.",
   "tasks[].agent.spot":
@@ -196,7 +204,7 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Default disk space allocation for tasks, which can be specified as a simple string or as an object with a size property. Available in 50GB increments starting from 50GB. Tasks can override this with their own `agent.disk`.",
   "defaults.agent.disk.size": "Default disk space allocation followed by 'gb'.",
   "defaults.agent.static-ips":
-    "Default vault expression resolving to the static IPs to use for tasks, or `true` as shorthand for `${{ vaults.default.static-ips }}`. Tasks can override this with their own `agent.static-ips`.",
+    "Default vault expression resolving to the static IPs to use for tasks. Tasks can override this with their own `agent.static-ips`.",
   "defaults.agent.tmpfs":
     "Default for whether tasks use tmpfs (in-memory filesystem) for improved I/O performance. Tasks can override this with their own `agent.tmpfs`. Tmpfs is useful for tasks with heavy disk I/O that fit in ~70% of available memory.",
   "defaults.agent.spot":
