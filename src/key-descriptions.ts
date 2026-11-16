@@ -129,14 +129,26 @@ export const keyDescriptions: Record<string, KeyDescriptionValue> = {
     "Maximum execution time for the task in minutes (default: 10 minutes). If the task runs longer than this timeout, it will be terminated with a SIGKILL signal (or SIGTERM if terminate-grace-period-seconds is set). The timeout applies to the entire task execution, including any background processes and their ready checks. Helps prevent runaway tasks from consuming resources indefinitely.",
   "tasks[].terminate-grace-period-seconds":
     "Grace period in seconds to allow for clean shutdown when the task is terminated due to timeout or cancellation (default: 0 for immediate SIGKILL). During this period, the task process receives a SIGTERM signal and can perform cleanup operations (releasing locks, closing connections, saving state) before being forcefully terminated with SIGKILL. Essential for tasks that manage external resources like Terraform locks.",
-  "tasks[].macos":
-    "Run the task on a macOS virtual machine instead of a Linux agent. Requires a `version` (major macOS version, e.g. `26`) and optionally accepts `cpu` and `memory` (defaults: 4 CPUs and 7GB). Cannot be combined with `agent`, `runner`, `tool-cache`, `docker`, or `background-processes`.",
-  "tasks[].macos.version":
-    "The major macOS version to run the task on, specified as a positive integer (e.g. `26`). Required.",
-  "tasks[].macos.cpu":
-    "The number of CPU cores to allocate for the macOS virtual machine (default: 4). Must be a positive integer or a template expression.",
-  "tasks[].macos.memory":
-    "The memory allocation for the macOS virtual machine, specified as a number followed by 'GB' (default: 7GB). Supports template expressions.",
+  "tasks[].macos": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "tasks[].macos.version": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "tasks[].macos.cpu": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
+  "tasks[].macos.memory": {
+    description: "",
+    documented: false,
+    autocomplete: false,
+  },
   "tasks[].retry":
     "Retry configuration that specifies how many times to retry the task if it fails and what action to take on retry. Retries help handle transient failures like network issues, resource contention, or flaky tests. Each retry attempt gets a fresh execution environment. Advanced retry actions can be configured to customize retry behavior, set debug flags, or provide retry-specific data via $MINT_RETRY_ACTIONS directory.",
   "tasks[].health-timeout":

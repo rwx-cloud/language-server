@@ -392,6 +392,37 @@ tasks:
       expect(contents.value).toContain("memory allocation");
     });
 
+    it("withholds hover for macOS keys", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: sw_vers
+    macos:
+      version: 26
+      cpu: 6
+      memory: 14GB`;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "macos.yml",
+        yamlContent
+      );
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      for (const [line, character] of [[3, 5], [4, 8], [5, 8], [6, 8]] as const) {
+        const hover = await server.sendRequest<Hover>("textDocument/hover", {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(line, character),
+        });
+        expect(hover).toBe(null);
+      }
+    });
+
     it("provides hover for a nested app key", async () => {
       const yamlContent = `tasks:
   - key: web
