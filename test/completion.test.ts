@@ -1003,6 +1003,38 @@ tasks:
       // Should NOT include keys already present
       expect(labels).not.toContain("key");
       expect(labels).not.toContain("run");
+      expect(labels).not.toContain("macos");
+    });
+
+    it("withholds completions inside a macOS block", async () => {
+      const yamlContent = `tasks:
+  - key: build
+    run: sw_vers
+    macos:
+      `;
+
+      const filePath = await createTestFile(
+        testEnv.mintDir,
+        "macos-keys.yml",
+        yamlContent
+      );
+      const textDocument = {
+        uri: `file://${filePath}`,
+        languageId: "yaml",
+        version: 1,
+        text: yamlContent,
+      };
+      server.sendNotification("textDocument/didOpen", { textDocument });
+
+      const completions = await server.sendRequest<CompletionItem[]>(
+        "textDocument/completion",
+        {
+          textDocument: { uri: textDocument.uri },
+          position: Position.create(4, 6),
+        }
+      );
+
+      expect(completions).toEqual([]);
     });
 
     it("provides app configuration key completions", async () => {
